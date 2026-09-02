@@ -1,18 +1,36 @@
-ATUALIZAR O SITE — 3 ficheiros
-==============================
+ATUALIZAR O SITE
+================
 
-Arrasta estes 3 ficheiros para a RAIZ do repositório no GitHub
-(o mesmo sítio onde já está a pasta data/), aceitando substituir:
+A) CODIGO DO SITE — 3 ficheiros para a RAIZ do repositorio (substituir):
 
   index.html
   The Oboe Playground v5.dc.html
   support.js
 
+B) DADOS — 1 ficheiro para a pasta data/ :
+
+  tecnicas.json   ->   data/tecnicas.json
+
 Depois: Commit changes. O Netlify republica sozinho em ~1 minuto.
 
-NAO apagues nem substituas as pastas data/, audio/, images/ e video/ —
-essas sao o teu conteudo, geridas pelo Archive Studio.
+NAO apagues as pastas data/, audio/, images/ e video/ — sao o teu conteudo.
 
-Porque e preciso: o index.html abria a versao v4 do site. A v5 e a
-que mostra as variacoes das tecnicas, as gravacoes das misturas e os
-videos de ficheiro.
+COMO FUNCIONA AGORA
+-------------------
+O site publicado nao tem nenhum conteudo dentro do HTML. Ao abrir, vai buscar
+tudo a:
+
+  https://raw.githubusercontent.com/patriciarmpinheiro/oboe-lab/main/data/tecnicas.json
+
+Mostra "Tuning up..." enquanto espera; se falhar, aparece um aviso discreto
+em baixo com um botao "Try again" — o site nao quebra.
+
+O Archive Studio v4 reescreve data/tecnicas.json em cada gravacao, juntando
+tecnicas, categorias, gravacoes, videos, multifonicos, Mix + Match, FAQ e
+textos. Ou seja: fazes o upload deste tecnicas.json uma vez e depois nunca
+mais — o Studio passa a mante-lo atualizado sozinho.
+
+A FOTO DA APRESENTACAO
+----------------------
+Deixou de se poder arrastar no site (qualquer visitante conseguia troca-la).
+Agora escolhe-se no Studio -> separador Textos -> "Foto da apresentacao".
