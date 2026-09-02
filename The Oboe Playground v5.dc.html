@@ -1,0 +1,1434 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&amp;family=Space+Grotesk:wght@400;500;600;700&amp;display=swap">
+  <script src="./image-slot.js"></script>
+  <style>
+    html { scroll-behavior: smooth; }
+    body { margin: 0; background: #F6F5EC; cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="34" height="34"><g transform="rotate(-38 17 17)"><path d="M13 2 h8 l-1 9 h-6 z" fill="%23F5EBCB"/><rect x="14" y="10.6" width="6" height="6.4" fill="%23141414"/><path d="M14 16.6 h6 v12 a3 3 0 0 1-6 0 z" fill="%23D9B98E"/><path d="M13 2 h8 l-1 9 h-6 z M14 16.6 h6 v12 a3 3 0 0 1-6 0 z" fill="none" stroke="%23000181" stroke-width="1.1"/></g></svg>') 17 3, auto; }
+    a, button, input, textarea, [role="button"] { cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="34" height="34"><g transform="rotate(-38 17 17)"><path d="M13 2 h8 l-1 9 h-6 z" fill="%23D0FFA4"/><rect x="14" y="10.6" width="6" height="6.4" fill="%23006EE9"/><path d="M14 16.6 h6 v12 a3 3 0 0 1-6 0 z" fill="%23D9B98E"/><path d="M13 2 h8 l-1 9 h-6 z M14 16.6 h6 v12 a3 3 0 0 1-6 0 z" fill="none" stroke="%23000181" stroke-width="1.3"/></g></svg>') 17 3, pointer; }
+    a { color: #006EE9; }
+    a:hover { color: #000181; }
+    ::-webkit-scrollbar { width: 10px; }
+    ::-webkit-scrollbar-track { background: #F6F5EC; }
+    ::-webkit-scrollbar-thumb { background: #000181; }
+    ::selection { background: #D0FFA4; color: #000181; }
+    input, textarea, button { font-family: 'Space Grotesk', sans-serif; }
+    @keyframes revealUp { from { opacity: 0; transform: translateY(36px); } to { opacity: 1; transform: none; } }
+    @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+    @keyframes drift1 { 0%, 100% { transform: translate(0, 0) rotate(-3deg); } 50% { transform: translate(14px, -18px) rotate(2deg); } }
+    @keyframes drift2 { 0%, 100% { transform: translate(0, 0) rotate(4deg); } 50% { transform: translate(-16px, 14px) rotate(-2deg); } }
+    @keyframes drift3 { 0%, 100% { transform: translate(0, 0) scale(1); } 50% { transform: translate(10px, 16px) scale(1.06); } }
+    @keyframes spinSlow { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+    @keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+    @keyframes ripple { from { opacity: .85; transform: translate(-50%, -50%) scale(.1); } to { opacity: 0; transform: translate(-50%, -50%) scale(1); } }
+    @keyframes barPulse { 0%, 100% { transform: scaleY(.35); } 50% { transform: scaleY(1); } }
+    @keyframes blinkDot { 0%, 100% { opacity: .2; } 50% { opacity: 1; } }
+    @keyframes tvNoise { 0% { background-position: 0 0, 0 0; } 100% { background-position: 0 120px, 120px 0; } }
+    @keyframes floatHint { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-7px); } }
+    @keyframes reedFall { from { transform: translateY(-12vh) rotate(0deg); opacity: 1; } to { transform: translateY(112vh) rotate(540deg); opacity: 1; } }
+    @keyframes wiggle { 0%, 100% { transform: rotate(-2.5deg); } 50% { transform: rotate(2.5deg); } }
+    @keyframes stickerPop { from { opacity: 0; transform: scale(.6) rotate(-14deg); } to { opacity: 1; transform: none; } }
+  </style>
+</helmet>
+
+<template id="__bundler_thumbnail"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200"><rect width="200" height="200" fill="#000181"></rect><rect x="86" y="60" width="28" height="20" fill="#D0FFA4"></rect><rect x="88" y="80" width="24" height="60" rx="12" fill="#F5EBCB"></rect><circle cx="100" cy="100" r="4" fill="#000181"></circle><circle cx="100" cy="118" r="4" fill="#000181"></circle></svg></template>
+
+<div style="min-height:100vh; background:#F6F5EC; color:#000181; font-family:'Space Grotesk',sans-serif; overflow-x:hidden">
+
+  <nav style="position:fixed; top:0; left:0; right:0; z-index:300; background:#000181; padding:0 clamp(14px,3vw,34px); min-height:54px; display:flex; align-items:center; gap:clamp(10px,2vw,26px)">
+    <a href="#top" style="font-family:'Instrument Serif',serif; font-size:1.06rem; letter-spacing:.02em; color:#F6F5EC; text-decoration:none; white-space:nowrap">The Oboe <span style="font-style:italic; color:#D0FFA4">Playground</span></a>
+    <div style="display:flex; align-items:center; gap:2px; margin-left:auto; overflow-x:auto; scrollbar-width:none">
+      <a href="#pod" style="font-weight:500; font-size:.62rem; letter-spacing:.16em; text-transform:uppercase; color:rgba(246,245,236,.72); text-decoration:none; padding:8px 12px; transition:color .25s" style-hover="color:#D0FFA4">Pod</a>
+      <a href="#who" style="font-weight:500; font-size:.62rem; letter-spacing:.16em; text-transform:uppercase; color:rgba(246,245,236,.72); text-decoration:none; padding:8px 12px; transition:color .25s" style-hover="color:#D0FFA4">Who</a>
+      <a href="#techniques" style="font-weight:500; font-size:.62rem; letter-spacing:.16em; text-transform:uppercase; color:rgba(246,245,236,.72); text-decoration:none; padding:8px 12px; transition:color .25s" style-hover="color:#D0FFA4">Techniques</a>
+      <sc-if value="{{ mixVisible }}" hint-placeholder-val="{{ true }}">
+        <a href="#mix" style="font-weight:500; font-size:.62rem; letter-spacing:.16em; text-transform:uppercase; color:rgba(246,245,236,.72); text-decoration:none; padding:8px 12px; transition:color .25s" style-hover="color:#D0FFA4">Mix</a>
+      </sc-if>
+      <a href="#tv" style="font-weight:500; font-size:.62rem; letter-spacing:.16em; text-transform:uppercase; color:rgba(246,245,236,.72); text-decoration:none; padding:8px 12px; transition:color .25s" style-hover="color:#D0FFA4">Oboe TV</a>
+      <a href="#support" style="font-weight:500; font-size:.62rem; letter-spacing:.16em; text-transform:uppercase; color:rgba(246,245,236,.72); text-decoration:none; padding:8px 12px; transition:color .25s" style-hover="color:#D0FFA4">Support</a>
+      <a href="#contact" style="font-weight:500; font-size:.62rem; letter-spacing:.16em; text-transform:uppercase; color:rgba(246,245,236,.72); text-decoration:none; padding:8px 12px; transition:color .25s" style-hover="color:#D0FFA4">Contact</a>
+    </div>
+    <button onClick="{{ surprise }}" style="font-weight:600; font-size:.6rem; letter-spacing:.16em; text-transform:uppercase; color:#000181; background:#D0FFA4; border:none; border-radius:100px; padding:9px 18px; transition:all .3s cubic-bezier(.2,.8,.2,1); flex-shrink:0; white-space:nowrap" style-hover="background:#E8A0FF; letter-spacing:.22em">Surprise me</button>
+  </nav>
+
+  <header id="top" onClick="{{ heroClick }}" style="position:relative; margin-top:54px; min-height:calc(100vh - 54px); background:#D0FFA4; display:flex; flex-direction:column; justify-content:center; align-items:center; padding:clamp(70px,10vw,110px) clamp(18px,5vw,40px) clamp(90px,12vw,130px); overflow:hidden">
+
+    <div id="hero-glow" style="position:absolute; top:0; left:0; width:520px; height:520px; margin:-260px 0 0 -260px; border-radius:50%; background:radial-gradient(circle, rgba(0,110,233,.32), rgba(0,110,233,0) 68%); pointer-events:none; z-index:1"></div>
+
+    <div data-par="0.05" style="position:absolute; top:16%; left:7%; width:clamp(70px,10vw,124px); height:clamp(70px,10vw,124px); border-radius:50%; border:1.5px solid #000181; animation:drift3 15s ease-in-out infinite; z-index:2"></div>
+    <div data-par="-0.07" style="position:absolute; bottom:22%; right:9%; width:clamp(80px,11vw,150px); height:clamp(80px,11vw,150px); background:#E8A0FF; animation:drift2 18s ease-in-out infinite; z-index:2"></div>
+    <div data-par="0.09" style="position:absolute; top:26%; right:16%; width:clamp(40px,5vw,64px); height:clamp(40px,5vw,64px); border-radius:50%; background:#006EE9; animation:drift1 13s ease-in-out infinite; z-index:2"></div>
+    <div data-par="-0.05" style="position:absolute; bottom:30%; left:12%; font-size:clamp(1.4rem,3vw,2.2rem); color:#006EE9; animation:spinSlow 22s linear infinite; z-index:2">✳</div>
+
+    <sc-for list="{{ heroTags }}" as="tag" hint-placeholder-count="6">
+      <span data-par="{{ tag.par }}" style="position:absolute; top:{{ tag.top }}%; left:{{ tag.left }}%; z-index:4; font-size:.62rem; font-weight:500; letter-spacing:.14em; text-transform:uppercase; color:#000181; background:#F6F5EC; border-radius:100px; padding:6px 14px; white-space:nowrap; animation:{{ tag.anim }}; transition:background .3s, color .3s" style-hover="background:#000181; color:#D0FFA4">{{ tag.label }}</span>
+    </sc-for>
+
+    <p style="position:relative; z-index:5; margin:0 0 clamp(14px,3vw,26px); font-size:.66rem; font-weight:500; letter-spacing:.3em; text-transform:uppercase; color:rgba(0,1,129,.65); animation:fadeIn 1s .1s both">{{ txHeroBadge }}</p>
+
+    <h1 style="position:relative; z-index:5; margin:0; text-align:center; line-height:.78">
+      <span style="display:flex; justify-content:center; align-items:baseline">
+        <sc-for list="{{ heroLetters }}" as="L" hint-placeholder-count="4">
+          <span style="display:inline-block; font-weight:700; font-size:clamp(4.6rem,21vw,17rem); letter-spacing:-.055em; color:#000181; transition:transform .45s cubic-bezier(.2,.9,.2,1), color .45s; animation:revealUp .9s {{ L.delay }}s cubic-bezier(.2,.9,.2,1) both" style-hover="transform:translateY(-22px) rotate(-4deg); color:#006EE9">{{ L.char }}</span>
+        </sc-for>
+      </span>
+      <span style="display:block; margin-top:-.08em; font-family:'Instrument Serif',serif; font-style:italic; font-weight:400; font-size:clamp(2.2rem,9vw,6.6rem); letter-spacing:-.01em; color:#006EE9; animation:revealUp 1s .45s cubic-bezier(.2,.9,.2,1) both">playground</span>
+    </h1>
+
+    <span style="position:relative; z-index:5; margin-top:clamp(26px,5vw,44px); font-size:.62rem; font-weight:500; letter-spacing:.2em; text-transform:uppercase; color:rgba(0,1,129,.5); animation:floatHint 3.4s ease-in-out infinite">click anywhere · it answers</span>
+
+    <div style="position:absolute; left:clamp(18px,5vw,40px); bottom:clamp(30px,6vw,52px); z-index:5; max-width:min(430px,74vw)">
+      <p style="margin:0; font-size:clamp(.92rem,1.5vw,1.1rem); line-height:1.5; color:#000181; text-wrap:pretty; animation:revealUp 1s .6s both">{{ txHeroSub }}</p>
+    </div>
+    <a href="#pod" style="position:absolute; right:clamp(18px,5vw,40px); bottom:clamp(30px,6vw,52px); z-index:5; font-size:.62rem; font-weight:600; letter-spacing:.22em; text-transform:uppercase; color:#000181; text-decoration:none; display:inline-flex; align-items:center; gap:9px; transition:gap .3s" style-hover="gap:18px">Scroll ↘</a>
+  </header>
+
+  <div style="background:#000181; overflow:hidden; white-space:nowrap; padding:11px 0">
+    <div style="display:inline-flex; animation:marquee 34s linear infinite; width:max-content">
+      <span style="font-size:.68rem; font-weight:500; letter-spacing:.26em; text-transform:uppercase; color:#D0FFA4">{{ tickerText }}</span>
+      <span style="font-size:.68rem; font-weight:500; letter-spacing:.26em; text-transform:uppercase; color:#D0FFA4">{{ tickerText }}</span>
+    </div>
+  </div>
+
+  <section id="who" style="background:#F6F5EC; color:#000181; scroll-margin-top:64px; position:relative; overflow:hidden">
+    <div style="position:absolute; inset:0; background:repeating-linear-gradient(-45deg, rgba(208,255,164,.55) 0 26px, rgba(246,245,236,0) 26px 52px)"></div>
+    <div style="position:relative; max-width:1180px; margin:0 auto; padding:clamp(64px,9vw,120px) clamp(18px,5vw,40px)">
+      <div style="display:flex; flex-wrap:wrap-reverse; gap:clamp(30px,5vw,64px); align-items:flex-start; justify-content:space-between">
+
+        <div style="flex:1 1 380px; max-width:600px">
+          <p style="margin:0 0 10px; font-size:.62rem; font-weight:600; letter-spacing:.26em; text-transform:uppercase; color:#006EE9">Who is behind this</p>
+          <h2 style="margin:0; font-weight:700; font-size:clamp(2.6rem,7.5vw,5.4rem); line-height:.86; letter-spacing:-.05em">HELLO,<br>I’M <span style="color:#006EE9">PATRÍCIA</span></h2>
+          <p style="display:inline-block; margin:18px 0 0; padding:4px 10px; background:#D0FFA4; font-family:'Instrument Serif',serif; font-style:italic; font-size:clamp(1.1rem,2.4vw,1.6rem); line-height:1.35; text-wrap:pretty">I play the oboe, break it open, and write down what comes out.</p>
+          <p style="margin:22px 0 0; max-width:520px; font-size:.95rem; line-height:1.75; color:rgba(0,1,129,.75); text-wrap:pretty">Oboist and cor anglais player working in a broad range from classic music to experimental one— premières, strange fingerings, long afternoons with a microphone and a mountain of reeds. This playground is my open notebook: everything I find, catalogued so you can hear it before you write it. I hope I can share a bit of my enthusiasm for the instrument with you!</p>
+
+          <div style="display:flex; flex-wrap:wrap; gap:8px; margin-top:26px">
+            <sc-for list="{{ bioTags }}" as="bt" hint-placeholder-count="6">
+              <span style="font-size:.66rem; font-weight:500; letter-spacing:.04em; color:#000181; background:#F6F5EC; border:1.5px solid #000181; border-radius:100px; padding:8px 16px; transition:all .3s cubic-bezier(.2,.8,.2,1)" style-hover="background:#000181; color:#D0FFA4; transform:rotate(-3deg)">{{ bt.label }}</span>
+            </sc-for>
+          </div>
+
+          <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(180px,1fr)); gap:2px; margin-top:32px; border-top:1.5px solid #000181">
+            <sc-for list="{{ bioFacts }}" as="bf" hint-placeholder-count="4">
+              <div style="padding:16px 0 4px; border-bottom:1px solid rgba(0,1,129,.15)">
+                <div style="font-size:.55rem; font-weight:600; letter-spacing:.2em; text-transform:uppercase; color:#006EE9">{{ bf.k }}</div>
+                <div style="margin-top:6px; font-size:.85rem; line-height:1.4">{{ bf.v }}</div>
+              </div>
+            </sc-for>
+          </div>
+
+          <div style="display:flex; flex-wrap:wrap; gap:12px; align-items:center; margin-top:32px">
+            <button onClick="{{ rainReeds }}" style="font-size:.62rem; font-weight:600; letter-spacing:.2em; text-transform:uppercase; color:#F6F5EC; background:#000181; border:none; border-radius:100px; padding:15px 28px; transition:all .35s cubic-bezier(.2,.8,.2,1)" style-hover="background:#006EE9; letter-spacing:.26em">Make it rain reeds</button>
+            <a href="#contact" style="font-size:.62rem; font-weight:600; letter-spacing:.2em; text-transform:uppercase; color:#000181; text-decoration:none; border:1.5px solid rgba(0,1,129,.4); border-radius:100px; padding:15px 26px; transition:all .35s" style-hover="background:#D0FFA4; border-color:#000181">Say hello →</a>
+          </div>
+        </div>
+
+        <div style="flex:0 1 340px; position:relative; align-self:center; min-width:270px">
+          <div style="position:absolute; inset:-8% -6% -10% -8%; background:#E8A0FF; border-radius:48% 52% 44% 56% / 52% 44% 56% 48%; animation:wiggle 9s ease-in-out infinite"></div>
+          <div style="position:relative; padding:14px; background:#F6F5EC; border-radius:20px; transform:rotate(-2deg)">
+            <image-slot id="bio-portrait" style="width:100%; height:340px" shape="rounded" radius="12" placeholder="Drop a photo of you here"></image-slot>
+            <div style="display:flex; justify-content:space-between; align-items:center; padding:12px 4px 2px">
+              <span style="font-size:.6rem; font-weight:600; letter-spacing:.16em; text-transform:uppercase">Patrícia Pinheiro</span>
+              <span style="font-family:'Instrument Serif',serif; font-style:italic; font-size:.9rem; color:#006EE9">oboe &amp; cor anglais</span>
+            </div>
+          </div>
+          <sc-for list="{{ bioStickers }}" as="st" hint-placeholder-count="3">
+            <span style="position:absolute; top:{{ st.top }}%; left:{{ st.left }}%; font-size:.6rem; font-weight:600; letter-spacing:.12em; text-transform:uppercase; color:#000181; background:{{ st.bg }}; border:1.5px solid #000181; border-radius:100px; padding:8px 14px; white-space:nowrap; rotate:{{ st.rot }}; animation:stickerPop .6s cubic-bezier(.2,.9,.2,1) both; z-index:3">{{ st.label }}</span>
+          </sc-for>
+        </div>
+      </div>
+    <div style="position: fixed; inset: 0; z-index: 590; pointer-events: none; overflow: hidden; left: -18px; top: -2px">
+    <sc-for list="{{ reeds }}" as="rd" hint-placeholder-count="0">
+      <span style="position:absolute; top:0; left:{{ rd.left }}%; width:11px; height:42px; border-radius:1px 1px 5px 5px; background:linear-gradient(180deg, #F5EBCB 0 26%, #141414 26% 42%, {{ rd.tint }} 42% 100%); box-shadow:inset 0 0 0 1px rgba(0,1,129,.6); scale:{{ rd.scale }}; animation:reedFall {{ rd.dur }}s {{ rd.delay }}s linear both"></span>
+    </sc-for>
+    <sc-for list="{{ ripples }}" as="rp" hint-placeholder-count="0">
+      <span style="position:absolute; left:{{ rp.x }}px; top:{{ rp.y }}px; width:{{ rp.size }}px; height:{{ rp.size }}px; border-radius:50%; border:1.5px solid {{ rp.color }}; animation:ripple 1.4s {{ rp.delay }}s cubic-bezier(.15,.8,.2,1) both"></span>
+    </sc-for>
+  </div></div>
+  </section>
+
+  <div style="position:sticky; top:54px; z-index:250; display:flex; justify-content:center; padding:16px; pointer-events:none">
+    <div style="pointer-events:auto; background:#F6F5EC; border:1.5px solid #000181; border-radius:100px; padding:5px 6px; display:inline-flex; align-items:center; gap:4px; box-shadow:0 10px 30px -18px rgba(0,1,129,.7)">
+      <span style="font-size:.55rem; font-weight:600; letter-spacing:.2em; text-transform:uppercase; color:rgba(0,1,129,.45); padding-left:12px; white-space:nowrap">I am a</span>
+      <sc-for list="{{ viewBtns }}" as="v" hint-placeholder-count="3">
+        <button onClick="{{ v.pick }}" style="font-weight:600; font-size:.62rem; letter-spacing:.12em; text-transform:uppercase; padding:9px 17px; border-radius:100px; border:none; transition:all .3s cubic-bezier(.2,.8,.2,1); background:{{ v.bg }}; color:{{ v.color }}">{{ v.label }}</button>
+      </sc-for>
+    </div>
+  </div>
+
+  <section id="pod" style="background:#000181; color:#F6F5EC; scroll-margin-top:64px; position:relative; overflow:hidden">
+    <div style="max-width:1180px; margin:0 auto; padding:clamp(70px,10vw,130px) clamp(18px,5vw,40px); display:flex; flex-wrap:wrap; gap:clamp(40px,6vw,80px); align-items:center; justify-content:center">
+      <div style="flex:1 1 330px; max-width:460px; animation:revealUp .9s linear both; animation-timeline:view(); animation-range:entry 6% cover 30%">
+        <p style="margin:0 0 18px; font-size:.6rem; font-weight:600; letter-spacing:.26em; text-transform:uppercase; color:#D0FFA4">Sound player</p>
+        <h2 style="margin:0 0 18px; font-family:'Instrument Serif',serif; font-weight:400; font-size:clamp(2.4rem,5.5vw,4rem); line-height:.98; letter-spacing:-.02em; color:#F6F5EC">The Oboe <span style="font-style:italic; color:#83E7FF">Pod</span></h2>
+        <p style="margin:0 0 26px; font-size:.95rem; line-height:1.7; color:rgba(246,245,236,.7); text-wrap:pretty">{{ txPodSub }}</p>
+        <div style="display:flex; flex-wrap:wrap; gap:8px">
+          <span style="font-size:.58rem; font-weight:500; letter-spacing:.14em; text-transform:uppercase; color:rgba(246,245,236,.6); border:1px solid rgba(246,245,236,.28); border-radius:100px; padding:6px 13px">wheel · scroll</span>
+          <span style="font-size:.58rem; font-weight:500; letter-spacing:.14em; text-transform:uppercase; color:rgba(246,245,236,.6); border:1px solid rgba(246,245,236,.28); border-radius:100px; padding:6px 13px">▶ listen</span>
+          <span style="font-size:.58rem; font-weight:500; letter-spacing:.14em; text-transform:uppercase; color:rgba(246,245,236,.6); border:1px solid rgba(246,245,236,.28); border-radius:100px; padding:6px 13px">centre · open</span>
+        </div>
+      </div>
+
+      <div style="flex:0 0 auto; width:min(320px,100%); background:#F6F5EC; border-radius:28px; padding:20px 20px 26px; color:#000181; animation:revealUp .9s linear both; animation-timeline:view(); animation-range:entry 6% cover 34%">
+        <div style="display:flex; align-items:center; justify-content:space-between; padding:0 4px 12px">
+          <span style="font-size:.58rem; font-weight:600; letter-spacing:.2em; text-transform:uppercase">Oboe Pod</span>
+          <span style="font-size:.58rem; font-weight:500; letter-spacing:.1em; color:rgba(0,1,129,.5)">{{ podBattery }}</span>
+        </div>
+        <div style="background:#000181; border-radius:14px; overflow:hidden; padding:8px 0; height:166px">
+          <div style="transition:transform .45s cubic-bezier(.2,.9,.2,1); transform:translateY({{ podShift }}px)">
+            <sc-for list="{{ podRows }}" as="r" hint-placeholder-count="9">
+              <div onClick="{{ r.pick }}" style="display:flex; align-items:center; gap:12px; height:30px; padding:0 16px; font-size:.72rem; font-weight:500; letter-spacing:.02em; transition:all .3s cubic-bezier(.2,.8,.2,1); background:{{ r.bg }}; color:{{ r.color }}">
+                <span style="width:14px; text-align:right; opacity:.55">{{ r.num }}</span>
+                <span style="flex:1; overflow:hidden; text-overflow:ellipsis; white-space:nowrap">{{ r.name }}</span>
+                <span>{{ r.mark }}</span>
+              </div>
+            </sc-for>
+          </div>
+        </div>
+
+        <div onWheel="{{ podWheel }}" onPointerDown="{{ podDown }}" onPointerMove="{{ podMove }}" onPointerUp="{{ podUp }}" onPointerCancel="{{ podUp }}" onPointerLeave="{{ podUp }}" style="width:min(206px,70vw); aspect-ratio:1; border-radius:50%; border:1.5px solid #000181; margin:24px auto 0; position:relative; touch-action:none; cursor:grab">
+          <button onClick="{{ podMenu }}" style="position:absolute; top:10px; left:50%; transform:translateX(-50%); background:none; border:none; font-size:.56rem; font-weight:600; letter-spacing:.22em; color:rgba(0,1,129,.65); padding:8px; transition:color .25s" style-hover="color:#006EE9">MENU</button>
+          <button onClick="{{ podPrev }}" style="position:absolute; left:10px; top:50%; transform:translateY(-50%); background:none; border:none; font-size:.82rem; color:rgba(0,1,129,.65); padding:10px; transition:color .25s" style-hover="color:#006EE9">⏮</button>
+          <button onClick="{{ podNext }}" style="position:absolute; right:10px; top:50%; transform:translateY(-50%); background:none; border:none; font-size:.82rem; color:rgba(0,1,129,.65); padding:10px; transition:color .25s" style-hover="color:#006EE9">⏭</button>
+          <button onClick="{{ podPlay }}" style="position:absolute; bottom:10px; left:50%; transform:translateX(-50%); background:none; border:none; font-size:.74rem; color:rgba(0,1,129,.65); padding:8px; transition:color .25s" style-hover="color:#006EE9">{{ podPlayIcon }}</button>
+          <button onClick="{{ podOpen }}" style="position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); width:78px; height:78px; border-radius:50%; background:#006EE9; border:none; color:#F6F5EC; font-size:.55rem; font-weight:600; letter-spacing:.16em; text-transform:uppercase; transition:all .35s cubic-bezier(.2,.8,.2,1)" style-hover="background:#000181; transform:translate(-50%,-50%) scale(1.09)">Open</button>
+        </div>
+        <p style="text-align:center; margin:16px 0 0; font-size:.58rem; font-weight:500; letter-spacing:.14em; text-transform:uppercase; color:rgba(0,1,129,.55)">{{ podNowPlaying }}</p>
+        <p style="text-align:center; margin:6px 0 0; font-size:.55rem; letter-spacing:.16em; text-transform:uppercase; color:rgba(0,1,129,.35)">drag the wheel to spin</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="techniques" style="background:#F6F5EC; color:#000181; scroll-margin-top:64px">
+    <div style="max-width:1180px; margin:0 auto; padding:clamp(70px,10vw,130px) clamp(18px,5vw,40px)">
+      <div style="display:flex; flex-wrap:wrap; gap:24px; align-items:flex-end; justify-content:space-between; margin-bottom:clamp(34px,5vw,54px); animation:revealUp .9s linear both; animation-timeline:view(); animation-range:entry 5% cover 26%">
+        <div>
+          <p style="margin:0 0 14px; font-size:.6rem; font-weight:600; letter-spacing:.26em; text-transform:uppercase; color:#006EE9">Extended techniques</p>
+          <h2 style="margin:0; font-family:'Instrument Serif',serif; font-weight:400; font-size:clamp(2.4rem,6vw,4.4rem); line-height:.96; letter-spacing:-.02em">Technique <span style="font-style:italic">library</span></h2>
+        </div>
+        <p style="margin:0; max-width:300px; font-size:.85rem; line-height:1.6; color:rgba(0,1,129,.55); text-wrap:pretty">{{ txTechniquesSub }}</p>
+      </div>
+
+      <div style="display:flex; gap:18px; flex-wrap:wrap; align-items:center; justify-content:space-between; border-top:1.5px solid #000181; border-bottom:1px solid rgba(0,1,129,.2); padding:14px 0; margin-bottom:8px">
+        <div style="display:flex; gap:4px; flex-wrap:wrap">
+          <sc-for list="{{ filters }}" as="f" hint-placeholder-count="5">
+            <button onClick="{{ f.pick }}" style="font-weight:500; font-size:.66rem; letter-spacing:.12em; text-transform:uppercase; padding:8px 15px; border:none; border-radius:100px; transition:all .3s cubic-bezier(.2,.8,.2,1); color:{{ f.color }}; background:{{ f.bg }}">{{ f.label }}</button>
+          </sc-for>
+        </div>
+        <input type="text" placeholder="search…" value="{{ search }}" onChange="{{ setSearch }}" style="background:transparent; border:none; border-bottom:1.5px solid rgba(0,1,129,.3); color:#000181; font-size:.75rem; letter-spacing:.06em; padding:7px 2px; width:180px; outline:none">
+      </div>
+
+      <div>
+        <sc-for list="{{ techs }}" as="t" hint-placeholder-count="9">
+          <div onClick="{{ t.open }}" style="display:flex; align-items:center; gap:clamp(12px,2.4vw,26px); padding:clamp(16px,2.4vw,26px) clamp(10px,2vw,22px); border-bottom:1px solid rgba(0,1,129,.16); transition:background .4s cubic-bezier(.2,.8,.2,1), padding .4s; position:relative; overflow:hidden" style-hover="background:#D0FFA4; padding-left:36px">
+            <span style="font-size:.64rem; font-weight:500; letter-spacing:.14em; color:rgba(0,1,129,.4); width:26px; flex-shrink:0; transition:transform .4s" style-hover="transform:rotate(-12deg) scale(1.3)">{{ t.num }}</span>
+            <span style="width:38px; height:38px; border-radius:50%; flex-shrink:0; display:flex; align-items:center; justify-content:center; font-size:1.05rem; background:{{ t.tileBg }}; transition:transform .5s cubic-bezier(.2,.9,.2,1)" style-hover="transform:rotate(14deg) scale(1.18)">{{ t.emoji }}</span>
+            <span style="flex:1 1 200px; min-width:0">
+              <span style="display:block; font-family:'Instrument Serif',serif; font-size:clamp(1.4rem,3.4vw,2.3rem); line-height:1.06; letter-spacing:-.01em; transition:letter-spacing .4s" style-hover="letter-spacing:.008em">{{ t.name }}</span>
+              <span style="display:block; margin-top:3px; font-size:.74rem; color:rgba(0,1,129,.55)">{{ t.sub }}</span>
+            </span>
+            <span style="flex:0 0 auto; font-size:.55rem; font-weight:600; letter-spacing:.16em; text-transform:uppercase; color:#000181; background:{{ t.catColor }}; border-radius:100px; padding:5px 12px; white-space:nowrap; opacity:.55; transition:opacity .4s" style-hover="opacity:1">{{ t.catLabel }}</span>
+            <button onClick="{{ t.hear }}" style="flex-shrink:0; width:38px; height:38px; border-radius:50%; border:1.5px solid rgba(0,1,129,.35); background:transparent; color:#000181; font-size:.7rem; transition:all .35s cubic-bezier(.2,.8,.2,1)" style-hover="background:#000181; color:#D0FFA4; border-color:#000181; transform:scale(1.1)">▶</button>
+            <span style="flex-shrink:0; font-size:1.05rem; transition:transform .4s" style-hover="transform:translate(8px,-8px)">↗</span>
+          </div>
+        </sc-for>
+      </div>
+
+      <sc-if value="{{ noResults }}" hint-placeholder-val="{{ false }}">
+        <p style="text-align:center; font-size:.85rem; color:rgba(0,1,129,.5); margin-top:48px">No techniques match — try another category or search term.</p>
+      </sc-if>
+    </div>
+  </section>
+
+  <sc-if value="{{ mixVisible }}" hint-placeholder-val="{{ true }}">
+    <section id="mix" style="background:#E8A0FF; color:#000181; scroll-margin-top:64px; position:relative; overflow:hidden">
+      <div style="position:absolute; top:-90px; right:-70px; width:300px; height:300px; border-radius:50%; border:1.5px solid rgba(0,1,129,.35)"></div>
+      <div style="position:relative; max-width:1060px; margin:0 auto; padding:clamp(70px,10vw,130px) clamp(18px,5vw,40px)">
+        <div style="margin-bottom:clamp(34px,5vw,54px); animation:revealUp .9s linear both; animation-timeline:view(); animation-range:entry 5% cover 26%">
+          <p style="margin:0 0 14px; font-size:.6rem; font-weight:600; letter-spacing:.26em; text-transform:uppercase; color:rgba(0,1,129,.6)">Combination lab</p>
+          <h2 style="margin:0 0 10px; font-family:'Instrument Serif',serif; font-weight:400; font-size:clamp(2.4rem,6vw,4.4rem); line-height:.96; letter-spacing:-.02em">Mix <span style="font-style:italic">&amp;</span> match</h2>
+          <p style="margin:0 0 22px; max-width:420px; font-size:.85rem; line-height:1.6; color:rgba(0,1,129,.6)">{{ txMixSub }}</p>
+          <div style="display:flex; flex-wrap:wrap; gap:10px; align-items:center">
+            <button onClick="{{ mixShuffle }}" style="font-size:.6rem; font-weight:600; letter-spacing:.18em; text-transform:uppercase; color:#F6F5EC; background:#000181; border:none; border-radius:100px; padding:12px 24px; transition:all .35s cubic-bezier(.2,.8,.2,1)" style-hover="background:#006EE9; letter-spacing:.24em">Shuffle a pair</button>
+            <button onClick="{{ mixPlay }}" style="font-size:.6rem; font-weight:600; letter-spacing:.18em; text-transform:uppercase; color:#000181; background:transparent; border:1.5px solid rgba(0,1,129,.4); border-radius:100px; padding:12px 22px; transition:all .35s" style-hover="background:#F6F5EC; border-color:#000181">▶ Hear A</button>
+          </div>
+        </div>
+
+        <div style="display:flex; align-items:center; justify-content:center; gap:clamp(12px,3vw,28px); flex-wrap:wrap; margin-bottom:clamp(26px,4vw,40px)">
+          <div style="display:flex; align-items:center; gap:12px; background:#F6F5EC; border-radius:100px; padding:10px 20px 10px 12px; min-width:180px">
+            <span style="width:34px; height:34px; border-radius:50%; background:#D0FFA4; display:flex; align-items:center; justify-content:center; font-size:.95rem">{{ mixAEmoji }}</span>
+            <span style="font-size:.8rem; font-weight:500">{{ mixAName }}</span>
+          </div>
+          <span style="font-family:'Instrument Serif',serif; font-style:italic; font-size:1.8rem">×</span>
+          <div style="display:flex; align-items:center; gap:12px; background:#F6F5EC; border-radius:100px; padding:10px 20px 10px 12px; min-width:180px">
+            <span style="width:34px; height:34px; border-radius:50%; background:#83E7FF; display:flex; align-items:center; justify-content:center; font-size:.95rem">{{ mixBEmoji }}</span>
+            <span style="font-size:.8rem; font-weight:500">{{ mixBName }}</span>
+          </div>
+        </div>
+
+        <div style="display:flex; flex-wrap:wrap; gap:clamp(18px,4vw,44px); align-items:flex-start">
+          <div style="flex:1 1 260px; background:rgba(246,245,236,.5); border-radius:24px; padding:20px">
+            <p style="margin:0 0 14px; font-size:.58rem; font-weight:600; letter-spacing:.2em; text-transform:uppercase; color:rgba(0,1,129,.55)">Technique A</p>
+            <div style="display:flex; flex-wrap:wrap; gap:7px">
+              <sc-for list="{{ mixListA }}" as="m" hint-placeholder-count="9">
+                <button onClick="{{ m.pick }}" style="font-size:.72rem; font-weight:500; letter-spacing:.02em; padding:10px 16px; border:1.5px solid #000181; border-radius:100px; transition:all .3s cubic-bezier(.2,.8,.2,1); color:{{ m.color }}; background:{{ m.bg }}; opacity:{{ m.opacity }}" style-hover="background:#D0FFA4; color:#000181; transform:translateY(-3px)">{{ m.name }}</button>
+              </sc-for>
+            </div>
+          </div>
+          <div style="flex:0 0 auto; align-self:center; display:flex; flex-direction:column; align-items:center; gap:8px">
+            <span style="width:1px; height:34px; background:rgba(0,1,129,.3)"></span>
+            <span style="width:46px; height:46px; border-radius:50%; background:#000181; color:#D0FFA4; display:flex; align-items:center; justify-content:center; font-family:'Instrument Serif',serif; font-style:italic; font-size:1.5rem">×</span>
+            <span style="width:1px; height:34px; background:rgba(0,1,129,.3)"></span>
+          </div>
+          <div style="flex:1 1 260px; background:rgba(246,245,236,.5); border-radius:24px; padding:20px">
+            <p style="margin:0 0 14px; font-size:.58rem; font-weight:600; letter-spacing:.2em; text-transform:uppercase; color:rgba(0,1,129,.55)">Technique B</p>
+            <div style="display:flex; flex-wrap:wrap; gap:7px">
+              <sc-for list="{{ mixListB }}" as="m" hint-placeholder-count="9">
+                <button onClick="{{ m.pick }}" style="font-size:.72rem; font-weight:500; letter-spacing:.02em; padding:10px 16px; border:1.5px solid #000181; border-radius:100px; transition:all .3s cubic-bezier(.2,.8,.2,1); color:{{ m.color }}; background:{{ m.bg }}; opacity:{{ m.opacity }}" style-hover="background:#83E7FF; color:#000181; transform:translateY(-3px)">{{ m.name }}</button>
+              </sc-for>
+            </div>
+          </div>
+        </div>
+
+        <sc-if value="{{ mixResult }}" hint-placeholder-val="{{ false }}">
+          <div style="background:#F6F5EC; border-radius:26px; padding:clamp(26px,4vw,40px); text-align:center; max-width:540px; margin:clamp(30px,4vw,46px) auto 0; animation:revealUp .5s cubic-bezier(.2,.9,.2,1) both">
+            <div style="font-size:2.2rem; line-height:1; margin-bottom:12px; animation:floatHint 3s ease-in-out infinite">{{ mixResult.emoji }}</div>
+            <div style="display:flex; gap:6px; justify-content:center; align-items:center; margin-bottom:14px">
+              <sc-for list="{{ mixStars }}" as="s" hint-placeholder-count="5">
+                <span style="width:9px; height:9px; border-radius:50%; background:{{ s.color }}"></span>
+              </sc-for>
+              <span style="margin-left:8px; font-size:.55rem; font-weight:600; letter-spacing:.18em; text-transform:uppercase; color:rgba(0,1,129,.5)">{{ mixVerdict }}</span>
+            </div>
+            <div style="font-family:'Instrument Serif',serif; font-size:clamp(1.4rem,3vw,1.95rem); line-height:1.1; margin-bottom:10px">{{ mixResult.label }}</div>
+            <p style="margin:0; font-size:.85rem; line-height:1.65; color:rgba(0,1,129,.7); text-wrap:pretty">{{ mixResult.notes }}</p>
+            <sc-if value="{{ mixHasAudio }}" hint-placeholder-val="{{ false }}">
+              <button onClick="{{ mixPlayRec }}" style="display:inline-flex; align-items:center; gap:10px; margin-top:18px; font-size:.6rem; font-weight:600; letter-spacing:.18em; text-transform:uppercase; color:#F6F5EC; background:#000181; border:none; border-radius:100px; padding:12px 22px; transition:transform .25s" style-hover="transform:translateY(-2px)">▶ {{ mixAudioLabel }}</button>
+            </sc-if>
+          </div>
+        </sc-if>
+      </div>
+    </section>
+  </sc-if>
+
+  <section id="tv" style="background:#83E7FF; color:#000181; scroll-margin-top:64px; position:relative; overflow:hidden">
+    <div style="position:relative; max-width:1180px; margin:0 auto; padding:clamp(70px,10vw,130px) clamp(18px,5vw,40px)">
+      <div style="display:flex; flex-wrap:wrap; gap:24px; align-items:flex-end; justify-content:space-between; margin-bottom:clamp(30px,4vw,48px); animation:revealUp .9s linear both; animation-timeline:view(); animation-range:entry 5% cover 26%">
+        <div>
+          <p style="margin:0 0 14px; font-size:.6rem; font-weight:600; letter-spacing:.26em; text-transform:uppercase; color:rgba(0,1,129,.6)">Social club</p>
+          <h2 style="margin:0 0 10px; font-family:'Instrument Serif',serif; font-weight:400; font-size:clamp(2.4rem,6vw,4.4rem); line-height:.96; letter-spacing:-.02em">Oboe <span style="font-style:italic">TV</span></h2>
+          <p style="margin:0; max-width:400px; font-size:.85rem; line-height:1.6; color:rgba(0,1,129,.6)">{{ txTvSub }}</p>
+        </div>
+        <div style="display:inline-flex; background:#F6F5EC; border-radius:100px; padding:5px; gap:3px">
+          <sc-for list="{{ tvModeBtns }}" as="mb" hint-placeholder-count="2">
+            <button onClick="{{ mb.pick }}" style="font-weight:600; font-size:.6rem; letter-spacing:.14em; text-transform:uppercase; padding:9px 16px; border:none; border-radius:100px; transition:all .3s; background:{{ mb.bg }}; color:{{ mb.color }}">{{ mb.label }}</button>
+          </sc-for>
+        </div>
+      </div>
+
+      <sc-if value="{{ tvMode }}" hint-placeholder-val="{{ true }}">
+        <div style="display:flex; flex-wrap:wrap; gap:clamp(24px,5vw,56px); align-items:flex-start; justify-content:center">
+          <div style="flex:0 0 auto; display:flex; gap:18px; align-items:flex-start; background:#E8A0FF; border:1.5px solid #000181; border-radius:34px; padding:18px; box-shadow:14px 14px 0 rgba(0,1,129,.14)">
+            <div style="display:flex; flex-direction:column; gap:12px">
+              <div style="display:flex; height:10px; border-radius:100px; overflow:hidden; border:1.5px solid #000181">
+                <span style="flex:1; background:#D0FFA4"></span>
+                <span style="flex:1; background:#83E7FF"></span>
+                <span style="flex:1; background:#006EE9"></span>
+                <span style="flex:1; background:#F6F5EC"></span>
+                <span style="flex:1; background:#E8A0FF"></span>
+                <span style="flex:1; background:#000181"></span>
+              </div>
+              <div style="width:min(288px,78vw); aspect-ratio:{{ tvAspect }}; background:#000181; border-radius:22px; overflow:hidden; position:relative">
+                <sc-if value="{{ tvHasUrl }}" hint-placeholder-val="{{ false }}">
+                  <iframe src="{{ tvSrc }}" style="width:100%; height:100%; border:none; background:#000181" allow="encrypted-media; accelerometer; clipboard-write; picture-in-picture" allowfullscreen="allowfullscreen"></iframe>
+                </sc-if>
+                <sc-if value="{{ tvIsFile }}" hint-placeholder-val="{{ false }}">
+                  <video src="{{ tvFileSrc }}" controls="controls" playsinline="playsinline" style="width:100%; height:100%; object-fit:cover; background:#000181; display:block"></video>
+                </sc-if>
+                <sc-if value="{{ tvNoUrl }}" hint-placeholder-val="{{ true }}">
+                  <div style="position:absolute; inset:0; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:16px; text-align:center; padding:26px; background-image:repeating-linear-gradient(0deg, rgba(246,245,236,.1) 0 1px, transparent 1px 3px); animation:tvNoise .5s steps(4) infinite">
+                    <span style="font-family:'Instrument Serif',serif; font-style:italic; font-size:1.15rem; color:#F6F5EC; line-height:1.3">{{ tvTitle }}</span>
+                    <span style="font-size:.55rem; font-weight:500; letter-spacing:.16em; text-transform:uppercase; color:#D0FFA4; border:1px solid rgba(208,255,164,.5); border-radius:100px; padding:6px 12px">free channel</span>
+                  </div>
+                </sc-if>
+                <sc-if value="{{ tvStatic }}" hint-placeholder-val="{{ false }}">
+                  <div style="position:absolute; inset:0; z-index:5; background:#000181; background-image:repeating-linear-gradient(0deg, rgba(246,245,236,.26) 0 1px, transparent 1px 3px), repeating-linear-gradient(90deg, rgba(246,245,236,.16) 0 2px, transparent 2px 4px); animation:tvNoise .18s steps(3) infinite"></div>
+                </sc-if>
+              </div>
+              <div style="background:#F6F5EC; border-radius:100px; padding:10px 16px; display:flex; align-items:center; gap:10px">
+                <span style="width:7px; height:7px; border-radius:50%; background:#006EE9; animation:blinkDot 1.4s infinite; flex-shrink:0"></span>
+                <span style="flex:1; font-size:.62rem; font-weight:500; letter-spacing:.06em; overflow:hidden; text-overflow:ellipsis; white-space:nowrap">{{ tvTitle }}</span>
+                <span style="font-size:.5rem; font-weight:600; letter-spacing:.14em; text-transform:uppercase; color:rgba(0,1,129,.5); white-space:nowrap">{{ tvPlatform }}</span>
+              </div>
+            </div>
+            <div style="display:flex; flex-direction:column; align-items:center; gap:12px">
+              <div style="font-size:.6rem; font-weight:600; letter-spacing:.14em; color:#000181; background:#F6F5EC; border-radius:100px; padding:8px 12px; white-space:nowrap">{{ tvNum }}</div>
+              <button onClick="{{ zapNext }}" style="width:50px; height:50px; border-radius:50%; background:#000181; border:none; color:#D0FFA4; font-size:.62rem; font-weight:600; letter-spacing:.08em; transition:all .35s cubic-bezier(.2,.8,.2,1)" style-hover="background:#006EE9; transform:scale(1.1)">CH+</button>
+              <button onClick="{{ zapPrev }}" style="width:50px; height:50px; border-radius:50%; background:#000181; border:none; color:#D0FFA4; font-size:.62rem; font-weight:600; letter-spacing:.08em; transition:all .35s cubic-bezier(.2,.8,.2,1)" style-hover="background:#006EE9; transform:scale(1.1)">CH−</button>
+              <sc-if value="{{ tvHasUrl }}" hint-placeholder-val="{{ false }}">
+                <a href="{{ tvOpen }}" target="_blank" style="font-size:.55rem; font-weight:600; letter-spacing:.14em; text-transform:uppercase; color:#000181; text-decoration:none; background:#F6F5EC; border-radius:100px; padding:8px 12px; text-align:center; transition:background .3s" style-hover="background:#D0FFA4">IG ↗</a>
+              </sc-if>
+            </div>
+          </div>
+
+          <div style="flex:1 1 280px; max-width:400px; display:flex; flex-direction:column; gap:2px">
+            <p style="margin:0 0 12px; font-size:.58rem; font-weight:600; letter-spacing:.2em; text-transform:uppercase; color:rgba(0,1,129,.5)">Channel guide — YouTube &amp; Instagram</p>
+            <sc-for list="{{ tvChannels }}" as="ch" hint-placeholder-count="5">
+              <button onClick="{{ ch.pick }}" style="display:flex; align-items:center; gap:14px; text-align:left; font-size:.78rem; font-weight:500; padding:12px 18px; border:none; border-radius:100px; transition:all .3s cubic-bezier(.2,.8,.2,1); color:{{ ch.color }}; background:{{ ch.bg }}" style-hover="background:#F6F5EC; color:#000181">
+                <span style="opacity:.55; flex-shrink:0">{{ ch.num }}</span>
+                <span style="flex:1; overflow:hidden; text-overflow:ellipsis; white-space:nowrap">{{ ch.title }}</span>
+                <span style="font-size:.5rem; font-weight:600; letter-spacing:.12em; text-transform:uppercase; opacity:.6; white-space:nowrap">{{ ch.plat }}</span>
+                <span>{{ ch.mark }}</span>
+              </button>
+            </sc-for>
+          </div>
+        </div>
+      </sc-if>
+
+      <sc-if value="{{ wallMode }}" hint-placeholder-val="{{ false }}">
+        <div style="display:flex; flex-wrap:wrap; gap:clamp(16px,3vw,28px); justify-content:center">
+          <sc-for list="{{ wallCards }}" as="w" hint-placeholder-count="5">
+            <div style="background:#F6F5EC; border-radius:20px; padding:14px; width:214px; transition:transform .4s cubic-bezier(.2,.8,.2,1)" style-hover="transform:translateY(-10px)">
+              <div style="width:100%; aspect-ratio:3/4; border-radius:14px; display:flex; align-items:flex-end; justify-content:space-between; gap:8px; padding:14px; background:{{ w.bg }}">
+                <span style="font-size:.56rem; font-weight:600; letter-spacing:.18em; color:rgba(0,1,129,.6)">CH {{ w.num }}</span>
+                <span style="font-size:.5rem; font-weight:600; letter-spacing:.12em; text-transform:uppercase; color:rgba(0,1,129,.5)">{{ w.plat }}</span>
+              </div>
+              <div style="font-family:'Instrument Serif',serif; font-size:1.02rem; line-height:1.25; padding:14px 4px 10px">{{ w.title }}</div>
+              <sc-if value="{{ w.hasUrl }}" hint-placeholder-val="{{ false }}">
+                <a href="{{ w.url }}" target="_blank" style="display:inline-block; font-size:.56rem; font-weight:600; letter-spacing:.16em; text-transform:uppercase; color:#F6F5EC; text-decoration:none; background:#000181; border-radius:100px; padding:8px 15px; transition:background .3s" style-hover="background:#006EE9">Watch ↗</a>
+              </sc-if>
+              <sc-if value="{{ w.noUrl }}" hint-placeholder-val="{{ true }}">
+                <span style="display:inline-block; font-size:.56rem; font-weight:500; letter-spacing:.14em; text-transform:uppercase; color:rgba(0,1,129,.4); border:1px dashed rgba(0,1,129,.3); border-radius:100px; padding:8px 15px">free slot</span>
+              </sc-if>
+            </div>
+          </sc-for>
+        </div>
+      </sc-if>
+    </div>
+  </section>
+
+  <section id="support" style="background:#F6F5EC; color:#000181; scroll-margin-top:64px; position:relative; overflow:hidden; border-top:1.5px solid rgba(0,1,129,.15)">
+    <div style="position:absolute; top:-120px; left:-80px; width:340px; height:340px; border-radius:50%; background:radial-gradient(circle, rgba(232,160,255,.5), rgba(232,160,255,0) 70%)"></div>
+    <div style="position:relative; max-width:1180px; margin:0 auto; padding:clamp(70px,10vw,130px) clamp(18px,5vw,40px); display:flex; flex-wrap:wrap; gap:clamp(34px,6vw,72px); align-items:flex-start; justify-content:space-between">
+      <div style="flex:1 1 330px; max-width:480px; animation:revealUp .9s linear both; animation-timeline:view(); animation-range:entry 5% cover 28%">
+        <p style="margin:0 0 14px; font-size:.6rem; font-weight:600; letter-spacing:.26em; text-transform:uppercase; color:#006EE9">Support the playground</p>
+        <h2 style="margin:0 0 18px; font-family:'Instrument Serif',serif; font-weight:400; font-size:clamp(2.4rem,6vw,4.2rem); line-height:.96; letter-spacing:-.02em">{{ txCoffeeTitle }}</h2>
+        <p style="margin:0 0 26px; font-size:.95rem; line-height:1.7; color:rgba(0,1,129,.7); text-wrap:pretty">{{ txCoffeeSub }}</p>
+        <a href="{{ coffeeUrl }}" target="_blank" style="display:inline-flex; align-items:center; gap:12px; font-size:.64rem; font-weight:600; letter-spacing:.2em; text-transform:uppercase; color:#F6F5EC; text-decoration:none; background:#000181; border-radius:100px; padding:16px 32px; transition:all .35s cubic-bezier(.2,.8,.2,1)" style-hover="background:#006EE9; gap:20px">Buy me a coffee →</a>
+        <p style="margin:16px 0 0; font-size:.66rem; color:rgba(0,1,129,.45)">No subscription, no paywall — everything here stays open.</p>
+      </div>
+      <div style="flex:1 1 300px; max-width:420px; display:flex; flex-direction:column; gap:10px; animation:revealUp .9s linear both; animation-timeline:view(); animation-range:entry 5% cover 32%">
+        <sc-for list="{{ coffeeTiers }}" as="c" hint-placeholder-count="3">
+          <a href="{{ c.href }}" target="_blank" style="display:flex; align-items:center; gap:18px; text-decoration:none; color:#000181; border-radius:20px; padding:20px 24px; background:{{ c.bg }}; transition:transform .4s cubic-bezier(.2,.8,.2,1)" style-hover="transform:translateX(10px)">
+            <span style="font-family:'Instrument Serif',serif; font-size:1.6rem; min-width:62px">{{ c.amount }}</span>
+            <span style="flex:1">
+              <span style="display:block; font-size:.78rem; font-weight:600; letter-spacing:.02em">{{ c.label }}</span>
+              <span style="display:block; margin-top:3px; font-size:.7rem; color:rgba(0,1,129,.6)">{{ c.note }}</span>
+            </span>
+            <span style="font-size:1rem">↗</span>
+          </a>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" style="background:#000181; color:#F6F5EC; scroll-margin-top:64px; position:relative; overflow:hidden">
+    <div style="position:relative; max-width:1060px; margin:0 auto; padding:clamp(70px,10vw,130px) clamp(18px,5vw,40px); display:flex; flex-wrap:wrap; gap:clamp(40px,6vw,80px); align-items:flex-start; justify-content:center">
+      <div style="flex:1 1 320px; max-width:460px; animation:revealUp .9s linear both; animation-timeline:view(); animation-range:entry 5% cover 28%">
+        <p style="margin:0 0 16px; font-size:.6rem; font-weight:600; letter-spacing:.26em; text-transform:uppercase; color:#D0FFA4">Say hello</p>
+        <h2 style="margin:0 0 6px; font-weight:700; font-size:clamp(2.4rem,7vw,4.6rem); line-height:.86; letter-spacing:-.05em">WRITE TO</h2>
+        <h2 style="margin:0 0 20px; font-family:'Instrument Serif',serif; font-style:italic; font-weight:400; font-size:clamp(2.6rem,7.5vw,5rem); line-height:.9; letter-spacing:-.02em; color:#83E7FF">Patrícia</h2>
+        <p style="margin:0 0 26px; font-size:.95rem; line-height:1.7; color:rgba(246,245,236,.72); text-wrap:pretty">{{ txContactSub }}</p>
+        <div style="display:flex; flex-wrap:wrap; gap:10px; align-items:center">
+          <span style="font-size:.58rem; font-weight:600; letter-spacing:.14em; text-transform:uppercase; color:#000181; background:#D0FFA4; border-radius:100px; padding:8px 15px; rotate:-3deg">replies within a week</span>
+          <span style="font-size:.58rem; font-weight:600; letter-spacing:.14em; text-transform:uppercase; color:#000181; background:#E8A0FF; border-radius:100px; padding:8px 15px; rotate:2deg">no question too weird</span>
+        </div>
+        <div style="display:flex; align-items:flex-end; gap:14px; margin-top:34px">
+          <span style="width:74px; height:74px; border-radius:50%; background:#006EE9; display:flex; align-items:center; justify-content:center; font-family:'Instrument Serif',serif; font-style:italic; font-size:1.6rem; color:#F6F5EC; animation:wiggle 6s ease-in-out infinite">hi!</span>
+          <p style="margin:0 0 8px; font-family:'Instrument Serif',serif; font-style:italic; font-size:1.05rem; color:rgba(246,245,236,.7); max-width:250px; text-wrap:pretty">Tell me what you are writing — I will tell you if the oboe can do it.</p>
+        </div>
+      </div>
+
+      <form name="contact" method="POST" data-netlify="true" style="flex:1 1 320px; max-width:440px; display:flex; flex-direction:column; gap:22px">
+        <input type="hidden" name="form-name" value="contact">
+        <input type="hidden" name="topic" value="{{ contactTopic }}">
+        <div>
+          <p style="margin:0 0 12px; font-size:.56rem; font-weight:600; letter-spacing:.2em; text-transform:uppercase; color:#D0FFA4">This is about</p>
+          <div style="display:flex; flex-wrap:wrap; gap:7px">
+            <sc-for list="{{ contactTopics }}" as="ct" hint-placeholder-count="5">
+              <button type="button" onClick="{{ ct.pick }}" style="font-size:.68rem; font-weight:500; padding:9px 16px; border-radius:100px; transition:all .3s cubic-bezier(.2,.8,.2,1); background:{{ ct.bg }}; color:{{ ct.color }}; border:1.5px solid {{ ct.border }}" style-hover="border-color:#D0FFA4; transform:translateY(-3px)">{{ ct.label }}</button>
+            </sc-for>
+          </div>
+        </div>
+        <label style="display:flex; flex-direction:column; gap:8px">
+          <span style="font-size:.56rem; font-weight:600; letter-spacing:.2em; text-transform:uppercase; color:#D0FFA4">Name</span>
+          <input type="text" name="name" required="required" placeholder="Your name" style="background:transparent; border:none; border-bottom:1.5px solid rgba(246,245,236,.35); color:#F6F5EC; font-size:.9rem; padding:8px 2px; outline:none">
+        </label>
+        <label style="display:flex; flex-direction:column; gap:8px">
+          <span style="font-size:.56rem; font-weight:600; letter-spacing:.2em; text-transform:uppercase; color:#D0FFA4">Email</span>
+          <input type="email" name="email" required="required" placeholder="you@somewhere.com" style="background:transparent; border:none; border-bottom:1.5px solid rgba(246,245,236,.35); color:#F6F5EC; font-size:.9rem; padding:8px 2px; outline:none">
+        </label>
+        <label style="display:flex; flex-direction:column; gap:8px">
+          <span style="font-size:.56rem; font-weight:600; letter-spacing:.2em; text-transform:uppercase; color:#D0FFA4">Message</span>
+          <textarea name="message" required="required" rows="4" placeholder="Tell me about your piece, your question, your seagull…" style="background:transparent; border:none; border-bottom:1.5px solid rgba(246,245,236,.35); color:#F6F5EC; font-size:.9rem; line-height:1.6; padding:8px 2px; outline:none; resize:vertical"></textarea>
+        </label>
+        <button type="submit" style="align-self:flex-start; font-size:.62rem; font-weight:600; letter-spacing:.2em; text-transform:uppercase; color:#000181; background:#D0FFA4; border:none; border-radius:100px; padding:14px 30px; transition:all .35s cubic-bezier(.2,.8,.2,1)" style-hover="background:#83E7FF; letter-spacing:.26em">Send message →</button>
+        <p style="margin:0; font-size:.64rem; color:rgba(246,245,236,.45)">Sending becomes active once the site is published on Netlify.</p>
+      </form>
+    </div>
+  </section>
+
+  <footer style="background:#F6F5EC; color:#000181">
+    <div style="max-width:1180px; margin:0 auto; padding:clamp(30px,5vw,46px) clamp(18px,5vw,40px); display:flex; flex-wrap:wrap; gap:14px; align-items:center; justify-content:space-between">
+      <span style="font-family:'Instrument Serif',serif; font-size:1rem">The Oboe <span style="font-style:italic; color:#006EE9">Playground</span></span>
+      <span style="font-size:.7rem; color:rgba(0,1,129,.5)">{{ txFooterLine }}</span>
+    </div>
+  </footer>
+
+  <sc-if value="{{ modal }}" hint-placeholder-val="{{ false }}">
+    <div onClick="{{ closeModal }}" style="position:fixed; inset:0; z-index:400; background:rgba(0,1,129,.82); backdrop-filter:blur(8px); display:flex; align-items:flex-start; justify-content:center; padding:clamp(10px,3vw,36px); overflow-y:auto; animation:fadeIn .3s ease both">
+      <div onClick="{{ stopClick }}" style="background:#F6F5EC; color:#000181; border-radius:26px; width:min(600px,100%); margin:auto; padding:clamp(26px,4vw,44px); position:relative; animation:revealUp .45s cubic-bezier(.2,.9,.2,1) both">
+        <button onClick="{{ closeModal }}" style="position:absolute; top:18px; right:18px; background:#000181; border:none; color:#F6F5EC; width:34px; height:34px; border-radius:50%; font-size:.8rem; transition:all .3s" style-hover="background:#006EE9; transform:rotate(90deg)">✕</button>
+
+        <div style="display:flex; align-items:center; gap:8px; flex-wrap:wrap; margin:0 44px 16px 0">
+          <span style="font-size:.55rem; font-weight:600; letter-spacing:.18em; text-transform:uppercase; color:#000181; background:{{ modal.catColor }}; border-radius:100px; padding:5px 12px">{{ modal.catLabel }}</span>
+          <sc-for list="{{ modalSubs }}" as="sub" hint-placeholder-count="2">
+            <span style="font-size:.55rem; font-weight:500; letter-spacing:.12em; text-transform:uppercase; color:rgba(0,1,129,.55); border:1px solid rgba(0,1,129,.22); border-radius:100px; padding:5px 11px">{{ sub.label }}</span>
+          </sc-for>
+        </div>
+
+        <h3 style="margin:0 0 8px; font-family:'Instrument Serif',serif; font-weight:400; font-size:clamp(2rem,5.5vw,2.9rem); line-height:1; letter-spacing:-.02em">{{ modal.name }}</h3>
+        <p style="margin:0 0 24px; font-family:'Instrument Serif',serif; font-style:italic; font-size:1.02rem; color:rgba(0,1,129,.6)">{{ modal.sub }}</p>
+
+        <sc-if value="{{ modalHasImg }}" hint-placeholder-val="{{ false }}">
+          <div style="height:clamp(160px,30vw,220px); overflow:hidden; border-radius:18px; margin-bottom:24px">
+            <img src="{{ modalImgSrc }}" alt="{{ modal.name }}" style="width:100%; height:100%; object-fit:cover; display:block">
+          </div>
+        </sc-if>
+
+        <p style="margin:0; font-size:.95rem; line-height:1.75; color:rgba(0,1,129,.85); text-wrap:pretty">{{ modal.desc }}</p>
+
+        <div style="font-size:.56rem; font-weight:600; letter-spacing:.22em; text-transform:uppercase; color:#006EE9; border-top:1px solid rgba(0,1,129,.15); padding-top:16px; margin:28px 0 14px">{{ audioSectionLabel }}</div>
+        <sc-if value="{{ modalHasRecs }}" hint-placeholder-val="{{ false }}">
+          <div style="display:flex; flex-direction:column; gap:8px">
+            <sc-for list="{{ modalRecs }}" as="rr" hint-placeholder-count="2">
+              <div style="background:#FFFFFF; border-radius:100px; padding:9px 16px 9px 9px; display:flex; align-items:center; gap:14px">
+                <button onClick="{{ rr.play }}" style="width:42px; height:42px; border-radius:50%; background:#006EE9; border:none; color:#F6F5EC; font-size:.85rem; flex-shrink:0; transition:all .3s" style-hover="background:#000181; transform:scale(1.08)">▶</button>
+                <div style="min-width:0">
+                  <div style="font-size:.78rem; font-weight:500">{{ rr.label }}</div>
+                  <div style="font-size:.66rem; color:rgba(0,1,129,.5)">{{ rr.meta }}</div>
+                </div>
+              </div>
+            </sc-for>
+          </div>
+        </sc-if>
+        <sc-if value="{{ modalNoRecs }}" hint-placeholder-val="{{ true }}">
+          <div style="background:#FFFFFF; border-radius:22px; padding:16px 20px; display:flex; align-items:center; gap:16px; max-width:360px">
+            <button onClick="{{ playDemo }}" style="width:46px; height:46px; border-radius:50%; background:#006EE9; border:none; color:#F6F5EC; font-size:.95rem; flex-shrink:0; transition:all .3s" style-hover="background:#000181; transform:scale(1.08)">{{ playIcon }}</button>
+            <div>
+              <div style="font-size:.74rem; font-weight:500; margin-bottom:8px">{{ modal.audioLabel }}</div>
+              <div style="display:flex; gap:3px; align-items:flex-end; height:22px">
+                <sc-for list="{{ synthBars }}" as="b" hint-placeholder-count="7">
+                  <div style="width:4px; border-radius:2px; background:#E8A0FF; height:{{ b.h }}px; transform-origin:bottom; animation:{{ b.anim }}"></div>
+                </sc-for>
+              </div>
+            </div>
+          </div>
+        </sc-if>
+        <p style="margin:12px 0 0; font-size:.66rem; color:rgba(0,1,129,.45)">{{ audioNote }}</p>
+
+        <div style="font-size:.56rem; font-weight:600; letter-spacing:.22em; text-transform:uppercase; color:#006EE9; border-top:1px solid rgba(0,1,129,.15); padding-top:16px; margin:28px 0 14px">{{ modalNoteLabel }}</div>
+        <div style="background:#D0FFA4; border-radius:20px; padding:20px 22px">
+          <p style="margin:0; font-size:.9rem; line-height:1.7; text-wrap:pretty">{{ modalNoteText }}</p>
+        </div>
+
+        <sc-if value="{{ modalHasMultis }}" hint-placeholder-val="{{ false }}">
+          <div style="font-size:.56rem; font-weight:600; letter-spacing:.22em; text-transform:uppercase; color:#006EE9; border-top:1px solid rgba(0,1,129,.15); padding-top:16px; margin:28px 0 14px">Analysed multiphonics</div>
+          <div style="display:flex; flex-direction:column; gap:10px">
+            <sc-for list="{{ modalMultis }}" as="mp" hint-placeholder-count="2">
+              <div style="background:#FFFFFF; border-radius:20px; padding:14px 16px; display:flex; gap:14px; align-items:center; flex-wrap:wrap">
+                <sc-if value="{{ mp.hasAudio }}" hint-placeholder-val="{{ false }}">
+                  <button onClick="{{ mp.play }}" style="width:40px; height:40px; border-radius:50%; background:#83E7FF; border:none; color:#000181; font-size:.8rem; flex-shrink:0; transition:all .3s" style-hover="background:#006EE9; color:#F6F5EC">▶</button>
+                </sc-if>
+                <div style="flex:1 1 170px; min-width:0">
+                  <div style="font-size:.78rem; font-weight:500">{{ mp.name }}</div>
+                  <div style="display:flex; gap:5px; flex-wrap:wrap; margin-top:8px">
+                    <sc-for list="{{ mp.chips }}" as="ch" hint-placeholder-count="3">
+                      <span style="font-size:.62rem; font-weight:500; color:#000181; background:{{ ch.bg }}; border-radius:100px; padding:3px 10px">{{ ch.label }}</span>
+                    </sc-for>
+                  </div>
+                  <sc-if value="{{ mp.fing }}" hint-placeholder-val="{{ false }}">
+                    <div style="font-size:.68rem; color:rgba(0,1,129,.65); margin-top:8px">{{ mp.fing }}</div>
+                  </sc-if>
+                  <sc-if value="{{ mp.notes }}" hint-placeholder-val="{{ false }}">
+                    <div style="font-size:.68rem; line-height:1.55; color:rgba(0,1,129,.55); margin-top:5px">{{ mp.notes }}</div>
+                  </sc-if>
+                </div>
+                <sc-if value="{{ mp.hasImg }}" hint-placeholder-val="{{ false }}">
+                  <img src="{{ mp.img }}" alt="espetro" style="width:120px; border-radius:10px; align-self:center">
+                </sc-if>
+              </div>
+            </sc-for>
+          </div>
+        </sc-if>
+
+        <sc-if value="{{ modalHasVars }}" hint-placeholder-val="{{ false }}">
+          <div style="font-size:.56rem; font-weight:600; letter-spacing:.22em; text-transform:uppercase; color:#006EE9; border-top:1px solid rgba(0,1,129,.15); padding-top:16px; margin:28px 0 14px">Variations</div>
+          <div style="display:flex; flex-direction:column; gap:12px">
+            <sc-for list="{{ modalVars }}" as="vr" hint-placeholder-count="1">
+              <div style="background:#FFFFFF; border-radius:20px; padding:16px 18px">
+                <div style="display:flex; gap:8px; align-items:center; flex-wrap:wrap">
+                  <span style="font-family:'Instrument Serif',serif; font-size:1.1rem; line-height:1.2">{{ vr.name }}</span>
+                  <span style="font-size:.55rem; font-weight:600; letter-spacing:.16em; text-transform:uppercase; color:#000181; background:#dceaff; border-radius:100px; padding:5px 11px">{{ vr.instrument }}</span>
+                  <sc-if value="{{ vr.hasNote }}" hint-placeholder-val="{{ false }}">
+                    <span style="font-size:.55rem; font-weight:600; letter-spacing:.16em; text-transform:uppercase; color:#000181; background:#D0FFA4; border-radius:100px; padding:5px 11px">{{ vr.note }}</span>
+                  </sc-if>
+                </div>
+                <sc-if value="{{ vr.hasFing }}" hint-placeholder-val="{{ false }}">
+                  <div style="font-family:ui-monospace,SFMono-Regular,Menlo,monospace; font-size:.72rem; letter-spacing:.02em; color:#006EE9; margin-top:10px">{{ vr.fingering }}</div>
+                </sc-if>
+                <sc-if value="{{ vr.hasNotes }}" hint-placeholder-val="{{ false }}">
+                  <p style="margin:10px 0 0; font-size:.82rem; line-height:1.7; color:rgba(0,1,129,.75); text-wrap:pretty">{{ vr.notes }}</p>
+                </sc-if>
+                <sc-if value="{{ vr.hasImgs }}" hint-placeholder-val="{{ false }}">
+                  <div style="display:flex; gap:12px; flex-wrap:wrap; margin-top:14px">
+                    <sc-for list="{{ vr.images }}" as="im" hint-placeholder-count="1">
+                      <div style="width:min(190px,100%)">
+                        <img src="{{ im.src }}" alt="{{ im.caption }}" style="width:100%; display:block; border-radius:10px; background:#f2f0e6">
+                        <sc-if value="{{ im.hasCaption }}" hint-placeholder-val="{{ false }}">
+                          <div style="font-size:.6rem; font-weight:500; letter-spacing:.1em; text-transform:uppercase; color:rgba(0,1,129,.5); margin-top:7px">{{ im.caption }}</div>
+                        </sc-if>
+                      </div>
+                    </sc-for>
+                  </div>
+                </sc-if>
+              </div>
+            </sc-for>
+          </div>
+        </sc-if>
+
+        <sc-if value="{{ modalHasFings }}" hint-placeholder-val="{{ false }}">
+          <div style="font-size:.56rem; font-weight:600; letter-spacing:.22em; text-transform:uppercase; color:#006EE9; border-top:1px solid rgba(0,1,129,.15); padding-top:16px; margin:28px 0 14px">Fingerings</div>
+          <div style="display:flex; gap:14px; flex-wrap:wrap">
+            <sc-for list="{{ modalFings }}" as="fg" hint-placeholder-count="1">
+              <div style="background:#FFFFFF; border-radius:16px; padding:12px; width:min(220px,100%)">
+                <img src="{{ fg.src }}" alt="{{ fg.name }}" style="width:100%; display:block; border-radius:8px">
+                <div style="font-size:.7rem; font-weight:500; margin-top:10px">{{ fg.name }}</div>
+              </div>
+            </sc-for>
+          </div>
+        </sc-if>
+      </div>
+    </div>
+  </sc-if>
+
+  <sc-if value="{{ aiEnabled }}" hint-placeholder-val="{{ true }}">
+    <div style="position:fixed; bottom:24px; right:24px; z-index:500; display:flex; flex-direction:column; align-items:flex-end; gap:14px">
+      <sc-if value="{{ aiOpen }}" hint-placeholder-val="{{ false }}">
+        <div style="width:330px; background:#F6F5EC; border-radius:24px; overflow:hidden; box-shadow:0 30px 60px -30px rgba(0,1,129,.8); display:flex; flex-direction:column; animation:revealUp .35s cubic-bezier(.2,.9,.2,1) both">
+          <div style="padding:16px 20px; display:flex; align-items:center; gap:10px; background:#000181">
+            <h3 style="margin:0; font-family:'Instrument Serif',serif; font-weight:400; font-size:1.05rem; color:#F6F5EC; flex:1">Ask <span style="font-style:italic; color:#D0FFA4">Patrícia</span></h3>
+            <button onClick="{{ toggleAi }}" style="background:transparent; border:none; color:#F6F5EC; font-size:.85rem; padding:2px; transition:transform .3s" style-hover="transform:rotate(90deg)">✕</button>
+          </div>
+          <div id="ai-scroll" style="padding:14px 16px; display:flex; flex-direction:column; gap:9px; max-height:290px; overflow-y:auto">
+            <sc-for list="{{ aiMsgs }}" as="msg" hint-placeholder-count="1">
+              <div style="max-width:90%; font-size:.78rem; line-height:1.6; padding:11px 16px; border-radius:16px; background:{{ msg.bg }}; color:{{ msg.color }}; align-self:{{ msg.align }}; white-space:pre-wrap">{{ msg.text }}</div>
+            </sc-for>
+            <sc-if value="{{ aiBusy }}" hint-placeholder-val="{{ false }}">
+              <div style="display:flex; gap:5px; padding:11px 16px">
+                <span style="width:6px; height:6px; border-radius:50%; background:#006EE9; animation:blinkDot 1s 0s infinite"></span>
+                <span style="width:6px; height:6px; border-radius:50%; background:#006EE9; animation:blinkDot 1s .2s infinite"></span>
+                <span style="width:6px; height:6px; border-radius:50%; background:#006EE9; animation:blinkDot 1s .4s infinite"></span>
+              </div>
+            </sc-if>
+          </div>
+          <div style="padding:12px 14px 14px; display:flex; flex-direction:column; gap:6px; border-top:1px solid rgba(0,1,129,.12)">
+            <sc-for list="{{ faqChips }}" as="fc" hint-placeholder-count="4">
+              <button onClick="{{ fc.pick }}" style="font-size:.7rem; font-weight:500; text-align:left; color:#000181; background:#FFFFFF; border:none; border-radius:100px; padding:9px 15px; transition:all .3s" style-hover="background:#D0FFA4">{{ fc.label }}</button>
+            </sc-for>
+            <a href="#contact" onClick="{{ toggleAi }}" style="font-size:.6rem; font-weight:600; letter-spacing:.14em; text-transform:uppercase; text-align:center; text-decoration:none; color:#F6F5EC; background:#000181; border-radius:100px; padding:11px 14px; margin-top:4px; transition:background .3s" style-hover="background:#006EE9">Another question? Write to me</a>
+          </div>
+        </div>
+      </sc-if>
+      <button onClick="{{ toggleAi }}" style="width:56px; height:56px; border-radius:50%; background:#000181; border:none; color:#D0FFA4; font-size:.58rem; font-weight:600; letter-spacing:.1em; text-transform:uppercase; transition:all .35s cubic-bezier(.2,.8,.2,1)" style-hover="background:#006EE9; transform:scale(1.09)">Ask</button>
+    </div>
+  </sc-if>
+
+  
+
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{
+  &quot;defaultView&quot;: { &quot;editor&quot;: &quot;enum&quot;, &quot;options&quot;: [&quot;composer&quot;, &quot;oboist&quot;, &quot;explorer&quot;], &quot;default&quot;: &quot;composer&quot;, &quot;tsType&quot;: &quot;string&quot;, &quot;section&quot;: &quot;Behaviour&quot; },
+  &quot;heroWord&quot;: { &quot;editor&quot;: &quot;text&quot;, &quot;default&quot;: &quot;OBOE&quot;, &quot;tsType&quot;: &quot;string&quot;, &quot;section&quot;: &quot;Hero&quot; },
+  &quot;heroTags&quot;: { &quot;editor&quot;: &quot;boolean&quot;, &quot;default&quot;: true, &quot;tsType&quot;: &quot;boolean&quot;, &quot;section&quot;: &quot;Hero&quot; },
+  &quot;showAiChat&quot;: { &quot;editor&quot;: &quot;boolean&quot;, &quot;default&quot;: true, &quot;tsType&quot;: &quot;boolean&quot;, &quot;section&quot;: &quot;Behaviour&quot; },
+  &quot;coffeeUrl&quot;: { &quot;editor&quot;: &quot;text&quot;, &quot;default&quot;: &quot;https://buymeacoffee.com/&quot;, &quot;tsType&quot;: &quot;string&quot;, &quot;section&quot;: &quot;Support&quot; },
+  &quot;videoLayout&quot;: { &quot;editor&quot;: &quot;enum&quot;, &quot;options&quot;: [&quot;tv&quot;, &quot;wall&quot;], &quot;default&quot;: &quot;tv&quot;, &quot;tsType&quot;: &quot;string&quot;, &quot;section&quot;: &quot;Oboe TV&quot; }
+}">
+const TECHS = [
+  { id: 'flutter', name: 'Flutter Tongue', cat: 'som', emoji: '🌀', sub: 'Rolling tremolo of tone colour',
+    desc: 'Produced by rolling an "r" (lingual or uvular) while playing. The effect is a rapid fluctuation of tone colour without significant pitch change. Speaks best in the middle register at mf and above.',
+    subs: ['lingual', 'uvular'],
+    composer: 'Notate with three tremolo strokes plus "flz." and mark clearly where it ends. Reliable down to about C4; below that it becomes dense and less stable.',
+    oboist: 'If a rolled R is impossible for you, use the uvular (throat) flutter — slower, but far more controllable. Keep the air speed high or the reed will choke.',
+    fun: 'Roughly one in ten oboists cannot roll an R at all — they build their whole flutter technique in the throat instead.',
+    synth: 'flutter', audioLabel: 'Flutter Tongue A4' },
+  { id: 'multi', name: 'Multiphonics', cat: 'ext', emoji: '🎶', sub: 'Two or more pitches at once',
+    desc: 'Special fingerings and embouchure adjustments make the reed vibrate in several modes at once, producing chords, beatings and rough textures. Each multiphonic has its own fingering, dynamic window and degree of stability.',
+    subs: ['fingered', 'dyads', 'beating'],
+    composer: 'Always print the fingering diagram in the score, and give the player time to set the embouchure — avoid fast approaches from loud tutti passages.',
+    oboist: 'Practise each one at the written dynamic; most only speak in a narrow band. Voicing slightly lower than the bottom note usually helps stability.',
+    fun: 'Over 200 oboe multiphonics have been catalogued — but every reed favours a different subset, so no two oboists share the same menu.',
+    synth: 'multi', audioLabel: 'Multiphonic — stable dyad' },
+  { id: 'harm', name: 'Harmonics', cat: 'reg', emoji: '✨', sub: 'Ethereal overtone colours',
+    desc: 'Overblown fingerings that produce a thin, veiled version of the pitch — a flute-like whisper of the note. Available roughly from C5 upward, sounding an octave or a twelfth above the base fingering.',
+    subs: ['octave', 'twelfth'],
+    composer: 'Notate with a small circle above the note. Best at p–mp in slow music; harmonics will not project over a full orchestra.',
+    oboist: 'Half-hole and voicing control are everything. Think of blowing "through" the note rather than at it.',
+    fun: 'Orchestral oboists have quietly used harmonic fingerings for centuries — as secret pianissimo alternatives long before new music asked for them by name.',
+    synth: 'harm', audioLabel: 'Harmonic C6' },
+  { id: 'circ', name: 'Circular Breathing', cat: 'ext', emoji: '🔄', sub: 'Unbroken stream of sound',
+    desc: 'The player inhales through the nose while pushing air stored in the cheeks through the reed, sustaining the sound indefinitely. The oboe needs so little air that it is one of the friendliest instruments for this.',
+    subs: ['sustained', 'drones'],
+    composer: 'You may write phrases of any length — but mark "circular breathing" in the part and expect a small colour ripple at each switch.',
+    oboist: 'Start with a straw in a glass of water. The switch is easiest on stable middle-register notes, away from register breaks.',
+    fun: 'Heinz Holliger sustained single notes for minutes on end — the oboe uses so little air that one cheekful covers several switches.',
+    synth: 'circ', audioLabel: 'Sustained D5 — two switches' },
+  { id: 'gliss', name: 'Glissando', cat: 'som', emoji: '🎢', sub: 'Sliding between pitches',
+    desc: 'A continuous slide produced by gradually sliding fingers off the keys, combined with embouchure bending. Ascending glissandi are easier than descending; the key mechanism limits the usable range.',
+    subs: ['finger gliss', 'embouchure'],
+    composer: 'Keep glissandi within a third for reliability, and prefer upward slides. Above the staff, the mechanism makes continuous sliding patchy.',
+    oboist: 'Slide the fingers sideways off the ring keys while relaxing the jaw. Combining finger and embouchure bend gives the widest smooth slide.',
+    fun: 'The famous opening slide of Rhapsody in Blue is a clarinet glissando — the oboe version is much harder, which is exactly why it is fun.',
+    synth: 'gliss', audioLabel: 'Glissando G4 → D5' },
+  { id: 'bend', name: 'Pitch Bend', cat: 'som', emoji: '〰️', sub: 'Micro-inflections of pitch',
+    desc: 'Lipping the pitch up or down — roughly a quarter-tone to a semitone — using embouchure and voicing alone. Ideal for microtonal inflections, "blue" notes and expressive ornaments.',
+    subs: ['quarter-tones', 'wide vibrato'],
+    composer: 'Quarter-tone bends are safe anywhere; a full semitone only works in the middle register at moderate dynamics.',
+    oboist: 'Drop the jaw and lower the tongue to bend down — think "ee" to "aw". Bending up is much harder; approach from below instead.',
+    fun: 'Baroque oboists bent pitch constantly as a matter of style — equal temperament is younger than the instrument itself.',
+    synth: 'bend', audioLabel: 'Bend A4 — quarter-tone dip' },
+  { id: 'keys', name: 'Key Clicks', cat: 'ext', emoji: '🥁', sub: 'Percussive key noise',
+    desc: 'The keys are slapped without blowing — or with air only — turning the oboe into a quiet percussion instrument with faint pitch shadows of the fingerings.',
+    subs: ['pitched', 'with air'],
+    composer: 'Very quiet — amplify, or score them in silence. Use x-noteheads at the fingering pitch to control the colour of each click.',
+    oboist: 'The low C, B and B♭ keys give the loudest clicks. Adding a breathy "huh" of air doubles the presence.',
+    fun: 'Unamplified key clicks carry barely ten metres in a hall — intimacy is the whole point of the effect.',
+    synth: 'keys', audioLabel: 'Key clicks — low C pattern' },
+  { id: 'air', name: 'Air Sounds', cat: 'som', emoji: '💨', sub: 'Breath through the instrument',
+    desc: 'Blowing air through the instrument without engaging the reed — from pure white-noise breath to half-tone mixtures where a shadow of pitch appears inside the noise.',
+    subs: ['pure air', 'half-tone'],
+    composer: 'Notate air with a triangle notehead and specify the consonant — "ss", "ff" or "sh" — since each filters the noise differently.',
+    oboist: 'Loosen the embouchure until the reed just stops speaking; the fingering still colours the noise, so change fingerings expressively.',
+    fun: 'The oboe\u2019s narrow bore makes its air sounds the most "whistly" of all the woodwinds.',
+    synth: 'air', audioLabel: 'Air sound — half-tone' },
+  { id: 'cor', name: 'Cor Anglais: Low Register', cat: 'cor', emoji: '🌑', sub: 'The dark voice of the cor anglais',
+    desc: 'The bottom fifth of the cor anglais — written B3 down to E3, sounding a fifth lower — has a covered, reedy darkness the oboe cannot reach. Slow to speak, enormous in colour.',
+    subs: ['sung lines', 'drones'],
+    composer: 'Approach the lowest notes by step and give them time — attacks below written G3 are slow at pp. Unbeatable for lament-like solos.',
+    oboist: 'Use a slightly heavier reed and think warm, slow air. Practise pp attacks daily; they are this register\u2019s whole craft.',
+    fun: 'The cor anglais is neither English nor a horn — "anglais" is probably a corruption of "angl\u00e9" (angled), after its old curved shape.',
+    synth: 'low', audioLabel: 'Cor anglais low F3' }
+];
+
+const NOTE_EN = ['C', 'C♯', 'D', 'E♭', 'E', 'F', 'F♯', 'G', 'A♭', 'A', 'B♭', 'B'];
+
+const CATS = {
+  som: { label: 'Sound & Timbre', color: '#E8A0FF', tile: '#f6e6ff' },
+  ext: { label: 'Extended Technique', color: '#006EE9', tile: '#dceaff' },
+  reg: { label: 'Register', color: '#83E7FF', tile: '#e2f8ff' },
+  cor: { label: 'Cor Anglais', color: '#D0FFA4', tile: '#eeffdc' }
+};
+
+const PAIRS = {
+  'circ|flutter': { stars: 5, emoji: '🔥', label: 'Advanced — very effective', notes: 'A continuous, pulsating stream of colour that never breathes. Demands real stamina — stunning in slow builds.' },
+  'flutter|multi': { stars: 4, emoji: '🌪️', label: 'Dense & turbulent', notes: 'A rough, buzzing chord-noise. Only the most stable multiphonics survive the flutter — pick them together with your player.' },
+  'bend|gliss': { stars: 5, emoji: '🎢', label: 'Seamless — expressive gold', notes: 'Finger glissando plus embouchure bend covers the widest smooth slides the oboe can make. A natural marriage.' },
+  'air|keys': { stars: 5, emoji: '👻', label: 'Ghost machine', notes: 'Percussive clicks inside a halo of breath — a whole quiet ensemble from a single player. Amplify for magic.' },
+  'harm|multi': { stars: 2, emoji: '🫧', label: 'Fragile — handle with care', notes: 'Both need precise voicing, and combining them usually collapses one or the other. Alternate rather than superimpose.' },
+  'cor|flutter': { stars: 4, emoji: '🐻', label: 'Dark growl', notes: 'Flutter in the cor anglais low register is a slow, furry rumble — one of the darkest colours in the double-reed family.' },
+  'air|cor': { stars: 4, emoji: '🌫️', label: 'Deep fog', notes: 'Air sounds through the cor anglais are lower and rounder than on oboe — a warm, distant wind. Beautiful in transitions.' },
+  'circ|gliss': { stars: 4, emoji: '🌀', label: 'Endless spiral', notes: 'An unbroken slide that keeps circling without a breath. Keep the range modest and it hypnotises.' },
+  'bend|multi': { stars: 4, emoji: '🌊', label: 'Beating clouds', notes: 'Bending one component of a multiphonic creates slow beating waves — a favourite of spectral writing.' },
+  'flutter|keys': { stars: 3, emoji: '🪵', label: 'Workable — rhythmic grit', notes: 'Alternating flutter bursts with key clicks makes a nice grainy groove; superimposing them buries the clicks.' },
+  'air|harm': { stars: 4, emoji: '🕊️', label: 'Veiled whisper', notes: 'A harmonic emerging from inside an air sound is one of the most delicate entrances the oboe can make.' },
+  'bend|harm': { stars: 3, emoji: '🌙', label: 'Delicate — narrow window', notes: 'Harmonics can be bent, but only slightly — a few cents of shimmer rather than a true slide.' },
+  'circ|multi': { stars: 4, emoji: '🐝', label: 'The infinite swarm', notes: 'A sustained multiphonic with no breaths — a swarm that never lands. Choose a very stable multiphonic.' }
+};
+
+const DEFAULT_TEXTS = {
+  heroBadge: 'Patrícia Pinheiro · oboe & cor anglais',
+  heroSub: 'An interactive reference for composers and performers — extended techniques, multiphonics and the full sonic world of the oboe and cor anglais.',
+  ticker: ['EXTENDED TECHNIQUES', 'MULTIPHONICS', 'FLUTTER TONGUE', 'CIRCULAR BREATHING', 'AIR SOUNDS', 'KEY CLICKS', 'GLISSANDO', 'HARMONICS', 'COR ANGLAIS'],
+  podSub: 'Scroll the wheel, pick a technique, press play. Where a real recording exists it plays automatically — the rest are synthesised sketches for now.',
+  techniquesSub: 'Browse and filter by category — open a row for notation, practice notes and recordings.',
+  mixSub: 'Pick two techniques and see how well they get along.',
+  tvSub: 'Reels, seagull sounds and experiments — zapping encouraged.',
+  coffeeTitle: 'Buy me a reed',
+  coffeeSub: 'This playground is built and recorded by one oboist, between rehearsals. A coffee (or a piece of cane) keeps the recordings, the multiphonic analyses and the whole archive growing — and free for everyone.',
+  contactSub: "Commissions, recordings, questions about a passage you're writing — or just to say your multiphonic finally spoke.",
+  footerLine: 'Curated by Patrícia Pinheiro — oboe & cor anglais'
+};
+
+const HERO_TAGS = [
+  { label: 'flutter tongue', top: 20, left: 16, par: 0.12, anim: 'drift1 12s ease-in-out infinite' },
+  { label: 'multiphonics', top: 32, left: 74, par: -0.14, anim: 'drift2 15s ease-in-out infinite' },
+  { label: 'circular breathing', top: 72, left: 20, par: 0.16, anim: 'drift3 17s ease-in-out infinite' },
+  { label: 'key clicks', top: 76, left: 62, par: -0.1, anim: 'drift1 14s ease-in-out infinite' },
+  { label: 'air sounds', top: 10, left: 68, par: 0.09, anim: 'drift2 19s ease-in-out infinite' },
+  { label: 'harmonics', top: 56, left: 84, par: -0.16, anim: 'drift3 13s ease-in-out infinite' }
+];
+
+const RIPPLE_COLORS = ['#000181', '#006EE9', '#E8A0FF', '#F6F5EC'];
+
+class Component extends DCLogic {
+  state = {
+    view: null, filter: 'all', search: '',
+    modalId: null, playing: false, selIdx: 0,
+    mixA: null, mixB: null, ripples: [], reeds: [],
+    recordings: {}, videos: [], tvIdx: 0, tvStatic: false, videoMode: null,
+    aiOpen: false, aiBusy: false,
+    faq: [], multis: [],
+    aiMsgs: [{ role: 'bot', text: 'Hello! Pick a question below — or write to Patrícia through the form.' }]
+  };
+
+  componentDidMount() {
+    this._esc = (e) => { if (e.key === 'Escape') this.setState({ modalId: null }); };
+    window.addEventListener('keydown', this._esc);
+
+    this._move = (e) => {
+      const hero = document.getElementById('top');
+      if (!hero) return;
+      const r = hero.getBoundingClientRect();
+      if (e.clientY > r.bottom) return;
+      const cx = e.clientX - r.left - r.width / 2;
+      const cy = e.clientY - r.top - r.height / 2;
+      const glow = document.getElementById('hero-glow');
+      if (glow) glow.style.transform = 'translate(' + (e.clientX - r.left) + 'px,' + (e.clientY - r.top) + 'px)';
+      hero.querySelectorAll('[data-par]').forEach((el) => {
+        const p = parseFloat(el.getAttribute('data-par')) || 0;
+        el.style.translate = (cx * p).toFixed(1) + 'px ' + (cy * p).toFixed(1) + 'px';
+      });
+    };
+    window.addEventListener('mousemove', this._move, { passive: true });
+
+    const load = (f, fn) => fetch(f).then((r) => r.json()).then(fn).catch(() => {});
+    load('data/recordings.json', (recordings) => this.setState({ recordings }));
+    load('data/videos.json', (v) => Array.isArray(v) && this.setState({ videos: v }));
+    load('data/faq.json', (f) => Array.isArray(f) && this.setState({ faq: f }));
+    load('data/techniques.json', (t) => Array.isArray(t) && t.length && this.setState({ techsData: t }));
+    load('data/categories.json', (c) => Array.isArray(c) && c.length && this.setState({ catsData: c }));
+    load('data/site-texts.json', (t) => t && typeof t === 'object' && this.setState({ texts: t }));
+    load('data/multiphonics.json', (m) => Array.isArray(m) && this.setState({ multis: m }));
+    load('data/pairs.json', (p) => Array.isArray(p) && p.length && this.setState({ pairsData: p }));
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('keydown', this._esc);
+    window.removeEventListener('mousemove', this._move);
+  }
+
+  pairsMap() {
+    const d = this.state.pairsData;
+    if (!d || !d.length) return PAIRS;
+    const m = {};
+    d.forEach((p) => { m[[p.a, p.b].sort().join('|')] = { stars: p.stars, emoji: p.emoji, label: p.label, notes: p.notes, audio: p.audio || '', audioLabel: p.audioLabel || '' }; });
+    return m;
+  }
+
+  get C() {
+    const d = this.state.catsData;
+    if (!d || !d.length) return CATS;
+    const m = {};
+    d.forEach((c) => { m[c.id] = c; });
+    return m;
+  }
+
+  get T() {
+    const d = this.state.techsData;
+    if (!d || !d.length) return TECHS;
+    return d.map((t) => ({ ...(TECHS.find((b) => b.id === t.id) || {}), ...t }));
+  }
+
+  recsFor(id) {
+    const r = (this.state.recordings || {})[id];
+    if (!r) return [];
+    return Array.isArray(r) ? r.filter((x) => x && x.file) : [{ file: r, label: 'Recording', instrument: '', notes: '' }];
+  }
+
+  rainReeds(n) {
+    const count = n || 34;
+    const reeds = [];
+    for (let i = 0; i < count; i++) {
+      reeds.push({
+        id: Date.now() + '-' + i,
+        left: (Math.random() * 98).toFixed(1),
+        dur: (2.6 + Math.random() * 2.6).toFixed(2),
+        delay: (Math.random() * 1.3).toFixed(2),
+        scale: (0.6 + Math.random() * 0.9).toFixed(2),
+        tint: ['#E9C79B', '#D9B27C', '#F0D8B4'][i % 3]
+      });
+    }
+    this.setState({ reeds });
+    clearTimeout(this._reedT);
+    this._reedT = setTimeout(() => this.setState({ reeds: [] }), 6200);
+  }
+
+  spawnRipples(x, y) {
+    const ripples = [];
+    for (let i = 0; i < 4; i++) {
+      ripples.push({
+        id: Date.now() + '-' + i, x, y,
+        size: 160 + i * 190,
+        delay: (i * 0.11).toFixed(2),
+        color: RIPPLE_COLORS[i % RIPPLE_COLORS.length]
+      });
+    }
+    this.setState({ ripples });
+    clearTimeout(this._rt);
+    this._rt = setTimeout(() => this.setState({ ripples: [] }), 2000);
+  }
+
+  heroTap(e) {
+    if (e.target.closest('a, button, input')) return;
+    this.spawnRipples(e.clientX, e.clientY);
+    this.playSynth(this.T[Math.floor(Math.random() * this.T.length)]);
+  }
+
+  playRecording(src) {
+    if (this._audio) {
+      this._audio.pause();
+      this._audio = null;
+      if (this.state.playing) { this.setState({ playing: false }); return; }
+    }
+    const a = new Audio(src);
+    this._audio = a;
+    a.onended = () => { this._audio = null; this.setState({ playing: false }); };
+    a.play().catch(() => {});
+    this.setState({ playing: true });
+  }
+
+  zapTo(i) {
+    if (i === this.state.tvIdx) return;
+    this.setState({ tvStatic: true });
+    clearTimeout(this._zt);
+    this._zt = setTimeout(() => this.setState({ tvIdx: i, tvStatic: false }), 340);
+  }
+
+  zap(dir) {
+    const n = (this.state.videos || []).length;
+    if (!n) return;
+    this.zapTo((this.state.tvIdx + dir + n) % n);
+  }
+
+  openTech(id) { this.setState({ modalId: id, playing: false }); }
+
+  angleAt(el, e) {
+    const r = el.getBoundingClientRect();
+    return Math.atan2(e.clientY - (r.top + r.height / 2), e.clientX - (r.left + r.width / 2));
+  }
+
+  wheelDown(e) {
+    if (e.target.closest('button')) return;
+    const el = e.currentTarget;
+    this._drag = { last: this.angleAt(el, e), acc: 0, el, moved: false };
+    if (el.setPointerCapture) { try { el.setPointerCapture(e.pointerId); } catch (err) {} }
+    this.setState({ dragging: true });
+  }
+
+  wheelMove(e) {
+    const d = this._drag;
+    if (!d) return;
+    let a = this.angleAt(d.el, e);
+    let delta = a - d.last;
+    if (delta > Math.PI) delta -= Math.PI * 2;
+    if (delta < -Math.PI) delta += Math.PI * 2;
+    d.last = a;
+    d.acc += delta;
+    const step = 0.42;
+    while (Math.abs(d.acc) >= step) {
+      const dir = d.acc > 0 ? 1 : -1;
+      d.acc -= dir * step;
+      d.moved = true;
+      this.movePod(dir);
+      this.tick();
+    }
+  }
+
+  wheelUp() {
+    this._drag = null;
+    if (this.state.dragging) this.setState({ dragging: false });
+  }
+
+  tick() {
+    try {
+      const AC = window.AudioContext || window.webkitAudioContext;
+      this._ac = this._ac || new AC();
+      const ac = this._ac;
+      if (ac.state === 'suspended') ac.resume();
+      const now = ac.currentTime;
+      const g = ac.createGain();
+      g.connect(ac.destination);
+      g.gain.setValueAtTime(0.06, now);
+      g.gain.exponentialRampToValueAtTime(0.0001, now + 0.05);
+      const o = ac.createOscillator();
+      o.type = 'square';
+      o.frequency.setValueAtTime(1900, now);
+      o.connect(g);
+      o.start(now);
+      o.stop(now + 0.05);
+    } catch (err) {}
+  }
+
+  shuffleMix() {
+    const T = this.T;
+    if (T.length < 2) return;
+    let a = Math.floor(Math.random() * T.length);
+    let b = Math.floor(Math.random() * T.length);
+    while (b === a) b = Math.floor(Math.random() * T.length);
+    this.setState({ mixA: T[a].id, mixB: T[b].id });
+  }
+
+  movePod(dir) {
+    const n = this.T.length;
+    this.setState({ selIdx: (this.state.selIdx + dir + n) % n });
+  }
+
+  playSynth(t) {
+    const recs = this.recsFor(t.id);
+    if (recs.length) { this.playRecording(recs[0].file); return; }
+    try {
+      const AC = window.AudioContext || window.webkitAudioContext;
+      this._ac = this._ac || new AC();
+      const ac = this._ac;
+      if (ac.state === 'suspended') ac.resume();
+      const now = ac.currentTime, dur = 1.9;
+      const g = ac.createGain();
+      g.connect(ac.destination);
+      g.gain.setValueAtTime(0.0001, now);
+      g.gain.exponentialRampToValueAtTime(0.16, now + 0.06);
+      g.gain.setValueAtTime(0.16, now + dur - 0.35);
+      g.gain.exponentialRampToValueAtTime(0.0001, now + dur);
+      const osc = (type, f) => { const o = ac.createOscillator(); o.type = type; o.frequency.setValueAtTime(f, now); return o; };
+      const noise = () => {
+        const buf = ac.createBuffer(1, ac.sampleRate * dur, ac.sampleRate);
+        const d = buf.getChannelData(0);
+        for (let i = 0; i < d.length; i++) d[i] = Math.random() * 2 - 1;
+        const s = ac.createBufferSource(); s.buffer = buf; return s;
+      };
+      const start = (n) => { n.start(now); n.stop(now + dur); };
+      switch (t.synth) {
+        case 'flutter': {
+          const o = osc('sawtooth', 440); o.connect(g); start(o);
+          const lfo = osc('sine', 26), lg = ac.createGain(); lg.gain.value = 0.10;
+          lfo.connect(lg); lg.connect(g.gain); start(lfo);
+          break;
+        }
+        case 'multi': {
+          [415, 622, 749].forEach((f) => { const o = osc('sawtooth', f); const og = ac.createGain(); og.gain.value = 0.4; o.connect(og); og.connect(g); start(o); });
+          break;
+        }
+        case 'harm': { const o = osc('sine', 1046); o.connect(g); start(o); break; }
+        case 'circ': {
+          const o = osc('sawtooth', 587); o.connect(g);
+          const v = osc('sine', 5.2), vg = ac.createGain(); vg.gain.value = 4;
+          v.connect(vg); vg.connect(o.frequency); start(v); start(o);
+          break;
+        }
+        case 'gliss': { const o = osc('sawtooth', 392); o.frequency.linearRampToValueAtTime(587, now + dur * 0.8); o.connect(g); start(o); break; }
+        case 'bend': {
+          const o = osc('sawtooth', 440);
+          o.frequency.linearRampToValueAtTime(415, now + 0.7);
+          o.frequency.setValueAtTime(415, now + 1.0);
+          o.frequency.linearRampToValueAtTime(440, now + 1.6);
+          o.connect(g); start(o);
+          break;
+        }
+        case 'keys': {
+          g.gain.cancelScheduledValues(now); g.gain.setValueAtTime(0.0001, now);
+          [0, 0.28, 0.5, 0.92, 1.15, 1.5].forEach((tm) => {
+            g.gain.setValueAtTime(0.001, now + tm);
+            g.gain.exponentialRampToValueAtTime(0.35, now + tm + 0.012);
+            g.gain.exponentialRampToValueAtTime(0.0001, now + tm + 0.09);
+          });
+          const s = noise(); const f = ac.createBiquadFilter(); f.type = 'lowpass'; f.frequency.value = 900;
+          s.connect(f); f.connect(g); start(s);
+          break;
+        }
+        case 'air': {
+          const s = noise(); const f = ac.createBiquadFilter(); f.type = 'bandpass'; f.frequency.value = 1800; f.Q.value = 1.4;
+          s.connect(f); f.connect(g); start(s);
+          const o = osc('sine', 880); const og = ac.createGain(); og.gain.value = 0.12; o.connect(og); og.connect(g); start(o);
+          break;
+        }
+        case 'low': {
+          const o = osc('sawtooth', 175); const f = ac.createBiquadFilter(); f.type = 'lowpass'; f.frequency.value = 700;
+          o.connect(f); f.connect(g); start(o);
+          break;
+        }
+        default: { const o = osc('sawtooth', 440); o.connect(g); start(o); }
+      }
+      this.setState({ playing: true });
+      clearTimeout(this._pt);
+      this._pt = setTimeout(() => this.setState({ playing: false }), dur * 1000);
+    } catch (e) { /* audio unavailable */ }
+  }
+
+  pickMix(side, id) {
+    this.setState({ [side]: this.state[side] === id ? null : id }, () => {
+      const r = this.computeMix();
+      if (r && r.stars >= 5) this.spawnRipples(window.innerWidth / 2, window.innerHeight * 0.62);
+    });
+  }
+
+  computeMix() {
+    const { mixA, mixB } = this.state;
+    if (!mixA || !mixB) return null;
+    if (mixA === mixB) return { stars: 0, emoji: '🤨', label: 'That\u2019s just one technique', notes: 'Pick two different techniques to test a combination.' };
+    const key = [mixA, mixB].sort().join('|');
+    const P = this.pairsMap();
+    if (P[key]) return P[key];
+    const a = this.T.find((t) => t.id === mixA), b = this.T.find((t) => t.id === mixB);
+    return { stars: 3, emoji: '🧪', label: 'Workable — test it', notes: a.name + ' and ' + b.name + ' can coexist; register and balance will decide. Try it with your oboist — or ask in the chat bottom right.' };
+  }
+
+  pickFaq(f) {
+    if (this.state.aiBusy) return;
+    const msgs = [...this.state.aiMsgs, { role: 'user', text: f.q }];
+    this.setState({ aiMsgs: msgs, aiBusy: true }, () => this.scrollChat());
+    clearTimeout(this._ft);
+    this._ft = setTimeout(() => {
+      this.setState({ aiMsgs: [...this.state.aiMsgs, { role: 'bot', text: f.a }], aiBusy: false }, () => this.scrollChat());
+    }, 550);
+  }
+
+  scrollChat() {
+    const el = document.getElementById('ai-scroll');
+    if (el) el.scrollTop = el.scrollHeight;
+  }
+
+  renderVals() {
+    const view = this.state.view || this.props.defaultView || 'composer';
+    const { filter, search, modalId, mixA, mixB, playing, selIdx } = this.state;
+
+    const viewDefs = [
+      { id: 'composer', label: 'Composer' },
+      { id: 'oboist', label: 'Oboist' },
+      { id: 'explorer', label: 'Explorer' }
+    ];
+    const viewBtns = viewDefs.map((v) => ({
+      ...v,
+      pick: () => this.setState({ view: v.id }),
+      bg: v.id === view ? '#000181' : 'transparent',
+      color: v.id === view ? '#D0FFA4' : 'rgba(0,1,129,.55)'
+    }));
+
+    const CC = this.C;
+    const catOf = (c) => CC[c] || { label: '—', color: '#E8A0FF', tile: '#f6e6ff' };
+    const filterDefs = [{ id: 'all', label: 'All' }].concat(Object.keys(CC).map((c) => ({ id: c, label: (CC[c].emoji ? CC[c].emoji + ' ' : '') + CC[c].label })));
+    const filters = filterDefs.map((f) => ({
+      ...f,
+      pick: () => this.setState({ filter: f.id }),
+      color: f.id === filter ? '#D0FFA4' : 'rgba(0,1,129,.6)',
+      bg: f.id === filter ? '#000181' : 'transparent'
+    }));
+
+    const TT = this.T;
+    const q = search.trim().toLowerCase();
+    const techs = TT
+      .filter((t) => filter === 'all' || t.cat === filter)
+      .filter((t) => !q || t.name.toLowerCase().includes(q) || (t.sub || '').toLowerCase().includes(q) || (t.subs || []).join(' ').toLowerCase().includes(q))
+      .map((t, i) => ({
+        ...t,
+        num: String(i + 1).padStart(2, '0'),
+        catLabel: (catOf(t.cat).emoji ? catOf(t.cat).emoji + ' ' : '') + catOf(t.cat).label,
+        catColor: catOf(t.cat).color,
+        tileBg: catOf(t.cat).tile,
+        emoji: t.emoji || '✳',
+        open: () => this.openTech(t.id),
+        hear: (e) => { e.stopPropagation(); this.playSynth(t); }
+      }));
+
+    const podRows = TT.map((t, i) => ({
+      num: i + 1,
+      name: t.name,
+      mark: i === selIdx ? (playing ? '♪' : '▸') : '',
+      pick: () => this.setState({ selIdx: i }),
+      bg: i === selIdx ? '#D0FFA4' : 'transparent',
+      color: i === selIdx ? '#000181' : 'rgba(246,245,236,.8)'
+    }));
+    const selTech = TT[Math.min(selIdx, TT.length - 1)];
+
+    const mkMixList = (side, otherId) => TT.map((t) => {
+      const sel = this.state[side] === t.id;
+      return {
+        name: t.name,
+        pick: () => this.pickMix(side, t.id),
+        color: sel ? '#D0FFA4' : '#000181',
+        bg: sel ? '#000181' : 'transparent',
+        opacity: t.id === otherId ? 0.4 : 1
+      };
+    });
+
+    const mixResult = this.computeMix();
+    const mixStars = mixResult ? [1, 2, 3, 4, 5].map((n) => ({ color: n <= mixResult.stars ? '#006EE9' : 'rgba(0,1,129,.15)' })) : [];
+    const nameOf = (id) => { const t = TT.find((x) => x.id === id); return t ? t.name : ''; };
+    const emojiOf = (id) => { const t = TT.find((x) => x.id === id); return t ? (t.emoji || '✳') : '✳'; };
+    const mixVerdict = mixResult ? (mixResult.stars >= 5 ? 'A perfect marriage' : mixResult.stars >= 4 ? 'Strong chemistry' : mixResult.stars >= 3 ? 'Worth testing' : 'Handle with care') : '';
+
+    const mt = TT.find((t) => t.id === modalId);
+    const noteMap = {
+      composer: { label: 'For composers', key: 'composer' },
+      oboist: { label: 'For oboists', key: 'oboist' },
+      explorer: { label: 'Did you know?', key: 'fun' }
+    };
+    const modal = mt ? { ...mt, catLabel: (catOf(mt.cat).emoji ? catOf(mt.cat).emoji + ' ' : '') + catOf(mt.cat).label, catColor: catOf(mt.cat).color } : null;
+    const modalSubs = mt ? (mt.subs || []).map((s) => ({ label: s })) : [];
+
+    const barHs = [8, 14, 6, 18, 10, 16, 8];
+    const synthBars = barHs.map((h, i) => ({ h, anim: playing ? 'barPulse ' + (0.35 + (i % 3) * 0.12).toFixed(2) + 's ease-in-out infinite' : 'none' }));
+
+    const roleStyles = {
+      user: { bg: '#E8A0FF', color: '#000181' },
+      bot: { bg: '#FFFFFF', color: '#000181' }
+    };
+    const roleAlign = { user: 'flex-end', bot: 'flex-start' };
+
+    let lastWheel = this._lastWheel || 0;
+
+    const videos = this.state.videos || [];
+    const nv = videos.length;
+    const tvIdx = nv ? Math.min(this.state.tvIdx, nv - 1) : 0;
+    const curV = nv ? videos[tvIdx] : null;
+    const ytId = (u) => {
+      const s = String(u || '');
+      const m = s.match(/(?:youtube\.com\/(?:watch\?(?:.*&)?v=|embed\/|shorts\/|live\/)|youtu\.be\/)([A-Za-z0-9_-]{6,})/);
+      return m ? m[1] : '';
+    };
+    const isLocalVid = (u) => /^video\//.test(String(u || '')) || /\.(mp4|webm|mov|m4v|ogv)(\?|$)/i.test(String(u || ''));
+    const platformOf = (u) => {
+      if (!u) return 'none';
+      if (isLocalVid(u)) return 'file';
+      if (ytId(u)) return 'youtube';
+      if (/instagram\.com/.test(String(u))) return 'instagram';
+      return 'other';
+    };
+    const toEmbed = (u) => {
+      if (!u) return '';
+      const y = ytId(u);
+      if (y) return 'https://www.youtube.com/embed/' + y + '?rel=0';
+      const m = String(u).match(/instagram\.com\/(reel|p|tv)\/([A-Za-z0-9_-]+)/);
+      if (m) return 'https://www.instagram.com/' + m[1] + '/' + m[2] + '/embed/';
+      return u;
+    };
+    const curPlatform = platformOf(curV && curV.url);
+    const isWide = curPlatform === 'youtube' && !/shorts\//.test(String((curV && curV.url) || ''));
+    const videoMode = this.state.videoMode || this.props.videoLayout || 'tv';
+    const vColors = ['#D0FFA4', '#E8A0FF', '#83E7FF', '#dceaff', '#eeffdc'];
+    const platLabel = { youtube: 'YouTube', instagram: 'Instagram', file: 'Video', other: 'Video', none: 'Free slot' };
+    const tvChannels = videos.map((v, i) => ({
+      num: String(i + 1).padStart(2, '0'),
+      title: v.title,
+      plat: platLabel[platformOf(v.url)],
+      mark: i === tvIdx ? '◉' : (v.url ? '▸' : '·'),
+      pick: () => this.zapTo(i),
+      bg: i === tvIdx ? '#000181' : 'rgba(246,245,236,.55)',
+      color: i === tvIdx ? '#D0FFA4' : '#000181'
+    }));
+    const wallCards = videos.map((v, i) => ({
+      title: v.title,
+      url: v.url || '',
+      hasUrl: !!v.url,
+      noUrl: !v.url,
+      num: String(i + 1).padStart(2, '0'),
+      plat: platLabel[platformOf(v.url)],
+      bg: vColors[i % vColors.length]
+    }));
+    const tvModeBtns = [
+      { id: 'tv', label: 'TV mode' },
+      { id: 'wall', label: 'Wall mode' }
+    ].map((b) => ({
+      ...b,
+      pick: () => this.setState({ videoMode: b.id }),
+      bg: b.id === videoMode ? '#000181' : 'transparent',
+      color: b.id === videoMode ? '#D0FFA4' : 'rgba(0,1,129,.6)'
+    }));
+
+    const modalRecs = mt ? this.recsFor(mt.id).map((r) => ({
+      label: r.label || 'Recording',
+      meta: [r.instrument, r.notes].filter(Boolean).join(' · ') || 'audio/' + String(r.file).split('/').pop(),
+      play: () => this.playRecording(r.file)
+    })) : [];
+    const hasRec = modalRecs.length > 0;
+    const modalVars = (mt && Array.isArray(mt.variations) ? mt.variations : []).map((v, i) => {
+      const imgs = (v.images || []).filter((im) => im && im.path);
+      return {
+        name: v.name || 'Variation ' + (i + 1),
+        instrument: v.instrument || 'Oboe',
+        note: v.note || '', hasNote: !!v.note,
+        fingering: v.fingering || '', hasFing: !!v.fingering,
+        notes: v.notes || '', hasNotes: !!v.notes,
+        hasImgs: imgs.length > 0,
+        images: imgs.map((im) => ({ src: im.path, caption: im.caption || '', hasCaption: !!im.caption }))
+      };
+    });
+    const varImgPaths = new Set();
+    modalVars.forEach((v) => v.images.forEach((im) => varImgPaths.add(im.src)));
+    const modalFings = (mt && Array.isArray(mt.fingerings) ? mt.fingerings : []).filter((f) => f.image && !varImgPaths.has(f.image)).map((f) => ({
+      name: f.name || 'Fingering',
+      src: f.image
+    }));
+
+    const noteName = (midi) => NOTE_EN[((midi % 12) + 12) % 12] + (Math.floor(midi / 12) - 1);
+    const modalMultis = mt ? (this.state.multis || []).filter((m) => m.tech === mt.id).map((m) => ({
+      name: m.name || 'Multiphonic',
+      fing: m.fingering || '',
+      notes: m.notes || '',
+      hasAudio: !!m.audio,
+      play: () => this.playRecording(m.audio),
+      hasImg: !!m.image,
+      img: m.image || '',
+      chips: (m.partials || []).map((p, i) => ({
+        label: noteName(p.midi) + ' ' + (p.cents > 0 ? '+' : '') + p.cents,
+        bg: i === 0 ? '#D0FFA4' : '#F6F5EC'
+      }))
+    })) : [];
+
+    const TX = { ...DEFAULT_TEXTS, ...(this.state.texts || {}) };
+    const tickerWords = Array.isArray(TX.ticker) && TX.ticker.length ? TX.ticker : DEFAULT_TEXTS.ticker;
+    const heroWord = (this.props.heroWord || 'OBOE').slice(0, 10);
+
+    return {
+      txHeroBadge: TX.heroBadge, txHeroSub: TX.heroSub,
+      tickerText: tickerWords.join('   ·   ') + '   ·\u00a0\u00a0',
+      txPodSub: TX.podSub, txTechniquesSub: TX.techniquesSub, txMixSub: TX.mixSub,
+      txTvSub: TX.tvSub, txContactSub: TX.contactSub, txFooterLine: TX.footerLine,
+      heroLetters: heroWord.split('').map((char, i) => ({ char, delay: (0.1 + i * 0.07).toFixed(2) })),
+      heroTags: (this.props.heroTags ?? true) ? HERO_TAGS : [],
+      heroClick: (e) => this.heroTap(e),
+      ripples: this.state.ripples,
+      viewBtns,
+      tvMode: videoMode === 'tv' && nv > 0,
+      wallMode: videoMode === 'wall' && nv > 0,
+      tvModeBtns, tvChannels, wallCards,
+      tvIsFile: !!(curV && isLocalVid(curV.url)),
+      tvHasUrl: !!(curV && curV.url && !isLocalVid(curV.url)),
+      tvFileSrc: curV && isLocalVid(curV.url) ? curV.url : '',
+      tvNoUrl: !!curV && !curV.url,
+      tvSrc: curV ? toEmbed(curV.url) : '',
+      tvOpen: curV ? curV.url : '',
+      tvTitle: curV ? curV.title : '',
+      tvNum: 'CH ' + String(tvIdx + 1).padStart(2, '0'),
+      tvPlatform: platLabel[curPlatform],
+      tvAspect: isWide ? '16/9' : '9/14',
+      tvStatic: this.state.tvStatic,
+      zapPrev: () => this.zap(-1),
+      zapNext: () => this.zap(1),
+      modalHasImg: !!(mt && mt.image),
+      modalImgSrc: mt ? (mt.image || '') : '',
+      modalRecs, modalHasRecs: hasRec, modalNoRecs: !!mt && !hasRec,
+      modalFings, modalHasFings: modalFings.length > 0,
+      modalVars, modalHasVars: modalVars.length > 0,
+      modalMultis, modalHasMultis: modalMultis.length > 0,
+      audioSectionLabel: hasRec ? 'Recordings — the real thing' : 'Audio demo — synth preview',
+      audioNote: hasRec ? 'Real recording by Patrícia — loaded from the audio/ folder.' : 'Synthesised sketch — real recordings coming soon.',
+      mixVisible: true,
+      filters, techs, noResults: techs.length === 0,
+      search, setSearch: (e) => this.setState({ search: e.target.value }),
+      surprise: () => this.openTech(TT[Math.floor(Math.random() * TT.length)].id),
+
+      podRows,
+      podBattery: '▮▮▮▯',
+      podNowPlaying: playing ? 'now playing — ' + selTech.audioLabel : 'track ' + (selIdx + 1) + ' of ' + TT.length + ' — ' + selTech.name,
+      podPrev: () => this.movePod(-1),
+      podNext: () => this.movePod(1),
+      podPlay: () => this.playSynth(selTech),
+      podPlayIcon: playing ? '⏸' : '▶',
+      podMenu: () => this.openTech(selTech.id),
+      podOpen: () => this.openTech(selTech.id),
+      podShift: -Math.max(0, Math.min(selIdx - 2, TT.length - 5)) * 30,
+      podDown: (e) => this.wheelDown(e),
+      podMove: (e) => this.wheelMove(e),
+      podUp: (e) => this.wheelUp(e),
+      podWheel: (e) => {
+        e.preventDefault();
+        const now = Date.now();
+        if (now - lastWheel > 140) {
+          this._lastWheel = now;
+          this.movePod(e.deltaY > 0 ? 1 : -1);
+        }
+      },
+
+      modal, modalSubs,
+      modalNoteLabel: noteMap[view].label,
+      modalNoteText: mt ? mt[noteMap[view].key] : '',
+      closeModal: () => this.setState({ modalId: null }),
+      stopClick: (e) => e.stopPropagation(),
+      playDemo: () => mt && this.playSynth(mt),
+      playIcon: playing ? '◼' : '▶',
+      synthBars,
+      mixListA: mkMixList('mixA', mixB),
+      mixListB: mkMixList('mixB', mixA),
+      mixResult, mixStars, mixVerdict,
+      mixHasAudio: !!(mixResult && mixResult.audio),
+      mixAudioLabel: (mixResult && mixResult.audioLabel) || 'Ouvir a mistura',
+      mixPlayRec: () => { if (mixResult && mixResult.audio) this.playRecording(mixResult.audio); },
+      mixShuffle: () => this.shuffleMix(),
+      mixPlay: () => { if (mixA) this.playSynth(TT.find((t) => t.id === mixA)); },
+      mixAName: mixA ? nameOf(mixA) : 'pick one', mixBName: mixB ? nameOf(mixB) : 'pick one',
+      mixAEmoji: mixA ? emojiOf(mixA) : '·', mixBEmoji: mixB ? emojiOf(mixB) : '·',
+      reeds: this.state.reeds,
+      rainReeds: () => this.rainReeds(),
+      contactTopics: ['A commission', 'A recording', 'A technique question', 'Teaching', 'Just saying hi'].map((label, i) => {
+        const sel = this.state.topic === label;
+        return {
+          label,
+          pick: () => this.setState({ topic: sel ? null : label }),
+          bg: sel ? '#D0FFA4' : 'transparent',
+          color: sel ? '#000181' : '#F6F5EC',
+          border: sel ? '#D0FFA4' : 'rgba(246,245,236,.4)'
+        };
+      }),
+      contactTopic: this.state.topic || '',
+      bioFacts: [
+        { k: 'Based in', v: 'Portugal, mostly on trains' },
+        { k: 'Plays', v: 'Oboe, cor anglais, oboe d’amore' },
+        { k: 'Collects', v: 'Multiphonics & seagull noises' },
+        { k: 'Reeds made', v: 'More than anyone should' }
+      ],
+      bioStickers: [
+        { label: 'reed nerd', bg: '#D0FFA4', rot: '-6deg', top: 4, left: 60 },
+        { label: 'new music', bg: '#83E7FF', rot: '7deg', top: 74, left: -4 },
+        { label: 'says yes to weird', bg: '#E8A0FF', rot: '-4deg', top: 42, left: 58 }
+      ],
+      bioTags: ['extended techniques', 'premières', 'improvisation', 'teaching', 'chamber music', 'recording'].map((label) => ({ label })),
+      txCoffeeTitle: TX.coffeeTitle, txCoffeeSub: TX.coffeeSub,
+      coffeeUrl: this.props.coffeeUrl || 'https://buymeacoffee.com/',
+      coffeeTiers: [
+        { label: 'One coffee', amount: '3 €', note: 'A morning of editing audio' },
+        { label: 'One reed', amount: '25 €', note: 'A new reed for the recordings' },
+        { label: 'One session', amount: '60 €', note: 'A full recording afternoon' }
+      ].map((t, i) => ({ ...t, bg: ['#D0FFA4', '#83E7FF', '#E8A0FF'][i], href: (this.props.coffeeUrl || 'https://buymeacoffee.com/') })),
+      aiEnabled: this.props.showAiChat ?? true,
+      aiOpen: this.state.aiOpen,
+      toggleAi: () => this.setState({ aiOpen: !this.state.aiOpen }),
+      aiMsgs: this.state.aiMsgs.map((m) => ({ ...m, ...roleStyles[m.role], align: roleAlign[m.role] })),
+      aiBusy: this.state.aiBusy,
+      faqChips: (this.state.faq || []).map((f) => ({ label: f.q, pick: () => this.pickFaq(f) }))
+    };
+  }
+}
+
+</script>
+</body>
+</html>

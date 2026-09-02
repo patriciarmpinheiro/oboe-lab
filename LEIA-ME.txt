@@ -1,0 +1,18 @@
+ATUALIZAR O SITE — 3 ficheiros
+==============================
+
+Arrasta estes 3 ficheiros para a RAIZ do repositório no GitHub
+(o mesmo sítio onde já está a pasta data/), aceitando substituir:
+
+  index.html
+  The Oboe Playground v5.dc.html
+  support.js
+
+Depois: Commit changes. O Netlify republica sozinho em ~1 minuto.
+
+NAO apagues nem substituas as pastas data/, audio/, images/ e video/ —
+essas sao o teu conteudo, geridas pelo Archive Studio.
+
+Porque e preciso: o index.html abria a versao v4 do site. A v5 e a
+que mostra as variacoes das tecnicas, as gravacoes das misturas e os
+videos de ficheiro.
