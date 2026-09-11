@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated": "2026-09-02T20:50:48.866Z",
+  "updated": "2026-09-11T09:32:34.856Z",
   "categories": [
     {
       "id": "som",
@@ -29,176 +29,185 @@
   ],
   "techniques": [
     {
+      "subs": [
+        "lingual",
+        "uvular"
+      ],
+      "fingerings": [],
+      "variations": [],
+      "videos": [],
       "id": "flutter",
       "name": "Flutter Tongue",
       "cat": "som",
       "emoji": "🌀",
       "sub": "Rolling tremolo of tone colour",
       "desc": "Produced by rolling an \"r\" (lingual or uvular) while playing. The effect is a rapid fluctuation of tone colour without significant pitch change. Speaks best in the middle register at mf and above.",
-      "subs": [
-        "lingual",
-        "uvular"
-      ],
       "composer": "Notate with three tremolo strokes plus \"flz.\" and mark clearly where it ends. Reliable down to about C4; below that it becomes dense and less stable.",
       "oboist": "If a rolled R is impossible for you, use the uvular (throat) flutter — slower, but far more controllable. Keep the air speed high or the reed will choke.",
       "fun": "Roughly one in ten oboists cannot roll an R at all — they build their whole flutter technique in the throat instead.",
       "synth": "flutter",
-      "audioLabel": "Flutter Tongue A4",
-      "fingerings": [],
-      "variations": []
+      "audioLabel": "Flutter Tongue A4"
     },
     {
+      "subs": [
+        "fingered",
+        "dyads",
+        "beating"
+      ],
+      "fingerings": [],
+      "variations": [],
+      "videos": [],
       "id": "multi",
       "name": "Multiphonics",
       "cat": "ext",
       "emoji": "🎶",
       "sub": "Two or more pitches at once",
       "desc": "Special fingerings and embouchure adjustments make the reed vibrate in several modes at once, producing chords, beatings and rough textures. Each multiphonic has its own fingering, dynamic window and degree of stability.",
-      "subs": [
-        "fingered",
-        "dyads",
-        "beating"
-      ],
       "composer": "Always print the fingering diagram in the score, and give the player time to set the embouchure — avoid fast approaches from loud tutti passages.",
       "oboist": "Practise each one at the written dynamic; most only speak in a narrow band. Voicing slightly lower than the bottom note usually helps stability.",
       "fun": "Over 200 oboe multiphonics have been catalogued — but every reed favours a different subset, so no two oboists share the same menu.",
       "synth": "multi",
-      "audioLabel": "Multiphonic — stable dyad",
-      "fingerings": [],
-      "variations": []
+      "audioLabel": "Multiphonic — stable dyad"
     },
     {
+      "subs": [
+        "octave",
+        "twelfth"
+      ],
+      "fingerings": [],
+      "variations": [],
+      "videos": [],
       "id": "harm",
       "name": "Harmonics",
       "cat": "reg",
       "emoji": "✨",
       "sub": "Ethereal overtone colours",
       "desc": "Overblown fingerings that produce a thin, veiled version of the pitch — a flute-like whisper of the note. Available roughly from C5 upward, sounding an octave or a twelfth above the base fingering.",
-      "subs": [
-        "octave",
-        "twelfth"
-      ],
       "composer": "Notate with a small circle above the note. Best at p–mp in slow music; harmonics will not project over a full orchestra.",
       "oboist": "Half-hole and voicing control are everything. Think of blowing \"through\" the note rather than at it.",
       "fun": "Orchestral oboists have quietly used harmonic fingerings for centuries — as secret pianissimo alternatives long before new music asked for them by name.",
       "synth": "harm",
-      "audioLabel": "Harmonic C6",
-      "fingerings": [],
-      "variations": []
+      "audioLabel": "Harmonic C6"
     },
     {
+      "subs": [
+        "sustained",
+        "drones"
+      ],
+      "fingerings": [],
+      "variations": [],
+      "videos": [],
       "id": "circ",
       "name": "Circular Breathing",
       "cat": "ext",
       "emoji": "🔄",
       "sub": "Unbroken stream of sound",
       "desc": "The player inhales through the nose while pushing air stored in the cheeks through the reed, sustaining the sound indefinitely. The oboe needs so little air that it is one of the friendliest instruments for this.",
-      "subs": [
-        "sustained",
-        "drones"
-      ],
       "composer": "You may write phrases of any length — but mark \"circular breathing\" in the part and expect a small colour ripple at each switch.",
       "oboist": "Start with a straw in a glass of water. The switch is easiest on stable middle-register notes, away from register breaks.",
       "fun": "Heinz Holliger sustained single notes for minutes on end — the oboe uses so little air that one cheekful covers several switches.",
       "synth": "circ",
-      "audioLabel": "Sustained D5 — two switches",
-      "fingerings": [],
-      "variations": []
+      "audioLabel": "Sustained D5 — two switches"
     },
     {
+      "subs": [
+        "finger gliss",
+        "embouchure"
+      ],
+      "fingerings": [],
+      "variations": [],
+      "videos": [],
       "id": "gliss",
       "name": "Glissando",
       "cat": "som",
       "emoji": "🎢",
       "sub": "Sliding between pitches",
       "desc": "A continuous slide produced by gradually sliding fingers off the keys, combined with embouchure bending. Ascending glissandi are easier than descending; the key mechanism limits the usable range.",
-      "subs": [
-        "finger gliss",
-        "embouchure"
-      ],
       "composer": "Keep glissandi within a third for reliability, and prefer upward slides. Above the staff, the mechanism makes continuous sliding patchy.",
       "oboist": "Slide the fingers sideways off the ring keys while relaxing the jaw. Combining finger and embouchure bend gives the widest smooth slide.",
       "fun": "The famous opening slide of Rhapsody in Blue is a clarinet glissando — the oboe version is much harder, which is exactly why it is fun.",
       "synth": "gliss",
-      "audioLabel": "Glissando G4 → D5",
-      "fingerings": [],
-      "variations": []
+      "audioLabel": "Glissando G4 → D5"
     },
     {
+      "subs": [
+        "quarter-tones",
+        "wide vibrato"
+      ],
+      "fingerings": [],
+      "variations": [],
+      "videos": [],
       "id": "bend",
       "name": "Pitch Bend",
       "cat": "som",
       "emoji": "〰️",
       "sub": "Micro-inflections of pitch",
       "desc": "Lipping the pitch up or down — roughly a quarter-tone to a semitone — using embouchure and voicing alone. Ideal for microtonal inflections, \"blue\" notes and expressive ornaments.",
-      "subs": [
-        "quarter-tones",
-        "wide vibrato"
-      ],
       "composer": "Quarter-tone bends are safe anywhere; a full semitone only works in the middle register at moderate dynamics.",
       "oboist": "Drop the jaw and lower the tongue to bend down — think \"ee\" to \"aw\". Bending up is much harder; approach from below instead.",
       "fun": "Baroque oboists bent pitch constantly as a matter of style — equal temperament is younger than the instrument itself.",
       "synth": "bend",
-      "audioLabel": "Bend A4 — quarter-tone dip",
-      "fingerings": [],
-      "variations": []
+      "audioLabel": "Bend A4 — quarter-tone dip"
     },
     {
+      "subs": [
+        "pitched",
+        "with air"
+      ],
+      "fingerings": [],
+      "variations": [],
+      "videos": [],
       "id": "keys",
       "name": "Key Clicks",
       "cat": "ext",
       "emoji": "🥁",
       "sub": "Percussive key noise",
       "desc": "The keys are slapped without blowing — or with air only — turning the oboe into a quiet percussion instrument with faint pitch shadows of the fingerings.",
-      "subs": [
-        "pitched",
-        "with air"
-      ],
       "composer": "Very quiet — amplify, or score them in silence. Use x-noteheads at the fingering pitch to control the colour of each click.",
       "oboist": "The low C, B and B♭ keys give the loudest clicks. Adding a breathy \"huh\" of air doubles the presence.",
       "fun": "Unamplified key clicks carry barely ten metres in a hall — intimacy is the whole point of the effect.",
       "synth": "keys",
-      "audioLabel": "Key clicks — low C pattern",
-      "fingerings": [],
-      "variations": []
+      "audioLabel": "Key clicks — low C pattern"
     },
     {
+      "subs": [
+        "pure air",
+        "half-tone"
+      ],
+      "fingerings": [],
+      "variations": [],
+      "videos": [],
       "id": "air",
       "name": "Air Sounds",
       "cat": "som",
       "emoji": "💨",
       "sub": "Breath through the instrument",
       "desc": "Blowing air through the instrument without engaging the reed — from pure white-noise breath to half-tone mixtures where a shadow of pitch appears inside the noise.",
-      "subs": [
-        "pure air",
-        "half-tone"
-      ],
       "composer": "Notate air with a triangle notehead and specify the consonant — \"ss\", \"ff\" or \"sh\" — since each filters the noise differently.",
       "oboist": "Loosen the embouchure until the reed just stops speaking; the fingering still colours the noise, so change fingerings expressively.",
       "fun": "The oboe’s narrow bore makes its air sounds the most \"whistly\" of all the woodwinds.",
       "synth": "air",
-      "audioLabel": "Air sound — half-tone",
-      "fingerings": [],
-      "variations": []
+      "audioLabel": "Air sound — half-tone"
     },
     {
+      "subs": [
+        "sung lines",
+        "drones"
+      ],
+      "fingerings": [],
+      "variations": [],
+      "videos": [],
       "id": "cor",
       "name": "Cor Anglais: Low Register",
       "cat": "cor",
       "emoji": "🌑",
       "sub": "The dark voice of the cor anglais",
       "desc": "The bottom fifth of the cor anglais — written B3 down to E3, sounding a fifth lower — has a covered, reedy darkness the oboe cannot reach. Slow to speak, enormous in colour.",
-      "subs": [
-        "sung lines",
-        "drones"
-      ],
       "composer": "Approach the lowest notes by step and give them time — attacks below written G3 are slow at pp. Unbeatable for lament-like solos.",
       "oboist": "Use a slightly heavier reed and think warm, slow air. Practise pp attacks daily; they are this register’s whole craft.",
       "fun": "The cor anglais is neither English nor a horn — \"anglais\" is probably a corruption of \"anglé\" (angled), after its old curved shape.",
       "synth": "low",
-      "audioLabel": "Cor anglais low F3",
-      "fingerings": [],
-      "variations": []
+      "audioLabel": "Cor anglais low F3"
     }
   ],
   "recordings": {
@@ -238,7 +247,26 @@
       "emoji": "🎬"
     }
   ],
-  "multiphonics": [],
+  "multiphonics": [
+    {
+      "id": "mf-mtw13qlc",
+      "name": "F2, A#1, A#3, C4, A · honky",
+      "tech": "multi",
+      "instrument": "cor anglais",
+      "fingering": "",
+      "fingeringImage": "images/fingering-f2-a-1-a-3-c4-mtwrc8uf.svg",
+      "images": [
+        "images/eh_multiphonic_1_notes.png"
+      ],
+      "pitches": "F2, A#1, A#3, C4, A",
+      "dynamic": "",
+      "category": "honky",
+      "stable": "yes",
+      "difficulty": "1",
+      "audio": "audio/eh_.multiphonic_1wav.wav",
+      "notes": ""
+    }
+  ],
   "pairs": [
     {
       "a": "circ",
