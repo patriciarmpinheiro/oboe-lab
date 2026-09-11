@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated": "2026-09-11T09:43:56.919Z",
+  "updated": "2026-09-11T09:49:35.159Z",
   "categories": [
     {
       "id": "som",
@@ -301,6 +301,24 @@
       "difficulty": "3",
       "audio": "audio/eh_multiphonic_3_audio.wav",
       "notes": "The multiphonic has a small beating but it breaks quite easily, it can of course depend on the reed on use, but it is a multiphonic that doesn't have a lot of dynamic range. The lower and higher note are the most audible"
+    },
+    {
+      "id": "mf-mtwrrd36",
+      "name": "F5, C#6, G4 · honky",
+      "tech": "multi",
+      "instrument": "cor anglais",
+      "fingering": "",
+      "fingeringImage": "images/fingering-f5-c-6-g4-mtwrvvob.svg",
+      "images": [
+        "images/captura-de-ecra-2026-09-11-as-11.46.15.png"
+      ],
+      "pitches": "F5, C#6, G4",
+      "dynamic": "",
+      "category": "honky",
+      "stable": "yes",
+      "difficulty": "1",
+      "audio": "audio/eh_multiphonic_4_audio-2-audio.wav",
+      "notes": "This multiphonic is quite exciting because although is very stable, it allows to play with air pressure. It also has the potencial of nice multiphonic trills with the half key of d, and the f key on the left hand"
     }
   ],
   "pairs": [
