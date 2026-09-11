@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated": "2026-09-11T09:49:46.188Z",
+  "updated": "2026-09-11T09:54:30.361Z",
   "categories": [
     {
       "id": "som",
@@ -318,7 +318,25 @@
       "stable": "yes",
       "difficulty": "1",
       "audio": "audio/eh_multiphonic_4_audio-2-audio.wav",
-      "notes": "This multiphonic is quite exciting because although is very stable, it allows to play with air pressure. It also has the potencial of nice multiphonic trills with the half key of d, and the f key on the left hand"
+      "notes": "This multiphonic is quite exciting because although is very stable, it allows to play with air pressure. It also has the potencial of nice multiphonic trills with the half key of d, and the f key on the left hand (n.5)"
+    },
+    {
+      "id": "mf-mtwrysj8",
+      "name": "G#, C#6, F#5, D#4 · beating",
+      "tech": "multi",
+      "instrument": "cor anglais",
+      "fingering": "",
+      "fingeringImage": "images/fingering-g-c-6-f-5-d-4-mtws0pay.svg",
+      "images": [
+        "images/eh_multiphonics_5_notes.png"
+      ],
+      "pitches": "G#, C#6, F#5, D#4",
+      "dynamic": "",
+      "category": "beating",
+      "stable": "yes",
+      "difficulty": "2",
+      "audio": "audio/eh_multiphonic_5_-beating-audio-2-audio.wav",
+      "notes": "This multiphonic has some beating to it, and the beating can change the speed depending on the embochure. Although the multiphonics speaks quite well, one has to be careful with changes from this multiphonic to others, since has an half hole, and keys being pressed on both little fingers. "
     }
   ],
   "pairs": [
