@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated": "2026-09-11T10:02:09.180Z",
+  "updated": "2026-09-11T10:09:30.558Z",
   "categories": [
     {
       "id": "som",
@@ -355,6 +355,24 @@
       "difficulty": "3",
       "audio": "audio/eh_multiphonic_6_-beating_audio.wav",
       "notes": "Depending on the embochure and pressure, the G5 can become a F#5. Due to the half hole/C# key combination it can be a multiphonic that needs a bit of time to prepare"
+    },
+    {
+      "id": "mf-mtwseq2l",
+      "name": "G5,F4,D6,A4 · honky",
+      "tech": "multi",
+      "instrument": "cor anglais",
+      "fingering": "",
+      "fingeringImage": "images/fingering-g5-f4-d6-a4-mtwskhhd.svg",
+      "images": [
+        "images/captura-de-ecra-2026-09-11-as-12.06.00.png"
+      ],
+      "pitches": "G5,F4,D6,A4",
+      "dynamic": "mp-mf",
+      "category": "honky",
+      "stable": "yes",
+      "difficulty": "1",
+      "audio": "audio/eh_multiphonic_7_-audio.wav",
+      "notes": "This multiphonic has a lot of trill possiilities, also, depending on the pressure of air and embochure, one can isolate the high G (eh- D)"
     }
   ],
   "pairs": [
