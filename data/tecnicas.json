@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated": "2026-09-11T09:39:26.788Z",
+  "updated": "2026-09-11T09:43:56.919Z",
   "categories": [
     {
       "id": "som",
@@ -259,7 +259,7 @@
         "images/eh_multiphonic_1_notes.png"
       ],
       "pitches": "F2, A#1, A#3, C4, A",
-      "dynamic": "",
+      "dynamic": "p-mf (f)",
       "category": "honky",
       "stable": "yes",
       "difficulty": "1",
@@ -283,6 +283,24 @@
       "difficulty": "2",
       "audio": "audio/eh_multiphonic_2_beating-2-audio.wav",
       "notes": "The multiphonic although is easy to play is really dependent of the embochure to stay stable. Depending of the air pressure one can choose the low or high harmonics of it."
+    },
+    {
+      "id": "mf-mtwrll01",
+      "name": "A#1, E2, F#3, G#3 · beating",
+      "tech": "multi",
+      "instrument": "cor anglais",
+      "fingering": "",
+      "fingeringImage": "images/fingering-a-1-e2-f-3-g-3-mtwrpddq.svg",
+      "images": [
+        "images/eh_multiphonics_3_notes.png"
+      ],
+      "pitches": "A#1, E2, F#3, G#3",
+      "dynamic": "mp",
+      "category": "beating",
+      "stable": "yes",
+      "difficulty": "3",
+      "audio": "audio/eh_multiphonic_3_audio.wav",
+      "notes": "The multiphonic has a small beating but it breaks quite easily, it can of course depend on the reed on use, but it is a multiphonic that doesn't have a lot of dynamic range. The lower and higher note are the most audible"
     }
   ],
   "pairs": [
