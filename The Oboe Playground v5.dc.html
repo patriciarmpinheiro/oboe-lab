@@ -48,15 +48,18 @@
   <nav style="position:fixed; top:0; left:0; right:0; z-index:300; background:#000181; padding:0 clamp(14px,3vw,34px); min-height:54px; display:flex; align-items:center; gap:clamp(10px,2vw,26px)">
     <a href="#top" style="font-family:'Instrument Serif',serif; font-size:1.06rem; letter-spacing:.02em; color:#F6F5EC; text-decoration:none; white-space:nowrap">The Oboe <span style="font-style:italic; color:#D0FFA4">Playground</span></a>
     <div style="display:flex; align-items:center; gap:2px; margin-left:auto; overflow-x:auto; scrollbar-width:none">
-      <a href="#pod" style="font-weight:500; font-size:.62rem; letter-spacing:.16em; text-transform:uppercase; color:rgba(246,245,236,.72); text-decoration:none; padding:8px 12px; transition:color .25s" style-hover="color:#D0FFA4">Pod</a>
-      <a href="#who" style="font-weight:500; font-size:.62rem; letter-spacing:.16em; text-transform:uppercase; color:rgba(246,245,236,.72); text-decoration:none; padding:8px 12px; transition:color .25s" style-hover="color:#D0FFA4">Who</a>
-      <a href="#techniques" style="font-weight:500; font-size:.62rem; letter-spacing:.16em; text-transform:uppercase; color:rgba(246,245,236,.72); text-decoration:none; padding:8px 12px; transition:color .25s" style-hover="color:#D0FFA4">Techniques</a>
-      <sc-if value="{{ mixVisible }}" hint-placeholder-val="{{ true }}">
-        <a href="#mix" style="font-weight:500; font-size:.62rem; letter-spacing:.16em; text-transform:uppercase; color:rgba(246,245,236,.72); text-decoration:none; padding:8px 12px; transition:color .25s" style-hover="color:#D0FFA4">Mix</a>
+      <a href="#pod" style="font-weight:500; font-size:.62rem; letter-spacing:.16em; text-transform:uppercase; color:rgba(246,245,236,.72); text-decoration:none; white-space:nowrap; padding:8px 8px; transition:color .25s" style-hover="color:#D0FFA4">Pod</a>
+      <a href="#who" style="font-weight:500; font-size:.62rem; letter-spacing:.16em; text-transform:uppercase; color:rgba(246,245,236,.72); text-decoration:none; white-space:nowrap; padding:8px 8px; transition:color .25s" style-hover="color:#D0FFA4">Who</a>
+      <a href="#techniques" style="font-weight:500; font-size:.62rem; letter-spacing:.16em; text-transform:uppercase; color:rgba(246,245,236,.72); text-decoration:none; white-space:nowrap; padding:8px 8px; transition:color .25s" style-hover="color:#D0FFA4">Techniques</a>
+      <sc-if value="{{ mpVisible }}" hint-placeholder-val="{{ true }}">
+        <a href="#multiphonics" style="font-weight:500; font-size:.62rem; letter-spacing:.16em; text-transform:uppercase; color:rgba(246,245,236,.72); text-decoration:none; white-space:nowrap; padding:8px 8px; transition:color .25s" style-hover="color:#D0FFA4">Multi.</a>
       </sc-if>
-      <a href="#tv" style="font-weight:500; font-size:.62rem; letter-spacing:.16em; text-transform:uppercase; color:rgba(246,245,236,.72); text-decoration:none; padding:8px 12px; transition:color .25s" style-hover="color:#D0FFA4">Oboe TV</a>
-      <a href="#support" style="font-weight:500; font-size:.62rem; letter-spacing:.16em; text-transform:uppercase; color:rgba(246,245,236,.72); text-decoration:none; padding:8px 12px; transition:color .25s" style-hover="color:#D0FFA4">Support</a>
-      <a href="#contact" style="font-weight:500; font-size:.62rem; letter-spacing:.16em; text-transform:uppercase; color:rgba(246,245,236,.72); text-decoration:none; padding:8px 12px; transition:color .25s" style-hover="color:#D0FFA4">Contact</a>
+      <sc-if value="{{ mixVisible }}" hint-placeholder-val="{{ true }}">
+        <a href="#mix" style="font-weight:500; font-size:.62rem; letter-spacing:.16em; text-transform:uppercase; color:rgba(246,245,236,.72); text-decoration:none; white-space:nowrap; padding:8px 8px; transition:color .25s" style-hover="color:#D0FFA4">Mix</a>
+      </sc-if>
+      <a href="#tv" style="font-weight:500; font-size:.62rem; letter-spacing:.16em; text-transform:uppercase; color:rgba(246,245,236,.72); text-decoration:none; white-space:nowrap; padding:8px 8px; transition:color .25s" style-hover="color:#D0FFA4">Oboe TV</a>
+      <a href="#support" style="font-weight:500; font-size:.62rem; letter-spacing:.16em; text-transform:uppercase; color:rgba(246,245,236,.72); text-decoration:none; white-space:nowrap; padding:8px 8px; transition:color .25s" style-hover="color:#D0FFA4">Support</a>
+      <a href="#contact" style="font-weight:500; font-size:.62rem; letter-spacing:.16em; text-transform:uppercase; color:rgba(246,245,236,.72); text-decoration:none; white-space:nowrap; padding:8px 8px; transition:color .25s" style-hover="color:#D0FFA4">Contact</a>
     </div>
     <button onClick="{{ surprise }}" style="font-weight:600; font-size:.6rem; letter-spacing:.16em; text-transform:uppercase; color:#000181; background:#D0FFA4; border:none; border-radius:100px; padding:9px 18px; transition:all .3s cubic-bezier(.2,.8,.2,1); flex-shrink:0; white-space:nowrap" style-hover="background:#E8A0FF; letter-spacing:.22em">Surprise me</button>
   </nav>
@@ -253,6 +256,91 @@
       </sc-if>
     </div>
   </section>
+
+  <sc-if value="{{ mpVisible }}" hint-placeholder-val="{{ true }}">
+    <section id="multiphonics" style="background:#000181; color:#F6F5EC; scroll-margin-top:64px; position:relative; overflow:hidden">
+      <div style="position:absolute; top:-140px; right:-90px; width:380px; height:380px; border-radius:50%; border:1.5px solid rgba(246,245,236,.18)"></div>
+      <div style="position:relative; max-width:1180px; margin:0 auto; padding:clamp(70px,10vw,130px) clamp(18px,5vw,40px)">
+        <div style="display:flex; flex-wrap:wrap; gap:24px; align-items:flex-end; justify-content:space-between; margin-bottom:clamp(30px,4vw,46px)">
+          <div>
+            <p style="margin:0 0 14px; font-size:.6rem; font-weight:600; letter-spacing:.26em; text-transform:uppercase; color:#83E7FF">Analysed archive</p>
+            <h2 style="margin:0; font-family:'Instrument Serif',serif; font-weight:400; font-size:clamp(2.4rem,6vw,4.4rem); line-height:.96; letter-spacing:-.02em">Multiphonic <span style="font-style:italic">index</span></h2>
+          </div>
+          <p style="margin:0; max-width:320px; font-size:.85rem; line-height:1.6; color:rgba(246,245,236,.72); text-wrap:pretty">{{ mpIntro }}</p>
+        </div>
+
+        <div style="display:flex; flex-direction:column; gap:14px; border-top:1.5px solid rgba(246,245,236,.5); border-bottom:1px solid rgba(246,245,236,.2); padding:16px 0; margin-bottom:clamp(22px,3vw,34px)">
+          <div style="display:flex; gap:12px; flex-wrap:wrap; align-items:center">
+            <span style="font-size:.55rem; font-weight:600; letter-spacing:.2em; text-transform:uppercase; color:rgba(246,245,236,.45); width:78px">Instrument</span>
+            <div style="display:flex; gap:5px; flex-wrap:wrap">
+              <sc-for list="{{ mpInstrFilters }}" as="f" hint-placeholder-count="3">
+                <button onClick="{{ f.pick }}" style="font-weight:500; font-size:.66rem; letter-spacing:.12em; text-transform:uppercase; padding:8px 15px; border:none; border-radius:100px; transition:all .3s cubic-bezier(.2,.8,.2,1); color:{{ f.color }}; background:{{ f.bg }}">{{ f.label }}</button>
+              </sc-for>
+            </div>
+          </div>
+          <div style="display:flex; gap:12px; flex-wrap:wrap; align-items:center">
+            <span style="font-size:.55rem; font-weight:600; letter-spacing:.2em; text-transform:uppercase; color:rgba(246,245,236,.45); width:78px">Character</span>
+            <div style="display:flex; gap:5px; flex-wrap:wrap">
+              <sc-for list="{{ mpCatFilters }}" as="f" hint-placeholder-count="3">
+                <button onClick="{{ f.pick }}" style="font-weight:500; font-size:.66rem; letter-spacing:.12em; text-transform:uppercase; padding:8px 15px; border:none; border-radius:100px; transition:all .3s cubic-bezier(.2,.8,.2,1); color:{{ f.color }}; background:{{ f.bg }}">{{ f.label }}</button>
+              </sc-for>
+            </div>
+          </div>
+          <div style="display:flex; gap:12px; flex-wrap:wrap; align-items:center">
+            <span style="font-size:.55rem; font-weight:600; letter-spacing:.2em; text-transform:uppercase; color:rgba(246,245,236,.45); width:78px">Dynamic</span>
+            <div style="display:flex; gap:5px; flex-wrap:wrap">
+              <sc-for list="{{ mpDynFilters }}" as="f" hint-placeholder-count="3">
+                <button onClick="{{ f.pick }}" style="font-weight:500; font-size:.66rem; letter-spacing:.12em; text-transform:uppercase; padding:8px 15px; border:none; border-radius:100px; transition:all .3s cubic-bezier(.2,.8,.2,1); color:{{ f.color }}; background:{{ f.bg }}">{{ f.label }}</button>
+              </sc-for>
+            </div>
+          </div>
+          <div style="display:flex; gap:12px; flex-wrap:wrap; align-items:center; justify-content:space-between">
+            <input type="text" placeholder="search a pitch or dynamic — F5, mp-mf…" value="{{ mpSearch }}" onChange="{{ setMpSearch }}" style="background:transparent; border:none; border-bottom:1.5px solid rgba(246,245,236,.35); color:#F6F5EC; font-size:.75rem; letter-spacing:.06em; padding:7px 2px; width:230px; outline:none">
+            <span style="font-size:.6rem; font-weight:600; letter-spacing:.18em; text-transform:uppercase; color:#83E7FF">{{ mpCount }}</span>
+          </div>
+        </div>
+
+        <div style="display:grid; grid-template-columns:repeat(auto-fill,minmax(min(100%,232px),1fr)); gap:12px">
+          <sc-for list="{{ mpCards }}" as="mp" hint-placeholder-count="6">
+            <div onClick="{{ mp.open }}" style="background:#F6F5EC; color:#000181; border-radius:20px; padding:15px; display:flex; flex-direction:column; gap:9px; cursor:pointer; transition:transform .45s cubic-bezier(.2,.8,.2,1)" style-hover="transform:translateY(-6px)">
+              <div style="display:flex; gap:5px; flex-wrap:wrap; align-items:center">
+                <span style="font-size:.52rem; font-weight:600; letter-spacing:.14em; text-transform:uppercase; background:#dceaff; border-radius:100px; padding:4px 9px">{{ mp.instr }}</span>
+                <sc-if value="{{ mp.hasCat }}" hint-placeholder-val="{{ false }}">
+                  <span style="font-size:.52rem; font-weight:600; letter-spacing:.14em; text-transform:uppercase; background:{{ mp.catBg }}; border-radius:100px; padding:4px 9px">{{ mp.cat }}</span>
+                </sc-if>
+              </div>
+              <div style="font-family:'Instrument Serif',serif; font-size:1.16rem; line-height:1.18; letter-spacing:-.01em">{{ mp.title }}</div>
+              <sc-if value="{{ mp.hasFing }}" hint-placeholder-val="{{ false }}">
+                <img src="{{ mp.fingImg }}" alt="fingering" style="width:100%; height:112px; object-fit:contain; background:#FFFFFF; border-radius:12px; padding:7px">
+              </sc-if>
+              <sc-if value="{{ mp.hasImgs }}" hint-placeholder-val="{{ false }}">
+                <div style="display:flex; flex-direction:column; gap:8px">
+                  <sc-for list="{{ mp.imgs }}" as="im" hint-placeholder-count="1">
+                    <img src="{{ im.src }}" alt="notation" style="width:100%; background:#FFFFFF; border-radius:14px">
+                  </sc-for>
+                </div>
+              </sc-if>
+              <div style="display:flex; gap:5px; flex-wrap:wrap">
+                <sc-for list="{{ mp.chips }}" as="ch" hint-placeholder-count="3">
+                  <span style="font-size:.57rem; font-weight:500; background:{{ ch.bg }}; border-radius:100px; padding:3px 9px">{{ ch.label }}</span>
+                </sc-for>
+              </div>
+              <sc-if value="{{ mp.hasNotes }}" hint-placeholder-val="{{ false }}">
+                <p style="margin:0; font-size:.66rem; line-height:1.55; color:rgba(0,1,129,.62); text-wrap:pretty; display:-webkit-box; -webkit-line-clamp:4; -webkit-box-orient:vertical; overflow:hidden">{{ mp.notes }}</p>
+              </sc-if>
+              <sc-if value="{{ mp.hasAudio }}" hint-placeholder-val="{{ false }}">
+                <button onClick="{{ mp.playStop }}" style="margin-top:auto; align-self:flex-start; display:inline-flex; align-items:center; gap:9px; font-size:.55rem; font-weight:600; letter-spacing:.16em; text-transform:uppercase; color:#000181; background:{{ mp.playBg }}; border:none; border-radius:100px; padding:9px 15px; transition:all .35s cubic-bezier(.2,.8,.2,1)" style-hover="background:#006EE9; color:#F6F5EC; letter-spacing:.22em">{{ mp.playLabel }}</button>
+              </sc-if>
+            </div>
+          </sc-for>
+        </div>
+
+        <sc-if value="{{ mpNoResults }}" hint-placeholder-val="{{ false }}">
+          <p style="text-align:center; font-size:.85rem; color:rgba(246,245,236,.6); margin-top:48px">Nothing here yet with those filters — try another instrument or character.</p>
+        </sc-if>
+      </div>
+    </section>
+  </sc-if>
 
   <sc-if value="{{ mixVisible }}" hint-placeholder-val="{{ true }}">
     <section id="mix" style="background:#E8A0FF; color:#000181; scroll-margin-top:64px; position:relative; overflow:hidden">
@@ -518,6 +606,54 @@
     </div>
   </sc-if>
 
+  <sc-if value="{{ mpModal }}" hint-placeholder-val="{{ false }}">
+    <div onClick="{{ mpClose }}" style="position:fixed; inset:0; z-index:420; background:rgba(0,1,129,.86); backdrop-filter:blur(8px); display:flex; align-items:flex-start; justify-content:center; padding:clamp(10px,3vw,36px); overflow-y:auto; animation:fadeIn .3s ease both">
+      <div onClick="{{ stopClick }}" style="background:#F6F5EC; color:#000181; border-radius:26px; width:min(640px,100%); margin:auto; padding:clamp(24px,4vw,40px); position:relative; animation:revealUp .45s cubic-bezier(.2,.9,.2,1) both">
+        <button onClick="{{ mpClose }}" style="position:absolute; top:18px; right:18px; background:#000181; border:none; color:#F6F5EC; width:34px; height:34px; border-radius:50%; font-size:.8rem; transition:all .3s" style-hover="background:#006EE9; transform:rotate(90deg)">✕</button>
+
+        <div style="display:flex; gap:6px; flex-wrap:wrap; align-items:center; margin:0 44px 14px 0">
+          <span style="font-size:.55rem; font-weight:600; letter-spacing:.16em; text-transform:uppercase; background:#dceaff; border-radius:100px; padding:5px 12px">{{ mpModal.instr }}</span>
+          <sc-if value="{{ mpModal.hasCat }}" hint-placeholder-val="{{ false }}">
+            <span style="font-size:.55rem; font-weight:600; letter-spacing:.16em; text-transform:uppercase; background:{{ mpModal.catBg }}; border-radius:100px; padding:5px 12px">{{ mpModal.cat }}</span>
+          </sc-if>
+        </div>
+
+        <h3 style="margin:0 0 6px; font-family:'Instrument Serif',serif; font-weight:400; font-size:clamp(1.8rem,4.4vw,2.7rem); line-height:1.02; letter-spacing:-.02em">{{ mpModal.title }}</h3>
+        <p style="margin:0 0 20px; font-size:.72rem; letter-spacing:.14em; text-transform:uppercase; color:rgba(0,1,129,.5)">{{ mpModal.meta }}</p>
+
+        <sc-if value="{{ mpModal.hasAudio }}" hint-placeholder-val="{{ false }}">
+          <button onClick="{{ mpModal.play }}" style="display:inline-flex; align-items:center; gap:10px; font-size:.6rem; font-weight:600; letter-spacing:.18em; text-transform:uppercase; color:#000181; background:{{ mpModal.playBg }}; border:none; border-radius:100px; padding:13px 24px; margin-bottom:22px; transition:all .35s cubic-bezier(.2,.8,.2,1)" style-hover="background:#006EE9; color:#F6F5EC; letter-spacing:.24em">{{ mpModal.playLabel }}</button>
+        </sc-if>
+
+        <sc-if value="{{ mpModal.hasFing }}" hint-placeholder-val="{{ false }}">
+          <div style="font-size:.56rem; font-weight:600; letter-spacing:.22em; text-transform:uppercase; color:#006EE9; border-top:1px solid rgba(0,1,129,.15); padding-top:16px; margin:0 0 12px">Fingering</div>
+          <img src="{{ mpModal.fingImg }}" alt="fingering" style="width:100%; max-height:340px; object-fit:contain; background:#FFFFFF; border-radius:18px; padding:16px; box-sizing:border-box">
+        </sc-if>
+
+        <sc-if value="{{ mpModal.hasImgs }}" hint-placeholder-val="{{ false }}">
+          <div style="font-size:.56rem; font-weight:600; letter-spacing:.22em; text-transform:uppercase; color:#006EE9; border-top:1px solid rgba(0,1,129,.15); padding-top:16px; margin:24px 0 12px">Resulting pitches</div>
+          <div style="display:flex; flex-direction:column; gap:10px">
+            <sc-for list="{{ mpModal.imgs }}" as="im" hint-placeholder-count="1">
+              <img src="{{ im.src }}" alt="notation" style="width:100%; background:#FFFFFF; border-radius:18px">
+            </sc-for>
+          </div>
+        </sc-if>
+
+        <div style="font-size:.56rem; font-weight:600; letter-spacing:.22em; text-transform:uppercase; color:#006EE9; border-top:1px solid rgba(0,1,129,.15); padding-top:16px; margin:24px 0 12px">Details</div>
+        <div style="display:flex; gap:6px; flex-wrap:wrap; margin-bottom:14px">
+          <sc-for list="{{ mpModal.chips }}" as="ch" hint-placeholder-count="3">
+            <span style="font-size:.66rem; font-weight:500; background:#FFFFFF; border-radius:100px; padding:6px 13px">{{ ch.label }}</span>
+          </sc-for>
+        </div>
+        <sc-if value="{{ mpModal.hasNotes }}" hint-placeholder-val="{{ false }}">
+          <div style="background:#D0FFA4; border-radius:20px; padding:18px 20px">
+            <p style="margin:0; font-size:.88rem; line-height:1.7; text-wrap:pretty">{{ mpModal.notes }}</p>
+          </div>
+        </sc-if>
+      </div>
+    </div>
+  </sc-if>
+
   <sc-if value="{{ modal }}" hint-placeholder-val="{{ false }}">
     <div onClick="{{ closeModal }}" style="position:fixed; inset:0; z-index:400; background:rgba(0,1,129,.82); backdrop-filter:blur(8px); display:flex; align-items:flex-start; justify-content:center; padding:clamp(10px,3vw,36px); overflow-y:auto; animation:fadeIn .3s ease both">
       <div onClick="{{ stopClick }}" style="background:#F6F5EC; color:#000181; border-radius:26px; width:min(600px,100%); margin:auto; padding:clamp(26px,4vw,44px); position:relative; animation:revealUp .45s cubic-bezier(.2,.9,.2,1) both">
@@ -577,32 +713,13 @@
 
         <sc-if value="{{ modalHasMultis }}" hint-placeholder-val="{{ false }}">
           <div style="font-size:.56rem; font-weight:600; letter-spacing:.22em; text-transform:uppercase; color:#006EE9; border-top:1px solid rgba(0,1,129,.15); padding-top:16px; margin:28px 0 14px">Analysed multiphonics</div>
-          <div style="display:flex; flex-direction:column; gap:10px">
-            <sc-for list="{{ modalMultis }}" as="mp" hint-placeholder-count="2">
-              <div style="background:#FFFFFF; border-radius:20px; padding:14px 16px; display:flex; gap:14px; align-items:center; flex-wrap:wrap">
-                <sc-if value="{{ mp.hasAudio }}" hint-placeholder-val="{{ false }}">
-                  <button onClick="{{ mp.play }}" style="width:40px; height:40px; border-radius:50%; background:#83E7FF; border:none; color:#000181; font-size:.8rem; flex-shrink:0; transition:all .3s" style-hover="background:#006EE9; color:#F6F5EC">▶</button>
-                </sc-if>
-                <div style="flex:1 1 170px; min-width:0">
-                  <div style="font-size:.78rem; font-weight:500">{{ mp.name }}</div>
-                  <div style="display:flex; gap:5px; flex-wrap:wrap; margin-top:8px">
-                    <sc-for list="{{ mp.chips }}" as="ch" hint-placeholder-count="3">
-                      <span style="font-size:.62rem; font-weight:500; color:#000181; background:{{ ch.bg }}; border-radius:100px; padding:3px 10px">{{ ch.label }}</span>
-                    </sc-for>
-                  </div>
-                  <sc-if value="{{ mp.fing }}" hint-placeholder-val="{{ false }}">
-                    <div style="font-size:.68rem; color:rgba(0,1,129,.65); margin-top:8px">{{ mp.fing }}</div>
-                  </sc-if>
-                  <sc-if value="{{ mp.notes }}" hint-placeholder-val="{{ false }}">
-                    <div style="font-size:.68rem; line-height:1.55; color:rgba(0,1,129,.55); margin-top:5px">{{ mp.notes }}</div>
-                  </sc-if>
-                </div>
-                <sc-if value="{{ mp.hasImg }}" hint-placeholder-val="{{ false }}">
-                  <img src="{{ mp.img }}" alt="espetro" style="width:120px; border-radius:10px; align-self:center">
-                </sc-if>
-              </div>
-            </sc-for>
-          </div>
+          <a href="#multiphonics" onClick="{{ closeModal }}" style="display:flex; align-items:center; justify-content:space-between; gap:16px; background:#000181; color:#F6F5EC; border-radius:22px; padding:18px 22px; text-decoration:none; transition:background .35s" style-hover="background:#006EE9">
+            <span>
+              <span style="display:block; font-family:'Instrument Serif',serif; font-size:1.25rem; line-height:1.2">{{ modalMultiLine }}</span>
+              <span style="display:block; margin-top:5px; font-size:.66rem; letter-spacing:.16em; text-transform:uppercase; color:rgba(246,245,236,.7)">Open the multiphonic index</span>
+            </span>
+            <span style="font-size:1.1rem">↗</span>
+          </a>
         </sc-if>
 
         <sc-if value="{{ modalHasVars }}" hint-placeholder-val="{{ false }}">
@@ -710,6 +827,7 @@ const PAIRS = {};
 
 const DEFAULT_TEXTS = {};
 const DATA_URL = 'https://raw.githubusercontent.com/patriciarmpinheiro/oboe-lab/main/data/tecnicas.json';
+const ASSET_BASE = 'https://raw.githubusercontent.com/patriciarmpinheiro/oboe-lab/main/';
 
 const HERO_TAGS = [
   { label: 'flutter tongue', top: 20, left: 16, par: 0.12, anim: 'drift1 12s ease-in-out infinite' },
@@ -730,12 +848,12 @@ class Component extends DCLogic {
     recordings: {}, videos: [], tvIdx: 0, tvStatic: false, videoMode: null,
     dataState: 'loading', dataErr: '',
     aiOpen: false, aiBusy: false,
-    faq: [], multis: [],
+    faq: [], multis: [], mpInstr: 'all', mpCat: 'all', mpDyn: 'all', mpSearch: '', mpOpenId: '', nowPlaying: '', audioErr: '',
     aiMsgs: [{ role: 'bot', text: 'Hello! Pick a question below — or write to Patrícia through the form.' }]
   };
 
   componentDidMount() {
-    this._esc = (e) => { if (e.key === 'Escape') this.setState({ modalId: null }); };
+    this._esc = (e) => { if (e.key === 'Escape') this.setState({ modalId: null, mpOpenId: '' }); };
     window.addEventListener('keydown', this._esc);
 
     this._move = (e) => {
@@ -753,6 +871,12 @@ class Component extends DCLogic {
       });
     };
     window.addEventListener('mousemove', this._move, { passive: true });
+
+    this._imgErr = (e) => {
+      const t = e.target;
+      if (t && t.tagName === 'IMG' && /(^|\/)images\//.test(t.getAttribute('src') || '')) t.style.display = 'none';
+    };
+    document.addEventListener('error', this._imgErr, true);
 
     this.loadData();
   }
@@ -780,6 +904,7 @@ class Component extends DCLogic {
   }
 
   componentWillUnmount() {
+    document.removeEventListener('error', this._imgErr, true);
     window.removeEventListener('keydown', this._esc);
     window.removeEventListener('mousemove', this._move);
   }
@@ -851,17 +976,32 @@ class Component extends DCLogic {
     this.playSynth(this.T[Math.floor(Math.random() * this.T.length)]);
   }
 
+  asset(p) {
+    if (!p) return '';
+    const s = String(p);
+    if (/^(https?:|data:|blob:|\/\/)/.test(s)) return s;
+    return ASSET_BASE + s.replace(/^\.?\//, '');
+  }
+
   playRecording(src) {
-    if (this._audio) {
-      this._audio.pause();
-      this._audio = null;
-      if (this.state.playing) { this.setState({ playing: false }); return; }
+    if (!src) return;
+    const same = this._audioSrc === src && this._audio;
+    if (this._audio) { this._audio.pause(); this._audio = null; }
+    if (same && this.state.playing) {
+      this._audioSrc = '';
+      this.setState({ playing: false, nowPlaying: '' });
+      return;
     }
-    const a = new Audio(src);
+    const a = new Audio(this.asset(src));
+    a.preload = 'auto';
     this._audio = a;
-    a.onended = () => { this._audio = null; this.setState({ playing: false }); };
-    a.play().catch(() => {});
-    this.setState({ playing: true });
+    this._audioSrc = src;
+    const stop = () => { this._audio = null; this._audioSrc = ''; this.setState({ playing: false, nowPlaying: '' }); };
+    a.onended = stop;
+    a.onerror = () => { stop(); this.setState({ audioErr: src }); };
+    this.setState({ playing: true, nowPlaying: src, audioErr: '' });
+    const p = a.play();
+    if (p && p.catch) p.catch(() => { stop(); this.setState({ audioErr: src }); });
   }
 
   zapTo(i) {
@@ -1225,30 +1365,104 @@ class Component extends DCLogic {
         fingering: v.fingering || '', hasFing: !!v.fingering,
         notes: v.notes || '', hasNotes: !!v.notes,
         hasImgs: imgs.length > 0,
-        images: imgs.map((im) => ({ src: im.path, caption: im.caption || '', hasCaption: !!im.caption }))
+        images: imgs.map((im) => ({ src: this.asset(im.path), caption: im.caption || '', hasCaption: !!im.caption }))
       };
     });
     const varImgPaths = new Set();
     modalVars.forEach((v) => v.images.forEach((im) => varImgPaths.add(im.src)));
     const modalFings = (mt && Array.isArray(mt.fingerings) ? mt.fingerings : []).filter((f) => f.image && !varImgPaths.has(f.image)).map((f) => ({
       name: f.name || 'Fingering',
-      src: f.image
+      src: this.asset(f.image)
     }));
 
     const noteName = (midi) => NOTE_EN[((midi % 12) + 12) % 12] + (Math.floor(midi / 12) - 1);
-    const modalMultis = mt ? (this.state.multis || []).filter((m) => m.tech === mt.id).map((m) => ({
-      name: m.name || 'Multiphonic',
-      fing: m.fingering || '',
-      notes: m.notes || '',
-      hasAudio: !!m.audio,
-      play: () => this.playRecording(m.audio),
-      hasImg: !!m.image,
-      img: m.image || '',
-      chips: (m.partials || []).map((p, i) => ({
+    const modalMultis = mt ? (this.state.multis || []).filter((m) => m.tech === mt.id).map((m) => {
+      const chips = [];
+      if (m.instrument) chips.push({ label: m.instrument, bg: '#dceaff' });
+      if (m.category) chips.push({ label: m.category, bg: '#D0FFA4' });
+      if (m.dynamic) chips.push({ label: m.dynamic, bg: '#F6F5EC' });
+      if (m.stable) chips.push({ label: String(m.stable).toLowerCase() === 'no' ? 'unstable' : 'stable', bg: '#F6F5EC' });
+      if (m.difficulty) chips.push({ label: 'difficulty ' + m.difficulty + '/5', bg: '#F6F5EC' });
+      (m.partials || []).forEach((p, i) => chips.push({
         label: noteName(p.midi) + ' ' + (p.cents > 0 ? '+' : '') + p.cents,
         bg: i === 0 ? '#D0FFA4' : '#F6F5EC'
-      }))
-    })) : [];
+      }));
+      const imgs = (Array.isArray(m.images) ? m.images : []).concat(m.image ? [m.image] : []);
+      return {
+        name: m.pitches || m.name || 'Multiphonic',
+        fing: m.fingering || '',
+        notes: m.notes || '',
+        hasAudio: !!m.audio,
+        playLabel: this.state.audioErr === m.audio ? 'audio failed' : (this.state.nowPlaying === m.audio ? '▮▮ Playing' : '▶ Listen'),
+        playBg: this.state.audioErr === m.audio ? '#E8A0FF' : (this.state.nowPlaying === m.audio ? '#D0FFA4' : '#83E7FF'),
+        play: () => this.playRecording(m.audio),
+        hasFingImg: !!m.fingeringImage,
+        fingImg: this.asset(m.fingeringImage),
+        imgs: imgs.map((src) => ({ src })),
+        hasImgs: imgs.length > 0,
+        chips
+      };
+    }) : [];
+
+    const allMultis = this.state.multis || [];
+    const mpInstrOf = (m) => String(m.instrument || 'oboe').trim().toLowerCase();
+    const mpCatOf = (m) => String(m.category || '').trim().toLowerCase();
+    const mpDynOf = (m) => String(m.dynamic || '').trim().toLowerCase();
+    const catBgOf = (c) => (c === 'beating' ? '#83E7FF' : (c === 'honky' ? '#E8A0FF' : '#D0FFA4'));
+    const mpQ = this.state.mpSearch.trim().toLowerCase();
+    const mpShown = allMultis.filter((m) => {
+      if (this.state.mpInstr !== 'all' && mpInstrOf(m) !== this.state.mpInstr) return false;
+      if (this.state.mpCat !== 'all' && mpCatOf(m) !== this.state.mpCat) return false;
+      if (this.state.mpDyn !== 'all' && mpDynOf(m) !== this.state.mpDyn) return false;
+      if (mpQ && [m.pitches, m.name, m.notes, m.category, m.dynamic].join(' ').toLowerCase().indexOf(mpQ) < 0) return false;
+      return true;
+    });
+    const pill = (label, on) => ({
+      label,
+      bg: on ? '#D0FFA4' : 'rgba(246,245,236,.12)',
+      color: on ? '#000181' : 'rgba(246,245,236,.8)'
+    });
+    const uniq = (xs) => xs.filter((x, i) => x && xs.indexOf(x) === i);
+    const instrKeys = uniq(allMultis.map(mpInstrOf));
+    const catKeys = uniq(allMultis.map(mpCatOf));
+    const mpInstrFilters = [{ k: 'all', label: 'All' }].concat(instrKeys.map((k) => ({ k, label: k }))).map((o) => Object.assign(
+      pill(o.label, this.state.mpInstr === o.k), { pick: () => this.setState({ mpInstr: o.k }) }
+    ));
+    const mpCatFilters = [{ k: 'all', label: 'All' }].concat(catKeys.map((k) => ({ k, label: k }))).map((o) => Object.assign(
+      pill(o.label, this.state.mpCat === o.k), { pick: () => this.setState({ mpCat: o.k }) }
+    ));
+    const mpDynFilters = [{ k: 'all', label: 'All' }].concat(uniq(allMultis.map(mpDynOf)).map((k) => ({ k, label: k }))).map((o) => Object.assign(
+      pill(o.label, this.state.mpDyn === o.k), { pick: () => this.setState({ mpDyn: o.k }) }
+    ));
+    const mpCardOf = (m) => {
+      const chips = [];
+      if (m.dynamic) chips.push({ label: m.dynamic, bg: '#F0EFE4' });
+      if (m.stable) chips.push({ label: String(m.stable).toLowerCase() === 'no' ? 'unstable' : 'stable', bg: '#F0EFE4' });
+      if (m.difficulty) chips.push({ label: 'difficulty ' + m.difficulty + '/5', bg: '#F0EFE4' });
+      (m.partials || []).forEach((p) => chips.push({ label: noteName(p.midi) + ' ' + (p.cents > 0 ? '+' : '') + p.cents, bg: '#F0EFE4' }));
+      const imgs = (Array.isArray(m.images) ? m.images : []).concat(m.image ? [m.image] : []);
+      const cat = mpCatOf(m);
+      return {
+        title: m.pitches || m.name || 'Multiphonic',
+        instr: mpInstrOf(m),
+        cat, hasCat: !!cat, catBg: catBgOf(cat),
+        hasFing: !!m.fingeringImage, fingImg: this.asset(m.fingeringImage),
+        imgs: imgs.map((src) => ({ src: this.asset(src) })), hasImgs: imgs.length > 0,
+        chips,
+        notes: m.notes || '', hasNotes: !!m.notes,
+        hasAudio: !!m.audio,
+        playLabel: this.state.audioErr === m.audio ? 'audio failed' : (this.state.nowPlaying === m.audio ? '▮▮ Playing' : '▶ Listen'),
+        playBg: this.state.audioErr === m.audio ? '#E8A0FF' : (this.state.nowPlaying === m.audio ? '#D0FFA4' : '#83E7FF'),
+        play: () => this.playRecording(m.audio),
+        playStop: (e) => { e.stopPropagation(); this.playRecording(m.audio); },
+        meta: [mpInstrOf(m), m.dynamic, m.difficulty ? 'difficulty ' + m.difficulty + '/5' : ''].filter(Boolean).join(' \u00b7 '),
+        open: () => this.setState({ mpOpenId: m.id || m.name })
+      };
+    };
+    const mpCards = mpShown.map(mpCardOf);
+    const mpOpenEntry = allMultis.find((m) => (m.id || m.name) === this.state.mpOpenId);
+    const mpModal = mpOpenEntry ? mpCardOf(mpOpenEntry) : null;
+    const mpTechCount = mt ? allMultis.filter((m) => m.tech === mt.id).length : 0;
 
     const TX = { ...DEFAULT_TEXTS, ...(this.state.texts || {}) };
     const tickerWords = Array.isArray(TX.ticker) && TX.ticker.length ? TX.ticker : [];
@@ -1281,7 +1495,7 @@ class Component extends DCLogic {
       zapPrev: () => this.zap(-1),
       zapNext: () => this.zap(1),
       modalHasImg: !!(mt && mt.image),
-      modalImgSrc: mt ? (mt.image || '') : '',
+      modalImgSrc: mt ? this.asset(mt.image) : '',
       modalRecs, modalHasRecs: hasRec, modalNoRecs: !!mt && !hasRec,
       modalFings, modalHasFings: modalFings.length > 0,
       modalVars, modalHasVars: modalVars.length > 0,
@@ -1289,13 +1503,23 @@ class Component extends DCLogic {
       audioSectionLabel: hasRec ? 'Recordings — the real thing' : 'Audio demo — synth preview',
       audioNote: hasRec ? 'Real recording by Patrícia — loaded from the audio/ folder.' : 'Synthesised sketch — real recordings coming soon.',
       mixVisible: true,
-      portraitSrc: TX.portrait || '',
+      portraitSrc: this.asset(TX.portrait),
       hasPortrait: !!TX.portrait,
       noPortrait: !TX.portrait,
       isLoading: this.state.dataState === 'loading',
       hasDataErr: this.state.dataState === 'error',
       dataErr: this.state.dataErr,
       retryData: () => this.loadData(),
+      mpVisible: allMultis.length > 0,
+      mpIntro: 'Every multiphonic here was played, recorded and analysed one by one — filter by instrument or character, and read the fingering straight off the diagram.',
+      mpInstrFilters, mpCatFilters, mpDynFilters, mpCards, mpModal,
+      mpClose: () => this.setState({ mpOpenId: '' }),
+      mpSearch: this.state.mpSearch,
+      setMpSearch: (e) => this.setState({ mpSearch: e.target.value }),
+      mpCount: mpShown.length + ' of ' + allMultis.length,
+      mpNoResults: mpShown.length === 0,
+      modalMultiLine: mpTechCount + (mpTechCount === 1 ? ' analysed multiphonic' : ' analysed multiphonics'),
+
       filters, techs, noResults: techs.length === 0,
       search, setSearch: (e) => this.setState({ search: e.target.value }),
       surprise: () => { if (TT.length) this.openTech(TT[Math.floor(Math.random() * TT.length)].id); },
