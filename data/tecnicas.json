@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated": "2026-09-11T09:49:35.159Z",
+  "updated": "2026-09-11T09:49:46.188Z",
   "categories": [
     {
       "id": "som",
@@ -313,7 +313,7 @@
         "images/captura-de-ecra-2026-09-11-as-11.46.15.png"
       ],
       "pitches": "F5, C#6, G4",
-      "dynamic": "",
+      "dynamic": "mp-mf",
       "category": "honky",
       "stable": "yes",
       "difficulty": "1",
