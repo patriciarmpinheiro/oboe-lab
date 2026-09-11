@@ -11,7 +11,6 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&amp;family=Space+Grotesk:wght@400;500;600;700&amp;display=swap">
-  <script src="./image-slot.js"></script>
   <style>
     html { scroll-behavior: smooth; }
     body { margin: 0; background: #F6F5EC; cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="34" height="34"><g transform="rotate(-38 17 17)"><path d="M13 2 h8 l-1 9 h-6 z" fill="%23F5EBCB"/><rect x="14" y="10.6" width="6" height="6.4" fill="%23141414"/><path d="M14 16.6 h6 v12 a3 3 0 0 1-6 0 z" fill="%23D9B98E"/><path d="M13 2 h8 l-1 9 h-6 z M14 16.6 h6 v12 a3 3 0 0 1-6 0 z" fill="none" stroke="%23000181" stroke-width="1.1"/></g></svg>') 17 3, auto; }
@@ -36,6 +35,7 @@
     @keyframes tvNoise { 0% { background-position: 0 0, 0 0; } 100% { background-position: 0 120px, 120px 0; } }
     @keyframes floatHint { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-7px); } }
     @keyframes reedFall { from { transform: translateY(-12vh) rotate(0deg); opacity: 1; } to { transform: translateY(112vh) rotate(540deg); opacity: 1; } }
+    @keyframes blink { 0%,100% { opacity:.25; transform:translateY(0) } 50% { opacity:1; transform:translateY(-4px) } }
     @keyframes wiggle { 0%, 100% { transform: rotate(-2.5deg); } 50% { transform: rotate(2.5deg); } }
     @keyframes stickerPop { from { opacity: 0; transform: scale(.6) rotate(-14deg); } to { opacity: 1; transform: none; } }
   </style>
@@ -135,7 +135,12 @@
         <div style="flex:0 1 340px; position:relative; align-self:center; min-width:270px">
           <div style="position:absolute; inset:-8% -6% -10% -8%; background:#E8A0FF; border-radius:48% 52% 44% 56% / 52% 44% 56% 48%; animation:wiggle 9s ease-in-out infinite"></div>
           <div style="position:relative; padding:14px; background:#F6F5EC; border-radius:20px; transform:rotate(-2deg)">
-            <image-slot id="bio-portrait" style="width:100%; height:340px" shape="rounded" radius="12" placeholder="Drop a photo of you here"></image-slot>
+            <sc-if value="{{ hasPortrait }}" hint-placeholder-val="{{ false }}">
+              <img src="{{ portraitSrc }}" alt="Patrícia Pinheiro" style="width:100%; height:340px; object-fit:cover; border-radius:12px; display:block" />
+            </sc-if>
+            <sc-if value="{{ noPortrait }}" hint-placeholder-val="{{ true }}">
+              <div style="width:100%; height:340px; border-radius:12px; background:#dceaff"></div>
+            </sc-if>
             <div style="display:flex; justify-content:space-between; align-items:center; padding:12px 4px 2px">
               <span style="font-size:.6rem; font-weight:600; letter-spacing:.16em; text-transform:uppercase">Patrícia Pinheiro</span>
               <span style="font-family:'Instrument Serif',serif; font-style:italic; font-size:.9rem; color:#006EE9">oboe &amp; cor anglais</span>
@@ -493,6 +498,26 @@
     </div>
   </footer>
 
+  <sc-if value="{{ isLoading }}" hint-placeholder-val="{{ true }}">
+    <div style="position:fixed; inset:0; z-index:600; background:#000181; color:#F6F5EC; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:18px">
+      <div style="font-family:'Instrument Serif',serif; font-size:clamp(2rem,6vw,3.4rem); line-height:1">Tuning up…</div>
+      <div style="display:flex; gap:7px">
+        <span style="width:9px; height:9px; border-radius:50%; background:#D0FFA4; animation:blink 1.1s ease-in-out infinite"></span>
+        <span style="width:9px; height:9px; border-radius:50%; background:#E8A0FF; animation:blink 1.1s ease-in-out .18s infinite"></span>
+        <span style="width:9px; height:9px; border-radius:50%; background:#83E7FF; animation:blink 1.1s ease-in-out .36s infinite"></span>
+      </div>
+      <div style="font-size:.58rem; font-weight:600; letter-spacing:.2em; text-transform:uppercase; color:rgba(246,245,236,.6)">Loading the archive</div>
+    </div>
+  </sc-if>
+
+  <sc-if value="{{ hasDataErr }}" hint-placeholder-val="{{ false }}">
+    <div style="position:fixed; z-index:600; bottom:20px; left:20px; max-width:min(330px,86vw); background:#F6F5EC; color:#000181; border:1.5px solid #000181; border-radius:16px; padding:14px 16px; box-shadow:0 10px 30px rgba(0,1,129,.2)">
+      <div style="font-size:.58rem; font-weight:600; letter-spacing:.18em; text-transform:uppercase; color:#006EE9">Archive offline</div>
+      <p style="margin:7px 0 0; font-size:.76rem; line-height:1.6">The content couldn't be loaded right now. Everything else still works — try again in a moment.</p>
+      <button onClick="{{ retryData }}" style="margin-top:11px; font-size:.56rem; font-weight:600; letter-spacing:.16em; text-transform:uppercase; color:#F6F5EC; background:#000181; border:none; border-radius:100px; padding:9px 16px">Try again</button>
+    </div>
+  </sc-if>
+
   <sc-if value="{{ modal }}" hint-placeholder-val="{{ false }}">
     <div onClick="{{ closeModal }}" style="position:fixed; inset:0; z-index:400; background:rgba(0,1,129,.82); backdrop-filter:blur(8px); display:flex; align-items:flex-start; justify-content:center; padding:clamp(10px,3vw,36px); overflow-y:auto; animation:fadeIn .3s ease both">
       <div onClick="{{ stopClick }}" style="background:#F6F5EC; color:#000181; border-radius:26px; width:min(600px,100%); margin:auto; padding:clamp(26px,4vw,44px); position:relative; animation:revealUp .45s cubic-bezier(.2,.9,.2,1) both">
@@ -675,110 +700,16 @@
   &quot;coffeeUrl&quot;: { &quot;editor&quot;: &quot;text&quot;, &quot;default&quot;: &quot;https://buymeacoffee.com/&quot;, &quot;tsType&quot;: &quot;string&quot;, &quot;section&quot;: &quot;Support&quot; },
   &quot;videoLayout&quot;: { &quot;editor&quot;: &quot;enum&quot;, &quot;options&quot;: [&quot;tv&quot;, &quot;wall&quot;], &quot;default&quot;: &quot;tv&quot;, &quot;tsType&quot;: &quot;string&quot;, &quot;section&quot;: &quot;Oboe TV&quot; }
 }">
-const TECHS = [
-  { id: 'flutter', name: 'Flutter Tongue', cat: 'som', emoji: '🌀', sub: 'Rolling tremolo of tone colour',
-    desc: 'Produced by rolling an "r" (lingual or uvular) while playing. The effect is a rapid fluctuation of tone colour without significant pitch change. Speaks best in the middle register at mf and above.',
-    subs: ['lingual', 'uvular'],
-    composer: 'Notate with three tremolo strokes plus "flz." and mark clearly where it ends. Reliable down to about C4; below that it becomes dense and less stable.',
-    oboist: 'If a rolled R is impossible for you, use the uvular (throat) flutter — slower, but far more controllable. Keep the air speed high or the reed will choke.',
-    fun: 'Roughly one in ten oboists cannot roll an R at all — they build their whole flutter technique in the throat instead.',
-    synth: 'flutter', audioLabel: 'Flutter Tongue A4' },
-  { id: 'multi', name: 'Multiphonics', cat: 'ext', emoji: '🎶', sub: 'Two or more pitches at once',
-    desc: 'Special fingerings and embouchure adjustments make the reed vibrate in several modes at once, producing chords, beatings and rough textures. Each multiphonic has its own fingering, dynamic window and degree of stability.',
-    subs: ['fingered', 'dyads', 'beating'],
-    composer: 'Always print the fingering diagram in the score, and give the player time to set the embouchure — avoid fast approaches from loud tutti passages.',
-    oboist: 'Practise each one at the written dynamic; most only speak in a narrow band. Voicing slightly lower than the bottom note usually helps stability.',
-    fun: 'Over 200 oboe multiphonics have been catalogued — but every reed favours a different subset, so no two oboists share the same menu.',
-    synth: 'multi', audioLabel: 'Multiphonic — stable dyad' },
-  { id: 'harm', name: 'Harmonics', cat: 'reg', emoji: '✨', sub: 'Ethereal overtone colours',
-    desc: 'Overblown fingerings that produce a thin, veiled version of the pitch — a flute-like whisper of the note. Available roughly from C5 upward, sounding an octave or a twelfth above the base fingering.',
-    subs: ['octave', 'twelfth'],
-    composer: 'Notate with a small circle above the note. Best at p–mp in slow music; harmonics will not project over a full orchestra.',
-    oboist: 'Half-hole and voicing control are everything. Think of blowing "through" the note rather than at it.',
-    fun: 'Orchestral oboists have quietly used harmonic fingerings for centuries — as secret pianissimo alternatives long before new music asked for them by name.',
-    synth: 'harm', audioLabel: 'Harmonic C6' },
-  { id: 'circ', name: 'Circular Breathing', cat: 'ext', emoji: '🔄', sub: 'Unbroken stream of sound',
-    desc: 'The player inhales through the nose while pushing air stored in the cheeks through the reed, sustaining the sound indefinitely. The oboe needs so little air that it is one of the friendliest instruments for this.',
-    subs: ['sustained', 'drones'],
-    composer: 'You may write phrases of any length — but mark "circular breathing" in the part and expect a small colour ripple at each switch.',
-    oboist: 'Start with a straw in a glass of water. The switch is easiest on stable middle-register notes, away from register breaks.',
-    fun: 'Heinz Holliger sustained single notes for minutes on end — the oboe uses so little air that one cheekful covers several switches.',
-    synth: 'circ', audioLabel: 'Sustained D5 — two switches' },
-  { id: 'gliss', name: 'Glissando', cat: 'som', emoji: '🎢', sub: 'Sliding between pitches',
-    desc: 'A continuous slide produced by gradually sliding fingers off the keys, combined with embouchure bending. Ascending glissandi are easier than descending; the key mechanism limits the usable range.',
-    subs: ['finger gliss', 'embouchure'],
-    composer: 'Keep glissandi within a third for reliability, and prefer upward slides. Above the staff, the mechanism makes continuous sliding patchy.',
-    oboist: 'Slide the fingers sideways off the ring keys while relaxing the jaw. Combining finger and embouchure bend gives the widest smooth slide.',
-    fun: 'The famous opening slide of Rhapsody in Blue is a clarinet glissando — the oboe version is much harder, which is exactly why it is fun.',
-    synth: 'gliss', audioLabel: 'Glissando G4 → D5' },
-  { id: 'bend', name: 'Pitch Bend', cat: 'som', emoji: '〰️', sub: 'Micro-inflections of pitch',
-    desc: 'Lipping the pitch up or down — roughly a quarter-tone to a semitone — using embouchure and voicing alone. Ideal for microtonal inflections, "blue" notes and expressive ornaments.',
-    subs: ['quarter-tones', 'wide vibrato'],
-    composer: 'Quarter-tone bends are safe anywhere; a full semitone only works in the middle register at moderate dynamics.',
-    oboist: 'Drop the jaw and lower the tongue to bend down — think "ee" to "aw". Bending up is much harder; approach from below instead.',
-    fun: 'Baroque oboists bent pitch constantly as a matter of style — equal temperament is younger than the instrument itself.',
-    synth: 'bend', audioLabel: 'Bend A4 — quarter-tone dip' },
-  { id: 'keys', name: 'Key Clicks', cat: 'ext', emoji: '🥁', sub: 'Percussive key noise',
-    desc: 'The keys are slapped without blowing — or with air only — turning the oboe into a quiet percussion instrument with faint pitch shadows of the fingerings.',
-    subs: ['pitched', 'with air'],
-    composer: 'Very quiet — amplify, or score them in silence. Use x-noteheads at the fingering pitch to control the colour of each click.',
-    oboist: 'The low C, B and B♭ keys give the loudest clicks. Adding a breathy "huh" of air doubles the presence.',
-    fun: 'Unamplified key clicks carry barely ten metres in a hall — intimacy is the whole point of the effect.',
-    synth: 'keys', audioLabel: 'Key clicks — low C pattern' },
-  { id: 'air', name: 'Air Sounds', cat: 'som', emoji: '💨', sub: 'Breath through the instrument',
-    desc: 'Blowing air through the instrument without engaging the reed — from pure white-noise breath to half-tone mixtures where a shadow of pitch appears inside the noise.',
-    subs: ['pure air', 'half-tone'],
-    composer: 'Notate air with a triangle notehead and specify the consonant — "ss", "ff" or "sh" — since each filters the noise differently.',
-    oboist: 'Loosen the embouchure until the reed just stops speaking; the fingering still colours the noise, so change fingerings expressively.',
-    fun: 'The oboe\u2019s narrow bore makes its air sounds the most "whistly" of all the woodwinds.',
-    synth: 'air', audioLabel: 'Air sound — half-tone' },
-  { id: 'cor', name: 'Cor Anglais: Low Register', cat: 'cor', emoji: '🌑', sub: 'The dark voice of the cor anglais',
-    desc: 'The bottom fifth of the cor anglais — written B3 down to E3, sounding a fifth lower — has a covered, reedy darkness the oboe cannot reach. Slow to speak, enormous in colour.',
-    subs: ['sung lines', 'drones'],
-    composer: 'Approach the lowest notes by step and give them time — attacks below written G3 are slow at pp. Unbeatable for lament-like solos.',
-    oboist: 'Use a slightly heavier reed and think warm, slow air. Practise pp attacks daily; they are this register\u2019s whole craft.',
-    fun: 'The cor anglais is neither English nor a horn — "anglais" is probably a corruption of "angl\u00e9" (angled), after its old curved shape.',
-    synth: 'low', audioLabel: 'Cor anglais low F3' }
-];
+const TECHS = [];
 
 const NOTE_EN = ['C', 'C♯', 'D', 'E♭', 'E', 'F', 'F♯', 'G', 'A♭', 'A', 'B♭', 'B'];
 
-const CATS = {
-  som: { label: 'Sound & Timbre', color: '#E8A0FF', tile: '#f6e6ff' },
-  ext: { label: 'Extended Technique', color: '#006EE9', tile: '#dceaff' },
-  reg: { label: 'Register', color: '#83E7FF', tile: '#e2f8ff' },
-  cor: { label: 'Cor Anglais', color: '#D0FFA4', tile: '#eeffdc' }
-};
+const CATS = {};
 
-const PAIRS = {
-  'circ|flutter': { stars: 5, emoji: '🔥', label: 'Advanced — very effective', notes: 'A continuous, pulsating stream of colour that never breathes. Demands real stamina — stunning in slow builds.' },
-  'flutter|multi': { stars: 4, emoji: '🌪️', label: 'Dense & turbulent', notes: 'A rough, buzzing chord-noise. Only the most stable multiphonics survive the flutter — pick them together with your player.' },
-  'bend|gliss': { stars: 5, emoji: '🎢', label: 'Seamless — expressive gold', notes: 'Finger glissando plus embouchure bend covers the widest smooth slides the oboe can make. A natural marriage.' },
-  'air|keys': { stars: 5, emoji: '👻', label: 'Ghost machine', notes: 'Percussive clicks inside a halo of breath — a whole quiet ensemble from a single player. Amplify for magic.' },
-  'harm|multi': { stars: 2, emoji: '🫧', label: 'Fragile — handle with care', notes: 'Both need precise voicing, and combining them usually collapses one or the other. Alternate rather than superimpose.' },
-  'cor|flutter': { stars: 4, emoji: '🐻', label: 'Dark growl', notes: 'Flutter in the cor anglais low register is a slow, furry rumble — one of the darkest colours in the double-reed family.' },
-  'air|cor': { stars: 4, emoji: '🌫️', label: 'Deep fog', notes: 'Air sounds through the cor anglais are lower and rounder than on oboe — a warm, distant wind. Beautiful in transitions.' },
-  'circ|gliss': { stars: 4, emoji: '🌀', label: 'Endless spiral', notes: 'An unbroken slide that keeps circling without a breath. Keep the range modest and it hypnotises.' },
-  'bend|multi': { stars: 4, emoji: '🌊', label: 'Beating clouds', notes: 'Bending one component of a multiphonic creates slow beating waves — a favourite of spectral writing.' },
-  'flutter|keys': { stars: 3, emoji: '🪵', label: 'Workable — rhythmic grit', notes: 'Alternating flutter bursts with key clicks makes a nice grainy groove; superimposing them buries the clicks.' },
-  'air|harm': { stars: 4, emoji: '🕊️', label: 'Veiled whisper', notes: 'A harmonic emerging from inside an air sound is one of the most delicate entrances the oboe can make.' },
-  'bend|harm': { stars: 3, emoji: '🌙', label: 'Delicate — narrow window', notes: 'Harmonics can be bent, but only slightly — a few cents of shimmer rather than a true slide.' },
-  'circ|multi': { stars: 4, emoji: '🐝', label: 'The infinite swarm', notes: 'A sustained multiphonic with no breaths — a swarm that never lands. Choose a very stable multiphonic.' }
-};
+const PAIRS = {};
 
-const DEFAULT_TEXTS = {
-  heroBadge: 'Patrícia Pinheiro · oboe & cor anglais',
-  heroSub: 'An interactive reference for composers and performers — extended techniques, multiphonics and the full sonic world of the oboe and cor anglais.',
-  ticker: ['EXTENDED TECHNIQUES', 'MULTIPHONICS', 'FLUTTER TONGUE', 'CIRCULAR BREATHING', 'AIR SOUNDS', 'KEY CLICKS', 'GLISSANDO', 'HARMONICS', 'COR ANGLAIS'],
-  podSub: 'Scroll the wheel, pick a technique, press play. Where a real recording exists it plays automatically — the rest are synthesised sketches for now.',
-  techniquesSub: 'Browse and filter by category — open a row for notation, practice notes and recordings.',
-  mixSub: 'Pick two techniques and see how well they get along.',
-  tvSub: 'Reels, seagull sounds and experiments — zapping encouraged.',
-  coffeeTitle: 'Buy me a reed',
-  coffeeSub: 'This playground is built and recorded by one oboist, between rehearsals. A coffee (or a piece of cane) keeps the recordings, the multiphonic analyses and the whole archive growing — and free for everyone.',
-  contactSub: "Commissions, recordings, questions about a passage you're writing — or just to say your multiphonic finally spoke.",
-  footerLine: 'Curated by Patrícia Pinheiro — oboe & cor anglais'
-};
+const DEFAULT_TEXTS = {};
+const DATA_URL = 'https://raw.githubusercontent.com/patriciarmpinheiro/oboe-lab/main/data/tecnicas.json';
 
 const HERO_TAGS = [
   { label: 'flutter tongue', top: 20, left: 16, par: 0.12, anim: 'drift1 12s ease-in-out infinite' },
@@ -797,6 +728,7 @@ class Component extends DCLogic {
     modalId: null, playing: false, selIdx: 0,
     mixA: null, mixB: null, ripples: [], reeds: [],
     recordings: {}, videos: [], tvIdx: 0, tvStatic: false, videoMode: null,
+    dataState: 'loading', dataErr: '',
     aiOpen: false, aiBusy: false,
     faq: [], multis: [],
     aiMsgs: [{ role: 'bot', text: 'Hello! Pick a question below — or write to Patrícia through the form.' }]
@@ -822,15 +754,29 @@ class Component extends DCLogic {
     };
     window.addEventListener('mousemove', this._move, { passive: true });
 
-    const load = (f, fn) => fetch(f).then((r) => r.json()).then(fn).catch(() => {});
-    load('data/recordings.json', (recordings) => this.setState({ recordings }));
-    load('data/videos.json', (v) => Array.isArray(v) && this.setState({ videos: v }));
-    load('data/faq.json', (f) => Array.isArray(f) && this.setState({ faq: f }));
-    load('data/techniques.json', (t) => Array.isArray(t) && t.length && this.setState({ techsData: t }));
-    load('data/categories.json', (c) => Array.isArray(c) && c.length && this.setState({ catsData: c }));
-    load('data/site-texts.json', (t) => t && typeof t === 'object' && this.setState({ texts: t }));
-    load('data/multiphonics.json', (m) => Array.isArray(m) && this.setState({ multis: m }));
-    load('data/pairs.json', (p) => Array.isArray(p) && p.length && this.setState({ pairsData: p }));
+    this.loadData();
+  }
+
+  loadData() {
+    this.setState({ dataState: 'loading', dataErr: '' });
+    fetch(DATA_URL + '?v=' + Date.now(), { cache: 'no-store' })
+      .then((r) => { if (!r.ok) throw new Error('HTTP ' + r.status); return r.json(); })
+      .then((d) => {
+        if (!d || typeof d !== 'object' || Array.isArray(d)) throw new Error('unexpected format');
+        const arr = (x) => (Array.isArray(x) ? x : []);
+        this.setState({
+          dataState: 'ready',
+          techsData: arr(d.techniques),
+          catsData: arr(d.categories),
+          recordings: d.recordings && typeof d.recordings === 'object' ? d.recordings : {},
+          videos: arr(d.videos),
+          multis: arr(d.multiphonics),
+          pairsData: arr(d.pairs),
+          faq: arr(d.faq),
+          texts: d.texts && typeof d.texts === 'object' ? d.texts : {}
+        });
+      })
+      .catch((e) => this.setState({ dataState: 'error', dataErr: String((e && e.message) || e) }));
   }
 
   componentWillUnmount() {
@@ -1167,7 +1113,7 @@ class Component extends DCLogic {
       bg: i === selIdx ? '#D0FFA4' : 'transparent',
       color: i === selIdx ? '#000181' : 'rgba(246,245,236,.8)'
     }));
-    const selTech = TT[Math.min(selIdx, TT.length - 1)];
+    const selTech = TT.length ? TT[Math.min(selIdx, TT.length - 1)] : null;
 
     const mkMixList = (side, otherId) => TT.map((t) => {
       const sel = this.state[side] === t.id;
@@ -1305,7 +1251,7 @@ class Component extends DCLogic {
     })) : [];
 
     const TX = { ...DEFAULT_TEXTS, ...(this.state.texts || {}) };
-    const tickerWords = Array.isArray(TX.ticker) && TX.ticker.length ? TX.ticker : DEFAULT_TEXTS.ticker;
+    const tickerWords = Array.isArray(TX.ticker) && TX.ticker.length ? TX.ticker : [];
     const heroWord = (this.props.heroWord || 'OBOE').slice(0, 10);
 
     return {
@@ -1343,19 +1289,26 @@ class Component extends DCLogic {
       audioSectionLabel: hasRec ? 'Recordings — the real thing' : 'Audio demo — synth preview',
       audioNote: hasRec ? 'Real recording by Patrícia — loaded from the audio/ folder.' : 'Synthesised sketch — real recordings coming soon.',
       mixVisible: true,
+      portraitSrc: TX.portrait || '',
+      hasPortrait: !!TX.portrait,
+      noPortrait: !TX.portrait,
+      isLoading: this.state.dataState === 'loading',
+      hasDataErr: this.state.dataState === 'error',
+      dataErr: this.state.dataErr,
+      retryData: () => this.loadData(),
       filters, techs, noResults: techs.length === 0,
       search, setSearch: (e) => this.setState({ search: e.target.value }),
-      surprise: () => this.openTech(TT[Math.floor(Math.random() * TT.length)].id),
+      surprise: () => { if (TT.length) this.openTech(TT[Math.floor(Math.random() * TT.length)].id); },
 
       podRows,
       podBattery: '▮▮▮▯',
-      podNowPlaying: playing ? 'now playing — ' + selTech.audioLabel : 'track ' + (selIdx + 1) + ' of ' + TT.length + ' — ' + selTech.name,
+      podNowPlaying: !selTech ? 'loading…' : (playing ? 'now playing — ' + (selTech.audioLabel || selTech.name) : 'track ' + (selIdx + 1) + ' of ' + TT.length + ' — ' + selTech.name),
       podPrev: () => this.movePod(-1),
       podNext: () => this.movePod(1),
-      podPlay: () => this.playSynth(selTech),
+      podPlay: () => { if (selTech) this.playSynth(selTech); },
       podPlayIcon: playing ? '⏸' : '▶',
-      podMenu: () => this.openTech(selTech.id),
-      podOpen: () => this.openTech(selTech.id),
+      podMenu: () => { if (selTech) this.openTech(selTech.id); },
+      podOpen: () => { if (selTech) this.openTech(selTech.id); },
       podShift: -Math.max(0, Math.min(selIdx - 2, TT.length - 5)) * 30,
       podDown: (e) => this.wheelDown(e),
       podMove: (e) => this.wheelMove(e),
