@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated": "2026-09-11T09:32:34.856Z",
+  "updated": "2026-09-11T09:39:26.788Z",
   "categories": [
     {
       "id": "som",
@@ -265,6 +265,24 @@
       "difficulty": "1",
       "audio": "audio/eh_.multiphonic_1wav.wav",
       "notes": ""
+    },
+    {
+      "id": "mf-mtwrcqkt",
+      "name": "F, G, B · beating",
+      "tech": "multi",
+      "instrument": "cor anglais",
+      "fingering": "",
+      "fingeringImage": "images/fingering-f-g-b-mtwreynw.svg",
+      "images": [
+        "images/eh_multiphonics_2_notes.png"
+      ],
+      "pitches": "F, G, B",
+      "dynamic": "mp-mf",
+      "category": "beating",
+      "stable": "no",
+      "difficulty": "2",
+      "audio": "audio/eh_multiphonic_2_beating-2-audio.wav",
+      "notes": "The multiphonic although is easy to play is really dependent of the embochure to stay stable. Depending of the air pressure one can choose the low or high harmonics of it."
     }
   ],
   "pairs": [
