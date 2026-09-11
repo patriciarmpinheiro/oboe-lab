@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated": "2026-09-11T09:54:30.361Z",
+  "updated": "2026-09-11T09:54:36.986Z",
   "categories": [
     {
       "id": "som",
@@ -331,7 +331,7 @@
         "images/eh_multiphonics_5_notes.png"
       ],
       "pitches": "G#, C#6, F#5, D#4",
-      "dynamic": "",
+      "dynamic": "mp-mf",
       "category": "beating",
       "stable": "yes",
       "difficulty": "2",
