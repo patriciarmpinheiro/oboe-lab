@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated": "2026-09-11T09:54:36.986Z",
+  "updated": "2026-09-11T10:02:09.180Z",
   "categories": [
     {
       "id": "som",
@@ -337,6 +337,24 @@
       "difficulty": "2",
       "audio": "audio/eh_multiphonic_5_-beating-audio-2-audio.wav",
       "notes": "This multiphonic has some beating to it, and the beating can change the speed depending on the embochure. Although the multiphonics speaks quite well, one has to be careful with changes from this multiphonic to others, since has an half hole, and keys being pressed on both little fingers. "
+    },
+    {
+      "id": "mf-mtws54g2",
+      "name": "G#4, D6, G5, F4 · beating",
+      "tech": "multi",
+      "instrument": "cor anglais",
+      "fingering": "",
+      "fingeringImage": "images/fingering-g-4-d6-g5-f4-mtws87dm.svg",
+      "images": [
+        "images/eh_multiphonics_6_notes.png"
+      ],
+      "pitches": "G#4, D6, G5, F4",
+      "dynamic": "mf",
+      "category": "beating",
+      "stable": "yes",
+      "difficulty": "3",
+      "audio": "audio/eh_multiphonic_6_-beating_audio.wav",
+      "notes": "Depending on the embochure and pressure, the G5 can become a F#5. Due to the half hole/C# key combination it can be a multiphonic that needs a bit of time to prepare"
     }
   ],
   "pairs": [
