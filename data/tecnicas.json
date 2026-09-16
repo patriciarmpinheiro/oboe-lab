@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated": "2026-09-16T09:38:51.921Z",
+  "updated": "2026-09-16T10:12:44.338Z",
   "categories": [
     {
       "id": "art",
@@ -88,16 +88,12 @@
       "emoji": "🎶",
       "sub": "Two or more pitches at once",
       "desc": "Special fingerings and embouchure adjustments make the reed vibrate in several modes at once, producing chords, beatings and rough textures. Each multiphonic has its own fingering, dynamic window and degree of stability.",
-      "composer": "Always print the fingering diagram in the score, and give the player time to set the embouchure — avoid fast approaches from loud tutti passages.",
-      "oboist": "Practise each one at the written dynamic; most only speak in a narrow band. Voicing slightly lower than the bottom note usually helps stability.",
-      "fun": "Over 200 oboe multiphonics have been catalogued — but every reed favours a different subset, so no two oboists share the same menu.",
+      "composer": "I recommend always including a fingering chart for each multiphonic, along with the primary pitch or intended sonority, in the performance notes. On one hand, this allows any performer (regardless of their background in contemporary music) to play the piece easily; on the other hand, if a given fingering fails to produce the desired result, it provides a benchmark to guide them in finding an alternative. I also find it crucial to cite the source index for each multiphonic (for instance, the catalog number from Peter Veale's book), as this helps the performer troubleshoot fingering issues.\n\nWhen writing a sequence of multiphonics, it is especially important to consider the complexity of fingering transitions. Multiphonics that only require adjustments across the six main tone holes are generally easy to shift between smoothly. However, fingerings that rely heavily on the pinky keys or trill keys can be quite difficult to connect fluidly. Always specify your priorities (such as pitch accuracy, tempo, or dynamics) in the introductory notes so the performer can choose the most effective solutions. Although this level of detail may seem overwhelming, providing this information reduces friction with the score and fosters a better connection between the performer and the piece—often encouraging them to find creative alternatives that benefit the music. Keep in mind that every oboist uses a unique setup (instrument, and reed structure). Therefore, a solution crafted for one player may not work for another. Clear compositional guidelines are essential for finding viable alternatives and making new scores more accessible to musicians of all levels.\n\nReeds are another crucial consideration. A reed optimized for quiet multiphonics (often referred to as double harmonics) is rarely ideal for produce loud, strongly beating sonorities. This does not mean these contrasting techniques cannot coexist in the same work; rather, composers should temper their expectations to allow each effect to speak in its optimal form.\n\nConsider the mechanics: a loud, beating multiphonic requires a freer-vibrating reed setup to generate the maximum number of partials from a given fingering. Conversely, a double harmonic depends on precise acoustic resonance around a primary pitch. Achieving this delicate balance at a piano dynamic requires greater resistance from the setup—paired with embouchure control aka strong lips —to dampen excess vibration and stabilize the overtone.",
+      "oboist": "While an all-purpose setup does not exist, several key factors can guide the selection process. Starting with a free-vibrating, comfortable reed (one that is neither overly stiff nor brand new) is ideal. \nAs a rule of thumb, a balanced reed suited for standard chamber repertoire (such as a wind quintet) serves as a reliable baseline when testing various multiphonics.\n\nBeyond their musical application, multiphonics are an excellent tool for developing vocal-tract awareness and bodily control. Because isolating or emphasizing specific partials within a multiphonic requires adjusting the throat, soft palate, and tongue position, players can incorporate them into their daily warm-ups. Selecting a single multiphonic and attempting to manipulate its partials and dynamic range purely through embouchure, voicing, or oral cavity adjustments offers valuable control over core woodwind mechanics.",
+      "fun": "Over 200 oboe multiphonics have been cataloged, yet every reed favors a distinct subset—meaning no two oboists share the same working palette. A single multiphonic can sound vastly different between the beginning and the end of a practice session, dictated simply by variations in embouchure tension and fatigue. For composers seeking strict consistency—where every performance sounds identical—this instability can be frustrating. Reeds seem to exercise a mind of their own, altering the dynamic range or speakability of a multiphonic in response to ambient humidity and room acoustics. Naturally, experienced oboists employ various adjustments to minimize these discrepancies across performances.",
       "synth": "multi",
       "audioLabel": "Multiphonic — stable dyad",
-      "sources": [
-        "Veale & Mahnkopf 1994",
-        "Holliger 1971",
-        "Post 1981–82"
-      ]
+      "sources": []
     },
     {
       "subs": [
