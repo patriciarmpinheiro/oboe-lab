@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated": "2026-09-16T09:24:47.159Z",
+  "updated": "2026-09-16T09:38:51.921Z",
   "categories": [
     {
       "id": "art",
@@ -65,16 +65,13 @@
       "cat": "art",
       "emoji": "🌀",
       "sub": "Rolling tremolo of tone colour",
-      "desc": "Produced by rolling an \"r\" (through the throat or tongue ) while playing. The effect is a rapid fluctuation of tone colour without significant pitch change. \nSpeaks best in the middle register at mf and above. The tongue one is normally louder than the throat one, but the throat one can be controled better in ",
+      "desc": "Produced by rolling an \"r\" (through the throat or tongue ) while playing. The effect is a rapid fluctuation of tone colour without significant pitch change. \nSpeaks best in the middle register at mf and above. \nThe tongue one is normally louder than the throat one, but the throat one can be controlled better in all registers, specially piano one.",
       "composer": "Notate with three tremolo strokes plus \"flz.\" and mark clearly where it ends. Reliable down to about C4; below that it becomes dense and less stable.",
-      "oboist": "If a rolled R is impossible for you, use the uvular (throat) flutter — slower, but far more controllable. Keep the air speed high or the reed will choke.",
-      "fun": "Roughly one in ten oboists cannot roll an R at all — they build their whole flutter technique in the throat instead.",
+      "oboist": "Doing scales and warm-up with rolled R (tongue) can be really great for your airflow and embouchure, at least is one of my favourite exercises to relax my body before playing and enter a flow action.\nOne trick is to focus the power of the embouchure on the side of the lips and not on the top/down, giving space for the tongue to freely roll and the air to go through. It takes some training but I love how much expressive the flutter tongue can become after.",
+      "fun": "",
       "synth": "flutter",
       "audioLabel": "Flutter Tongue A4",
-      "sources": [
-        "Veale & Mahnkopf 1994",
-        "Van Cleve 2004"
-      ]
+      "sources": []
     },
     {
       "subs": [
