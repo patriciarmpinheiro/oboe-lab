@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated": "2026-09-20T10:38:03.344Z",
+  "updated": "2026-09-20T10:42:40.841Z",
   "categories": [
     {
       "id": "art",
@@ -109,7 +109,7 @@
       "emoji": "✨",
       "sub": "Ethereal overtone colours",
       "desc": "Overblown fingerings that produce a thin, veiled version of the pitch — a flute-like whisper of the note. Available roughly from C5 upward, sounding an octave or a twelfth above the base fingering.",
-      "composer": "Notate with a small circle above the note. Best at p–mp in slow music; harmonics will not project over a full ensemble or orchestra.",
+      "composer": "Notate with a small circle above the note. Best at pp–p dynamic range; harmonics will not project over a full ensemble or orchestra and any try of playing them louder can lead to the harmonics to not speak anymore.",
       "oboist": "Half-hole and voicing control are everything. Think of blowing \"through\" the note rather than at it.",
       "fun": "Orchestral oboists have quietly used harmonic fingerings for centuries — as secret pianissimo alternatives long before new music asked for them by name.",
       "synth": "harm",
