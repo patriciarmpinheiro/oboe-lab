@@ -1,0 +1,24 @@
+# Servir o site no endereço limpo (lab.patriciapinheiro.com) sem redireccionamento.
+[[redirects]]
+  from = "/"
+  to = "/The%20Oboe%20Playground%20v5.dc.html"
+  status = 200
+  force = true
+
+# O áudio e as imagens nunca mudam de conteúdo — cache longa torna o site
+# instantâneo em visitas repetidas.
+[[headers]]
+  for = "/audio/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000"
+
+[[headers]]
+  for = "/images/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000"
+
+# Os dados mudam sempre que gravas no Archive Studio — nunca guardar em cache.
+[[headers]]
+  for = "/data/*"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"

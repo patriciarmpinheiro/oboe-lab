@@ -68,7 +68,7 @@
       "desc": "Produced by rolling an \"r\" (through the throat or tongue ) while playing. The effect is a rapid fluctuation of tone colour without significant pitch change. \nSpeaks best in the middle register at mf and above. \nThe tongue one is normally louder than the throat one, but the throat one can be controlled better in all registers, specially piano one.",
       "composer": "Notate with three tremolo strokes plus \"flz.\" and mark clearly where it ends. Reliable down to about C4; below that it becomes dense and less stable.",
       "oboist": "Doing scales and warm-up with rolled R (tongue) can be really great for your airflow and embouchure, at least is one of my favourite exercises to relax my body before playing and enter a flow action.\nOne trick is to focus the power of the embouchure on the side of the lips and not on the top/down, giving space for the tongue to freely roll and the air to go through. It takes some training but I love how much expressive the flutter tongue can become after.",
-      "fun": "",
+      "fun": "Some players roll the R with the tongue, some only in the throat, and very few do both well. If you are writing flutter for a specific oboist it is worth asking which one they have, because the throat one keeps working in the high register and the tongue one usually does not.",
       "synth": "flutter",
       "audioLabel": "Flutter Tongue A4",
       "sources": []
@@ -278,7 +278,7 @@
       "desc": "Single-tonguing is the default articulation on oboe, striking each note with a single tongue stroke against the reed, usually near the tip. It is the baseline every other articulation gets compared against.",
       "composer": "Reliable across the full range and every dynamic, no caveats needed. That is exactly what makes it a poor showcase on its own, but the natural default for anything that is not asking for another articulation.",
       "oboist": "The real work is consistency: same syllable, same placement, same air support across registers and dynamics, so a scale does not audibly change character as it climbs.",
-      "fun": "",
+      "fun": "The reed is so small that the tongue only ever touches a corner of it. Most of what sounds like tongue speed is actually air, which is why a tired player gets slower before they get less accurate.",
       "synth": "",
       "audioLabel": "Single-tonguing — repeated A4",
       "sources": [
@@ -302,7 +302,7 @@
       "desc": "Double-tonguing splits a fast articulated passage across two syllables, typically \"tu-ku\" or \"ta-ka\", so the tongue and the back of the tongue alternate the attack instead of a single stroke repeating over and over. It lets fast repeated notes go beyond what single-tonguing can sustain without tiring.",
       "composer": "Once secure, it removes speed as a limiting factor for repeated notes and rapid articulation, opening tempos well beyond comfortable single-tonguing range. It tends to hold up best in the middle register at moderate to loud dynamics; very soft dynamics or extreme registers make the \"ku\" syllable harder to match cleanly to the \"tu\".",
       "oboist": "The two syllables need to sound identical in weight and length before speed matters at all. Most players default to a slightly weaker \"ku\" without noticing. Practising slowly with a metronome, listening specifically for the second syllable, beats practising fast.",
-      "fun": "",
+      "fun": "The “ku” is always the weaker syllable, and on a reed this small the unevenness shows immediately. Getting the two to match is years of work, and most of us still hear the difference even when nobody else does.",
       "synth": "",
       "audioLabel": "Double-tonguing — fast repeated notes",
       "sources": [
@@ -326,7 +326,7 @@
       "desc": "Triple-tonguing extends the double-tonguing pattern to groups of three, typically \"tu-tu-ku\" or \"ta-ta-ka\", matching triplet subdivisions at speed.",
       "composer": "Useful specifically for fast triplet or compound metre passages where double-tonguing’s two-syllable pattern does not divide evenly. Reliability tracks closely with how solid the double-tonguing already is, since it is built from the same syllable pair.",
       "oboist": "The trap is letting the pattern drift into \"tu-ku-tu, ku-tu-ku\" across the barline instead of a clean \"tu-tu-ku\" repeated, which changes the accent pattern audibly. Isolating the syllable order away from the actual notes fixes it faster than practising on the passage itself.",
-      "fun": "",
+      "fun": "In fast triplets most oboists quietly switch between “tu-tu-ku” and “tu-ku-tu” depending on where the bar line falls. The audience never hears which one was used.",
       "synth": "",
       "audioLabel": "Triple-tonguing — triplet figure",
       "sources": [
@@ -347,7 +347,7 @@
       "desc": "Slap-tongue creates a dry, percussive attack by building suction between the tongue and the reed, then releasing it sharply. More a mechanical pop than a blown note.",
       "composer": "Works as a genuinely percussive colour, closer to a woodblock than an oboe attack, and reads clearly even in a dense texture because it does not rely on sustained air. Reliability drops in extreme registers where reed response is already unstable.",
       "oboist": "It is a suction and release action, not a hit. Players who try to hit the reed harder usually get an inconsistent result. Isolating the tongue and reed contact away from full embouchure pressure first makes the mechanism clearer before adding pitch.",
-      "fun": "",
+      "fun": "Slap-tongue is much more generous on saxophone and clarinet, where the reed is big. On the oboe it is small and dry, more a click than a slap — which is exactly what makes it useful inside quiet textures.",
       "synth": "",
       "audioLabel": "Slap-tongue — single pop",
       "sources": [
@@ -369,7 +369,7 @@
       "desc": "Removing the instrument and playing on the reed alone exposes its raw \"crow\", the buzzing sound it makes on its own before the oboe’s bore shapes it into a note.",
       "composer": "Useful as a distinct, exposed timbre rather than an oboe substitute. Reliability depends heavily on the individual reed, since reed response varies more here than through the full instrument.",
       "oboist": "Closer to reed testing than performance technique, so the same care that goes into checking a reed’s crow translates directly. Recording it separately, rather than cutting to it live, avoids an awkward instrument-removal moment.",
-      "fun": "",
+      "fun": "The crow is how we test a reed before it ever touches the instrument. This technique puts on stage the part of an oboist's daily life that nobody is supposed to hear.",
       "synth": "",
       "audioLabel": "Reed crow",
       "sources": [
@@ -391,7 +391,7 @@
       "desc": "The inverse: removing the reed and playing the bare instrument, relying on breath and key noise without any reed vibration.",
       "composer": "Produces a hollow, breathy, unpitched character, essentially air tones and key noise without any reed content at all. Reliable as a texture, unreliable as anything resembling a pitched note.",
       "oboist": "Worth recording as its own isolated sound rather than a live switch mid-performance; removing the reed cleanly during a piece is a practical hazard, not a musical one.",
-      "fun": "",
+      "fun": "Without the reed the oboe becomes a strange tube of wood and keys: you can blow across the top, click the mechanism, or push air straight through it. It is the one technique where the instrument stops being an oboe.",
       "synth": "",
       "audioLabel": "Bare instrument — breath and keys",
       "sources": [
@@ -416,7 +416,7 @@
       "desc": "Vibrato oscillates pitch and intensity around a sustained note through controlled diaphragm or throat pulsing. The oboe’s core expressive device rather than an extended technique.",
       "composer": "Depth and speed are both adjustable and can be notated as parameters (slow/wide versus fast/narrow) rather than left constant. Holds up reliably across the full range and most dynamics, though very soft high notes narrow the room to vary depth without destabilising pitch.",
       "oboist": "Depth and speed are worth practising as independent variables; most players default to one habitual vibrato and never test the edges of the range on purpose. Comparing it at extreme dynamics shows where it needs the most conscious control.",
-      "fun": "",
+      "fun": "Oboe vibrato comes from the diaphragm, not the jaw or the throat. The speed is a choice, and it changes with the repertoire, with the hall, and honestly with the mood of the day.",
       "synth": "",
       "audioLabel": "Vibrato — slow to fast",
       "sources": [
@@ -437,7 +437,7 @@
       "desc": "A lip glissando bends pitch through embouchure and lip tension alone, without changing fingering, producing a smaller, smoother slide than a full fingered glissando.",
       "composer": "The interval range is narrow, closer to a pitch bend than a real glide between distant notes, so it works best as an ornament on a single fingering rather than a way to connect two different notes. Strongest in the middle register.",
       "oboist": "The slide should come from gradually loosening or tightening the lips, not from the jaw; jaw movement destabilises tone quality fast. Practising the two endpoints in isolation before connecting them makes the motion more controlled.",
-      "fun": "",
+      "fun": "The lip glissando is small, usually less than a semitone, but it is the only slide that works on any note with no fingering to prepare. Good for inflections, not for big gestures.",
       "synth": "",
       "audioLabel": "Lip glissando — middle register",
       "sources": [
@@ -458,7 +458,7 @@
       "desc": "Smorzato fades a note out gradually while keeping its pitch centred, rather than simply decrescendoing to silence. The pitch stays locked as the sound thins.",
       "composer": "A controlled disappearance rather than a stop, useful at phrase endings where a normal diminuendo would read as too final or too gradual a change in colour. Depends on register: very high or low notes are harder to keep centred as air support drops.",
       "oboist": "The temptation is to let pitch drift flat as air drops, which defeats the effect. Keeping voicing and support active even as volume falls is the real skill.",
-      "fun": "",
+      "fun": "The difficult part is not the fading, it is keeping the pitch from rising while the air gets smaller. The oboe always wants to go sharp on its way to silence.",
       "synth": "",
       "audioLabel": "Smorzato — sustained fade",
       "sources": [
@@ -479,7 +479,7 @@
       "desc": "Oscillato produces a controlled pitch wobble through embouchure movement, distinct from vibrato in that the oscillation is usually wider and slower, closer to a deliberate pitch wave than an expressive shimmer.",
       "composer": "Works as a distinct effect from vibrato when notated separately, wider and more deliberate rather than blended into the tone. Extreme widths risk losing the fundamental pitch reference entirely.",
       "oboist": "Isolating oscillato from habitual vibrato takes conscious effort since the muscles involved overlap; practising the two side by side rather than in isolation helps.",
-      "fun": "",
+      "fun": "Oscillato is what happens when you let vibrato get out of hand on purpose. Written wide enough and slow enough, it stops sounding like expression and starts sounding like an effect.",
       "synth": "",
       "audioLabel": "Oscillato — wide slow wave",
       "sources": [
@@ -500,7 +500,7 @@
       "desc": "Singing or humming a pitch while playing a different note produces two simultaneous voices, the sung tone and the played tone, rather than a single line.",
       "composer": "Genuinely polyphonic from a single performer, and the interval between sung and played pitch is a real compositional parameter. Close intervals are harder to keep independent than wide ones.",
       "oboist": "Balancing volume between the two lines takes real practice; one usually dominates by default. Starting with the pitches far apart makes the coordination easier before narrowing the interval.",
-      "fun": "",
+      "fun": "The interval between the two voices changes everything: close intervals start to beat against each other, open ones ring. It is also easier to sing below the played note than above it.",
       "synth": "",
       "audioLabel": "Sung and played — wide interval",
       "sources": [
@@ -521,7 +521,7 @@
       "desc": "Vocalisation lets the voice and instrument interact without singing a distinct separate pitch, closer to speaking, growling, or shaping vowels through the instrument than producing two independent notes.",
       "composer": "More textural and less strictly pitched than singing and humming, useful for vocal-adjacent colour rather than genuine two-voice writing. More aggressive vocal effects are harder to sustain over a long phrase.",
       "oboist": "Forcing the throat for a stronger effect tends to backfire and costs endurance fast. A lighter vocal effort usually reads just as clearly through the instrument.",
-      "fun": "",
+      "fun": "This is the only technique where the player's own voice is audible as a voice. Composers often ask for a specific vowel, and it is worth doing — the shape of the mouth really does change what comes out of the bell.",
       "synth": "",
       "audioLabel": "Vocalisation — vowel shaping",
       "sources": [
@@ -542,7 +542,7 @@
       "desc": "A multiphonic effect produced by rolling a finger gradually across a key or tonehole rather than lifting it cleanly, sliding the chord’s pitch content rather than switching it discretely.",
       "composer": "A genuinely continuous shift in the multiphonic’s character rather than a stepped change, closer to a slow morph than a cut. Reliability drops as roll speed increases: faster rolls are harder to control precisely.",
       "oboist": "Start slow and only increase speed once the slow version is fully controlled. This is one where rushing the practice actively works against the result.",
-      "fun": "",
+      "fun": "Rolling the finger instead of lifting it turns a change of pitch into a change of colour. It is one of the few places where everything we are taught about clean finger technique is the thing to avoid.",
       "synth": "",
       "audioLabel": "Rolling note — slow morph",
       "sources": [
@@ -564,7 +564,7 @@
       "desc": "Sounding two harmonics of the same fundamental simultaneously, rather than a single harmonic, by carefully balancing air support between the two upper partials.",
       "composer": "A genuinely two-note effect from a single fingering, distinct in colour from a normal dyad since both notes share the same fundamental. Closer harmonics tend to lock in more easily than distant ones.",
       "oboist": "Stabilising the fundamental first, before attempting to add the second harmonic on top, makes the whole thing far more repeatable than trying to find both at once.",
-      "fun": "",
+      "fun": "Balancing two partials of the same fundamental is mostly air, not fingers. The two notes rarely want the same amount of support, so one of them is always slightly in charge.",
       "synth": "",
       "audioLabel": "Double harmonic",
       "sources": [
@@ -614,7 +614,7 @@
       "desc": "Fast alternation between two fingerings, either adjacent (trill) or more distant (tremolo), including alternates not available through standard trill keys.",
       "composer": "Extends trill and tremolo possibilities beyond the standard fingering system, including intervals or pitches a conventional trill key cannot reach. Some alternate trills are far more even than others.",
       "oboist": "Evenness between the two fingerings matters more than raw speed; an uneven trill reads as sloppy even at a reasonable tempo. Worth practising slowly until both fingerings feel identical in weight.",
-      "fun": "",
+      "fun": "There are trills the trill keys were never built for, and those are the ones worth asking about. Some are easy, some are impossible, and you cannot tell which from the written interval.",
       "synth": "",
       "audioLabel": "Alternate trill",
       "sources": [
@@ -635,7 +635,7 @@
       "desc": "Bringing the teeth into gentle contact with the reed, adding a buzzing, distorted edge to the tone alongside the normal embouchure.",
       "composer": "A distinct distortion colour layered on top of a normal note rather than replacing it, closer to an added texture than a separate technique. Light contact is more sustainable than heavy contact over a long phrase.",
       "oboist": "Should stay gentle and controlled, more contact than pressure. Forcing it risks reed damage without actually improving the effect.",
-      "fun": "",
+      "fun": "A reed costs hours of work and the teeth go straight onto it. Oboists will do it for a good piece, but do not be surprised if the first question back is how many bars.",
       "synth": "",
       "audioLabel": "Teeth note",
       "sources": [
@@ -656,7 +656,7 @@
       "desc": "Shaping the attack and resonance of a note to resemble a trumpet’s character, through a sharper, more focused articulation and embouchure adjustment rather than any fingering change.",
       "composer": "A borrowed brass character on a double reed instrument, useful where a fanfare-like attack is wanted without an actual brass instrument. Holds up best in the middle to upper register, where a sharper attack reads most clearly.",
       "oboist": "The effect comes mostly from the attack, not the sustained tone, so the first few milliseconds of the note deserve more attention than the rest of the phrase.",
-      "fun": "",
+      "fun": "There is no fingering for this one, it is all attack and embouchure. It works best around the middle of the instrument, on notes that already have a bit of brass in them.",
       "synth": "",
       "audioLabel": "Alla tromba — fanfare attack",
       "sources": [
@@ -718,8 +718,8 @@
       "category": "honky",
       "stable": "yes",
       "difficulty": "1",
-      "audio": "audio/eh_.multiphonic_1wav.wav",
-      "notes": ""
+      "audio": "audio/eh_.multiphonic_1wav.m4a",
+      "notes": "A low, honky multiphonic that speaks easily and stays where you put it — one of the most reliable ones here. The F2 is clearly the strongest note and the ones above sit around it like a halo. It takes dynamics well, from p up to f, and because it is so stable it is a good one to arrive on straight from a normal note."
     },
     {
       "id": "mf-mtwrcqkt",
@@ -736,7 +736,7 @@
       "category": "beating",
       "stable": "no",
       "difficulty": "2",
-      "audio": "audio/eh_multiphonic_2_beating-2-audio.wav",
+      "audio": "audio/eh_multiphonic_2_beating-2-audio.m4a",
       "notes": "The multiphonic although is easy to play is really dependent of the embochure to stay stable. Depending of the air pressure one can choose the low or high harmonics of it."
     },
     {
@@ -754,7 +754,7 @@
       "category": "beating",
       "stable": "yes",
       "difficulty": "3",
-      "audio": "audio/eh_multiphonic_3_audio.wav",
+      "audio": "audio/eh_multiphonic_3_audio.m4a",
       "notes": "The multiphonic has a small beating but it breaks quite easily, it can of course depend on the reed on use, but it is a multiphonic that doesn't have a lot of dynamic range. The lower and higher note are the most audible"
     },
     {
@@ -772,7 +772,7 @@
       "category": "honky",
       "stable": "yes",
       "difficulty": "1",
-      "audio": "audio/eh_multiphonic_4_audio-2-audio.wav",
+      "audio": "audio/eh_multiphonic_4_audio-2-audio.m4a",
       "notes": "This multiphonic is quite exciting because although is very stable, it allows to play with air pressure. It also has the potencial of nice multiphonic trills with the half key of d, and the f key on the left hand (n.5)"
     },
     {
@@ -790,7 +790,7 @@
       "category": "beating",
       "stable": "yes",
       "difficulty": "2",
-      "audio": "audio/eh_multiphonic_5_-beating-audio-2-audio.wav",
+      "audio": "audio/eh_multiphonic_5_-beating-audio-2-audio.m4a",
       "notes": "This multiphonic has some beating to it, and the beating can change the speed depending on the embochure. Although the multiphonics speaks quite well, one has to be careful with changes from this multiphonic to others, since has an half hole, and keys being pressed on both little fingers. "
     },
     {
@@ -808,7 +808,7 @@
       "category": "beating",
       "stable": "yes",
       "difficulty": "3",
-      "audio": "audio/eh_multiphonic_6_-beating_audio.wav",
+      "audio": "audio/eh_multiphonic_6_-beating_audio.m4a",
       "notes": "Depending on the embochure and pressure, the G5 can become a F#5. Due to the half hole/C# key combination it can be a multiphonic that needs a bit of time to prepare"
     },
     {
@@ -826,7 +826,7 @@
       "category": "honky",
       "stable": "yes",
       "difficulty": "1",
-      "audio": "audio/eh_multiphonic_7_-audio.wav",
+      "audio": "audio/eh_multiphonic_7_-audio.m4a",
       "notes": "This multiphonic has a lot of trill possiilities, also, depending on the pressure of air and embochure, one can isolate the high G (eh- D)"
     }
   ],
@@ -957,11 +957,21 @@
     {
       "q": "How do commissions work?",
       "a": "Send a message through the form with your idea, instrumentation and timeline — I'll reply with availability and next steps."
+    },
+    {
+      "q": "I don't write contemporary classical music — is this still for me?",
+      "a": "Yes. Most of this started in concert music, but the sounds do not belong to a style. Air sounds and key clicks work as texture in ambient and in film, multiphonics make very good drones, flutter and bends sit easily in jazz writing, and the low cor anglais has been carrying film scores for decades. Tell me what you are writing for and I will point you at the ones that will work.",
+      "id": "faq-i-don-t-write-contemporary-c"
+    },
+    {
+      "q": "Can I book you for a session or a score?",
+      "a": "Yes — oboe, cor anglais and oboe d'amore, for concert music, records, film, games or anything else. Write through the form with what you need and by when, and I will come back with availability.",
+      "id": "faq-can-i-book-you-for-a-session"
     }
   ],
   "texts": {
     "heroBadge": "Patrícia Pinheiro · Oboe & Cor Anglais",
-    "heroSub": "An interactive reference for composers and performers — extended techniques, multiphonics and the full sonic world of the oboe and cor anglais.",
+    "heroSub": "An interactive reference for anyone writing for the oboe — concert music, jazz, film, games, ambient. Extended techniques, multiphonics and the full sonic world of the oboe and cor anglais.",
     "ticker": [
       "EXTENDED TECHNIQUES",
       "MULTIPHONICS",
@@ -974,10 +984,10 @@
       "COR ANGLAIS"
     ],
     "podSub": "Scroll the wheel, pick a technique, press play. Where a real recording exists it plays automatically — the rest are synthesised sketches for now.",
-    "techniquesSub": "Browse and filter by category — open a row for notation, practice notes and recordings.",
+    "techniquesSub": "Browse and filter by category — open a row for notation, practice notes and recordings. Written for anyone who needs the sound, whatever the idiom.",
     "mixSub": "Pick two techniques and see how well they get along.",
     "tvSub": "Reels, seagull sounds and experiments — zapping encouraged. YouTube and Instagram both play here.",
-    "contactSub": "Commissions, recordings, questions about a passage you're writing — or just to say your multiphonic finally spoke. Messages land straight in Patrícia's inbox.",
+    "contactSub": "Commissions, sessions, film and game scores, questions about a passage you're writing — or just to say your multiphonic finally spoke. Messages land straight in Patrícia's inbox.",
     "footerLine": "Curated by Patrícia Pinheiro — oboe & cor anglais",
     "coffeeTitle": "Buy me a reed",
     "coffeeSub": "This playground is built and recorded by one oboist, between rehearsals. A coffee (or a piece of cane) keeps the recordings, the multiphonic analyses and the whole archive growing — and free for everyone.",
