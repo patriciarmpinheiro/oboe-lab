@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated": "2026-11-24T14:10:09.075Z",
+  "updated": "2026-11-24T14:10:17.129Z",
   "categories": [
     {
       "id": "art",
@@ -689,7 +689,7 @@
       "videos": [],
       "id": "double-harm",
       "name": "Double Harmonics",
-      "cat": "ded",
+      "cat": "multi",
       "emoji": "✳️",
       "sub": "Two partials, one fundamental",
       "desc": "Sounding two harmonics of the same fundamental simultaneously, rather than a single harmonic, by carefully balancing air support between the two upper partials.",
