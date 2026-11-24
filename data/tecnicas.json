@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated": "2026-11-24T14:10:17.129Z",
+  "updated": "2026-11-24T14:29:45.598Z",
   "categories": [
     {
       "id": "art",
@@ -533,116 +533,6 @@
       "fingerings": [],
       "variations": [],
       "videos": [],
-      "id": "multi-loudest",
-      "name": "Loudest Note in the Multiphonic",
-      "cat": "multi",
-      "emoji": "📢",
-      "sub": "Bringing out the foreground pitch",
-      "desc": "Every multiphonic fingering produces several simultaneous pitches at different volumes. This isolates and brings out the loudest component through air support and voicing.",
-      "composer": "The most audible, foreground pitch within a given multiphonic chord, useful as the primary melodic reference point when writing multiphonics into a line. Some multiphonics have a much clearer dominant pitch than others.",
-      "oboist": "Finding it is a listening exercise as much as a technical one, isolating each component of the chord by ear before trying to emphasise one over the others.",
-      "fun": "",
-      "synth": "",
-      "audioLabel": "Multiphonic — loudest component",
-      "sources": [
-        "Veale & Mahnkopf 1994",
-        "Holliger 1971",
-        "Post 1981–82"
-      ]
-    },
-    {
-      "subs": [],
-      "fingerings": [],
-      "variations": [],
-      "videos": [],
-      "id": "multi-lowest",
-      "name": "Lowest Note in the Multiphonic",
-      "cat": "multi",
-      "emoji": "⬇️",
-      "sub": "Isolating the bass component",
-      "desc": "The inverse: isolating and emphasising the lowest pitch within a multiphonic’s chord rather than the loudest overall component.",
-      "composer": "Gives access to the multiphonic’s bass note as a distinct, controllable element, useful when the chord’s foundation matters more than its brightest component. Some fingerings have a much steadier low component than others.",
-      "oboist": "Tends to need more air support and less brightness in the voicing than emphasising the loudest component, essentially the opposite embouchure adjustment.",
-      "fun": "",
-      "synth": "",
-      "audioLabel": "Multiphonic — lowest component",
-      "sources": [
-        "Veale & Mahnkopf 1994",
-        "Holliger 1971",
-        "Post 1981–82"
-      ]
-    },
-    {
-      "subs": [],
-      "fingerings": [],
-      "variations": [],
-      "videos": [],
-      "id": "multi-beats",
-      "name": "Multiphonics with Beats",
-      "cat": "multi",
-      "emoji": "💓",
-      "sub": "Interference as rhythm",
-      "desc": "Tuning the multiphonic’s component pitches close enough together that they interfere and produce an audible pulsing, or beating, rather than a stable chord.",
-      "composer": "The beating rate itself becomes a controllable parameter, faster or slower depending on how closely the components are tuned, genuinely usable as a rhythmic device on its own. Sensitive to reed and embouchure adjustment: small changes shift the rate noticeably.",
-      "oboist": "A tuning exercise more than a fingering one; small embouchure adjustments change the beat rate directly. Worth practising slowly with attention to the pulse rather than the pitch.",
-      "fun": "",
-      "synth": "",
-      "audioLabel": "Multiphonic with beating",
-      "sources": [
-        "Veale & Mahnkopf 1994",
-        "Holliger 1971",
-        "Post 1981–82"
-      ]
-    },
-    {
-      "subs": [],
-      "fingerings": [],
-      "variations": [],
-      "videos": [],
-      "id": "multi-noise",
-      "name": "Multiphonics with High Noise Content",
-      "cat": "multi",
-      "emoji": "🌫️",
-      "sub": "Chords pushed into turbulence",
-      "desc": "Pushing a multiphonic toward its noisier, less pitched end, favouring air turbulence over clean pitch content within the chord.",
-      "composer": "A genuinely unstable, textural sound, closer to breath noise with harmonic colour than a clean chord, useful where instability is the point rather than a defect. Inherently lower reliability than a clean multiphonic, since noise content is harder to control precisely.",
-      "oboist": "Closer to controlled instability than a mistake, worth practising deliberately rather than just noting when a multiphonic happens to come out noisy.",
-      "fun": "",
-      "synth": "",
-      "audioLabel": "Noisy multiphonic",
-      "sources": [
-        "Veale & Mahnkopf 1994",
-        "Holliger 1971",
-        "Post 1981–82"
-      ]
-    },
-    {
-      "subs": [],
-      "fingerings": [],
-      "variations": [],
-      "videos": [],
-      "id": "multi-trans",
-      "name": "Transitions to the Multiphonics",
-      "cat": "multi",
-      "emoji": "🔗",
-      "sub": "Letting a chord emerge",
-      "desc": "Moving from a single pitched tone into a multiphonic fingering without an audible break, connecting the two rather than treating them as separate events.",
-      "composer": "Lets a multiphonic emerge from an existing line rather than interrupting it, a real option when the chord needs to feel discovered rather than announced. Some note-to-multiphonic pairs transition far more smoothly than others.",
-      "oboist": "The fingering change and any embouchure adjustment need to happen gradually rather than as a single switch; practising the transition in slow motion first makes the seam disappear faster.",
-      "fun": "",
-      "synth": "",
-      "audioLabel": "Note into multiphonic",
-      "sources": [
-        "Veale & Mahnkopf 1994",
-        "Holliger 1971",
-        "Post 1981–82"
-      ]
-    },
-    {
-      "subs": [],
-      "fingerings": [],
-      "variations": [],
-      "videos": [],
       "id": "rolling-notes",
       "name": "Rolling Notes",
       "cat": "multi",
@@ -658,28 +548,6 @@
         "Veale & Mahnkopf 1994",
         "Holliger 1971",
         "Post 1981–82"
-      ]
-    },
-    {
-      "subs": [],
-      "fingerings": [],
-      "variations": [],
-      "videos": [],
-      "id": "eighth-tone",
-      "name": "Eighth-tone Scale",
-      "cat": "ded",
-      "emoji": "🔬",
-      "sub": "Finer than quarter-tones",
-      "desc": "A scale built from eighth-tone steps, using specific microtonal fingerings between the standard chromatic pitches, a finer division than the more familiar quarter-tone.",
-      "composer": "Opens a finer microtonal grid than quarter-tones, useful where more than two intermediate steps are needed between adjacent semitones. Depends on consistent fingering choice, since several possible fingerings can approximate the same step with different intonation tendencies.",
-      "oboist": "Consistency matters more than perfect tuning; picking one fingering per step and using it every time keeps the scale legible even if individual pitches drift slightly.",
-      "fun": "",
-      "synth": "",
-      "audioLabel": "Eighth-tone scale",
-      "sources": [
-        "Veale & Mahnkopf 1994",
-        "Van Cleve 2004",
-        "Read 1993"
       ]
     },
     {
@@ -705,19 +573,23 @@
       ]
     },
     {
-      "subs": [],
+      "subs": [
+        "harmonics",
+        "bright",
+        "dull & diffuse"
+      ],
       "fingerings": [],
       "variations": [],
       "videos": [],
       "id": "timbre-fing",
-      "name": "Timbre Fingerings",
+      "name": "Timbre Fingerings and Harmonics",
       "cat": "ded",
       "emoji": "🎨",
       "sub": "Same pitch, different colour",
-      "desc": "Alternate fingerings for the same written pitch that change the note’s colour, brightness, or resonance rather than its pitch, letting a single note shift character without moving.",
-      "composer": "A genuine colour palette at a fixed pitch, useful for repeated or sustained notes that need to shift character without changing pitch. Some alternates are far more stable in pitch than others despite the colour change.",
-      "oboist": "Worth cataloguing which alternates stay truly in tune at the same pitch versus which ones drift slightly, since not every timbral fingering is pitch-neutral.",
-      "fun": "",
+      "desc": "A timbre fingering is an alternative fingering for a note you can already play, used to change its colour instead of its pitch. Almost every note on the oboe has several. They run from fingerings that sit close to the standard one and only brighten it a little, through to fingerings far enough away that the note loses overtones, goes dull, and starts to pick up noise. Thinking of them as families that move outwards from the normal fingering is more useful than thinking of them one by one.\n\nThe register decides a lot of it. The lower notes give the duller and more diffuse colours, the upper register gives the sharper and brighter ones, and that is the acoustics of the instrument rather than a choice anyone makes.\n\nHarmonics belong in this family and are the far end of it. A harmonic is played on the fingering of a much lower note with an octave key opened, so the instrument speaks a twelfth above instead of the fundamental. The one I use most is the A, fingered as a D with the side octave key open. On the oboe they run from F5 to C6, and they hold from pp to mf at the most. The sound is hollow and further away than the normal fingering, and darker. People expect a thinner version of the note and get a different colour on the same pitch.",
+      "composer": "A colour palette at a fixed pitch, which makes this one of the most useful things on the instrument for anyone writing long or repeated notes.\n\nIn the orchestra it is a blending tool before it is an effect. When the oboe has to disappear into a chord instead of sitting on top of it, a harmonic or an alternative fingering gets there faster than any amount of embouchure work, and that is where most of us use them. Britten asks for harmonics in Pan for the same reason, to change the colour rather than to make a special effect.\n\nTwo things to know before writing a sequence of them. Fingerings that are underblown or overblown relative to each other need an embouchure change in between, and the player needs time for that, so a fast line of contrasting colours is harder than it looks on the page. And most timbre fingerings take the full dynamic range, while harmonics do not: pp to mf, and pushing past that kills them.\n\nThere is no standard notation for any of this, so say what you mean in the front matter. If you use a circle above the note, know that it usually reads as a harmonic, and if that is not what you want you will get one anyway. As with multiphonics, suggest a fingering instead of only naming the colour you want, and leave the player room to substitute. Every setup is different, and the fingering that works on my reed may not work on the next oboe.\n\nIf you want the colour to move instead of sitting still, ask for bisbigliando. Write the sounding note once with the alternation marked above it/ and its speed if wished. The speed is partly mechanical and partly a musical decision. Where the two fingerings sit close together under the hand it runs fast and even, and where the change crosses both hands it stays slow. ",
+      "oboist": "The A is the one I implement mostly in my daily use, fingered as a D with the side octave key open. Not all the pure harmonic fingerings are steady on their own, so expect to adjust slightly and keep whichever adjustment holds the note without taking the colour away.\n\nFor the rest, build your own list instead of working from a book. The useful question is not which fingerings exist, it is which of them stay in tune at your pitch and on your reed, and two fingerings from the same family can sit a long way apart in intonation on different setups.",
+      "fun": "In Pan, from Britten's Six Metamorphoses after Ovid, I use a harmonic fingering to reach the high A in pp, as it gives me control over the pp and the tone color I want. This is one way of applying extended technique in standard repertoire.",
       "synth": "",
       "audioLabel": "Timbre fingerings — same pitch",
       "sources": [
