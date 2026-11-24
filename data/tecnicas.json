@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated": "2026-11-24T14:29:45.598Z",
+  "updated": "2026-11-24T14:47:35.057Z",
   "categories": [
     {
       "id": "art",
@@ -122,7 +122,8 @@
     {
       "subs": [
         "sustained",
-        "drones"
+        "drones",
+        "legato&tenuto"
       ],
       "fingerings": [],
       "variations": [],
@@ -132,10 +133,10 @@
       "cat": "voz",
       "emoji": "🔄",
       "sub": "Unbroken stream of sound",
-      "desc": "The player inhales through the nose while pushing air stored in the cheeks through the reed, sustaining the sound indefinitely. The oboe needs so little air that it is one of the friendliest instruments for this.",
-      "composer": "You may write phrases of any length — but mark \"circular breathing\" in the part and expect a small colour ripple at each switch.",
-      "oboist": "Start with a straw in a glass of water. The switch is easiest on stable middle-register notes, away from register breaks.",
-      "fun": "Heinz Holliger sustained single notes for minutes on end — the oboe uses so little air that one cheekful covers several switches.",
+      "desc": "Circular breathing keeps the sound going without a break. The cheeks push air out of the mouth and into the instrument while the lungs refill through the nose, and the two things happen at the same time. That is the part that feels impossible at first.\n\nIt works across the whole family, and it suits legato and tenuto writing. It does not suit staccato, where there are gaps to breathe in anyway. In the lower instruments of the family the technique may show other resistances.\n\nIt is not a given. Not every oboist has it, and not every oboist who has it uses it often. I rarely do. It is also harder for anyone who has any difficulty breathing through the nose, which is a real limit for some players and not one that anybody announces..",
+      "composer": "Before writing a passage that depends on it, ask the player whether they have it. The technique is common enough that it exists and not common enough that this particular oboist uses it, and that is better to find out before the first rehearsal than during it. If the piece has to work either way, mark where a breath would make more sense musically.\n\nWhere it is in play, it suits long legato and tenuto lines and drones. Put circular breathing in the part so the player knows the phrase is meant to be unbroken, instead of leaving them to work out whether a long phrase is a challenge or an oversight.\n\nTwo limits worth knowing. Even with the technique, most players hold it for a couple of minutes before the embouchure has to relax or they need a real breath, so an unbroken line is not an infinite one. And the switch is not always silent. How audible it is depends on the player, and on a close microphone it can show up even when it would pass unnoticed in a hall.\n\nFast or florid writing hides the switch better than a long exposed note, because small changes in tone are harder to hear when the notes are moving. \n\nAlso the reed chose to be suitable to other techniques in the same piece can make the circular breathing not being as easy, as to choose a reed only for the circular breathing need. ",
+      "oboist": "Start away from the instrument. \n1. Fill the cheeks, push the air out \n2. Then do the same with them while breathing in through the nose, and repeat it until it stops needing thought. \n3. A straw in a glass of water is the usual next step, because you can see the stream and hear the moment it stutters.\n\nThe oboe adds a problem the other instruments do not have. The air has to be fast and under high pressure to get through the reed, and a stream that works fine through a straw is nowhere near enough here. That part has to be built on purpose rather than expected to transfer.\n\nGo onto the instrument with a reed with less resistance than you would normally choose. Middle register, moderate dynamic, nothing exposed. Once the switch itself is reliable, the work moves to keeping the tone, the intonation and the dynamic from shifting across it, and that is the part that takes the longest.",
+      "fun": "On most wind instruments the problem is running out of air. On the oboe it is the other way round. The instrument takes so little that the difficulty is getting rid of the air you already have, which is why oboists working on this end up practising breathing out through the nose as well as in.",
       "synth": "circ",
       "audioLabel": "Sustained D5 — two switches",
       "sources": [
