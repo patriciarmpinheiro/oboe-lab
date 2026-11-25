@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated": "2026-11-25T10:40:22.100Z",
+  "updated": "2026-11-25T11:53:20.393Z",
   "categories": [
     {
       "id": "art",
@@ -60,6 +60,7 @@
       "fingerings": [],
       "variations": [],
       "videos": [],
+      "excerpts": [],
       "id": "flutter",
       "name": "Flutter Tongue",
       "cat": "art",
@@ -82,6 +83,7 @@
       "fingerings": [],
       "variations": [],
       "videos": [],
+      "excerpts": [],
       "id": "multi",
       "name": "Multiphonics",
       "cat": "multi",
@@ -103,6 +105,7 @@
       "fingerings": [],
       "variations": [],
       "videos": [],
+      "excerpts": [],
       "id": "harm",
       "name": "Harmonics",
       "cat": "ded",
@@ -128,6 +131,7 @@
       "fingerings": [],
       "variations": [],
       "videos": [],
+      "excerpts": [],
       "id": "circ",
       "name": "Circular Breathing",
       "cat": "voz",
@@ -152,6 +156,7 @@
       "fingerings": [],
       "variations": [],
       "videos": [],
+      "excerpts": [],
       "id": "gliss",
       "name": "Glissando",
       "cat": "pitch",
@@ -176,6 +181,7 @@
       "fingerings": [],
       "variations": [],
       "videos": [],
+      "excerpts": [],
       "id": "bend",
       "name": "Pitch Bend",
       "cat": "pitch",
@@ -201,6 +207,7 @@
       "fingerings": [],
       "variations": [],
       "videos": [],
+      "excerpts": [],
       "id": "keys",
       "name": "Key Clicks",
       "cat": "ruido",
@@ -224,6 +231,7 @@
       "fingerings": [],
       "variations": [],
       "videos": [],
+      "excerpts": [],
       "id": "air",
       "name": "Air Sounds",
       "cat": "ruido",
@@ -245,6 +253,7 @@
       "fingerings": [],
       "variations": [],
       "videos": [],
+      "excerpts": [],
       "id": "single-tongue",
       "name": "Single-tonguing",
       "cat": "art",
@@ -269,6 +278,7 @@
       "fingerings": [],
       "variations": [],
       "videos": [],
+      "excerpts": [],
       "id": "double-tongue",
       "name": "Double-tonguing",
       "cat": "art",
@@ -293,6 +303,7 @@
       "fingerings": [],
       "variations": [],
       "videos": [],
+      "excerpts": [],
       "id": "triple-tongue",
       "name": "Triple-tonguing",
       "cat": "art",
@@ -314,6 +325,7 @@
       "fingerings": [],
       "variations": [],
       "videos": [],
+      "excerpts": [],
       "id": "slap-tongue",
       "name": "Slap-tongue",
       "cat": "art",
@@ -336,6 +348,7 @@
       "fingerings": [],
       "variations": [],
       "videos": [],
+      "excerpts": [],
       "id": "reed-only",
       "name": "Playing with the Reed Only",
       "cat": "ruido",
@@ -358,6 +371,7 @@
       "fingerings": [],
       "variations": [],
       "videos": [],
+      "excerpts": [],
       "id": "no-reed",
       "name": "Special Effects without the Reed",
       "cat": "ruido",
@@ -383,6 +397,7 @@
       "fingerings": [],
       "variations": [],
       "videos": [],
+      "excerpts": [],
       "id": "vibrato",
       "name": "Vibrato",
       "cat": "pitch",
@@ -404,6 +419,7 @@
       "fingerings": [],
       "variations": [],
       "videos": [],
+      "excerpts": [],
       "id": "lip-gliss",
       "name": "Lip Glissando",
       "cat": "pitch",
@@ -425,6 +441,7 @@
       "fingerings": [],
       "variations": [],
       "videos": [],
+      "excerpts": [],
       "id": "smorzato",
       "name": "Smorzato",
       "cat": "pitch",
@@ -446,6 +463,7 @@
       "fingerings": [],
       "variations": [],
       "videos": [],
+      "excerpts": [],
       "id": "oscillato",
       "name": "Oscillato",
       "cat": "pitch",
@@ -467,6 +485,7 @@
       "fingerings": [],
       "variations": [],
       "videos": [],
+      "excerpts": [],
       "id": "sing-hum",
       "name": "Singing and Humming",
       "cat": "voz",
@@ -488,6 +507,7 @@
       "fingerings": [],
       "variations": [],
       "videos": [],
+      "excerpts": [],
       "id": "vocalisation",
       "name": "Vocalisation",
       "cat": "voz",
@@ -509,6 +529,7 @@
       "fingerings": [],
       "variations": [],
       "videos": [],
+      "excerpts": [],
       "id": "rolling-notes",
       "name": "Rolling Notes",
       "cat": "multi",
@@ -531,6 +552,7 @@
       "fingerings": [],
       "variations": [],
       "videos": [],
+      "excerpts": [],
       "id": "double-harm",
       "name": "Double Harmonics",
       "cat": "multi",
@@ -557,6 +579,7 @@
       "fingerings": [],
       "variations": [],
       "videos": [],
+      "excerpts": [],
       "id": "timbre-fing",
       "name": "Timbre Fingerings and Harmonics",
       "cat": "ded",
@@ -581,6 +604,7 @@
       "fingerings": [],
       "variations": [],
       "videos": [],
+      "excerpts": [],
       "id": "trills-trem",
       "name": "Trills and Tremolos",
       "cat": "ded",
@@ -602,6 +626,7 @@
       "fingerings": [],
       "variations": [],
       "videos": [],
+      "excerpts": [],
       "id": "teeth",
       "name": "Teeth Notes",
       "cat": "esp",
@@ -623,6 +648,7 @@
       "fingerings": [],
       "variations": [],
       "videos": [],
+      "excerpts": [],
       "id": "alla-tromba",
       "name": "Alla Tromba",
       "cat": "esp",
@@ -647,6 +673,50 @@
         "label": "Demo",
         "instrument": "oboe",
         "notes": ""
+      }
+    ],
+    "flutter": [
+      {
+        "file": "audio/ob-flz-sib-transitions.mp3",
+        "label": "OBOE FLZ - High B ",
+        "instrument": "oboe",
+        "notes": "This audio is a High B, with the pure tone, transitioning to FLZ, and with attack starting with FLZ"
+      },
+      {
+        "file": "audio/ob-flz-eb-transitions.mp3",
+        "label": "OBOE FLZ - Eb - Throat",
+        "instrument": "oboe",
+        "notes": "This audio is a middle Eb, with the pure tone, transitioning to FLZ, and with attack starting with FLZ. \nThis recording was done with Throat FLZ (that I personally don't use), only to show the difference between them, Oboists that use this FLZ on their daily basis can do it with better transitions"
+      },
+      {
+        "file": "audio/ob-flz-lowerc-transition.mp3",
+        "label": "OBOE FLZ - Lower C ",
+        "instrument": "oboe",
+        "notes": "This audio is a lower C, with the pure tone transitioning to FLZ, piano possible dynamic"
+      },
+      {
+        "file": "audio/ob-flz-lowerc-attack.mp3",
+        "label": "OBOE FLZ - Lower C ",
+        "instrument": "oboe",
+        "notes": "This audio is a lower C, attacking with FLZ, piano possible dynamic"
+      },
+      {
+        "file": "audio/ob-flz-forte.mp3",
+        "label": "OBOE FLZ - Forte",
+        "instrument": "oboe",
+        "notes": "This audio has different notes in F dynamic"
+      },
+      {
+        "file": "audio/ob-flz-lipbend.mp3",
+        "label": "OBOE FLZ - Lip Bend",
+        "instrument": "oboe",
+        "notes": "This audio has some examples of lip bends + FLZ"
+      },
+      {
+        "file": "audio/ob-flz-airvariations.mp3",
+        "label": "OBOE FLZ - Variations",
+        "instrument": "oboe",
+        "notes": "This audio has some examples of variations done with FLZ, using FLZ to articulate inside of a long note four example, or mixed with lip bends"
       }
     ]
   },
@@ -694,7 +764,10 @@
       "stable": "yes",
       "difficulty": "1",
       "audio": "audio/eh_.multiphonic_1wav.m4a",
-      "notes": "A low, honky multiphonic that speaks easily and stays where you put it — one of the most reliable ones here. The F2 is clearly the strongest note and the ones above sit around it like a halo. It takes dynamics well, from p up to f, and because it is so stable it is a good one to arrive on straight from a normal note."
+      "notes": "A low, honky multiphonic that speaks easily and stays where you put it — one of the most reliable ones here. The F2 is clearly the strongest note and the ones above sit around it like a halo. It takes dynamics well, from p up to f, and because it is so stable it is a good one to arrive on straight from a normal note.",
+      "categories": [
+        "honky"
+      ]
     },
     {
       "id": "mf-mtwrcqkt",
@@ -712,7 +785,10 @@
       "stable": "no",
       "difficulty": "2",
       "audio": "audio/eh_multiphonic_2_beating-2-audio.m4a",
-      "notes": "The multiphonic although is easy to play is really dependent of the embochure to stay stable. Depending of the air pressure one can choose the low or high harmonics of it."
+      "notes": "The multiphonic although is easy to play is really dependent of the embochure to stay stable. Depending of the air pressure one can choose the low or high harmonics of it.",
+      "categories": [
+        "beating"
+      ]
     },
     {
       "id": "mf-mtwrll01",
@@ -730,7 +806,10 @@
       "stable": "yes",
       "difficulty": "3",
       "audio": "audio/eh_multiphonic_3_audio.m4a",
-      "notes": "The multiphonic has a small beating but it breaks quite easily, it can of course depend on the reed on use, but it is a multiphonic that doesn't have a lot of dynamic range. The lower and higher note are the most audible"
+      "notes": "The multiphonic has a small beating but it breaks quite easily, it can of course depend on the reed on use, but it is a multiphonic that doesn't have a lot of dynamic range. The lower and higher note are the most audible",
+      "categories": [
+        "beating"
+      ]
     },
     {
       "id": "mf-mtwrrd36",
@@ -748,7 +827,10 @@
       "stable": "yes",
       "difficulty": "1",
       "audio": "audio/eh_multiphonic_4_audio-2-audio.m4a",
-      "notes": "This multiphonic is quite exciting because although is very stable, it allows to play with air pressure. It also has the potencial of nice multiphonic trills with the half key of d, and the f key on the left hand (n.5)"
+      "notes": "This multiphonic is quite exciting because although is very stable, it allows to play with air pressure. It also has the potencial of nice multiphonic trills with the half key of d, and the f key on the left hand (n.5)",
+      "categories": [
+        "honky"
+      ]
     },
     {
       "id": "mf-mtwrysj8",
@@ -766,7 +848,10 @@
       "stable": "yes",
       "difficulty": "2",
       "audio": "audio/eh_multiphonic_5_-beating-audio-2-audio.m4a",
-      "notes": "This multiphonic has some beating to it, and the beating can change the speed depending on the embochure. Although the multiphonics speaks quite well, one has to be careful with changes from this multiphonic to others, since has an half hole, and keys being pressed on both little fingers. "
+      "notes": "This multiphonic has some beating to it, and the beating can change the speed depending on the embochure. Although the multiphonics speaks quite well, one has to be careful with changes from this multiphonic to others, since has an half hole, and keys being pressed on both little fingers. ",
+      "categories": [
+        "beating"
+      ]
     },
     {
       "id": "mf-mtws54g2",
@@ -784,7 +869,10 @@
       "stable": "yes",
       "difficulty": "3",
       "audio": "audio/eh_multiphonic_6_-beating_audio.m4a",
-      "notes": "Depending on the embochure and pressure, the G5 can become a F#5. Due to the half hole/C# key combination it can be a multiphonic that needs a bit of time to prepare"
+      "notes": "Depending on the embochure and pressure, the G5 can become a F#5. Due to the half hole/C# key combination it can be a multiphonic that needs a bit of time to prepare",
+      "categories": [
+        "beating"
+      ]
     },
     {
       "id": "mf-mtwseq2l",
@@ -802,7 +890,10 @@
       "stable": "yes",
       "difficulty": "1",
       "audio": "audio/eh_multiphonic_7_-audio.m4a",
-      "notes": "This multiphonic has a lot of trill possiilities, also, depending on the pressure of air and embochure, one can isolate the high G (eh- D)"
+      "notes": "This multiphonic has a lot of trill possiilities, also, depending on the pressure of air and embochure, one can isolate the high G (eh- D)",
+      "categories": [
+        "honky"
+      ]
     }
   ],
   "mpLinks": [],
@@ -944,31 +1035,7 @@
       "id": "faq-can-i-book-you-for-a-session"
     }
   ],
-  "texts": {
-    "heroBadge": "Patrícia Pinheiro · Oboe & Cor Anglais",
-    "heroSub": "An interactive reference for anyone writing for the oboe — concert music, jazz, film, games, ambient. Extended techniques, multiphonics and the full sonic world of the oboe and cor anglais.",
-    "ticker": [
-      "EXTENDED TECHNIQUES",
-      "MULTIPHONICS",
-      "FLUTTER TONGUE",
-      "CIRCULAR BREATHING",
-      "AIR SOUNDS",
-      "KEY CLICKS",
-      "GLISSANDO",
-      "HARMONICS",
-      "COR ANGLAIS"
-    ],
-    "podSub": "Scroll the wheel, pick a technique, press play. Where a real recording exists it plays automatically — the rest are synthesised sketches for now.",
-    "techniquesSub": "Browse and filter by category — open a row for notation, practice notes and recordings. Written for anyone who needs the sound, whatever the idiom.",
-    "mixSub": "Pick two techniques and see how well they get along.",
-    "tvSub": "Reels, seagull sounds and experiments — zapping encouraged. YouTube and Instagram both play here.",
-    "contactSub": "Commissions, sessions, film and game scores, questions about a passage you're writing — or just to say your multiphonic finally spoke. Messages land straight in Patrícia's inbox.",
-    "footerLine": "Curated by Patrícia Pinheiro — oboe & cor anglais",
-    "coffeeTitle": "Buy me a reed",
-    "coffeeSub": "This playground is built and recorded by one oboist, between rehearsals. A coffee (or a piece of cane) keeps the recordings, the multiphonic analyses and the whole archive growing — and free for everyone.",
-    "thanks": "This archive grew out of conversations with composers, colleagues and teachers who kept asking for a sound before writing it. Thank you to everyone who lent a reed, an ear or an afternoon of recording — and to the authors below, whose work is the ground every page here stands on.",
-    "bibSub": "What was used and by whom. Each technique lists the sources behind its description; the full references are here."
-  },
+  "repertoire": [],
   "bibliography": [
     {
       "key": "Veale & Mahnkopf 1994",
@@ -1042,5 +1109,31 @@
       "url": "",
       "note": "Everything here marked with a recording or a fingering diagram was tested and recorded for this site."
     }
-  ]
+  ],
+  "people": [],
+  "texts": {
+    "heroBadge": "Patrícia Pinheiro · Oboe & Cor Anglais",
+    "heroSub": "An interactive reference for anyone writing for the oboe — concert music, jazz, film, games, ambient. Extended techniques, multiphonics and the full sonic world of the oboe and cor anglais.",
+    "ticker": [
+      "EXTENDED TECHNIQUES",
+      "MULTIPHONICS",
+      "FLUTTER TONGUE",
+      "CIRCULAR BREATHING",
+      "AIR SOUNDS",
+      "KEY CLICKS",
+      "GLISSANDO",
+      "HARMONICS",
+      "COR ANGLAIS"
+    ],
+    "podSub": "Scroll the wheel, pick a technique, press play. Where a real recording exists it plays automatically — the rest are synthesised sketches for now.",
+    "techniquesSub": "Browse and filter by category — open a row for notation, practice notes and recordings. Written for anyone who needs the sound, whatever the idiom.",
+    "mixSub": "Pick two techniques and see how well they get along.",
+    "tvSub": "Reels, seagull sounds and experiments — zapping encouraged. YouTube and Instagram both play here.",
+    "contactSub": "Commissions, sessions, film and game scores, questions about a passage you're writing — or just to say your multiphonic finally spoke. Messages land straight in Patrícia's inbox.",
+    "footerLine": "Curated by Patrícia Pinheiro — oboe & cor anglais",
+    "coffeeTitle": "Buy me a reed",
+    "coffeeSub": "This playground is built and recorded by one oboist, between rehearsals. A coffee (or a piece of cane) keeps the recordings, the multiphonic analyses and the whole archive growing — and free for everyone.",
+    "thanks": "This archive grew out of conversations with composers, colleagues and teachers who kept asking for a sound before writing it. Thank you to everyone who lent a reed, an ear or an afternoon of recording — and to the authors below, whose work is the ground every page here stands on.",
+    "bibSub": "What was used and by whom. Each technique lists the sources behind its description; the full references are here."
+  }
 }
