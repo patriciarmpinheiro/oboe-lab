@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated": "2026-11-25T18:31:56.043Z",
+  "updated": "2026-11-25T18:57:19.761Z",
   "categories": [
     {
       "id": "art",
@@ -734,10 +734,52 @@
   "recordings": {
     "air": [
       {
-        "file": "audio/air-sounds.mp3",
-        "label": "Demo",
+        "file": "audio/ob-air-inh-ex-air.mp3",
+        "label": "Inhale + Exhale - Full Body",
         "instrument": "oboe",
-        "notes": ""
+        "notes": "This recording demonstrates both inhalation and exhalation through the full length of the instrument with all fingerings closed, creating a dark, enclosed air resonance."
+      },
+      {
+        "file": "audio/ob-air-bell-air.mp3",
+        "label": "Bell ",
+        "instrument": "oboe",
+        "notes": "This recording demonstrates air sounds blown solely through the bell, using the hand at the open end to shape and filter the airflow."
+      },
+      {
+        "file": "audio/ob-air-top-reed-air.mp3",
+        "label": "On top of the reed, moving fingerings",
+        "instrument": "oboe",
+        "notes": "This recording demonstrates air sounds produced by blowing over the top of the reed while changing fingerings to filter the resonance."
+      },
+      {
+        "file": "audio/ob-air-reed-air.mp3",
+        "label": "Through Reed",
+        "instrument": "oboe",
+        "notes": "This recording demonstrates a delicate, pianissimo airflow directed through the reed, producing a pure, subtle air tone without pitch."
+      },
+      {
+        "file": "audio/ob-air-head-air.mp3",
+        "label": "Through Headjoint",
+        "instrument": "oboe",
+        "notes": "This recording demonstrates air sounds directed through the headjoint as the keys are opened and closed, with the end stopped by the hand to alter resonance. Use also of FLZ."
+      },
+      {
+        "file": "audio/ob-air-d-key-air.mp3",
+        "label": "D Key",
+        "instrument": "oboe",
+        "notes": "This recording demonstrates a focused air effect blown directly through the D key. Because it is the only ring-shaped key left on the instrument, its open center lets significantly more air enter the tube"
+      },
+      {
+        "file": "audio/ob-air-d-key-variations-air.mp3",
+        "label": "D Key - Variations",
+        "instrument": "oboe",
+        "notes": "This recording explores different sound colors created by blowing directly into the D key—whose unique open-ring design allows more air into the instrument than closed-pad keys."
+      },
+      {
+        "file": "audio/ob-air-fullbody-flz-air.mp3",
+        "label": "FLZ ",
+        "instrument": "oboe",
+        "notes": "This recording demonstrates unpitched flutter-tonguing resonating through the full length of the instrument's body."
       }
     ],
     "flutter": [
