@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated": "2026-11-25T11:53:20.393Z",
+  "updated": "2026-11-25T12:44:27.587Z",
   "categories": [
     {
       "id": "art",
@@ -677,46 +677,52 @@
     ],
     "flutter": [
       {
-        "file": "audio/ob-flz-sib-transitions.mp3",
+        "file": "audio/ob-flz-sib-var-flz.mp3",
         "label": "OBOE FLZ - High B ",
         "instrument": "oboe",
         "notes": "This audio is a High B, with the pure tone, transitioning to FLZ, and with attack starting with FLZ"
       },
       {
-        "file": "audio/ob-flz-eb-transitions.mp3",
+        "file": "audio/ob-flz-eb-thr-flz.mp3",
         "label": "OBOE FLZ - Eb - Throat",
         "instrument": "oboe",
         "notes": "This audio is a middle Eb, with the pure tone, transitioning to FLZ, and with attack starting with FLZ. \nThis recording was done with Throat FLZ (that I personally don't use), only to show the difference between them, Oboists that use this FLZ on their daily basis can do it with better transitions"
       },
       {
-        "file": "audio/ob-flz-lowerc-transition.mp3",
+        "file": "audio/ob-flz-c-trans-flz.mp3",
         "label": "OBOE FLZ - Lower C ",
         "instrument": "oboe",
         "notes": "This audio is a lower C, with the pure tone transitioning to FLZ, piano possible dynamic"
       },
       {
-        "file": "audio/ob-flz-lowerc-attack.mp3",
+        "file": "audio/ob-flz-c-attack-flz.mp3",
         "label": "OBOE FLZ - Lower C ",
         "instrument": "oboe",
         "notes": "This audio is a lower C, attacking with FLZ, piano possible dynamic"
       },
       {
-        "file": "audio/ob-flz-forte.mp3",
+        "file": "audio/ob-flz-fdynamic-flz.mp3",
         "label": "OBOE FLZ - Forte",
         "instrument": "oboe",
         "notes": "This audio has different notes in F dynamic"
       },
       {
-        "file": "audio/ob-flz-lipbend.mp3",
+        "file": "audio/ob-flz-lipbend-flz.mp3",
         "label": "OBOE FLZ - Lip Bend",
         "instrument": "oboe",
         "notes": "This audio has some examples of lip bends + FLZ"
       },
       {
-        "file": "audio/ob-flz-airvariations.mp3",
+        "file": "audio/ob-flz-variations-flz.mp3",
         "label": "OBOE FLZ - Variations",
         "instrument": "oboe",
         "notes": "This audio has some examples of variations done with FLZ, using FLZ to articulate inside of a long note four example, or mixed with lip bends"
+      },
+      {
+        "file": "audio/ob-flz-multiphonic-flz.mp3",
+        "label": "OBOE FLZ - Multiphonics",
+        "instrument": "oboe",
+        "notes": "This audio has some examples of multiphonics with FLZ. When a multiphonic is not very stable, the position of the mouth of FLZ can make it even more unstable, and have some breaks between the fundamental of the multiphonic and the multiphonic itself. It changes a lot between multiphonics. "
       }
     ]
   },
