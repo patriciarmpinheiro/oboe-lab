@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated": "2026-11-25T17:53:45.774Z",
+  "updated": "2026-11-25T18:15:05.592Z",
   "categories": [
     {
       "id": "art",
@@ -796,6 +796,38 @@
         "label": "Harmonics",
         "instrument": "oboe",
         "notes": "In this recording you can listen to the spectrum of simple harmonics, going from F to H, the first sound is always the harmonic, followed by the real position of the note"
+      }
+    ],
+    "bend": [
+      {
+        "file": "audio/ob-lipbend-incontext-lip-bend.mp3",
+        "label": "Downward Bend in Musical Context",
+        "instrument": "oboe",
+        "notes": "This recording illustrates how a lip bend can be used expressively inside a musical phrase."
+      },
+      {
+        "file": "audio/ob-lipbend-upbend-lip-bend.mp3",
+        "label": "High B - Downward Bend",
+        "instrument": "oboe",
+        "notes": "Downward lip bend — slow motion followed by fast tempo."
+      },
+      {
+        "file": "audio/ob-lipbend-middle-slow-fast-lip-bend.mp3",
+        "label": "Middle B - Downward Bend",
+        "instrument": "oboe",
+        "notes": "Downward lip bend — slow motion followed by fast tempo. You can hear on the slow motion where is the point of break. "
+      },
+      {
+        "file": "audio/ob-lipbend-lower-oct-down-lip-bend.mp3",
+        "label": "Lower Register - Downward Bend",
+        "instrument": "oboe",
+        "notes": "This recording demonstrates a downward lip bend executed in the lower register.\nIn this register, any upward bend can transform itself in rolling tone."
+      },
+      {
+        "file": "audio/ob-lipbend-low-slow-fast-lip-bend.mp3",
+        "label": "Lower E - Downward Bend",
+        "instrument": "oboe",
+        "notes": "Downward lip bend — slow motion followed by fast tempo."
       }
     ]
   },
