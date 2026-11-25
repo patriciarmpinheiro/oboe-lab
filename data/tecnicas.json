@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated": "2026-11-25T18:23:21.601Z",
+  "updated": "2026-11-25T18:30:31.554Z",
   "categories": [
     {
       "id": "art",
@@ -828,6 +828,32 @@
         "label": "Lower E - Downward Bend",
         "instrument": "oboe",
         "notes": "Downward lip bend — slow motion followed by fast tempo."
+      }
+    ],
+    "keys": [
+      {
+        "file": "audio/ob-key-air-rythmic-key-clicks.mp3",
+        "label": "Key Clicks + Rythmical Air",
+        "instrument": "oboe",
+        "notes": "This recording demonstrates the combination of percussive key clicks and rhythmical airflow through the instrument.\nThe lower keys are being pressed here (the ones with more ressonance)."
+      },
+      {
+        "file": "audio/ob-key-upper-key-clicks.mp3",
+        "label": "Upper Key clicks",
+        "instrument": "oboe",
+        "notes": "This recording demonstrates very soft upper-register key clicks played with the left hand, producing a delicate percussive sound that does not carry through the bore."
+      },
+      {
+        "file": "audio/ob-key-lower-key-clicks.mp3",
+        "label": "Nova gravação",
+        "instrument": "oboe",
+        "notes": "This recording demonstrates right-hand key clicks, which naturally yield a warmer tone and slightly more acoustic body than the upper left-hand keys. Still very soft for an ensemble piece, for example"
+      },
+      {
+        "file": "audio/ob-key-bellr-key-clicks.mp3",
+        "label": "Bell Keys",
+        "instrument": "oboe",
+        "notes": "Bell-area key clicks — the deepest and most resonant of all positions"
       }
     ]
   },
