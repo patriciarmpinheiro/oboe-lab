@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated": "2026-11-25T10:03:56.570Z",
+  "updated": "2026-11-25T10:40:22.100Z",
   "categories": [
     {
       "id": "art",
@@ -219,8 +219,7 @@
     },
     {
       "subs": [
-        "pure air",
-        "half-tone"
+        "pure air;noise"
       ],
       "fingerings": [],
       "variations": [],
@@ -230,38 +229,14 @@
       "cat": "ruido",
       "emoji": "💨",
       "sub": "Breath through the instrument",
-      "desc": "Blowing air through the instrument without engaging the reed — from pure white-noise breath to half-tone mixtures where a shadow of pitch appears inside the noise.",
-      "composer": "Notate air with a triangle notehead and specify the consonant — \"ss\", \"ff\" or \"sh\" — since each filters the noise differently.",
-      "oboist": "Loosen the embouchure until the reed just stops speaking; the fingering still colours the noise, so change fingerings expressively.",
-      "fun": "The oboe’s narrow bore makes its air sounds the most \"whistly\" of all the woodwinds.",
+      "desc": "Air sounds are the sound of the player's breath moving through the instrument, in or out, without the reed vibrating.\n\nThere is more than one place to do it. Through the reed on its own, through the opening at the top of the instrument where the reed or the crook sits, or through the keys. Each opening gives a different sound, because the air meets a different shape on its way out.\n\nIt works on every instrument in the family, and it works on single parts of an instrument too.\n\nBreathing in is louder than breathing out. \n\nPulling the air the other way gives a different family altogether. Sucking noises are loud and close to uncontrollable, in the sense that the pitch and the volume are not really yours to choose. Kissing sounds are the same idea in fast impulses, and they are just as unpredictable.",
+      "composer": "Like key clicks, this technique changes completely depending on whether there is a microphone. Without one it is very quiet and it will not come through an ensemble that is playing. Decide early whether it is amplified, whether it is a solo moment, or whether there is silence around it, because that decision changes what/ how much you can ask for.\n\nYou can shape the noise with consonants. Write shh, tch or tsss over the note and each one filters the air differently. Air sounds also combine with flutter tongue and with ordinary articulation, which gives you a family of textures instead of one sound. Also you can combine the breathing sound with key clicks and fingering movements.\n\nThe sucking noises and kissing sounds work the other way round, and in one way they are easier. They are loud. Where a blown air sound disappears inside an ensemble, these carry, so they survive without a microphone and without silence around them. What you cannot do is choose the pitch or the dynamic. Write them as gestures, with a rhythm and a shape, and leave the rest open. Asking for a particular note is asking for something nobody can deliver twice in a row. They are also funny, which is worth knowing before you put one inside a serious passage.\n\nTwo things about time, and both cause real trouble when they are forgotten.\n\nThe first is assembly. Most of this needs the reed out, or the instrument apart. The player has to take something off and put it back. Write the time for both, and write enough of it. One bar is usually not enough, and arriving at a melodic passage with the reed barely seated is where the frustration starts.\n\nThe second is the breathing itself. Air drawn in through the instrument is recycled air, and a long passage of breathing in and out through the tube leaves the player dizzy. I know because I tried it. Keep these passages short, or give the player somewhere to breathe normally.",
+      "oboist": "For the blown sounds, loosen the embouchure until the reed stops speaking. The fingering still colours the noise, so changing fingerings while the air runs is an expressive move and not only a mechanical one.\n\nThe sucking noises come from several places and none of them sound alike. From the reed. From a cor anglais crook with no reed on it, which resonates best of all. From the top of the oboe with no reed, where the lips meet the metal. And from an oboe staple with no cane on it, which gives a different set again.\n\nAll of them depend on finding the resonance position against the metal, and that is the hard part. In the middle of a piece, with no time to search for it, landing on it is not guaranteed. Mark your own position in advance and practise arriving at it cold.\n\nA pickup changes what the blown sounds are. On cor anglais this is my favourite effect, and the pickup is most of the reason why.",
+      "fun": "I love the humour of the sucking effects. They are also the least repeatable thing on this site, so I tend to use them a lot for improvisation.  ",
       "synth": "air",
       "audioLabel": "Air sound — half-tone",
       "sources": [
         "Van Cleve 2004",
-        "Veale & Mahnkopf 1994"
-      ]
-    },
-    {
-      "subs": [
-        "sung lines",
-        "drones"
-      ],
-      "fingerings": [],
-      "variations": [],
-      "videos": [],
-      "id": "cor",
-      "name": "Cor Anglais: Low Register",
-      "cat": "cor",
-      "emoji": "🌑",
-      "sub": "The dark voice of the cor anglais",
-      "desc": "The bottom fifth of the cor anglais — written B3 down to E3, sounding a fifth lower — has a covered, reedy darkness the oboe cannot reach. Slow to speak, enormous in colour.",
-      "composer": "Approach the lowest notes by step and give them time — attacks below written G3 are slow at pp. Unbeatable for lament-like solos.",
-      "oboist": "Use a slightly heavier reed and think warm, slow air. Practise pp attacks daily; they are this register’s whole craft.",
-      "fun": "The cor anglais is neither English nor a horn — \"anglais\" is probably a corruption of \"anglé\" (angled), after its old curved shape.",
-      "synth": "low",
-      "audioLabel": "Cor anglais low F3",
-      "sources": [
-        "Burgess & Haynes 2004",
         "Veale & Mahnkopf 1994"
       ]
     },
