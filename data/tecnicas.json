@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated": "2026-11-25T12:44:27.587Z",
+  "updated": "2026-11-25T17:53:45.774Z",
   "categories": [
     {
       "id": "art",
@@ -103,7 +103,72 @@
         "twelfth"
       ],
       "fingerings": [],
-      "variations": [],
+      "variations": [
+        {
+          "name": "F Harmonic",
+          "instrument": "oboe",
+          "note": "F",
+          "fingering": "",
+          "image": "images/fingering-file-mwwf3awx.svg",
+          "notes": "You press a low B to get a F with the side octave key"
+        },
+        {
+          "name": "F# Harmonic",
+          "instrument": "oboe",
+          "note": "",
+          "fingering": "",
+          "image": "images/fingering-file-mwwf43eu.svg",
+          "notes": "You press a low H to get a F# with the side octave key"
+        },
+        {
+          "name": "G Harmonic",
+          "instrument": "oboe",
+          "note": "G",
+          "fingering": "",
+          "image": "images/fingering-g-mwwf5moj.svg",
+          "notes": "You press a low C to get a G with the side octave key"
+        },
+        {
+          "name": "G# Harmonic",
+          "instrument": "oboe",
+          "note": "G",
+          "fingering": "",
+          "image": "images/fingering-g-mwwf69st.svg",
+          "notes": "You press a low C# to get a G# with the side octave key"
+        },
+        {
+          "name": "A Harmonic",
+          "instrument": "oboe",
+          "note": "A",
+          "fingering": "",
+          "image": "images/fingering-a-mwwf6vfa.svg",
+          "notes": "You press a low D to get an A with the side octave key"
+        },
+        {
+          "name": "A# Harmonic",
+          "instrument": "oboe",
+          "note": "A#",
+          "fingering": "",
+          "image": "images/fingering-a-mwwf7lli.svg",
+          "notes": "You press a low D# to get an A# with the side octave key"
+        },
+        {
+          "name": "H Harmonic",
+          "instrument": "oboe",
+          "note": "H",
+          "fingering": "",
+          "image": "images/fingering-h-mwwf8asg.svg",
+          "notes": "You press a low E to get an H with the side octave key"
+        },
+        {
+          "name": "C Harmonic",
+          "instrument": "oboe",
+          "note": "C",
+          "fingering": "",
+          "image": "images/fingering-c-mwwf92ss.svg",
+          "notes": "You press a low F to get an C, with both the first as the side octave key"
+        }
+      ],
       "videos": [],
       "excerpts": [],
       "id": "harm",
@@ -723,6 +788,14 @@
         "label": "OBOE FLZ - Multiphonics",
         "instrument": "oboe",
         "notes": "This audio has some examples of multiphonics with FLZ. When a multiphonic is not very stable, the position of the mouth of FLZ can make it even more unstable, and have some breaks between the fundamental of the multiphonic and the multiphonic itself. It changes a lot between multiphonics. "
+      }
+    ],
+    "harm": [
+      {
+        "file": "audio/ob-harmonics-2-audio.mp3",
+        "label": "Harmonics",
+        "instrument": "oboe",
+        "notes": "In this recording you can listen to the spectrum of simple harmonics, going from F to H, the first sound is always the harmonic, followed by the real position of the note"
       }
     ]
   },
