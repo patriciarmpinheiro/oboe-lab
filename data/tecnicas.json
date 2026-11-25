@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated": "2026-11-24T16:24:31.211Z",
+  "updated": "2026-11-25T10:03:56.570Z",
   "categories": [
     {
       "id": "art",
@@ -208,7 +208,7 @@
       "sub": "Percussive key noise",
       "desc": "Key clicks are the sound of the keys themselves. The player does not blow, or blows air without making the reed speak, and the oboe becomes a small percussion instrument.\n\nOn the oboe the sound is very quiet. The inside of the instrument does not resonate much, so the clicks stay small, and the change of pitch from one fingering to another is hard to hear. The bigger instruments of the family give more.",
       "composer": "The first decision is whether there will be a microphone. Without one this technique gives very little. With a pickup or a close microphone the possibilities become more and with a body of its own. There is a recording here of key clicks on the cor anglais with a pickup, and it is the fastest way to hear the difference.\n\nAir can be added to the clicks. The player blows through the instrument without letting the reed speak, and the clicks sit inside that breath instead of in silence. It gives the technique a different depth and body, and it is a different sound from clicks on their own, so say in the score which of the two you want. The air can be coordinated with the clicks to exaggerate the percussive effect. (sh, k, ts sounds).\n\nThe second decision is where it sits. If you write key clicks inside an ensemble texture where the noise cannot get through, nothing arrives. The player works hard, the audience hears nothing, and the rehearsal becomes frustrating for everybody. Put silence around them, or amplify them, or both.\n\nThere is also the instrument itself. Hitting the keys hard can damage it. A violinist can sometimes bring a cheaper instrument to a piece that asks for rough treatment. An oboist almost never has that choice. So ask yourself whether the piece really needs this, and when you write it, say how hard and how often.\n\nNotate with x noteheads at the pitch of the fingering, so you choose the colour of each click. For more resonance, the instrument can be played with the reed taken out. On cor anglais and oboe d'amore the crook can come out as well, which opens the tube further.",
-      "oboist": "A pickup changes what this technique is. Without one you are working hard for a sound that does not leave your chair. With one, the clicks get body and the pitch differences between fingerings start to be audible.\n\nIt is worth finding your own pickup position before a rehearsal, not during one, because the position changes how much key noise reaches the microphone and how much of the instrument comes with it.",
+      "oboist": "A pickup changes what this technique is. Without one you are working hard for a sound that does not leave your chair. With one, the clicks get body and the pitch differences between fingerings start to be audible.",
       "fun": "This technique works much better on the flute, which is why composers often expect more from it than the oboe can give. The flute's tube resonates and the oboe's does not. The same gesture that fills a hall on one instrument barely reaches the second row on the other.",
       "synth": "keys",
       "audioLabel": "Key clicks on cor anglais with pickup",
