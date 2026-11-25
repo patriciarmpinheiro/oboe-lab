@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated": "2026-11-25T18:30:31.554Z",
+  "updated": "2026-11-25T18:31:56.043Z",
   "categories": [
     {
       "id": "art",
@@ -854,6 +854,12 @@
         "label": "Bell Keys",
         "instrument": "oboe",
         "notes": "Bell-area key clicks — the deepest and most resonant of all positions"
+      },
+      {
+        "file": "audio/ob-key-flz-key-clicks.mp3",
+        "label": "Random keys + FLZ",
+        "instrument": "oboe",
+        "notes": "This recording demonstrates flutter-tonguing directed into the body of the instrument while moving the keys randomly, creating a textured, shifting percussive and air-rich sound."
       }
     ]
   },
