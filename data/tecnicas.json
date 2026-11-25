@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated": "2026-11-25T19:02:10.135Z",
+  "updated": "2026-11-25T20:10:23.452Z",
   "categories": [
     {
       "id": "art",
@@ -415,7 +415,7 @@
       "videos": [],
       "excerpts": [],
       "id": "reed-only",
-      "name": "Playing with the Reed Only",
+      "name": "Reed Effects",
       "cat": "ruido",
       "emoji": "🌾",
       "sub": "The raw crow of the reed",
