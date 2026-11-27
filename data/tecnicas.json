@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated": "2026-11-27T18:46:30.513Z",
+  "updated": "2026-11-27T18:50:14.544Z",
   "categories": [
     {
       "id": "art",
@@ -253,7 +253,7 @@
       "emoji": "〰️",
       "sub": "Bending the note",
       "desc": "A pitch bend moves the pitch with the embouchure alone. The fingering does not change, and the note does not have to arrive anywhere. It can bend down and come back inside a single note, and that is what separates it from a glissando. A glissando travels from one note to another. A bend can stay where it is and still move.\n\nThe oboe reed is what makes this work so well. Relaxing the embouchure or pulling the reed slightly out drops the pitch by at least a semitone in most registers. Raising the pitch does the opposite—you tighten up, take in more reed, or slide off a tone hole when the fingering allows it. Bending up is always possible, though much more limited than bending down.\n\nIt works best from G5 to F6. Below E4 it barely works. Above F6 it can be effective, and those notes are unstable enough that they may crack while you are doing it.\n\nBending changes the dynamic on its own, because the lips are moving. Keeping the sound level through the bend takes extra support from the diaphragm, and without it the bend arrives with a break in it instead of a curve.",
-      "composer": "f you write jazz, this is the technique on this site that needs the least explaining. The oboe bends the way a lead instrument bends, and the reed is the reason. The pitch sits in the lips rather than in the mechanism.\n\nDown is the strong direction. Falls, and bends down into or out of a note, all sit well. Scoops and anything rising are available and narrower, so if the gesture has to go up, keep it small and put it in the middle or upper register where there is room for it.\n\nThe useful range is G5 to F6. Below E4 do not expect much. Above F6 you can have it, with the risk that the note cracks.\n\nA bend needs no destination. Write it as an inflection inside a held note, down and back, with nothing after it, and it reads clearly.\n\nIt combines. Bend with glissando covers the widest smooth slide the instrument can make, because the fingers and the lips are doing the same job from two directions. Bend with flutter tongue gives something rougher and distorted, and it still reads as a slide.\n\nNotate it with a line going to the pitch you want, or with a line showing only the direction if the exact amount is the player's choice. Say which of the two you mean.",
+      "composer": "If you write jazz, this is the technique on this site that needs the least explaining. The oboe bends the way a lead instrument bends, and the reed is the reason. The pitch sits in the lips rather than in the mechanism.\n\nDown is the strong direction. Falls, and bends down into or out of a note, all sit well. Scoops and anything rising are available and narrower, so if the gesture has to go up, keep it small and put it in the middle or upper register where there is room for it.\n\nThe useful range is G5 to F6. Below E4 do not expect much. Above F6 you can have it, with the risk that the note cracks.\n\nA bend needs no destination. Write it as an inflection inside a held note, down and back, with nothing after it, and it reads clearly.\n\nIt combines. Bend with glissando covers the widest smooth slide the instrument can make, because the fingers and the lips are doing the same job from two directions. Bend with flutter tongue gives something rougher and distorted, and it still reads as a slide.\n\nNotate it with a line going to the pitch you want, or with a line showing only the direction if the exact amount is the player's choice. Say which of the two you mean.",
       "oboist": "The support is the whole thing. The lips moving will change the dynamic by themselves, so the diaphragm has to hold the sound steady underneath, or the bend comes out with a step in it.\n\nDown: relax the embouchure, or take the reed slightly out of the mouth. Up: tighten, or take more reed in, and use the fingers where sliding off a hole is available. Use the corners of the lips to support the movement in both directions without bite the reed.\n\nIt is worth practising as a return rather than as a departure. Going down and coming back to the centre of the note with the pitch intact is harder than bending away from it, and it is the version that music mostly asks for.",
       "fun": "To train pitch bends only with the reed and without hand support, by activating the corners of the lips and a good breathing support is actually in itself an amazing exercise for sound and flexibility for the oboe",
       "synth": "bend",
@@ -867,7 +867,7 @@
       },
       {
         "file": "audio/ob-lipbend-upbend-lip-bend.mp3",
-        "label": "High B - Downward Bend",
+        "label": "High B - Upward Bend",
         "instrument": "oboe",
         "notes": "Downward lip bend — slow motion followed by fast tempo."
       },
