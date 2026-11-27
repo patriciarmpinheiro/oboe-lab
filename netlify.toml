@@ -1,9 +1,29 @@
-# Servir o site no endereço limpo (lab.patriciapinheiro.com) sem redireccionamento.
+# A raiz (lab.patriciapinheiro.com) serve o index.html, que é a página de
+# "being built". O Playground continua publicado no caminho abaixo, para
+# continuares a trabalhar nele sem o mostrar a quem chega à raiz.
+#
+# Quando o arquivo abrir ao público, descomenta este bloco e a raiz volta a
+# servir o Playground, sem redireccionamento visível.
+#
+# [[redirects]]
+#   from = "/"
+#   to = "/The%20Oboe%20Playground%20v5.dc.html"
+#   status = 200
+#   force = true
+
+# Atalho para trabalhares: lab.patriciapinheiro.com/preview mostra o
+# Playground mantendo o endereço limpo. Não está ligado em lado nenhum.
 [[redirects]]
-  from = "/"
+  from = "/preview"
   to = "/The%20Oboe%20Playground%20v5.dc.html"
   status = 200
-  force = true
+
+# O formulário da Open Call vive em /forms (ficheiro forms/index.html).
+# Este atalho dá-lhe um endereço que se explica a si próprio.
+[[redirects]]
+  from = "/open-call"
+  to = "/forms/"
+  status = 301
 
 # O áudio e as imagens nunca mudam de conteúdo — cache longa torna o site
 # instantâneo em visitas repetidas.

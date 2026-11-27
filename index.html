@@ -3,42 +3,125 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>The Oboe Playground — extended techniques for oboe &amp; cor anglais</title>
-<meta name="description" content="An interactive reference for composers and performers: 33 extended techniques, analysed multiphonics with fingerings and recordings, and the full sonic world of the oboe and cor anglais. By Patrícia Pinheiro.">
+<title>The Oboe Playground — being built</title>
+<meta name="description" content="A reference for composers and performers on the oboe and cor anglais: techniques, multiphonics, fingerings and recordings. Being built in the open. The open call for repertoire is live.">
 <link rel="canonical" href="https://lab.patriciapinheiro.com/">
 <meta name="theme-color" content="#D0FFA4">
 <link rel="icon" href="/images/favicon.svg" type="image/svg+xml">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="The Oboe Playground">
-<meta property="og:title" content="The Oboe Playground — extended techniques for oboe &amp; cor anglais">
-<meta property="og:description" content="An interactive reference for composers and performers: 33 extended techniques, analysed multiphonics with fingerings and recordings, and the full sonic world of the oboe and cor anglais.">
+<meta property="og:title" content="The Oboe Playground — being built">
+<meta property="og:description" content="A reference for composers and performers on the oboe and cor anglais. Being built in the open. The open call for repertoire is live.">
 <meta property="og:url" content="https://lab.patriciapinheiro.com/">
 <meta property="og:image" content="https://lab.patriciapinheiro.com/images/og-cover.jpg">
 <meta property="og:image:width" content="800">
 <meta property="og:image:height" content="420">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://lab.patriciapinheiro.com/images/og-cover.jpg">
-<meta http-equiv="refresh" content="0; url='The Oboe Playground v5.dc.html'">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
-  body{margin:0;min-height:100vh;display:flex;align-items:center;justify-content:center;
-       background:#D0FFA4;color:#000181;font-family:'Space Grotesk',system-ui,sans-serif;text-align:center}
-  a{color:#000181;font-size:1.1rem;letter-spacing:.04em}
+  *,*::before,*::after{box-sizing:border-box}
+  body{margin:0;min-height:100vh;display:flex;flex-direction:column;
+    background:#D0FFA4;color:#000181;font-family:'Space Grotesk',sans-serif;
+    cursor:url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="34" height="34"><g transform="rotate(-38 17 17)"><path d="M13 2 h8 l-1 9 h-6 z" fill="%23F5EBCB"/><rect x="14" y="10.6" width="6" height="6.4" fill="%23141414"/><path d="M14 16.6 h6 v12 a3 3 0 0 1-6 0 z" fill="%23D9B98E"/><path d="M13 2 h8 l-1 9 h-6 z M14 16.6 h6 v12 a3 3 0 0 1-6 0 z" fill="none" stroke="%23000181" stroke-width="1.1"/></g></svg>') 17 3, auto}
+  a,button{cursor:url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="34" height="34"><g transform="rotate(-38 17 17)"><path d="M13 2 h8 l-1 9 h-6 z" fill="%23D0FFA4"/><rect x="14" y="10.6" width="6" height="6.4" fill="%23006EE9"/><path d="M14 16.6 h6 v12 a3 3 0 0 1-6 0 z" fill="%23D9B98E"/><path d="M13 2 h8 l-1 9 h-6 z M14 16.6 h6 v12 a3 3 0 0 1-6 0 z" fill="none" stroke="%23000181" stroke-width="1.3"/></g></svg>') 17 3, pointer}
+  p{cursor:text}
+  ::selection{background:#F6F5EC;color:#000181}
+  @keyframes wiggle{0%,100%{transform:rotate(-2.5deg)}50%{transform:rotate(2.5deg)}}
+  @keyframes blink{0%,100%{opacity:.25;transform:translateY(0)}50%{opacity:1;transform:translateY(-4px)}}
+
+  main{flex:1;display:flex;align-items:center;padding:clamp(54px,9vw,110px) clamp(18px,5vw,40px)}
+  .inner{max-width:760px;margin:0 auto;width:100%}
+  .wordmark{margin:0 0 30px;font-family:'Instrument Serif',serif;font-size:1.05rem}
+  .wordmark i{color:#006EE9}
+  .eyebrow{margin:0 0 14px;font-size:.6rem;font-weight:600;letter-spacing:.26em;
+    text-transform:uppercase;color:#006EE9}
+  h1{margin:0;font-weight:700;font-size:clamp(2.6rem,9vw,5.6rem);line-height:.86;letter-spacing:-.05em}
+  h1 .serif{display:block;font-family:'Instrument Serif',serif;font-style:italic;font-weight:400;
+    font-size:clamp(2.8rem,9.5vw,6rem);line-height:.92;letter-spacing:-.02em;color:#006EE9}
+  .shout{display:inline-block;margin:24px 0 0;padding:5px 11px;background:#F6F5EC;
+    font-family:'Instrument Serif',serif;font-style:italic;
+    font-size:clamp(1.1rem,2.5vw,1.7rem);line-height:1.35}
+  .body{margin:24px 0 0;max-width:54ch;font-size:.95rem;line-height:1.75;color:rgba(0,1,129,.78)}
+  .dots{display:flex;gap:7px;margin-top:30px}
+  .dots span{width:9px;height:9px;border-radius:50%;background:#000181;animation:blink 1.2s ease-in-out infinite}
+  .dots span:nth-child(2){animation-delay:.18s;background:#006EE9}
+  .dots span:nth-child(3){animation-delay:.36s;background:#E8A0FF}
+
+  .card{margin-top:40px;background:#000181;color:#F6F5EC;border-radius:26px;
+    padding:clamp(24px,4vw,38px);display:flex;flex-wrap:wrap;gap:26px;align-items:center}
+  .card .txt{flex:1 1 280px}
+  .card .eyebrow{color:#D0FFA4}
+  .card h2{margin:0;font-weight:700;font-size:clamp(1.4rem,3.6vw,2.1rem);line-height:.92;letter-spacing:-.03em}
+  .card h2 .serif{display:block;font-family:'Instrument Serif',serif;font-style:italic;font-weight:400;
+    font-size:clamp(1.6rem,4vw,2.4rem);color:#83E7FF;letter-spacing:-.01em}
+  .card p{margin:14px 0 0;font-size:.88rem;line-height:1.7;color:rgba(246,245,236,.72)}
+  .go{display:inline-flex;align-items:center;gap:12px;margin-top:4px;
+    font-size:.64rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;
+    color:#000181;background:#D0FFA4;border-radius:100px;padding:16px 30px;
+    text-decoration:none;transition:all .35s cubic-bezier(.2,.8,.2,1);white-space:nowrap}
+  .go:hover{background:#83E7FF;gap:20px}
+  .hi{display:flex;align-items:flex-end;gap:14px;margin-top:38px}
+  .hi span{width:68px;height:68px;border-radius:50%;background:#006EE9;display:flex;
+    align-items:center;justify-content:center;font-family:'Instrument Serif',serif;
+    font-style:italic;font-size:1.45rem;color:#F6F5EC;flex-shrink:0;animation:wiggle 6s ease-in-out infinite}
+  .hi p{margin:0 0 6px;font-family:'Instrument Serif',serif;font-style:italic;font-size:1.02rem;
+    color:rgba(0,1,129,.68);max-width:320px}
+  .hi a{color:#006EE9}
+  footer{background:#000181;color:#F6F5EC;padding:clamp(24px,4vw,34px) clamp(18px,5vw,40px)}
+  footer .inner{display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between;align-items:center}
+  footer .fl{font-family:'Instrument Serif',serif;font-size:1rem}
+  footer .fl i{color:#83E7FF}
+  footer .fr{font-size:.68rem;color:rgba(246,245,236,.5)}
 </style>
 </head>
 <body>
-  <p><a href="The Oboe Playground v5.dc.html">The Oboe Playground →</a></p>
 
-  <!-- Formulário invisível só para o Netlify detectar o formulário de contacto.
-       O formulário verdadeiro é construído por JavaScript na página do site, e o
-       Netlify não consegue vê-lo ao publicar. Este espelho estático resolve isso.
-       NÃO APAGAR. -->
-  <form name="contact" data-netlify="true" netlify-honeypot="bot-field" hidden>
-    <input type="hidden" name="form-name" value="contact">
-    <input type="text" name="bot-field">
-    <input type="text" name="topic">
-    <input type="text" name="name">
-    <input type="email" name="email">
-    <textarea name="message"></textarea>
-  </form>
+<main>
+  <div class="inner">
+    <p class="wordmark">The Oboe <i>Playground</i></p>
+    <p class="eyebrow">Opening soon</p>
+    <h1>BEING BUILT<span class="serif">one sound at a time</span></h1>
+    <p class="shout">I am recording the techniques, one by one, and writing down what actually works.</p>
+    <p class="body">An interactive reference for composers and performers on the oboe and cor anglais: techniques with isolated sound, analysed multiphonics, fingerings and notation that holds up on the stand. It opens when there is enough inside to be worth your time.</p>
+    <div class="dots"><span></span><span></span><span></span></div>
+
+    <div class="card">
+      <div class="txt">
+        <p class="eyebrow">Open call · closes 31 january</p>
+        <h2>YOUR PIECES<span class="serif">in the archive</span></h2>
+        <p>The repertoire list for the oboe family is being built with the people who wrote the music. Add your pieces now and they are there on opening day. You decide, piece by piece, how each one may be used.</p>
+      </div>
+      <a class="go" href="/forms">Add your pieces &rarr;</a>
+    </div>
+
+    <div class="hi">
+      <span>hi!</span>
+      <p>Writing for oboe and need an answer before this opens? <a href="mailto:lab@patriciapinheiro.com">Write to me</a> and I will answer.</p>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="inner">
+    <span class="fl">The Oboe <i>Playground</i></span>
+    <span class="fr">© Patrícia Pinheiro · Opening soon</span>
+  </div>
+</footer>
+
+<!-- Formulário invisível só para o Netlify detectar o formulário de contacto.
+     O formulário verdadeiro é construído por JavaScript na página do site, e o
+     Netlify não consegue vê-lo ao publicar. Este espelho estático resolve isso.
+     NÃO APAGAR. -->
+<form name="contact" data-netlify="true" netlify-honeypot="bot-field" hidden>
+  <input type="hidden" name="form-name" value="contact">
+  <input type="text" name="bot-field">
+  <input type="text" name="topic">
+  <input type="text" name="name">
+  <input type="email" name="email">
+  <textarea name="message"></textarea>
+</form>
 </body>
 </html>

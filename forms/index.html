@@ -1,0 +1,1032 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Open Call — music for the oboe family</title>
+<meta name="description" content="Add your pieces for oboe, oboe d'amore, cor anglais or bass oboe to a free public repertoire archive, searchable by technique. You decide how each piece may be used. Closes 31 January.">
+<meta name="theme-color" content="#D0FFA4">
+<meta name="robots" content="index, follow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  *,*::before,*::after{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:#F6F5EC;color:#000181;font-family:'Space Grotesk',sans-serif;
+    cursor:url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="34" height="34"><g transform="rotate(-38 17 17)"><path d="M13 2 h8 l-1 9 h-6 z" fill="%23F5EBCB"/><rect x="14" y="10.6" width="6" height="6.4" fill="%23141414"/><path d="M14 16.6 h6 v12 a3 3 0 0 1-6 0 z" fill="%23D9B98E"/><path d="M13 2 h8 l-1 9 h-6 z M14 16.6 h6 v12 a3 3 0 0 1-6 0 z" fill="none" stroke="%23000181" stroke-width="1.1"/></g></svg>') 17 3, auto}
+  a,button,input,textarea,select,label{cursor:url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="34" height="34"><g transform="rotate(-38 17 17)"><path d="M13 2 h8 l-1 9 h-6 z" fill="%23D0FFA4"/><rect x="14" y="10.6" width="6" height="6.4" fill="%23006EE9"/><path d="M14 16.6 h6 v12 a3 3 0 0 1-6 0 z" fill="%23D9B98E"/><path d="M13 2 h8 l-1 9 h-6 z M14 16.6 h6 v12 a3 3 0 0 1-6 0 z" fill="none" stroke="%23000181" stroke-width="1.3"/></g></svg>') 17 3, pointer}
+  p,.lede{cursor:text}
+  ::selection{background:#D0FFA4;color:#000181}
+  ::-webkit-scrollbar{width:10px}
+  ::-webkit-scrollbar-track{background:#F6F5EC}
+  ::-webkit-scrollbar-thumb{background:#000181}
+  @keyframes wiggle{0%,100%{transform:rotate(-2.5deg)}50%{transform:rotate(2.5deg)}}
+
+  .inner{max-width:720px;margin:0 auto}
+  header{background:#D0FFA4;padding:clamp(54px,8vw,92px) clamp(18px,5vw,40px) clamp(60px,9vw,100px)}
+  .wordmark{font-family:'Instrument Serif',serif;font-size:1rem;margin:0 0 26px;color:#000181}
+  .wordmark i{color:#006EE9}
+  .eyebrow{margin:0 0 14px;font-size:.6rem;font-weight:600;letter-spacing:.26em;text-transform:uppercase;color:#006EE9}
+  h1{margin:0;font-weight:700;font-size:clamp(2.5rem,8vw,5rem);line-height:.86;letter-spacing:-.05em}
+  h1 .serif{display:block;font-family:'Instrument Serif',serif;font-style:italic;font-weight:400;
+    font-size:clamp(2.7rem,8.5vw,5.4rem);line-height:.92;letter-spacing:-.02em;color:#006EE9}
+  .shout{display:inline-block;margin:22px 0 0;padding:5px 11px;background:#F6F5EC;
+    font-family:'Instrument Serif',serif;font-style:italic;font-size:clamp(1.05rem,2.4vw,1.6rem);line-height:1.35}
+  .stickers{display:flex;flex-wrap:wrap;gap:10px;margin-top:26px}
+  .sticker{font-size:.58rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;
+    color:#000181;background:#F6F5EC;border-radius:100px;padding:8px 15px}
+  .sticker:nth-child(even){background:#E8A0FF;rotate:2deg}
+  .sticker:nth-child(odd){rotate:-3deg}
+
+  section{padding:clamp(50px,7vw,84px) clamp(18px,5vw,40px)}
+  h2{margin:0;font-family:'Instrument Serif',serif;font-weight:400;
+    font-size:clamp(2rem,5.5vw,3.4rem);line-height:.96;letter-spacing:-.02em}
+  h2 i{font-style:italic;color:#006EE9}
+  .lede{margin:20px 0 0;font-size:.95rem;line-height:1.75;color:rgba(0,1,129,.75);text-wrap:pretty}
+  .lede strong{font-weight:600;color:#000181}
+  .facts{margin:32px 0 0;border-top:1.5px solid #000181}
+  .fact{display:flex;gap:clamp(14px,3vw,26px);padding:14px 0;border-bottom:1px solid rgba(0,1,129,.2)}
+  .fact dt{flex:0 0 clamp(88px,15vw,140px);font-size:.58rem;font-weight:600;letter-spacing:.18em;
+    text-transform:uppercase;color:#006EE9;padding-top:3px}
+  .fact dd{margin:0;font-size:.88rem;line-height:1.6;color:rgba(0,1,129,.78)}
+
+  form{margin-top:30px}
+  fieldset{border:none;margin:0 0 42px;padding:0}
+  legend{padding:0;margin-bottom:6px;font-size:.58rem;font-weight:600;letter-spacing:.22em;
+    text-transform:uppercase;color:#006EE9}
+  .fs-rule{border-top:1.5px solid #000181;margin-bottom:4px}
+  .f{display:flex;flex-direction:column;gap:8px;margin-top:22px}
+  .k{font-size:.56rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:#006EE9}
+  .hint{display:block;margin-top:6px;font-size:.72rem;font-weight:400;letter-spacing:0;
+    text-transform:none;color:rgba(0,1,129,.5);line-height:1.55}
+  input[type=text],input[type=email],input[type=url],input[type=number],textarea,select{
+    width:100%;background:transparent;border:none;border-bottom:1.5px solid rgba(0,1,129,.35);
+    color:#000181;font-family:'Space Grotesk',sans-serif;font-size:.9rem;padding:8px 2px;outline:none;transition:border-color .25s}
+  input:focus,textarea:focus,select:focus{border-bottom-color:#006EE9}
+  input::placeholder,textarea::placeholder{color:rgba(0,1,129,.33)}
+  textarea{line-height:1.6;resize:vertical}
+  select{appearance:none;border-radius:0;padding-right:26px;
+    background-image:linear-gradient(45deg,transparent 50%,#000181 50%),linear-gradient(135deg,#000181 50%,transparent 50%);
+    background-position:calc(100% - 11px) 55%,calc(100% - 6px) 55%;background-size:5px 5px,5px 5px;background-repeat:no-repeat}
+  .two{display:grid;grid-template-columns:1fr 1fr;gap:0 24px}
+  @media(max-width:620px){.two{grid-template-columns:1fr}}
+
+  .pills{display:flex;flex-wrap:wrap;gap:7px}
+  .pill{position:relative;display:inline-flex}
+  .pill input{position:absolute;opacity:0;width:0;height:0}
+  .pill span{font-size:.68rem;font-weight:500;padding:9px 16px;border-radius:100px;
+    border:1.5px solid rgba(0,1,129,.28);color:#000181;transition:all .3s cubic-bezier(.2,.8,.2,1);display:inline-block}
+  .pill span:hover{border-color:#006EE9;transform:translateY(-3px)}
+  .pill input:checked + span{background:#D0FFA4;border-color:#000181}
+  .pill input:focus-visible + span{outline:2px solid #006EE9;outline-offset:3px}
+
+  .piece{position:relative}
+  .piece legend{color:#000181;font-family:'Instrument Serif',serif;font-style:italic;
+    font-size:1.1rem;letter-spacing:0;text-transform:none;font-weight:400}
+  .choice{background:#000181;color:#F6F5EC;border-radius:20px;padding:22px 24px;margin-top:22px}
+  .choice .k{display:block;color:#D0FFA4;font-size:.6rem}
+  .choice .note{margin:10px 0 14px;font-size:.74rem;color:rgba(246,245,236,.6);line-height:1.6}
+  .choice .pill span{border-color:rgba(246,245,236,.35);color:#F6F5EC}
+  .choice .pill span:hover{border-color:#D0FFA4}
+  .choice .pill input:checked + span{background:#D0FFA4;color:#000181;border-color:#D0FFA4}
+  .choice input[type=text]{border-bottom-color:rgba(246,245,236,.4);color:#F6F5EC}
+  .choice input[type=text]::placeholder{color:rgba(246,245,236,.35)}
+  .choice input[type=text]:focus{border-bottom-color:#D0FFA4}
+
+  .addrow{display:flex;flex-wrap:wrap;gap:12px;align-items:center;margin:0 0 42px}
+  .add{font-size:.62rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:#000181;
+    background:transparent;border:1.5px solid #000181;border-radius:100px;padding:13px 24px;transition:all .3s}
+  .add:hover{background:#D0FFA4}
+  .add[disabled]{opacity:.35}
+  .addnote{font-size:.72rem;color:rgba(0,1,129,.5)}
+  .drop{margin-top:22px;font-size:.58rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;
+    color:#006EE9;background:transparent;border:none;padding:0;text-decoration:underline}
+  .file{border:1.5px dashed rgba(0,1,129,.4);border-radius:16px;padding:14px 16px}
+  input[type=file]{width:100%;font-family:'Space Grotesk',sans-serif;font-size:.74rem;color:rgba(0,1,129,.7)}
+  input[type=file]::file-selector-button{font-size:.56rem;font-weight:600;letter-spacing:.16em;
+    text-transform:uppercase;color:#F6F5EC;background:#000181;border:none;border-radius:100px;
+    padding:9px 16px;margin-right:14px}
+  .hp{position:absolute;left:-9999px}
+  .send{font-size:.64rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:#000181;
+    background:#D0FFA4;border:none;border-radius:100px;padding:16px 34px;transition:all .35s cubic-bezier(.2,.8,.2,1)}
+  .send:hover{background:#83E7FF;letter-spacing:.26em}
+  .after{margin:16px 0 0;font-size:.72rem;color:rgba(0,1,129,.5)}
+  .hi{display:flex;align-items:flex-end;gap:14px;margin-top:30px}
+  .hi span{width:70px;height:70px;border-radius:50%;background:#006EE9;display:flex;align-items:center;
+    justify-content:center;font-family:'Instrument Serif',serif;font-style:italic;font-size:1.5rem;
+    color:#F6F5EC;flex-shrink:0;animation:wiggle 6s ease-in-out infinite}
+  .hi p{margin:0 0 6px;font-family:'Instrument Serif',serif;font-style:italic;font-size:1.02rem;
+    color:rgba(0,1,129,.65);max-width:300px}
+  footer{background:#000181;color:#F6F5EC;padding:clamp(28px,5vw,42px) clamp(18px,5vw,40px)}
+  footer .inner{display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between;align-items:center}
+  footer .fl{font-family:'Instrument Serif',serif;font-size:1rem}
+  footer .fl i{color:#83E7FF}
+  footer .fr{font-size:.68rem;color:rgba(246,245,236,.5)}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="inner">
+    <p class="wordmark">The Oboe <i>Playground</i></p>
+    <p class="eyebrow">Open call · closes 31 january</p>
+    <h1>SEND ME<span class="serif">your pieces</span></h1>
+    <p class="shout">Published, unpublished, premiered once and waiting for the next time. All of it belongs here.</p>
+    <div class="stickers">
+      <span class="sticker">no jury, no fee</span>
+      <span class="sticker">free forever</span>
+      <span class="sticker">as many pieces as you like</span>
+    </div>
+  </div>
+</header>
+
+<section>
+  <div class="inner">
+    <p class="eyebrow">What this is</p>
+    <h2>Thought of everything the oboe could do, then went looking for <i>the archive</i>?</h2>
+    <p class="lede">That is what I am building, and it is being built with the people who wrote the pieces. A list of repertoire for the oboe family that is <strong>free, permanent and public</strong>, searchable by technique. Your pieces go in and stay in. A composer looking for pieces that use multiphonics finds yours. An oboist looking for something new to play finds yours.</p>
+    <dl class="facts">
+      <div class="fact"><dt>Instruments</dt><dd>Oboe, oboe d'amore, cor anglais, bass oboe, musette</dd></div>
+      <div class="fact"><dt>Forces</dt><dd>Solo, with piano, duo, trio, wind quintet, double reeds, chamber, orchestra, electronics. Any formation that includes one of the instruments above</dd></div>
+      <div class="fact"><dt>Idiom</dt><dd>Contemporary concert music, jazz, film, games, ambient, improvised</dd></div>
+      <div class="fact"><dt>Status</dt><dd>Published, self-published, unpublished. All the same to me</dd></div>
+      <div class="fact"><dt>How many</dt><dd>Up to six pieces in one go. One form, one send</dd></div>
+      <div class="fact"><dt>What it is not</dt><dd>A competition. No jury, no fee, no ranking</dd></div>
+    </dl>
+    <div class="hi">
+      <span>hi!</span>
+      <p>You say how each piece may be used. Tick nothing and it is simply listed.</p>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="inner">
+    <p class="eyebrow">The form</p>
+    <h2>Submit your <i>pieces</i></h2>
+    <p class="lede">Only the starred fields are required. Everything else helps, and nothing happens to a piece beyond being listed unless you say so.</p>
+
+    <form name="open-call" method="POST" data-netlify="true" netlify-honeypot="bot-field" enctype="multipart/form-data">
+      <input type="hidden" name="form-name" value="open-call">
+      <p class="hp"><label>Leave this empty: <input name="bot-field"></label></p>
+
+      <fieldset>
+        <legend>You</legend>
+        <div class="fs-rule"></div>
+        <div class="two">
+          <label class="f"><span class="k">Composer *</span>
+            <input name="Composer" type="text" required placeholder="Your name"></label>
+          <label class="f"><span class="k">Country</span>
+            <input name="Country" type="text"></label>
+        </div>
+        <label class="f"><span class="k">Email *
+          <span class="hint">So I can reply. Never published unless you tick the box below.</span></span>
+          <input name="Email" type="email" required placeholder="you@somewhere.com"></label>
+        <label class="f"><span class="k">Website or link
+          <span class="hint">The page you would like linked from your entries.</span></span>
+          <input name="Website" type="url" placeholder="https://"></label>
+        <div class="f"><span class="k">Two last things</span>
+          <div class="pills">
+            <label class="pill"><input type="checkbox" name="Contact consent" value="Yes"><span>Publish my contact as a link</span></label>
+            <label class="pill"><input type="checkbox" name="Future consent" value="Yes"><span>Contact me about readings and recordings</span></label>
+          </div>
+        </div>
+      </fieldset>
+
+  <fieldset class="piece" id="piece-1">
+    <legend>Piece 1</legend>
+    <div class="fs-rule"></div>
+
+    <label class="f"><span class="k">Title of the work *</span>
+      <input name="Piece 1 title" type="text" required></label>
+
+    <div class="two">
+      <label class="f"><span class="k">Year</span>
+        <input name="Piece 1 year" type="number" min="1600" max="2100" placeholder="2024"></label>
+      <label class="f"><span class="k">Duration in minutes</span>
+        <input name="Piece 1 duration" type="number" min="0" step="1" placeholder="8"></label>
+    </div>
+
+    <div class="f"><span class="k">Which instrument of the family *</span>
+      <div class="pills">
+        <label class="pill"><input type="checkbox" name="Piece 1 instrument" value="Oboe"><span>Oboe</span></label>
+        <label class="pill"><input type="checkbox" name="Piece 1 instrument" value="Oboe d'amore"><span>Oboe d'amore</span></label>
+        <label class="pill"><input type="checkbox" name="Piece 1 instrument" value="Cor anglais"><span>Cor anglais</span></label>
+        <label class="pill"><input type="checkbox" name="Piece 1 instrument" value="Bass oboe"><span>Bass oboe</span></label>
+        <label class="pill"><input type="checkbox" name="Piece 1 instrument" value="Musette"><span>Musette</span></label>
+      </div>
+    </div>
+
+    <div class="f"><span class="k">Forces
+      <span class="hint">Any formation that includes the oboe family. Tick all that apply.</span></span>
+      <div class="pills">
+        <label class="pill"><input type="checkbox" name="Piece 1 forces" value="Solo"><span>Solo</span></label>
+        <label class="pill"><input type="checkbox" name="Piece 1 forces" value="Solo with electronics"><span>Solo with electronics</span></label>
+        <label class="pill"><input type="checkbox" name="Piece 1 forces" value="Oboe and piano"><span>Oboe and piano</span></label>
+        <label class="pill"><input type="checkbox" name="Piece 1 forces" value="Duo (other)"><span>Duo (other)</span></label>
+        <label class="pill"><input type="checkbox" name="Piece 1 forces" value="Trio"><span>Trio</span></label>
+        <label class="pill"><input type="checkbox" name="Piece 1 forces" value="Wind quintet"><span>Wind quintet</span></label>
+        <label class="pill"><input type="checkbox" name="Piece 1 forces" value="Double reed ensemble"><span>Double reed ensemble</span></label>
+        <label class="pill"><input type="checkbox" name="Piece 1 forces" value="Chamber ensemble"><span>Chamber ensemble</span></label>
+        <label class="pill"><input type="checkbox" name="Piece 1 forces" value="With voice"><span>With voice</span></label>
+        <label class="pill"><input type="checkbox" name="Piece 1 forces" value="With orchestra"><span>With orchestra</span></label>
+        <label class="pill"><input type="checkbox" name="Piece 1 forces" value="With tape or fixed media"><span>With tape or fixed media</span></label>
+        <label class="pill"><input type="checkbox" name="Piece 1 forces" value="Other"><span>Other</span></label>
+      </div>
+    </div>
+    <label class="f"><span class="k">Spell out the formation</span>
+      <input name="Piece 1 formation" type="text" placeholder="cor anglais, accordion and live electronics"></label>
+
+    <div class="f"><span class="k">Idiom</span>
+      <div class="pills">
+        <label class="pill"><input type="checkbox" name="Piece 1 idiom" value="Contemporary concert music"><span>Contemporary concert music</span></label>
+        <label class="pill"><input type="checkbox" name="Piece 1 idiom" value="Jazz"><span>Jazz</span></label>
+        <label class="pill"><input type="checkbox" name="Piece 1 idiom" value="Film"><span>Film</span></label>
+        <label class="pill"><input type="checkbox" name="Piece 1 idiom" value="Games"><span>Games</span></label>
+        <label class="pill"><input type="checkbox" name="Piece 1 idiom" value="Ambient"><span>Ambient</span></label>
+        <label class="pill"><input type="checkbox" name="Piece 1 idiom" value="Improvised"><span>Improvised</span></label>
+        <label class="pill"><input type="checkbox" name="Piece 1 idiom" value="Other"><span>Other</span></label>
+      </div>
+    </div>
+
+    <div class="two">
+      <label class="f"><span class="k">Publication</span>
+        <select name="Piece 1 publication">
+          <option value="">Choose one</option>
+          <option>Published</option>
+          <option>Self-published</option>
+          <option>Unpublished</option>
+        </select></label>
+      <label class="f"><span class="k">Publisher</span>
+        <input name="Piece 1 publisher" type="text"></label>
+    </div>
+
+    <label class="f"><span class="k">Prizes or awards
+      <span class="hint">Has it won anything or been selected for anything?</span></span>
+      <input name="Piece 1 prizes" type="text"></label>
+
+    <div class="f"><span class="k">Techniques it asks for
+      <span class="hint">This is what makes the archive searchable by sound.</span></span>
+      <div class="pills">
+        <label class="pill"><input type="checkbox" name="Piece 1 techniques" value="Multiphonics"><span>Multiphonics</span></label>
+        <label class="pill"><input type="checkbox" name="Piece 1 techniques" value="Pitch bend and microtones"><span>Pitch bend / microtones</span></label>
+        <label class="pill"><input type="checkbox" name="Piece 1 techniques" value="Glissando"><span>Glissando</span></label>
+        <label class="pill"><input type="checkbox" name="Piece 1 techniques" value="Harmonics"><span>Harmonics</span></label>
+        <label class="pill"><input type="checkbox" name="Piece 1 techniques" value="Timbre fingerings"><span>Timbre fingerings</span></label>
+        <label class="pill"><input type="checkbox" name="Piece 1 techniques" value="Trills and tremolos"><span>Trills / tremolos</span></label>
+        <label class="pill"><input type="checkbox" name="Piece 1 techniques" value="Vibrato"><span>Vibrato</span></label>
+        <label class="pill"><input type="checkbox" name="Piece 1 techniques" value="Articulation"><span>Articulation</span></label>
+        <label class="pill"><input type="checkbox" name="Piece 1 techniques" value="Air sounds"><span>Air sounds</span></label>
+        <label class="pill"><input type="checkbox" name="Piece 1 techniques" value="Key clicks"><span>Key clicks</span></label>
+        <label class="pill"><input type="checkbox" name="Piece 1 techniques" value="Voice and breath"><span>Voice / circular breathing</span></label>
+        <label class="pill"><input type="checkbox" name="Piece 1 techniques" value="Special techniques"><span>Other special techniques</span></label>
+        <label class="pill"><input type="checkbox" name="Piece 1 techniques" value="None or conventional writing"><span>None, conventional writing</span></label>
+      </div>
+    </div>
+    <label class="f"><span class="k">Does the score include a legend or performance note for them?</span>
+      <select name="Piece 1 score legend">
+        <option value="">Choose one</option>
+        <option>Yes</option>
+        <option>No</option>
+        <option>Partly</option>
+      </select></label>
+
+    <div class="two">
+      <label class="f"><span class="k">Score link</span>
+        <input name="Piece 1 score link" type="url" placeholder="https://"></label>
+      <label class="f"><span class="k">Recording link</span>
+        <input name="Piece 1 recording link" type="url" placeholder="https://"></label>
+    </div>
+
+    <div class="choice">
+      <span class="k">How may I use this piece?</span>
+      <p class="note">Tick nothing and the piece is listed only: title, year, forces, techniques and your links. Nothing else happens without you.</p>
+      <div class="pills">
+        <label class="pill"><input type="checkbox" name="Piece 1 use" value="Perform"><span>I would be glad if you performed it</span></label>
+        <label class="pill"><input type="checkbox" name="Piece 1 use" value="Record"><span>You may record excerpts and publish them</span></label>
+        <label class="pill"><input type="checkbox" name="Piece 1 use" value="Feature"><span>You may feature it in a post, with my name</span></label>
+        <label class="pill"><input type="checkbox" name="Piece 1 use" value="Score page"><span>You may show a page of the score</span></label>
+      </div>
+      <label class="f"><span class="k">If a page of the score is fine, which page or bars?</span>
+        <input name="Piece 1 score page" type="text" placeholder="first page, or bars 12 to 28"></label>
+    </div>
+
+    <label class="f"><span class="k">What should an oboist know about it?
+      <span class="hint">One or two sentences. What it needs, what nobody tells you until the first rehearsal.</span></span>
+      <textarea name="Piece 1 notes" rows="3"></textarea></label>
+  </fieldset>
+
+  <fieldset class="piece" id="piece-2" hidden>
+    <legend>Piece 2</legend>
+    <div class="fs-rule"></div>
+
+    <label class="f"><span class="k">Title of the work</span>
+      <input name="Piece 2 title" type="text"></label>
+
+    <div class="two">
+      <label class="f"><span class="k">Year</span>
+        <input name="Piece 2 year" type="number" min="1600" max="2100" placeholder="2024"></label>
+      <label class="f"><span class="k">Duration in minutes</span>
+        <input name="Piece 2 duration" type="number" min="0" step="1" placeholder="8"></label>
+    </div>
+
+    <div class="f"><span class="k">Which instrument of the family</span>
+      <div class="pills">
+        <label class="pill"><input type="checkbox" name="Piece 2 instrument" value="Oboe"><span>Oboe</span></label>
+        <label class="pill"><input type="checkbox" name="Piece 2 instrument" value="Oboe d'amore"><span>Oboe d'amore</span></label>
+        <label class="pill"><input type="checkbox" name="Piece 2 instrument" value="Cor anglais"><span>Cor anglais</span></label>
+        <label class="pill"><input type="checkbox" name="Piece 2 instrument" value="Bass oboe"><span>Bass oboe</span></label>
+        <label class="pill"><input type="checkbox" name="Piece 2 instrument" value="Musette"><span>Musette</span></label>
+      </div>
+    </div>
+
+    <div class="f"><span class="k">Forces
+      <span class="hint">Any formation that includes the oboe family. Tick all that apply.</span></span>
+      <div class="pills">
+        <label class="pill"><input type="checkbox" name="Piece 2 forces" value="Solo"><span>Solo</span></label>
+        <label class="pill"><input type="checkbox" name="Piece 2 forces" value="Solo with electronics"><span>Solo with electronics</span></label>
+        <label class="pill"><input type="checkbox" name="Piece 2 forces" value="Oboe and piano"><span>Oboe and piano</span></label>
+        <label class="pill"><input type="checkbox" name="Piece 2 forces" value="Duo (other)"><span>Duo (other)</span></label>
+        <label class="pill"><input type="checkbox" name="Piece 2 forces" value="Trio"><span>Trio</span></label>
+        <label class="pill"><input type="checkbox" name="Piece 2 forces" value="Wind quintet"><span>Wind quintet</span></label>
+        <label class="pill"><input type="checkbox" name="Piece 2 forces" value="Double reed ensemble"><span>Double reed ensemble</span></label>
+        <label class="pill"><input type="checkbox" name="Piece 2 forces" value="Chamber ensemble"><span>Chamber ensemble</span></label>
+        <label class="pill"><input type="checkbox" name="Piece 2 forces" value="With voice"><span>With voice</span></label>
+        <label class="pill"><input type="checkbox" name="Piece 2 forces" value="With orchestra"><span>With orchestra</span></label>
+        <label class="pill"><input type="checkbox" name="Piece 2 forces" value="With tape or fixed media"><span>With tape or fixed media</span></label>
+        <label class="pill"><input type="checkbox" name="Piece 2 forces" value="Other"><span>Other</span></label>
+      </div>
+    </div>
+    <label class="f"><span class="k">Spell out the formation</span>
+      <input name="Piece 2 formation" type="text" placeholder="cor anglais, accordion and live electronics"></label>
+
+    <div class="f"><span class="k">Idiom</span>
+      <div class="pills">
+        <label class="pill"><input type="checkbox" name="Piece 2 idiom" value="Contemporary concert music"><span>Contemporary concert music</span></label>
+        <label class="pill"><input type="checkbox" name="Piece 2 idiom" value="Jazz"><span>Jazz</span></label>
+        <label class="pill"><input type="checkbox" name="Piece 2 idiom" value="Film"><span>Film</span></label>
+        <label class="pill"><input type="checkbox" name="Piece 2 idiom" value="Games"><span>Games</span></label>
+        <label class="pill"><input type="checkbox" name="Piece 2 idiom" value="Ambient"><span>Ambient</span></label>
+        <label class="pill"><input type="checkbox" name="Piece 2 idiom" value="Improvised"><span>Improvised</span></label>
+        <label class="pill"><input type="checkbox" name="Piece 2 idiom" value="Other"><span>Other</span></label>
+      </div>
+    </div>
+
+    <div class="two">
+      <label class="f"><span class="k">Publication</span>
+        <select name="Piece 2 publication">
+          <option value="">Choose one</option>
+          <option>Published</option>
+          <option>Self-published</option>
+          <option>Unpublished</option>
+        </select></label>
+      <label class="f"><span class="k">Publisher</span>
+        <input name="Piece 2 publisher" type="text"></label>
+    </div>
+
+    <label class="f"><span class="k">Prizes or awards
+      <span class="hint">Has it won anything or been selected for anything?</span></span>
+      <input name="Piece 2 prizes" type="text"></label>
+
+    <div class="f"><span class="k">Techniques it asks for
+      <span class="hint">This is what makes the archive searchable by sound.</span></span>
+      <div class="pills">
+        <label class="pill"><input type="checkbox" name="Piece 2 techniques" value="Multiphonics"><span>Multiphonics</span></label>
+        <label class="pill"><input type="checkbox" name="Piece 2 techniques" value="Pitch bend and microtones"><span>Pitch bend / microtones</span></label>
+        <label class="pill"><input type="checkbox" name="Piece 2 techniques" value="Glissando"><span>Glissando</span></label>
+        <label class="pill"><input type="checkbox" name="Piece 2 techniques" value="Harmonics"><span>Harmonics</span></label>
+        <label class="pill"><input type="checkbox" name="Piece 2 techniques" value="Timbre fingerings"><span>Timbre fingerings</span></label>
+        <label class="pill"><input type="checkbox" name="Piece 2 techniques" value="Trills and tremolos"><span>Trills / tremolos</span></label>
+        <label class="pill"><input type="checkbox" name="Piece 2 techniques" value="Vibrato"><span>Vibrato</span></label>
+        <label class="pill"><input type="checkbox" name="Piece 2 techniques" value="Articulation"><span>Articulation</span></label>
+        <label class="pill"><input type="checkbox" name="Piece 2 techniques" value="Air sounds"><span>Air sounds</span></label>
+        <label class="pill"><input type="checkbox" name="Piece 2 techniques" value="Key clicks"><span>Key clicks</span></label>
+        <label class="pill"><input type="checkbox" name="Piece 2 techniques" value="Voice and breath"><span>Voice / circular breathing</span></label>
+        <label class="pill"><input type="checkbox" name="Piece 2 techniques" value="Special techniques"><span>Other special techniques</span></label>
+        <label class="pill"><input type="checkbox" name="Piece 2 techniques" value="None or conventional writing"><span>None, conventional writing</span></label>
+      </div>
+    </div>
+    <label class="f"><span class="k">Does the score include a legend or performance note for them?</span>
+      <select name="Piece 2 score legend">
+        <option value="">Choose one</option>
+        <option>Yes</option>
+        <option>No</option>
+        <option>Partly</option>
+      </select></label>
+
+    <div class="two">
+      <label class="f"><span class="k">Score link</span>
+        <input name="Piece 2 score link" type="url" placeholder="https://"></label>
+      <label class="f"><span class="k">Recording link</span>
+        <input name="Piece 2 recording link" type="url" placeholder="https://"></label>
+    </div>
+
+    <div class="choice">
+      <span class="k">How may I use this piece?</span>
+      <p class="note">Tick nothing and the piece is listed only: title, year, forces, techniques and your links. Nothing else happens without you.</p>
+      <div class="pills">
+        <label class="pill"><input type="checkbox" name="Piece 2 use" value="Perform"><span>I would be glad if you performed it</span></label>
+        <label class="pill"><input type="checkbox" name="Piece 2 use" value="Record"><span>You may record excerpts and publish them</span></label>
+        <label class="pill"><input type="checkbox" name="Piece 2 use" value="Feature"><span>You may feature it in a post, with my name</span></label>
+        <label class="pill"><input type="checkbox" name="Piece 2 use" value="Score page"><span>You may show a page of the score</span></label>
+      </div>
+      <label class="f"><span class="k">If a page of the score is fine, which page or bars?</span>
+        <input name="Piece 2 score page" type="text" placeholder="first page, or bars 12 to 28"></label>
+    </div>
+
+    <label class="f"><span class="k">What should an oboist know about it?
+      <span class="hint">One or two sentences. What it needs, what nobody tells you until the first rehearsal.</span></span>
+      <textarea name="Piece 2 notes" rows="3"></textarea></label>
+      <button type="button" class="drop" data-drop="2">remove this piece</button>
+  </fieldset>
+
+  <fieldset class="piece" id="piece-3" hidden>
+    <legend>Piece 3</legend>
+    <div class="fs-rule"></div>
+
+    <label class="f"><span class="k">Title of the work</span>
+      <input name="Piece 3 title" type="text"></label>
+
+    <div class="two">
+      <label class="f"><span class="k">Year</span>
+        <input name="Piece 3 year" type="number" min="1600" max="2100" placeholder="2024"></label>
+      <label class="f"><span class="k">Duration in minutes</span>
+        <input name="Piece 3 duration" type="number" min="0" step="1" placeholder="8"></label>
+    </div>
+
+    <div class="f"><span class="k">Which instrument of the family</span>
+      <div class="pills">
+        <label class="pill"><input type="checkbox" name="Piece 3 instrument" value="Oboe"><span>Oboe</span></label>
+        <label class="pill"><input type="checkbox" name="Piece 3 instrument" value="Oboe d'amore"><span>Oboe d'amore</span></label>
+        <label class="pill"><input type="checkbox" name="Piece 3 instrument" value="Cor anglais"><span>Cor anglais</span></label>
+        <label class="pill"><input type="checkbox" name="Piece 3 instrument" value="Bass oboe"><span>Bass oboe</span></label>
+        <label class="pill"><input type="checkbox" name="Piece 3 instrument" value="Musette"><span>Musette</span></label>
+      </div>
+    </div>
+
+    <div class="f"><span class="k">Forces
+      <span class="hint">Any formation that includes the oboe family. Tick all that apply.</span></span>
+      <div class="pills">
+        <label class="pill"><input type="checkbox" name="Piece 3 forces" value="Solo"><span>Solo</span></label>
+        <label class="pill"><input type="checkbox" name="Piece 3 forces" value="Solo with electronics"><span>Solo with electronics</span></label>
+        <label class="pill"><input type="checkbox" name="Piece 3 forces" value="Oboe and piano"><span>Oboe and piano</span></label>
+        <label class="pill"><input type="checkbox" name="Piece 3 forces" value="Duo (other)"><span>Duo (other)</span></label>
+        <label class="pill"><input type="checkbox" name="Piece 3 forces" value="Trio"><span>Trio</span></label>
+        <label class="pill"><input type="checkbox" name="Piece 3 forces" value="Wind quintet"><span>Wind quintet</span></label>
+        <label class="pill"><input type="checkbox" name="Piece 3 forces" value="Double reed ensemble"><span>Double reed ensemble</span></label>
+        <label class="pill"><input type="checkbox" name="Piece 3 forces" value="Chamber ensemble"><span>Chamber ensemble</span></label>
+        <label class="pill"><input type="checkbox" name="Piece 3 forces" value="With voice"><span>With voice</span></label>
+        <label class="pill"><input type="checkbox" name="Piece 3 forces" value="With orchestra"><span>With orchestra</span></label>
+        <label class="pill"><input type="checkbox" name="Piece 3 forces" value="With tape or fixed media"><span>With tape or fixed media</span></label>
+        <label class="pill"><input type="checkbox" name="Piece 3 forces" value="Other"><span>Other</span></label>
+      </div>
+    </div>
+    <label class="f"><span class="k">Spell out the formation</span>
+      <input name="Piece 3 formation" type="text" placeholder="cor anglais, accordion and live electronics"></label>
+
+    <div class="f"><span class="k">Idiom</span>
+      <div class="pills">
+        <label class="pill"><input type="checkbox" name="Piece 3 idiom" value="Contemporary concert music"><span>Contemporary concert music</span></label>
+        <label class="pill"><input type="checkbox" name="Piece 3 idiom" value="Jazz"><span>Jazz</span></label>
+        <label class="pill"><input type="checkbox" name="Piece 3 idiom" value="Film"><span>Film</span></label>
+        <label class="pill"><input type="checkbox" name="Piece 3 idiom" value="Games"><span>Games</span></label>
+        <label class="pill"><input type="checkbox" name="Piece 3 idiom" value="Ambient"><span>Ambient</span></label>
+        <label class="pill"><input type="checkbox" name="Piece 3 idiom" value="Improvised"><span>Improvised</span></label>
+        <label class="pill"><input type="checkbox" name="Piece 3 idiom" value="Other"><span>Other</span></label>
+      </div>
+    </div>
+
+    <div class="two">
+      <label class="f"><span class="k">Publication</span>
+        <select name="Piece 3 publication">
+          <option value="">Choose one</option>
+          <option>Published</option>
+          <option>Self-published</option>
+          <option>Unpublished</option>
+        </select></label>
+      <label class="f"><span class="k">Publisher</span>
+        <input name="Piece 3 publisher" type="text"></label>
+    </div>
+
+    <label class="f"><span class="k">Prizes or awards
+      <span class="hint">Has it won anything or been selected for anything?</span></span>
+      <input name="Piece 3 prizes" type="text"></label>
+
+    <div class="f"><span class="k">Techniques it asks for
+      <span class="hint">This is what makes the archive searchable by sound.</span></span>
+      <div class="pills">
+        <label class="pill"><input type="checkbox" name="Piece 3 techniques" value="Multiphonics"><span>Multiphonics</span></label>
+        <label class="pill"><input type="checkbox" name="Piece 3 techniques" value="Pitch bend and microtones"><span>Pitch bend / microtones</span></label>
+        <label class="pill"><input type="checkbox" name="Piece 3 techniques" value="Glissando"><span>Glissando</span></label>
+        <label class="pill"><input type="checkbox" name="Piece 3 techniques" value="Harmonics"><span>Harmonics</span></label>
+        <label class="pill"><input type="checkbox" name="Piece 3 techniques" value="Timbre fingerings"><span>Timbre fingerings</span></label>
+        <label class="pill"><input type="checkbox" name="Piece 3 techniques" value="Trills and tremolos"><span>Trills / tremolos</span></label>
+        <label class="pill"><input type="checkbox" name="Piece 3 techniques" value="Vibrato"><span>Vibrato</span></label>
+        <label class="pill"><input type="checkbox" name="Piece 3 techniques" value="Articulation"><span>Articulation</span></label>
+        <label class="pill"><input type="checkbox" name="Piece 3 techniques" value="Air sounds"><span>Air sounds</span></label>
+        <label class="pill"><input type="checkbox" name="Piece 3 techniques" value="Key clicks"><span>Key clicks</span></label>
+        <label class="pill"><input type="checkbox" name="Piece 3 techniques" value="Voice and breath"><span>Voice / circular breathing</span></label>
+        <label class="pill"><input type="checkbox" name="Piece 3 techniques" value="Special techniques"><span>Other special techniques</span></label>
+        <label class="pill"><input type="checkbox" name="Piece 3 techniques" value="None or conventional writing"><span>None, conventional writing</span></label>
+      </div>
+    </div>
+    <label class="f"><span class="k">Does the score include a legend or performance note for them?</span>
+      <select name="Piece 3 score legend">
+        <option value="">Choose one</option>
+        <option>Yes</option>
+        <option>No</option>
+        <option>Partly</option>
+      </select></label>
+
+    <div class="two">
+      <label class="f"><span class="k">Score link</span>
+        <input name="Piece 3 score link" type="url" placeholder="https://"></label>
+      <label class="f"><span class="k">Recording link</span>
+        <input name="Piece 3 recording link" type="url" placeholder="https://"></label>
+    </div>
+
+    <div class="choice">
+      <span class="k">How may I use this piece?</span>
+      <p class="note">Tick nothing and the piece is listed only: title, year, forces, techniques and your links. Nothing else happens without you.</p>
+      <div class="pills">
+        <label class="pill"><input type="checkbox" name="Piece 3 use" value="Perform"><span>I would be glad if you performed it</span></label>
+        <label class="pill"><input type="checkbox" name="Piece 3 use" value="Record"><span>You may record excerpts and publish them</span></label>
+        <label class="pill"><input type="checkbox" name="Piece 3 use" value="Feature"><span>You may feature it in a post, with my name</span></label>
+        <label class="pill"><input type="checkbox" name="Piece 3 use" value="Score page"><span>You may show a page of the score</span></label>
+      </div>
+      <label class="f"><span class="k">If a page of the score is fine, which page or bars?</span>
+        <input name="Piece 3 score page" type="text" placeholder="first page, or bars 12 to 28"></label>
+    </div>
+
+    <label class="f"><span class="k">What should an oboist know about it?
+      <span class="hint">One or two sentences. What it needs, what nobody tells you until the first rehearsal.</span></span>
+      <textarea name="Piece 3 notes" rows="3"></textarea></label>
+      <button type="button" class="drop" data-drop="3">remove this piece</button>
+  </fieldset>
+
+  <fieldset class="piece" id="piece-4" hidden>
+    <legend>Piece 4</legend>
+    <div class="fs-rule"></div>
+
+    <label class="f"><span class="k">Title of the work</span>
+      <input name="Piece 4 title" type="text"></label>
+
+    <div class="two">
+      <label class="f"><span class="k">Year</span>
+        <input name="Piece 4 year" type="number" min="1600" max="2100" placeholder="2024"></label>
+      <label class="f"><span class="k">Duration in minutes</span>
+        <input name="Piece 4 duration" type="number" min="0" step="1" placeholder="8"></label>
+    </div>
+
+    <div class="f"><span class="k">Which instrument of the family</span>
+      <div class="pills">
+        <label class="pill"><input type="checkbox" name="Piece 4 instrument" value="Oboe"><span>Oboe</span></label>
+        <label class="pill"><input type="checkbox" name="Piece 4 instrument" value="Oboe d'amore"><span>Oboe d'amore</span></label>
+        <label class="pill"><input type="checkbox" name="Piece 4 instrument" value="Cor anglais"><span>Cor anglais</span></label>
+        <label class="pill"><input type="checkbox" name="Piece 4 instrument" value="Bass oboe"><span>Bass oboe</span></label>
+        <label class="pill"><input type="checkbox" name="Piece 4 instrument" value="Musette"><span>Musette</span></label>
+      </div>
+    </div>
+
+    <div class="f"><span class="k">Forces
+      <span class="hint">Any formation that includes the oboe family. Tick all that apply.</span></span>
+      <div class="pills">
+        <label class="pill"><input type="checkbox" name="Piece 4 forces" value="Solo"><span>Solo</span></label>
+        <label class="pill"><input type="checkbox" name="Piece 4 forces" value="Solo with electronics"><span>Solo with electronics</span></label>
+        <label class="pill"><input type="checkbox" name="Piece 4 forces" value="Oboe and piano"><span>Oboe and piano</span></label>
+        <label class="pill"><input type="checkbox" name="Piece 4 forces" value="Duo (other)"><span>Duo (other)</span></label>
+        <label class="pill"><input type="checkbox" name="Piece 4 forces" value="Trio"><span>Trio</span></label>
+        <label class="pill"><input type="checkbox" name="Piece 4 forces" value="Wind quintet"><span>Wind quintet</span></label>
+        <label class="pill"><input type="checkbox" name="Piece 4 forces" value="Double reed ensemble"><span>Double reed ensemble</span></label>
+        <label class="pill"><input type="checkbox" name="Piece 4 forces" value="Chamber ensemble"><span>Chamber ensemble</span></label>
+        <label class="pill"><input type="checkbox" name="Piece 4 forces" value="With voice"><span>With voice</span></label>
+        <label class="pill"><input type="checkbox" name="Piece 4 forces" value="With orchestra"><span>With orchestra</span></label>
+        <label class="pill"><input type="checkbox" name="Piece 4 forces" value="With tape or fixed media"><span>With tape or fixed media</span></label>
+        <label class="pill"><input type="checkbox" name="Piece 4 forces" value="Other"><span>Other</span></label>
+      </div>
+    </div>
+    <label class="f"><span class="k">Spell out the formation</span>
+      <input name="Piece 4 formation" type="text" placeholder="cor anglais, accordion and live electronics"></label>
+
+    <div class="f"><span class="k">Idiom</span>
+      <div class="pills">
+        <label class="pill"><input type="checkbox" name="Piece 4 idiom" value="Contemporary concert music"><span>Contemporary concert music</span></label>
+        <label class="pill"><input type="checkbox" name="Piece 4 idiom" value="Jazz"><span>Jazz</span></label>
+        <label class="pill"><input type="checkbox" name="Piece 4 idiom" value="Film"><span>Film</span></label>
+        <label class="pill"><input type="checkbox" name="Piece 4 idiom" value="Games"><span>Games</span></label>
+        <label class="pill"><input type="checkbox" name="Piece 4 idiom" value="Ambient"><span>Ambient</span></label>
+        <label class="pill"><input type="checkbox" name="Piece 4 idiom" value="Improvised"><span>Improvised</span></label>
+        <label class="pill"><input type="checkbox" name="Piece 4 idiom" value="Other"><span>Other</span></label>
+      </div>
+    </div>
+
+    <div class="two">
+      <label class="f"><span class="k">Publication</span>
+        <select name="Piece 4 publication">
+          <option value="">Choose one</option>
+          <option>Published</option>
+          <option>Self-published</option>
+          <option>Unpublished</option>
+        </select></label>
+      <label class="f"><span class="k">Publisher</span>
+        <input name="Piece 4 publisher" type="text"></label>
+    </div>
+
+    <label class="f"><span class="k">Prizes or awards
+      <span class="hint">Has it won anything or been selected for anything?</span></span>
+      <input name="Piece 4 prizes" type="text"></label>
+
+    <div class="f"><span class="k">Techniques it asks for
+      <span class="hint">This is what makes the archive searchable by sound.</span></span>
+      <div class="pills">
+        <label class="pill"><input type="checkbox" name="Piece 4 techniques" value="Multiphonics"><span>Multiphonics</span></label>
+        <label class="pill"><input type="checkbox" name="Piece 4 techniques" value="Pitch bend and microtones"><span>Pitch bend / microtones</span></label>
+        <label class="pill"><input type="checkbox" name="Piece 4 techniques" value="Glissando"><span>Glissando</span></label>
+        <label class="pill"><input type="checkbox" name="Piece 4 techniques" value="Harmonics"><span>Harmonics</span></label>
+        <label class="pill"><input type="checkbox" name="Piece 4 techniques" value="Timbre fingerings"><span>Timbre fingerings</span></label>
+        <label class="pill"><input type="checkbox" name="Piece 4 techniques" value="Trills and tremolos"><span>Trills / tremolos</span></label>
+        <label class="pill"><input type="checkbox" name="Piece 4 techniques" value="Vibrato"><span>Vibrato</span></label>
+        <label class="pill"><input type="checkbox" name="Piece 4 techniques" value="Articulation"><span>Articulation</span></label>
+        <label class="pill"><input type="checkbox" name="Piece 4 techniques" value="Air sounds"><span>Air sounds</span></label>
+        <label class="pill"><input type="checkbox" name="Piece 4 techniques" value="Key clicks"><span>Key clicks</span></label>
+        <label class="pill"><input type="checkbox" name="Piece 4 techniques" value="Voice and breath"><span>Voice / circular breathing</span></label>
+        <label class="pill"><input type="checkbox" name="Piece 4 techniques" value="Special techniques"><span>Other special techniques</span></label>
+        <label class="pill"><input type="checkbox" name="Piece 4 techniques" value="None or conventional writing"><span>None, conventional writing</span></label>
+      </div>
+    </div>
+    <label class="f"><span class="k">Does the score include a legend or performance note for them?</span>
+      <select name="Piece 4 score legend">
+        <option value="">Choose one</option>
+        <option>Yes</option>
+        <option>No</option>
+        <option>Partly</option>
+      </select></label>
+
+    <div class="two">
+      <label class="f"><span class="k">Score link</span>
+        <input name="Piece 4 score link" type="url" placeholder="https://"></label>
+      <label class="f"><span class="k">Recording link</span>
+        <input name="Piece 4 recording link" type="url" placeholder="https://"></label>
+    </div>
+
+    <div class="choice">
+      <span class="k">How may I use this piece?</span>
+      <p class="note">Tick nothing and the piece is listed only: title, year, forces, techniques and your links. Nothing else happens without you.</p>
+      <div class="pills">
+        <label class="pill"><input type="checkbox" name="Piece 4 use" value="Perform"><span>I would be glad if you performed it</span></label>
+        <label class="pill"><input type="checkbox" name="Piece 4 use" value="Record"><span>You may record excerpts and publish them</span></label>
+        <label class="pill"><input type="checkbox" name="Piece 4 use" value="Feature"><span>You may feature it in a post, with my name</span></label>
+        <label class="pill"><input type="checkbox" name="Piece 4 use" value="Score page"><span>You may show a page of the score</span></label>
+      </div>
+      <label class="f"><span class="k">If a page of the score is fine, which page or bars?</span>
+        <input name="Piece 4 score page" type="text" placeholder="first page, or bars 12 to 28"></label>
+    </div>
+
+    <label class="f"><span class="k">What should an oboist know about it?
+      <span class="hint">One or two sentences. What it needs, what nobody tells you until the first rehearsal.</span></span>
+      <textarea name="Piece 4 notes" rows="3"></textarea></label>
+      <button type="button" class="drop" data-drop="4">remove this piece</button>
+  </fieldset>
+
+  <fieldset class="piece" id="piece-5" hidden>
+    <legend>Piece 5</legend>
+    <div class="fs-rule"></div>
+
+    <label class="f"><span class="k">Title of the work</span>
+      <input name="Piece 5 title" type="text"></label>
+
+    <div class="two">
+      <label class="f"><span class="k">Year</span>
+        <input name="Piece 5 year" type="number" min="1600" max="2100" placeholder="2024"></label>
+      <label class="f"><span class="k">Duration in minutes</span>
+        <input name="Piece 5 duration" type="number" min="0" step="1" placeholder="8"></label>
+    </div>
+
+    <div class="f"><span class="k">Which instrument of the family</span>
+      <div class="pills">
+        <label class="pill"><input type="checkbox" name="Piece 5 instrument" value="Oboe"><span>Oboe</span></label>
+        <label class="pill"><input type="checkbox" name="Piece 5 instrument" value="Oboe d'amore"><span>Oboe d'amore</span></label>
+        <label class="pill"><input type="checkbox" name="Piece 5 instrument" value="Cor anglais"><span>Cor anglais</span></label>
+        <label class="pill"><input type="checkbox" name="Piece 5 instrument" value="Bass oboe"><span>Bass oboe</span></label>
+        <label class="pill"><input type="checkbox" name="Piece 5 instrument" value="Musette"><span>Musette</span></label>
+      </div>
+    </div>
+
+    <div class="f"><span class="k">Forces
+      <span class="hint">Any formation that includes the oboe family. Tick all that apply.</span></span>
+      <div class="pills">
+        <label class="pill"><input type="checkbox" name="Piece 5 forces" value="Solo"><span>Solo</span></label>
+        <label class="pill"><input type="checkbox" name="Piece 5 forces" value="Solo with electronics"><span>Solo with electronics</span></label>
+        <label class="pill"><input type="checkbox" name="Piece 5 forces" value="Oboe and piano"><span>Oboe and piano</span></label>
+        <label class="pill"><input type="checkbox" name="Piece 5 forces" value="Duo (other)"><span>Duo (other)</span></label>
+        <label class="pill"><input type="checkbox" name="Piece 5 forces" value="Trio"><span>Trio</span></label>
+        <label class="pill"><input type="checkbox" name="Piece 5 forces" value="Wind quintet"><span>Wind quintet</span></label>
+        <label class="pill"><input type="checkbox" name="Piece 5 forces" value="Double reed ensemble"><span>Double reed ensemble</span></label>
+        <label class="pill"><input type="checkbox" name="Piece 5 forces" value="Chamber ensemble"><span>Chamber ensemble</span></label>
+        <label class="pill"><input type="checkbox" name="Piece 5 forces" value="With voice"><span>With voice</span></label>
+        <label class="pill"><input type="checkbox" name="Piece 5 forces" value="With orchestra"><span>With orchestra</span></label>
+        <label class="pill"><input type="checkbox" name="Piece 5 forces" value="With tape or fixed media"><span>With tape or fixed media</span></label>
+        <label class="pill"><input type="checkbox" name="Piece 5 forces" value="Other"><span>Other</span></label>
+      </div>
+    </div>
+    <label class="f"><span class="k">Spell out the formation</span>
+      <input name="Piece 5 formation" type="text" placeholder="cor anglais, accordion and live electronics"></label>
+
+    <div class="f"><span class="k">Idiom</span>
+      <div class="pills">
+        <label class="pill"><input type="checkbox" name="Piece 5 idiom" value="Contemporary concert music"><span>Contemporary concert music</span></label>
+        <label class="pill"><input type="checkbox" name="Piece 5 idiom" value="Jazz"><span>Jazz</span></label>
+        <label class="pill"><input type="checkbox" name="Piece 5 idiom" value="Film"><span>Film</span></label>
+        <label class="pill"><input type="checkbox" name="Piece 5 idiom" value="Games"><span>Games</span></label>
+        <label class="pill"><input type="checkbox" name="Piece 5 idiom" value="Ambient"><span>Ambient</span></label>
+        <label class="pill"><input type="checkbox" name="Piece 5 idiom" value="Improvised"><span>Improvised</span></label>
+        <label class="pill"><input type="checkbox" name="Piece 5 idiom" value="Other"><span>Other</span></label>
+      </div>
+    </div>
+
+    <div class="two">
+      <label class="f"><span class="k">Publication</span>
+        <select name="Piece 5 publication">
+          <option value="">Choose one</option>
+          <option>Published</option>
+          <option>Self-published</option>
+          <option>Unpublished</option>
+        </select></label>
+      <label class="f"><span class="k">Publisher</span>
+        <input name="Piece 5 publisher" type="text"></label>
+    </div>
+
+    <label class="f"><span class="k">Prizes or awards
+      <span class="hint">Has it won anything or been selected for anything?</span></span>
+      <input name="Piece 5 prizes" type="text"></label>
+
+    <div class="f"><span class="k">Techniques it asks for
+      <span class="hint">This is what makes the archive searchable by sound.</span></span>
+      <div class="pills">
+        <label class="pill"><input type="checkbox" name="Piece 5 techniques" value="Multiphonics"><span>Multiphonics</span></label>
+        <label class="pill"><input type="checkbox" name="Piece 5 techniques" value="Pitch bend and microtones"><span>Pitch bend / microtones</span></label>
+        <label class="pill"><input type="checkbox" name="Piece 5 techniques" value="Glissando"><span>Glissando</span></label>
+        <label class="pill"><input type="checkbox" name="Piece 5 techniques" value="Harmonics"><span>Harmonics</span></label>
+        <label class="pill"><input type="checkbox" name="Piece 5 techniques" value="Timbre fingerings"><span>Timbre fingerings</span></label>
+        <label class="pill"><input type="checkbox" name="Piece 5 techniques" value="Trills and tremolos"><span>Trills / tremolos</span></label>
+        <label class="pill"><input type="checkbox" name="Piece 5 techniques" value="Vibrato"><span>Vibrato</span></label>
+        <label class="pill"><input type="checkbox" name="Piece 5 techniques" value="Articulation"><span>Articulation</span></label>
+        <label class="pill"><input type="checkbox" name="Piece 5 techniques" value="Air sounds"><span>Air sounds</span></label>
+        <label class="pill"><input type="checkbox" name="Piece 5 techniques" value="Key clicks"><span>Key clicks</span></label>
+        <label class="pill"><input type="checkbox" name="Piece 5 techniques" value="Voice and breath"><span>Voice / circular breathing</span></label>
+        <label class="pill"><input type="checkbox" name="Piece 5 techniques" value="Special techniques"><span>Other special techniques</span></label>
+        <label class="pill"><input type="checkbox" name="Piece 5 techniques" value="None or conventional writing"><span>None, conventional writing</span></label>
+      </div>
+    </div>
+    <label class="f"><span class="k">Does the score include a legend or performance note for them?</span>
+      <select name="Piece 5 score legend">
+        <option value="">Choose one</option>
+        <option>Yes</option>
+        <option>No</option>
+        <option>Partly</option>
+      </select></label>
+
+    <div class="two">
+      <label class="f"><span class="k">Score link</span>
+        <input name="Piece 5 score link" type="url" placeholder="https://"></label>
+      <label class="f"><span class="k">Recording link</span>
+        <input name="Piece 5 recording link" type="url" placeholder="https://"></label>
+    </div>
+
+    <div class="choice">
+      <span class="k">How may I use this piece?</span>
+      <p class="note">Tick nothing and the piece is listed only: title, year, forces, techniques and your links. Nothing else happens without you.</p>
+      <div class="pills">
+        <label class="pill"><input type="checkbox" name="Piece 5 use" value="Perform"><span>I would be glad if you performed it</span></label>
+        <label class="pill"><input type="checkbox" name="Piece 5 use" value="Record"><span>You may record excerpts and publish them</span></label>
+        <label class="pill"><input type="checkbox" name="Piece 5 use" value="Feature"><span>You may feature it in a post, with my name</span></label>
+        <label class="pill"><input type="checkbox" name="Piece 5 use" value="Score page"><span>You may show a page of the score</span></label>
+      </div>
+      <label class="f"><span class="k">If a page of the score is fine, which page or bars?</span>
+        <input name="Piece 5 score page" type="text" placeholder="first page, or bars 12 to 28"></label>
+    </div>
+
+    <label class="f"><span class="k">What should an oboist know about it?
+      <span class="hint">One or two sentences. What it needs, what nobody tells you until the first rehearsal.</span></span>
+      <textarea name="Piece 5 notes" rows="3"></textarea></label>
+      <button type="button" class="drop" data-drop="5">remove this piece</button>
+  </fieldset>
+
+  <fieldset class="piece" id="piece-6" hidden>
+    <legend>Piece 6</legend>
+    <div class="fs-rule"></div>
+
+    <label class="f"><span class="k">Title of the work</span>
+      <input name="Piece 6 title" type="text"></label>
+
+    <div class="two">
+      <label class="f"><span class="k">Year</span>
+        <input name="Piece 6 year" type="number" min="1600" max="2100" placeholder="2024"></label>
+      <label class="f"><span class="k">Duration in minutes</span>
+        <input name="Piece 6 duration" type="number" min="0" step="1" placeholder="8"></label>
+    </div>
+
+    <div class="f"><span class="k">Which instrument of the family</span>
+      <div class="pills">
+        <label class="pill"><input type="checkbox" name="Piece 6 instrument" value="Oboe"><span>Oboe</span></label>
+        <label class="pill"><input type="checkbox" name="Piece 6 instrument" value="Oboe d'amore"><span>Oboe d'amore</span></label>
+        <label class="pill"><input type="checkbox" name="Piece 6 instrument" value="Cor anglais"><span>Cor anglais</span></label>
+        <label class="pill"><input type="checkbox" name="Piece 6 instrument" value="Bass oboe"><span>Bass oboe</span></label>
+        <label class="pill"><input type="checkbox" name="Piece 6 instrument" value="Musette"><span>Musette</span></label>
+      </div>
+    </div>
+
+    <div class="f"><span class="k">Forces
+      <span class="hint">Any formation that includes the oboe family. Tick all that apply.</span></span>
+      <div class="pills">
+        <label class="pill"><input type="checkbox" name="Piece 6 forces" value="Solo"><span>Solo</span></label>
+        <label class="pill"><input type="checkbox" name="Piece 6 forces" value="Solo with electronics"><span>Solo with electronics</span></label>
+        <label class="pill"><input type="checkbox" name="Piece 6 forces" value="Oboe and piano"><span>Oboe and piano</span></label>
+        <label class="pill"><input type="checkbox" name="Piece 6 forces" value="Duo (other)"><span>Duo (other)</span></label>
+        <label class="pill"><input type="checkbox" name="Piece 6 forces" value="Trio"><span>Trio</span></label>
+        <label class="pill"><input type="checkbox" name="Piece 6 forces" value="Wind quintet"><span>Wind quintet</span></label>
+        <label class="pill"><input type="checkbox" name="Piece 6 forces" value="Double reed ensemble"><span>Double reed ensemble</span></label>
+        <label class="pill"><input type="checkbox" name="Piece 6 forces" value="Chamber ensemble"><span>Chamber ensemble</span></label>
+        <label class="pill"><input type="checkbox" name="Piece 6 forces" value="With voice"><span>With voice</span></label>
+        <label class="pill"><input type="checkbox" name="Piece 6 forces" value="With orchestra"><span>With orchestra</span></label>
+        <label class="pill"><input type="checkbox" name="Piece 6 forces" value="With tape or fixed media"><span>With tape or fixed media</span></label>
+        <label class="pill"><input type="checkbox" name="Piece 6 forces" value="Other"><span>Other</span></label>
+      </div>
+    </div>
+    <label class="f"><span class="k">Spell out the formation</span>
+      <input name="Piece 6 formation" type="text" placeholder="cor anglais, accordion and live electronics"></label>
+
+    <div class="f"><span class="k">Idiom</span>
+      <div class="pills">
+        <label class="pill"><input type="checkbox" name="Piece 6 idiom" value="Contemporary concert music"><span>Contemporary concert music</span></label>
+        <label class="pill"><input type="checkbox" name="Piece 6 idiom" value="Jazz"><span>Jazz</span></label>
+        <label class="pill"><input type="checkbox" name="Piece 6 idiom" value="Film"><span>Film</span></label>
+        <label class="pill"><input type="checkbox" name="Piece 6 idiom" value="Games"><span>Games</span></label>
+        <label class="pill"><input type="checkbox" name="Piece 6 idiom" value="Ambient"><span>Ambient</span></label>
+        <label class="pill"><input type="checkbox" name="Piece 6 idiom" value="Improvised"><span>Improvised</span></label>
+        <label class="pill"><input type="checkbox" name="Piece 6 idiom" value="Other"><span>Other</span></label>
+      </div>
+    </div>
+
+    <div class="two">
+      <label class="f"><span class="k">Publication</span>
+        <select name="Piece 6 publication">
+          <option value="">Choose one</option>
+          <option>Published</option>
+          <option>Self-published</option>
+          <option>Unpublished</option>
+        </select></label>
+      <label class="f"><span class="k">Publisher</span>
+        <input name="Piece 6 publisher" type="text"></label>
+    </div>
+
+    <label class="f"><span class="k">Prizes or awards
+      <span class="hint">Has it won anything or been selected for anything?</span></span>
+      <input name="Piece 6 prizes" type="text"></label>
+
+    <div class="f"><span class="k">Techniques it asks for
+      <span class="hint">This is what makes the archive searchable by sound.</span></span>
+      <div class="pills">
+        <label class="pill"><input type="checkbox" name="Piece 6 techniques" value="Multiphonics"><span>Multiphonics</span></label>
+        <label class="pill"><input type="checkbox" name="Piece 6 techniques" value="Pitch bend and microtones"><span>Pitch bend / microtones</span></label>
+        <label class="pill"><input type="checkbox" name="Piece 6 techniques" value="Glissando"><span>Glissando</span></label>
+        <label class="pill"><input type="checkbox" name="Piece 6 techniques" value="Harmonics"><span>Harmonics</span></label>
+        <label class="pill"><input type="checkbox" name="Piece 6 techniques" value="Timbre fingerings"><span>Timbre fingerings</span></label>
+        <label class="pill"><input type="checkbox" name="Piece 6 techniques" value="Trills and tremolos"><span>Trills / tremolos</span></label>
+        <label class="pill"><input type="checkbox" name="Piece 6 techniques" value="Vibrato"><span>Vibrato</span></label>
+        <label class="pill"><input type="checkbox" name="Piece 6 techniques" value="Articulation"><span>Articulation</span></label>
+        <label class="pill"><input type="checkbox" name="Piece 6 techniques" value="Air sounds"><span>Air sounds</span></label>
+        <label class="pill"><input type="checkbox" name="Piece 6 techniques" value="Key clicks"><span>Key clicks</span></label>
+        <label class="pill"><input type="checkbox" name="Piece 6 techniques" value="Voice and breath"><span>Voice / circular breathing</span></label>
+        <label class="pill"><input type="checkbox" name="Piece 6 techniques" value="Special techniques"><span>Other special techniques</span></label>
+        <label class="pill"><input type="checkbox" name="Piece 6 techniques" value="None or conventional writing"><span>None, conventional writing</span></label>
+      </div>
+    </div>
+    <label class="f"><span class="k">Does the score include a legend or performance note for them?</span>
+      <select name="Piece 6 score legend">
+        <option value="">Choose one</option>
+        <option>Yes</option>
+        <option>No</option>
+        <option>Partly</option>
+      </select></label>
+
+    <div class="two">
+      <label class="f"><span class="k">Score link</span>
+        <input name="Piece 6 score link" type="url" placeholder="https://"></label>
+      <label class="f"><span class="k">Recording link</span>
+        <input name="Piece 6 recording link" type="url" placeholder="https://"></label>
+    </div>
+
+    <div class="choice">
+      <span class="k">How may I use this piece?</span>
+      <p class="note">Tick nothing and the piece is listed only: title, year, forces, techniques and your links. Nothing else happens without you.</p>
+      <div class="pills">
+        <label class="pill"><input type="checkbox" name="Piece 6 use" value="Perform"><span>I would be glad if you performed it</span></label>
+        <label class="pill"><input type="checkbox" name="Piece 6 use" value="Record"><span>You may record excerpts and publish them</span></label>
+        <label class="pill"><input type="checkbox" name="Piece 6 use" value="Feature"><span>You may feature it in a post, with my name</span></label>
+        <label class="pill"><input type="checkbox" name="Piece 6 use" value="Score page"><span>You may show a page of the score</span></label>
+      </div>
+      <label class="f"><span class="k">If a page of the score is fine, which page or bars?</span>
+        <input name="Piece 6 score page" type="text" placeholder="first page, or bars 12 to 28"></label>
+    </div>
+
+    <label class="f"><span class="k">What should an oboist know about it?
+      <span class="hint">One or two sentences. What it needs, what nobody tells you until the first rehearsal.</span></span>
+      <textarea name="Piece 6 notes" rows="3"></textarea></label>
+      <button type="button" class="drop" data-drop="6">remove this piece</button>
+  </fieldset>
+
+  <div class="addrow">
+    <button type="button" class="add" id="addPiece">+ Add another piece</button>
+    <span class="addnote" id="addNote">Up to 6 pieces in one submission. More than that, send the form twice.</span>
+  </div>
+
+  <fieldset>
+    <legend>One file, if you have one handy</legend>
+    <div class="fs-rule"></div>
+    <div class="f"><span class="k">A page of a score
+      <span class="hint">Optional, and only for a piece where you allowed it above. One file, max 8 MB. For the rest, the links are enough.</span></span>
+      <div class="file"><input name="Score page file" type="file" accept=".pdf,.png,.jpg,.jpeg"></div>
+    </div>
+    <label class="f"><span class="k">Which piece is that file for?</span>
+      <input name="Score page file belongs to" type="text" placeholder="title of the piece"></label>
+  </fieldset>
+
+      <button class="send" type="submit">Send it in &rarr;</button>
+      <p class="after">You will get a reply from me, not an autoresponder. It may take a few days.</p>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <div class="inner">
+    <span class="fl">The Oboe <i>Playground</i></span>
+    <span class="fr">© Patrícia Pinheiro · Open call for repertoire</span>
+  </div>
+</footer>
+
+<script>
+  (function () {
+    var max = 6;
+    var shown = 1;
+    var addBtn = document.getElementById('addPiece');
+    var note = document.getElementById('addNote');
+
+    function refresh() {
+      addBtn.disabled = shown >= max;
+      if (shown >= max) { note.textContent = 'That is six. For more, send the form again.'; }
+    }
+
+    addBtn.addEventListener('click', function () {
+      if (shown >= max) return;
+      shown++;
+      var fs = document.getElementById('piece-' + shown);
+      fs.hidden = false;
+      fs.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      refresh();
+    });
+
+    document.querySelectorAll('.drop').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        var i = btn.getAttribute('data-drop');
+        var fs = document.getElementById('piece-' + i);
+        fs.querySelectorAll('input, textarea, select').forEach(function (el) {
+          if (el.type === 'checkbox' || el.type === 'radio') { el.checked = false; }
+          else { el.value = ''; }
+        });
+        // esconde este bloco e puxa os seguintes para cima, para nao ficarem buracos
+        var last = shown;
+        for (var k = Number(i); k < last; k++) {
+          copyBlock(k + 1, k);
+        }
+        document.getElementById('piece-' + last).hidden = true;
+        clearBlock(last);
+        shown--;
+        refresh();
+      });
+    });
+
+    function fieldsOf(i) {
+      return document.getElementById('piece-' + i).querySelectorAll('input, textarea, select');
+    }
+    function copyBlock(from, to) {
+      var a = fieldsOf(from), b = fieldsOf(to);
+      for (var j = 0; j < a.length && j < b.length; j++) {
+        if (a[j].type === 'checkbox' || a[j].type === 'radio') { b[j].checked = a[j].checked; }
+        else { b[j].value = a[j].value; }
+      }
+    }
+    function clearBlock(i) {
+      fieldsOf(i).forEach(function (el) {
+        if (el.type === 'checkbox' || el.type === 'radio') { el.checked = false; }
+        else { el.value = ''; }
+      });
+    }
+
+    refresh();
+  })();
+</script>
+
+</body>
+</html>
