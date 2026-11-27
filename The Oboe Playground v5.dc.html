@@ -90,6 +90,83 @@
     .tech-row > *:nth-child(5) { grid-area: play; justify-self: end; }
     .tech-row > *:nth-child(6) { grid-area: open; justify-self: end; }
   }
+
+  /* --- Campos de cor fluidos (escritos a mao, nao vem do gerador) ----------
+     Pedido a 27/11: trazer para o site a "vibe" dos posts do Canva — campos
+     de cor a escorrer uns para os outros, com grao de impressao — sem perder
+     a limpeza. Por isso so entram nas seccoes que ja sao de cor. As tres
+     superficies de leitura (#who, #techniques, #support) ficam lisas, que e
+     onde se le texto corrido.
+
+     Feito so com gradientes radiais e um grao em SVG embutido: nenhuma imagem
+     nova, nenhum pedido extra ao servidor. Vai em background-image para
+     assentar por cima da cor chapada que o estilo em linha define, sem mexer
+     no empilhamento dos elementos la dentro — nada de ::before a tapar
+     conteudo. O !important e preciso porque "background:" em linha e um
+     atalho que apaga a camada de imagem. */
+  #top, #pod, #multiphonics, #tv, #thanks, #contact { background-repeat: repeat, no-repeat, no-repeat, no-repeat; }
+
+  #top {
+    background-image:
+      url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='180' height='180' filter='url(%23n)' opacity='.5'/%3E%3C/svg%3E"),
+      radial-gradient(70% 55% at 14% 18%, rgba(0,110,233,.34) 0%, rgba(0,110,233,0) 62%),
+      radial-gradient(60% 50% at 88% 34%, rgba(232,160,255,.40) 0%, rgba(232,160,255,0) 60%),
+      radial-gradient(85% 60% at 46% 104%, rgba(0,1,129,.20) 0%, rgba(0,1,129,0) 66%) !important;
+  }
+  #pod {
+    background-image:
+      url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='180' height='180' filter='url(%23n)' opacity='.5'/%3E%3C/svg%3E"),
+      radial-gradient(65% 55% at 82% 14%, rgba(0,110,233,.60) 0%, rgba(0,110,233,0) 62%),
+      radial-gradient(60% 50% at 10% 70%, rgba(232,160,255,.26) 0%, rgba(232,160,255,0) 62%),
+      radial-gradient(70% 45% at 50% 108%, rgba(208,255,164,.12) 0%, rgba(208,255,164,0) 64%) !important;
+  }
+  #multiphonics {
+    background-image:
+      url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='180' height='180' filter='url(%23n)' opacity='.5'/%3E%3C/svg%3E"),
+      radial-gradient(60% 50% at 16% 12%, rgba(0,110,233,.52) 0%, rgba(0,110,233,0) 60%),
+      radial-gradient(65% 55% at 90% 78%, rgba(131,231,255,.22) 0%, rgba(131,231,255,0) 62%),
+      radial-gradient(70% 50% at 44% 102%, rgba(232,160,255,.18) 0%, rgba(232,160,255,0) 64%) !important;
+  }
+  #tv {
+    background-image:
+      url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='180' height='180' filter='url(%23n)' opacity='.5'/%3E%3C/svg%3E"),
+      radial-gradient(65% 55% at 12% 16%, rgba(232,160,255,.42) 0%, rgba(232,160,255,0) 62%),
+      radial-gradient(60% 50% at 86% 24%, rgba(208,255,164,.44) 0%, rgba(208,255,164,0) 60%),
+      radial-gradient(80% 55% at 52% 104%, rgba(0,110,233,.22) 0%, rgba(0,110,233,0) 66%) !important;
+  }
+  #thanks {
+    background-image:
+      url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='180' height='180' filter='url(%23n)' opacity='.5'/%3E%3C/svg%3E"),
+      radial-gradient(65% 55% at 86% 14%, rgba(0,110,233,.30) 0%, rgba(0,110,233,0) 62%),
+      radial-gradient(60% 50% at 10% 42%, rgba(208,255,164,.44) 0%, rgba(208,255,164,0) 60%),
+      radial-gradient(75% 55% at 48% 106%, rgba(246,245,236,.34) 0%, rgba(246,245,236,0) 64%) !important;
+  }
+  #contact {
+    background-image:
+      url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='180' height='180' filter='url(%23n)' opacity='.5'/%3E%3C/svg%3E"),
+      radial-gradient(60% 50% at 14% 16%, rgba(232,160,255,.34) 0%, rgba(232,160,255,0) 60%),
+      radial-gradient(65% 55% at 88% 66%, rgba(0,110,233,.50) 0%, rgba(0,110,233,0) 62%),
+      radial-gradient(70% 45% at 46% 104%, rgba(131,231,255,.14) 0%, rgba(131,231,255,0) 64%) !important;
+  }
+
+  /* --- Titulos com mais peso (escrito a mao) -------------------------------
+     Pedido a 27/11: titulos mais bold, no espirito do "open call" dos posts.
+     O Instrument Serif so existe em 400 — nao ha versao negra para carregar —
+     por isso o peso ganha-se em tamanho e em aperto: a caixa cresce cerca de
+     25% no topo da escala, o espacejamento fecha e as linhas aproximam-se.
+     Vale so para os titulos de seccao (h2); os h3 do contacto ficam como
+     estavam, senao esmagavam o formulario. Apanha so os que sao mesmo em
+     Instrument Serif: os titulos do WHO e do contacto sao Space Grotesk a
+     700 e ja sao grandes por desenho proprio — o aperto de -.035em, pensado
+     para as hastes finas do serif, esmagava-os. */
+  section h2[style*="Instrument Serif"] {
+    font-size: clamp(2.7rem, 7vw, 5.4rem) !important;
+    letter-spacing: -.035em !important;
+    line-height: .9 !important;
+  }
+  @media (max-width: 820px) {
+    section h2[style*="Instrument Serif"] { font-size: clamp(2.5rem, 10vw, 3.6rem) !important; }
+  }
 </style>
 <script src="./support.js"></script>
 <script>
