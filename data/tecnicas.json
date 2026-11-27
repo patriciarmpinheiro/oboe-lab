@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated": "2026-11-27T18:39:24.349Z",
+  "updated": "2026-11-27T18:40:57.114Z",
   "categories": [
     {
       "id": "art",
@@ -817,7 +817,7 @@
         "file": "audio/ob-flz-c-trans-flz.mp3",
         "label": "OBOE FLZ - Lower C ",
         "instrument": "oboe",
-        "notes": "This audio is a lower C, with the pure tone transitioning to FLZ, piano possible dynamic"
+        "notes": "This audio is a lower C, with the pure tone transitioning to FLZ"
       },
       {
         "file": "audio/ob-flz-c-attack-flz.mp3",
