@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated": "2026-11-27T17:57:53.092Z",
+  "updated": "2026-11-27T18:02:41.145Z",
   "categories": [
     {
       "id": "art",
@@ -1238,6 +1238,32 @@
       "id": "faq-can-i-book-you-for-a-session"
     }
   ],
+  "texts": {
+    "heroBadge": "Patrícia Pinheiro · Oboe & Cor Anglais",
+    "heroSub": "An interactive reference for anyone writing for the oboe — concert music, jazz, film, games, ambient. Extended techniques, multiphonics and the full sonic world of the oboe and cor anglais.",
+    "ticker": [
+      "EXTENDED TECHNIQUES",
+      "MULTIPHONICS",
+      "FLUTTER TONGUE",
+      "CIRCULAR BREATHING",
+      "AIR SOUNDS",
+      "KEY CLICKS",
+      "GLISSANDO",
+      "HARMONICS",
+      "COR ANGLAIS"
+    ],
+    "podSub": "Scroll the wheel, pick a technique, press play. Where a real recording exists it plays automatically — the rest are synthesised sketches for now.",
+    "techniquesSub": "Browse and filter by category — open a row for notation, practice notes and recordings. Written for anyone who needs the sound, whatever the idiom.",
+    "mixSub": "Pick two techniques and see how well they get along.",
+    "tvSub": "Reels, seagull sounds and experiments — zapping encouraged. YouTube and Instagram both play here.",
+    "contactSub": "Commissions, sessions, film and game scores, questions about a passage you're writing — or just to say your multiphonic finally spoke. Messages land straight in Patrícia's inbox.",
+    "footerLine": "Curated by Patrícia Pinheiro — oboe & cor anglais",
+    "coffeeTitle": "Buy me a reed",
+    "coffeeSub": "This playground is built and recorded by one oboist, between rehearsals. A coffee (or a piece of cane) keeps the recordings, the multiphonic analyses and the whole archive growing — and free for everyone.",
+    "thanks": "This archive grew out of conversations with composers, colleagues and teachers who kept asking for a sound before writing it. Thank you to everyone who lent a reed, an ear or an afternoon of recording — and to the authors below, whose work is the ground every page here stands on.",
+    "bibSub": "What was used and by whom. Each technique lists the sources behind its description; the full references are here.",
+    "portrait": "images/shootingpatriciapinheiro_sophiahegewald-1275.jpg"
+  },
   "repertoire": [],
   "bibliography": [
     {
@@ -1313,30 +1339,5 @@
       "note": "Everything here marked with a recording or a fingering diagram was tested and recorded for this site."
     }
   ],
-  "people": [],
-  "texts": {
-    "heroBadge": "Patrícia Pinheiro · Oboe & Cor Anglais",
-    "heroSub": "An interactive reference for anyone writing for the oboe — concert music, jazz, film, games, ambient. Extended techniques, multiphonics and the full sonic world of the oboe and cor anglais.",
-    "ticker": [
-      "EXTENDED TECHNIQUES",
-      "MULTIPHONICS",
-      "FLUTTER TONGUE",
-      "CIRCULAR BREATHING",
-      "AIR SOUNDS",
-      "KEY CLICKS",
-      "GLISSANDO",
-      "HARMONICS",
-      "COR ANGLAIS"
-    ],
-    "podSub": "Scroll the wheel, pick a technique, press play. Where a real recording exists it plays automatically — the rest are synthesised sketches for now.",
-    "techniquesSub": "Browse and filter by category — open a row for notation, practice notes and recordings. Written for anyone who needs the sound, whatever the idiom.",
-    "mixSub": "Pick two techniques and see how well they get along.",
-    "tvSub": "Reels, seagull sounds and experiments — zapping encouraged. YouTube and Instagram both play here.",
-    "contactSub": "Commissions, sessions, film and game scores, questions about a passage you're writing — or just to say your multiphonic finally spoke. Messages land straight in Patrícia's inbox.",
-    "footerLine": "Curated by Patrícia Pinheiro — oboe & cor anglais",
-    "coffeeTitle": "Buy me a reed",
-    "coffeeSub": "This playground is built and recorded by one oboist, between rehearsals. A coffee (or a piece of cane) keeps the recordings, the multiphonic analyses and the whole archive growing — and free for everyone.",
-    "thanks": "This archive grew out of conversations with composers, colleagues and teachers who kept asking for a sound before writing it. Thank you to everyone who lent a reed, an ear or an afternoon of recording — and to the authors below, whose work is the ground every page here stands on.",
-    "bibSub": "What was used and by whom. Each technique lists the sources behind its description; the full references are here."
-  }
+  "people": []
 }
