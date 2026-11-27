@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated": "2026-11-25T20:10:40.110Z",
+  "updated": "2026-11-27T17:57:53.092Z",
   "categories": [
     {
       "id": "art",
@@ -814,18 +814,6 @@
     ],
     "flutter": [
       {
-        "file": "audio/ob-flz-sib-var-flz.mp3",
-        "label": "OBOE FLZ - High B ",
-        "instrument": "oboe",
-        "notes": "This audio is a High B, with the pure tone, transitioning to FLZ, and with attack starting with FLZ"
-      },
-      {
-        "file": "audio/ob-flz-eb-thr-flz.mp3",
-        "label": "OBOE FLZ - Eb - Throat",
-        "instrument": "oboe",
-        "notes": "This audio is a middle Eb, with the pure tone, transitioning to FLZ, and with attack starting with FLZ. \nThis recording was done with Throat FLZ (that I personally don't use), only to show the difference between them, Oboists that use this FLZ on their daily basis can do it with better transitions"
-      },
-      {
         "file": "audio/ob-flz-c-trans-flz.mp3",
         "label": "OBOE FLZ - Lower C ",
         "instrument": "oboe",
@@ -839,9 +827,9 @@
       },
       {
         "file": "audio/ob-flz-fdynamic-flz.mp3",
-        "label": "OBOE FLZ - Forte",
+        "label": "OBOE FLZ ",
         "instrument": "oboe",
-        "notes": "This audio has different notes in F dynamic"
+        "notes": "This audio has different notes in mf/ F dynamic"
       },
       {
         "file": "audio/ob-flz-lipbend-flz.mp3",
