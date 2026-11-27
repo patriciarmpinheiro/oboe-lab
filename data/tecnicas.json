@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated": "2026-11-27T18:40:57.114Z",
+  "updated": "2026-11-27T18:46:30.513Z",
   "categories": [
     {
       "id": "art",
@@ -895,7 +895,7 @@
         "file": "audio/ob-key-air-rythmic-key-clicks.mp3",
         "label": "Key Clicks + Rythmical Air",
         "instrument": "oboe",
-        "notes": "This recording demonstrates the combination of percussive key clicks and rhythmical airflow through the instrument.\nThe lower keys are being pressed here (the ones with more ressonance)."
+        "notes": "This recording demonstrates the combination of percussive key clicks and rhythmical airflow through the instrument.\nThe lower keys are being pressed here (the ones with more ressonance).\n\nDon't forget that this was recorded next to a microphone"
       },
       {
         "file": "audio/ob-key-upper-key-clicks.mp3",
@@ -905,7 +905,7 @@
       },
       {
         "file": "audio/ob-key-lower-key-clicks.mp3",
-        "label": "Nova gravação",
+        "label": "Right-hand key clicks",
         "instrument": "oboe",
         "notes": "This recording demonstrates right-hand key clicks, which naturally yield a warmer tone and slightly more acoustic body than the upper left-hand keys. Still very soft for an ensemble piece, for example"
       },
