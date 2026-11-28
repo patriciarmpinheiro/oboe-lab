@@ -690,7 +690,12 @@
             </div>
           </div>
           <div style="display:flex; gap:12px; flex-wrap:wrap; align-items:center; justify-content:space-between">
-            <input type="text" placeholder="search a piece, composer or technique…" value="{{ repSearch }}" onChange="{{ setRepSearch }}" style="background:transparent; border:none; border-bottom:1.5px solid rgba(0,1,129,.35); color:#000181; font-size:.75rem; letter-spacing:.06em; padding:7px 2px; width:260px; outline:none">
+            <div style="display:flex; gap:14px; flex-wrap:wrap; align-items:center">
+              <input type="text" placeholder="search a piece, composer or technique…" value="{{ repSearch }}" onChange="{{ setRepSearch }}" style="background:transparent; border:none; border-bottom:1.5px solid rgba(0,1,129,.35); color:#000181; font-size:.75rem; letter-spacing:.06em; padding:7px 2px; width:260px; outline:none">
+              <sc-if value="{{ repCanDiscover }}" hint-placeholder-val="{{ true }}">
+                <button onClick="{{ repDiscover }}" style="font-size:.58rem; font-weight:600; letter-spacing:.18em; text-transform:uppercase; color:#F6F5EC; background:#000181; border:none; border-radius:100px; padding:11px 20px; transition:all .35s cubic-bezier(.2,.8,.2,1)" style-hover="background:#006EE9; letter-spacing:.24em">Discover a piece ↻</button>
+              </sc-if>
+            </div>
             <span style="font-size:.6rem; font-weight:600; letter-spacing:.18em; text-transform:uppercase; color:#006EE9">{{ repCount }}</span>
           </div>
         </div>
@@ -726,8 +731,12 @@
                   </div>
                 </div>
               </sc-if>
-              <sc-if value="{{ pc.hasUrl }}" hint-placeholder-val="{{ false }}">
-                <a href="{{ pc.url }}" target="_blank" rel="noopener" style="align-self:flex-start; font-size:.56rem; font-weight:600; letter-spacing:.16em; text-transform:uppercase; color:#000181; text-decoration:none; border-bottom:1.5px solid #000181; padding-bottom:2px">Score &amp; info ↗</a>
+              <sc-if value="{{ pc.hasLinks }}" hint-placeholder-val="{{ false }}">
+                <div style="display:flex; gap:14px; flex-wrap:wrap; align-items:center">
+                  <sc-for list="{{ pc.links }}" as="lk" hint-placeholder-count="1">
+                    <a href="{{ lk.url }}" target="_blank" rel="noopener" style="font-size:.56rem; font-weight:600; letter-spacing:.16em; text-transform:uppercase; color:#000181; text-decoration:none; border-bottom:1.5px solid #000181; padding-bottom:2px">{{ lk.label }} ↗</a>
+                  </sc-for>
+                </div>
               </sc-if>
             </div>
           </sc-for>
@@ -1269,7 +1278,7 @@ class Component extends DCLogic {
     view: null, filter: 'all', search: '',
     modalId: null, playing: false, selIdx: 0,
     mixA: null, mixB: null, ripples: [], reeds: [],
-    recordings: {}, videos: [], tvIdx: 0, tvStatic: false, videoMode: null, podPicks: [], hiddenSecs: [],
+    recordings: {}, videos: [], tvIdx: 0, tvStatic: false, videoMode: null, podPicks: [], hiddenSecs: [], formations: [],
     dataState: 'loading', dataErr: '',
     aiOpen: false, aiBusy: false,
     faq: [], multis: [], mpInstr: 'all', mpCat: 'all', mpDyn: 'all', mpDiff: 'all', mpSearch: '',
@@ -1323,6 +1332,7 @@ class Component extends DCLogic {
           videos: arr(d.videos),
           podPicks: arr(d.pod),
           hiddenSecs: arr(d.hidden),
+          formations: arr(d.formations),
           multis: arr(d.multiphonics),
           pairsData: arr(d.pairs),
           faq: arr(d.faq),
@@ -1991,6 +2001,16 @@ class Component extends DCLogic {
       'ensemble': 'Ensemble', 'concerto': 'Concerto', 'with electronics': 'With electronics',
       'orchestral excerpt': 'Orchestral excerpt', 'opera / ballet excerpt': 'Opera / ballet excerpt', 'other': 'Other'
     };
+    /* escrito a mao: as doze formacoes de origem deixam de ser a lista toda.
+       O que ela escrever em "formations" no Studio ("ensemble with oboe",
+       "fixed media", "with live electronics") junta-se a elas. A chave e
+       sempre minuscula, por isso "Solo" e "solo" contam como a mesma. */
+    (Array.isArray(this.state.formations) ? this.state.formations : []).forEach((x) => {
+      const bruto = String(x || '').trim();
+      if (!bruto) return;
+      const chave = bruto.toLowerCase();
+      if (!FORM_LABEL[chave]) FORM_LABEL[chave] = bruto.charAt(0).toUpperCase() + bruto.slice(1);
+    });
     const FORM_ORDER = Object.keys(FORM_LABEL);
     const pieces = (this.state.repertoire || []).filter((p) => p && (p.title || p.composer));
     const pieceById = {};
@@ -2034,7 +2054,19 @@ class Component extends DCLogic {
         instrs: instrsOf(p).map((label) => ({ label })),
         scoring: p.instrumentation || '', hasScoring: !!p.instrumentation,
         notes: p.notes || '', hasNotes: !!p.notes,
-        url: p.url || '', hasUrl: !!p.url,
+        /* escrito a mao: uma obra tinha um unico link. Os compositores querem
+           deixar o site deles, onde se compra a partitura, um email de
+           contacto. "links" e uma lista de {label, url}; o "url" antigo
+           continua a funcionar e entra como a primeira. Um ficheiro
+           carregado no Studio entra como mais uma. */
+        links: [].concat(
+          p.url ? [{ label: 'Score & info', url: p.url }] : [],
+          (Array.isArray(p.links) ? p.links : [])
+            .filter((l) => l && l.url)
+            .map((l) => ({ label: l.label || 'Link', url: l.url })),
+          p.file ? [{ label: p.fileLabel || 'Download', url: this.asset(p.file) }] : []
+        ),
+        hasLinks: !!(p.url || p.file || (Array.isArray(p.links) && p.links.some((l) => l && l.url))),
         techs: ts.map((t) => ({ label: t.name, bg: ((this.C[t.cat] || {}).tile) || '#D0FFA4', open: () => this.openTech(t.id) })),
         hasTechs: ts.length > 0
       };
@@ -2142,6 +2174,16 @@ class Component extends DCLogic {
       mpDiffFilters, mpHasDiff: diffKeys.length > 0,
       repVisible: pieces.length > 0 && mostrar('repertoire'),
       txRepSub: TX.repertoireSub || 'Pieces where these techniques live — open a technique to see the passage in the score.',
+      /* escrito a mao: "discover a piece" escolhe uma obra ao acaso e deixa
+         so essa a vista, limpando os filtros. Nunca repete a que esta a ser
+         mostrada, se houver mais do que uma. Carregar outra vez da outra. */
+      repCanDiscover: pieces.length > 1,
+      repDiscover: () => {
+        const outras = pieces.filter((x) => (x.title || '') !== this.state.repSearch);
+        const pool = outras.length ? outras : pieces;
+        const escolhida = pool[Math.floor(Math.random() * pool.length)];
+        if (escolhida) this.setState({ repSearch: escolhida.title || '', repForm: 'all', repInstr: 'all' });
+      },
       repFormFilters, repInstrFilters, repCards,
       repSearch: this.state.repSearch,
       setRepSearch: (e) => this.setState({ repSearch: e.target.value }),
