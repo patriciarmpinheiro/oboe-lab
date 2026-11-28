@@ -305,7 +305,7 @@
     <div data-par="-0.05" style="position:absolute; bottom:30%; left:12%; font-size:clamp(1.4rem,3vw,2.2rem); color:#006EE9; animation:spinSlow 22s linear infinite; z-index:2">✳</div>
 
     <sc-for list="{{ heroTags }}" as="tag" hint-placeholder-count="6">
-      <span data-par="{{ tag.par }}" style="position:absolute; top:{{ tag.top }}%; left:{{ tag.left }}%; z-index:4; font-size:.62rem; font-weight:500; letter-spacing:.14em; text-transform:uppercase; color:#000181; background:#F6F5EC; border-radius:100px; padding:6px 14px; white-space:nowrap; animation:{{ tag.anim }}; transition:background .3s, color .3s" style-hover="background:#000181; color:#D0FFA4">{{ tag.label }}</span>
+      <button data-par="{{ tag.par }}" onClick="{{ tag.tap }}" style="position:absolute; border:none; cursor:pointer; top:{{ tag.top }}%; left:{{ tag.left }}%; z-index:4; font-size:.62rem; font-weight:500; letter-spacing:.14em; text-transform:uppercase; color:#000181; background:#F6F5EC; border-radius:100px; padding:6px 14px; white-space:nowrap; animation:{{ tag.anim }}; transition:background .3s, color .3s" style-hover="background:#000181; color:#D0FFA4">{{ tag.label }}</button>
     </sc-for>
 
     <p style="position:relative; z-index:5; margin:0 0 clamp(14px,3vw,26px); font-size:.66rem; font-weight:500; letter-spacing:.3em; text-transform:uppercase; color:rgba(0,1,129,.65); animation:fadeIn 1s .1s both">{{ txHeroBadge }}</p>
@@ -1434,10 +1434,24 @@ class Component extends DCLogic {
     this._rt = setTimeout(() => this.setState({ ripples: [] }), 2000);
   }
 
+  /* escrito a mao, nao vem do gerador: tocava sempre a primeira gravacao da
+     tecnica, e no topo sorteava entre as 26 — com 21 ainda por gravar, "click
+     anywhere, it answers" respondia uma vez em cinco. Agora sorteia-se entre
+     as gravacoes que ela atribuiu aquela tecnica, e no topo so entram as
+     tecnicas que tem som. Nunca toca nada sintetizado. */
+  playRandomFrom(t) {
+    const recs = this.recsFor(t && t.id);
+    if (!recs.length) return false;
+    this.playRecording(recs[Math.floor(Math.random() * recs.length)].file);
+    return true;
+  }
+
   heroTap(e) {
     if (e.target.closest('a, button, input')) return;
     this.spawnRipples(e.clientX, e.clientY);
-    this.playSynth(this.T[Math.floor(Math.random() * this.T.length)]);
+    const comSom = (this.T || []).filter((t) => this.recsFor(t.id).length);
+    if (!comSom.length) return;
+    this.playRandomFrom(comSom[Math.floor(Math.random() * comSom.length)]);
   }
 
   asset(p) {
@@ -1585,7 +1599,8 @@ class Component extends DCLogic {
   playSynth(t) {
     if (!t) return;
     const recs = this.recsFor(t.id);
-    if (recs.length) { this.playRecording(recs[0].file); return; }
+    /* sorteia entre as gravacoes atribuidas, em vez de tocar sempre a primeira */
+    if (recs.length) { this.playRecording(recs[Math.floor(Math.random() * recs.length)].file); return; }
     /* escrito a mao: sem gravacao verdadeira nao se inventa som. A pre-escuta
        sintetizada so toca se a tecnica tiver "allowSynth" ligado no Studio. */
     if (!t.allowSynth) return;
@@ -2195,7 +2210,20 @@ class Component extends DCLogic {
       txWhoIAm: TX.whoIAm || 'I am a',
       txTvSub: TX.tvSub, txContactSub: TX.contactSub, txFooterLine: TX.footerLine,
       heroLetters: heroWord.split('').map((char, i) => ({ char, delay: (0.1 + i * 0.07).toFixed(2) })),
-      heroTags: (this.props.heroTags ?? true) ? HERO_TAGS : [],
+      heroTags: (this.props.heroTags ?? true) ? (() => {
+        const comSom = (this.T || []).filter((t) => this.recsFor(t.id).length);
+        const escolhidas = String(TX.heroTags || '').split(',').map((x) => x.trim()).filter(Boolean);
+        const base = escolhidas.length
+          ? escolhidas.map((nome) => comSom.find((t) => t.name.toLowerCase() === nome.toLowerCase())).filter(Boolean)
+          : comSom;
+        if (!base.length) return [];
+        /* so tantas bolhas quantas as tecnicas: com 5 e 6 lugares, uma
+           repetia-se e parecia engano */
+        return HERO_TAGS.slice(0, Math.min(base.length, HERO_TAGS.length)).map((pos, i) => {
+          const t = base[i];
+          return { ...pos, label: t.name.toLowerCase(), tap: (e) => { e.stopPropagation(); this.playRandomFrom(t); } };
+        });
+      })() : [],
       heroClick: (e) => this.heroTap(e),
       ripples: this.state.ripples,
       viewBtns,
@@ -2350,18 +2378,28 @@ class Component extends DCLogic {
         };
       }),
       contactTopic: this.state.topic || '',
-      bioFacts: [
-        { k: 'Based in', v: 'Portugal, mostly on trains' },
-        { k: 'Plays', v: 'Oboe, cor anglais, oboe d’amore' },
-        { k: 'Collects', v: 'Multiphonics & seagull noises' },
-        { k: 'Reeds made', v: 'More than anyone should' }
-      ],
-      bioStickers: [
-        { label: 'reed nerd', bg: '#D0FFA4', rot: '-6deg', top: 4, left: 60 },
-        { label: 'new music', bg: '#83E7FF', rot: '7deg', top: 74, left: -4 },
-        { label: 'says yes to weird', bg: '#E8A0FF', rot: '-4deg', top: 42, left: 58 }
-      ],
-      bioTags: ['extended techniques', 'premières', 'improvisation', 'teaching', 'chamber music', 'recording'].map((label) => ({ label })),
+      bioFacts: String(TX.bioFacts || 'Based in | Portugal, mostly on trains\nPlays | Oboe, cor anglais, oboe d\u2019amore\nCollects | Multiphonics & seagull noises\nReeds made | More than anyone should')
+        .split('\n').map((linha) => {
+          const corte = linha.indexOf('|');
+          if (corte < 0) return null;
+          const k = linha.slice(0, corte).trim();
+          const v = linha.slice(corte + 1).trim();
+          return k ? { k, v } : null;
+        }).filter(Boolean),
+      bioStickers: (() => {
+        /* as posicoes e as cores ficam no codigo, para o arranjo nao se
+           desfazer; ela escolhe so as palavras, uma por linha */
+        const sitios = [
+          { bg: '#D0FFA4', rot: '-6deg', top: 4, left: 60 },
+          { bg: '#83E7FF', rot: '7deg', top: 74, left: -4 },
+          { bg: '#E8A0FF', rot: '-4deg', top: 42, left: 58 }
+        ];
+        return String(TX.bioStickers || 'reed nerd\nnew music\nsays yes to weird')
+          .split('\n').map((x) => x.trim()).filter(Boolean).slice(0, 3)
+          .map((label, i) => ({ label, ...sitios[i % sitios.length] }));
+      })(),
+      bioTags: String(TX.bioTags || 'extended techniques, premières, improvisation, teaching, chamber music, recording')
+        .split(',').map((x) => x.trim()).filter(Boolean).map((label) => ({ label })),
       txCoffeeTitle: TX.coffeeTitle, txCoffeeSub: TX.coffeeSub,
       coffeeUrl: this.props.coffeeUrl || 'https://buymeacoffee.com/',
       coffeeTiers: [
