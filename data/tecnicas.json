@@ -1262,7 +1262,18 @@
     "coffeeSub": "This playground is built and recorded by one oboist, between rehearsals. A coffee (or a piece of cane) keeps the recordings, the multiphonic analyses and the whole archive growing — and free for everyone.",
     "thanks": "This archive grew out of conversations with composers, colleagues and teachers who kept asking for a sound before writing it. Thank you to everyone who lent a reed, an ear or an afternoon of recording — and to the authors below, whose work is the ground every page here stands on.",
     "bibSub": "What was used and by whom. Each technique lists the sources behind its description; the full references are here.",
-    "portrait": "images/shootingpatriciapinheiro_sophiahegewald-1275.jpg"
+    "portrait": "images/shootingpatriciapinheiro_sophiahegewald-1275.jpg",
+    "whoBadge": "Who is behind this",
+    "whoLine1": "Hello,",
+    "whoLine2": "I’m",
+    "whoName": "Patrícia",
+    "whoQuote": "I play the oboe, break it open, and write down what comes out.",
+    "whoBio": "Oboist and cor anglais player working across a broad range, from classical to experimental music — premières, strange fingerings, long afternoons with a microphone and a mountain of reeds. The sounds here do not belong to any one style: they turn up in concert pieces, in jazz writing, in film and game scores and in ambient records, and you are welcome whichever of those you write. This playground is my open notebook: everything I find, catalogued so you can hear it before you write it. I hope I can share a bit of my enthusiasm for the instrument with you!",
+    "supportBtn": "Make it rain reeds",
+    "contactBtn": "Say hello →",
+    "portraitName": "Patrícia Pinheiro",
+    "portraitRole": "oboe & cor anglais",
+    "whoIAm": "I am a"
   },
   "repertoire": [],
   "bibliography": [
