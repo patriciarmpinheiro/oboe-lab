@@ -487,6 +487,10 @@
         </sc-for>
       </div>
 
+      <sc-if value="{{ techsHasMore }}" hint-placeholder-val="{{ true }}">
+        <button onClick="{{ techsToggle }}" style="margin-top:22px; width:100%; font-size:.62rem; font-weight:600; letter-spacing:.2em; text-transform:uppercase; color:#000181; background:transparent; border:1.5px solid rgba(0,1,129,.35); border-radius:100px; padding:16px 24px; transition:all .35s cubic-bezier(.2,.8,.2,1)" style-hover="background:#000181; color:#D0FFA4; border-color:#000181; letter-spacing:.26em">{{ techsMoreLabel }}</button>
+      </sc-if>
+
       <sc-if value="{{ noResults }}" hint-placeholder-val="{{ false }}">
         <p style="text-align:center; font-size:.85rem; color:rgba(0,1,129,.5); margin-top:48px">No techniques match — try another category or search term.</p>
       </sc-if>
@@ -1287,7 +1291,7 @@ const RIPPLE_COLORS = ['#000181', '#006EE9', '#E8A0FF', '#F6F5EC'];
 class Component extends DCLogic {
   state = {
     view: null, filter: 'all', search: '',
-    modalId: null, playing: false, selIdx: 0,
+    modalId: null, playing: false, selIdx: 0, techsAll: false,
     mixA: null, mixB: null, ripples: [], reeds: [],
     recordings: {}, videos: [], tvIdx: 0, tvStatic: false, videoMode: null, podPicks: [], hiddenSecs: [], formations: [],
     dataState: 'loading', dataErr: '',
@@ -1795,6 +1799,11 @@ class Component extends DCLogic {
         hear: (e) => { e.stopPropagation(); this.playSynth(t); }
       }));
 
+    const TECHS_RESUMO = 6;
+    const techsTotal = techs.length;
+    const techsResumido = !this.state.techsAll && filter === 'all' && !q && techsTotal > TECHS_RESUMO;
+    const techsVista = techsResumido ? techs.slice(0, TECHS_RESUMO) : techs;
+
     const PT = this.podTechs();
     const podRows = PT.map((t, i) => ({
       num: i + 1,
@@ -2262,7 +2271,17 @@ class Component extends DCLogic {
       mpNoResults: mpShown.length === 0,
       modalMultiLine: mpTechCount + (mpTechCount === 1 ? ' analysed multiphonic' : ' analysed multiphonics'),
 
-      filters, techs, noResults: techs.length === 0,
+      /* escrito a mao, nao vem do gerador: vinte e seis linhas abertas de
+         uma vez faziam da pagina inicial uma parede. Enquanto ninguem filtrar
+         nem procurar, mostram-se seis e ha um botao para abrir o resto. Com
+         um filtro ou uma pesquisa activos mostram-se todas as que encaixam,
+         porque ai ja foi ela a estreitar. */
+      filters, techs: techsVista, noResults: techs.length === 0,
+      techsHasMore: techsResumido || (this.state.techsAll && techsTotal > 6),
+      techsMoreLabel: techsResumido
+        ? 'See all ' + techsTotal + ' techniques \u2193'
+        : 'Show fewer \u2191',
+      techsToggle: () => this.setState({ techsAll: !this.state.techsAll }),
       search, setSearch: (e) => this.setState({ search: e.target.value }),
       surprise: () => { if (TT.length) this.openTech(TT[Math.floor(Math.random() * TT.length)].id); },
 
