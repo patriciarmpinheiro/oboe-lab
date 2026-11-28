@@ -475,7 +475,7 @@
         <sc-for list="{{ techs }}" as="t" hint-placeholder-count="9">
           <div class="tech-row" onClick="{{ t.open }}" style="display:flex; align-items:center; gap:clamp(12px,2.4vw,26px); padding:clamp(16px,2.4vw,26px) clamp(10px,2vw,22px); border-bottom:1px solid rgba(0,1,129,.16); transition:background .4s cubic-bezier(.2,.8,.2,1), padding .4s; position:relative; overflow:hidden" style-hover="background:#D0FFA4; padding-left:36px">
             <span style="font-size:.64rem; font-weight:500; letter-spacing:.14em; color:rgba(0,1,129,.4); width:26px; flex-shrink:0; transition:transform .4s" style-hover="transform:rotate(-12deg) scale(1.3)">{{ t.num }}</span>
-            <span style="width:38px; height:38px; border-radius:50%; flex-shrink:0; display:flex; align-items:center; justify-content:center; font-size:1.05rem; background:{{ t.tileBg }}; transition:transform .5s cubic-bezier(.2,.9,.2,1)" style-hover="transform:rotate(14deg) scale(1.18)">{{ t.emoji }}</span>
+            <span style="width:38px; height:38px; border-radius:50%; flex-shrink:0; display:flex; align-items:center; justify-content:center; font-size:1.05rem; background:{{ t.tileBg }}; transition:transform .5s cubic-bezier(.2,.9,.2,1)" style-hover="transform:rotate(14deg) scale(1.18)"><img src="{{ t.mark }}" alt="" style="width:21px; height:21px; display:block"></span>
             <span style="flex:1 1 200px; min-width:0">
               <span style="display:block; font-family:'Instrument Serif',serif; font-size:clamp(1.4rem,3.4vw,2.3rem); line-height:1.06; letter-spacing:-.01em; transition:letter-spacing .4s" style-hover="letter-spacing:.008em">{{ t.name }}</span>
               <span style="display:block; margin-top:3px; font-size:.74rem; color:rgba(0,1,129,.55)">{{ t.sub }}</span>
@@ -1286,6 +1286,57 @@ const HERO_TAGS = [
   { label: 'harmonics', top: 56, left: 84, par: -0.16, anim: 'drift3 13s ease-in-out infinite' }
 ];
 
+/* --- Marcas das tecnicas (escrito a mao, nao vem do gerador) -------------
+   Os emojis saiam de um alfabeto que nao e o do site: cores, contornos e
+   tracos que nao combinam com nada a volta. Estas 26 marcas sao desenhadas
+   do mesmo molde — mesmo traco, mesmas pontas redondas, a cor da categoria
+   da propria tecnica — e levam um empurrao de turbulencia que lhes tira a
+   rectidao. A 38px o grao nao se le, mas a ondulacao le-se, e e isso que as
+   faz parecer impressas em vez de vectoriais.
+   Os emojis continuam guardados nos dados; deixaram so de ser desenhados. */
+const MARK_SHAPES = {
+  flutter:        '<path d="M5 16q2.5-6 5 0t5 0 5 0 5 0"/>',
+  multi:          '<circle cx="12.5" cy="16" r="7"/><circle cx="20" cy="16" r="7"/>',
+  harm:           '<circle cx="16" cy="8.5" r="2.6" fill="CURRENT" stroke="none"/><circle cx="16" cy="20" r="6.5"/>',
+  circ:           '<circle cx="16" cy="16" r="8.5"/>',
+  gliss:          '<path d="M6 24C12 24 20 8 26 8"/>',
+  bend:           '<path d="M6 12c0 8 4 12 10 12s10-4 10-10"/>',
+  keys:           '<circle cx="8" cy="16" r="2.8" fill="CURRENT" stroke="none"/><circle cx="16" cy="16" r="2.8" fill="CURRENT" stroke="none"/><circle cx="24" cy="16" r="2.8" fill="CURRENT" stroke="none"/>',
+  air:            '<path d="M5 21C11 21 13 11 19 11M13 25c5 0 6-5 11-5"/>',
+  'single-tongue':'<path d="M16 7v18"/>',
+  'double-tongue':'<path d="M12 7v18M20 7v18"/>',
+  'triple-tongue':'<path d="M9 8v16M16 6v20M23 8v16"/>',
+  'slap-tongue':  '<path d="M16 5v6M16 21v6M5 16h6M21 16h6M9 9l4 4M23 23l-4-4M23 9l-4 4M9 23l4-4"/>',
+  'reed-only':    '<path d="M16 5c3 6 3 16 0 22-3-6-3-16 0-22Z"/>',
+  'no-reed':      '<path d="M24 10a8.5 8.5 0 1 0 1.5 9"/>',
+  vibrato:        '<path d="M5 16q4-6 8 0t8 0 6-3"/>',
+  'lip-gliss':    '<path d="M7 22C12 22 18 10 23 10"/><circle cx="25" cy="9" r="2.6" fill="CURRENT" stroke="none"/>',
+  smorzato:       '<path d="M5 16q4-7 8 0t8 0"/><path d="M21 16q3-2 6 0" opacity=".45"/>',
+  oscillato:      '<path d="M5 12q4-5 8 0t8 0 6-2"/><path d="M5 22q4-5 8 0t8 0 6-2"/>',
+  'sing-hum':     '<path d="M10 24a9 9 0 0 1 12 0"/><path d="M6 27a14 14 0 0 1 20 0"/>',
+  vocalisation:   '<path d="M11 10a9 9 0 1 0 10 0"/><path d="M16 14v7"/>',
+  'rolling-notes':'<path d="M6 20c0-6 5-9 8-5s-2 9-5 5 2-9 8-5 5 9 9 5"/>',
+  'double-harm':  '<circle cx="11" cy="9" r="2.4" fill="CURRENT" stroke="none"/><circle cx="21" cy="9" r="2.4" fill="CURRENT" stroke="none"/><circle cx="16" cy="21" r="6"/>',
+  'timbre-fing':  '<path d="M16 6a10 10 0 0 1 0 20Z" fill="CURRENT" stroke="none"/><circle cx="16" cy="16" r="10"/>',
+  'trills-trem':  '<path d="M5 16q1.6-5 3.2 0t3.2 0 3.2 0 3.2 0 3.2 0 3.2 0 3.2 0"/>',
+  teeth:          '<path d="M5 11h22v5l-4 5-4-5-4 5-4-5-4 5-2-5Z"/>',
+  'alla-tromba':  '<path d="M7 16h9l9-7v14l-9-7"/>'
+};
+const MARK_FALLBACK = '<circle cx="16" cy="16" r="7"/>';
+
+function techMark(inner, cor) {
+  const corpo = String(inner || MARK_FALLBACK).split('CURRENT').join(cor);
+  const svg =
+    '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32">' +
+    '<filter id="w" x="-20%" y="-20%" width="140%" height="140%">' +
+    '<feTurbulence type="fractalNoise" baseFrequency="0.07" numOctaves="2" seed="7" result="n"/>' +
+    '<feDisplacementMap in="SourceGraphic" in2="n" scale="1.6" xChannelSelector="R" yChannelSelector="G"/>' +
+    '</filter>' +
+    '<g filter="url(#w)" fill="none" stroke="' + cor + '" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round">' +
+    corpo + '</g></svg>';
+  return 'data:image/svg+xml,' + encodeURIComponent(svg);
+}
+
 const RIPPLE_COLORS = ['#000181', '#006EE9', '#E8A0FF', '#F6F5EC'];
 
 class Component extends DCLogic {
@@ -1803,7 +1854,7 @@ class Component extends DCLogic {
         catColor: catOf(t.cat).color,
         catText: catTextOn(catOf(t.cat).color),
         tileBg: catOf(t.cat).tile,
-        emoji: t.emoji || '✳',
+        mark: techMark(MARK_SHAPES[t.id], catOf(t.cat).color),
         open: () => this.openTech(t.id),
         /* escrito a mao: sem gravacao verdadeira o botao de ouvir tocava um
            sintetizador. Agora apaga-se e deixa de reagir, em vez de ficar um
