@@ -1287,8 +1287,12 @@ class Component extends DCLogic {
   };
 
   componentDidMount() {
-    this._esc = (e) => { if (e.key === 'Escape') this.setState({ modalId: null, mpOpenId: '' }); };
+    this._esc = (e) => { if (e.key === 'Escape') { this.stopAudio(); this.setState({ modalId: null, mpOpenId: '' }); } };
     window.addEventListener('keydown', this._esc);
+    this._hide = () => { if (document.hidden) this.stopAudio(); };
+    document.addEventListener('visibilitychange', this._hide);
+    this._bye = () => this.stopAudio();
+    window.addEventListener('pagehide', this._bye);
 
     this._move = (e) => {
       const hero = document.getElementById('top');
@@ -1346,9 +1350,12 @@ class Component extends DCLogic {
   }
 
   componentWillUnmount() {
+    this.stopAudio();
     document.removeEventListener('error', this._imgErr, true);
     window.removeEventListener('keydown', this._esc);
     window.removeEventListener('mousemove', this._move);
+    document.removeEventListener('visibilitychange', this._hide);
+    window.removeEventListener('pagehide', this._bye);
   }
 
   pairsMap() {
@@ -1423,6 +1430,17 @@ class Component extends DCLogic {
     const s = String(p);
     if (/^(https?:|data:|blob:|\/\/)/.test(s)) return s;
     return ASSET_BASE + s.replace(/^\.?\//, '');
+  }
+
+  /* escrito a mao, nao vem do gerador: o som so parava ao carregar outra vez
+     no leitor ou ao escolher outro. Mudar de separador no browser, fechar a
+     janela de uma tecnica ou carregar Escape deixavam-no a tocar sozinho por
+     tras. Agora ha um unico sitio que o para, e todos esses casos chamam-no. */
+  stopAudio() {
+    if (this._audio) { try { this._audio.pause(); } catch (e) { /* ignora */ } }
+    this._audio = null;
+    this._audioSrc = '';
+    if (this.state.playing || this.state.nowPlaying) this.setState({ playing: false, nowPlaying: '' });
   }
 
   playRecording(src) {
@@ -2194,7 +2212,7 @@ class Component extends DCLogic {
       txThanksSub: TX.thanksSub || 'Nothing here came from nowhere. These are the books and the people I learned from — thank you.',
       thBooks, thHasBooks: thBooks.length > 0,
       thPeople, thHasPeople: thPeople.length > 0,
-      mpClose: () => this.setState({ mpOpenId: '' }),
+      mpClose: () => { this.stopAudio(); this.setState({ mpOpenId: '' }); },
       mpSearch: this.state.mpSearch,
       setMpSearch: (e) => this.setState({ mpSearch: e.target.value }),
       mpCount: mpShown.length + ' of ' + allMultis.length,
@@ -2242,7 +2260,7 @@ class Component extends DCLogic {
           border: k === view ? '2px solid transparent' : '2px solid rgba(0,1,129,.18)'
         }))
         .filter((n) => n.text) : [],
-      closeModal: () => this.setState({ modalId: null }),
+      closeModal: () => { this.stopAudio(); this.setState({ modalId: null }); },
       stopClick: (e) => e.stopPropagation(),
       playDemo: () => mt && this.playSynth(mt),
       playIcon: playing ? '◼' : '▶',
