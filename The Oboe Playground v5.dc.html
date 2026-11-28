@@ -1724,9 +1724,26 @@ class Component extends DCLogic {
       const vsNavy = (L + 0.05) / 0.0661;   /* 0.0661 = luminancia do #000181 + 0.05 */
       return vsWhite >= vsNavy ? '#FFFFFF' : '#000181';
     };
-    const filterDefs = [{ id: 'all', label: 'All' }].concat(Object.keys(CC).map((c) => ({ id: c, label: (CC[c].emoji ? CC[c].emoji + ' ' : '') + CC[c].label })));
+    /* escrito a mao, nao vem do gerador: a biblioteca nao dizia onde estava o
+       som. Com 21 das 26 tecnicas ainda por gravar, o visitante via uma lista
+       de botoes apagados e nao percebia se estava avariada ou por encher.
+       Agora ha um filtro "With sound" logo a seguir a "All", e cada botao diz
+       quantas tecnicas tem — assim ve-se de relance onde ha o que ouvir e
+       onde o arquivo ainda esta a crescer. */
+    const comSom = (t) => this.recsFor(t.id).length > 0;
+    const quantas = (id) => (id === 'all' ? this.T.length
+      : id === 'sound' ? this.T.filter(comSom).length
+      : this.T.filter((t) => t.cat === id).length);
+    const filterDefs = [{ id: 'all', label: 'All' }]
+      .concat(this.T.some(comSom) ? [{ id: 'sound', label: '\u266a With sound' }] : [])
+      .concat(Object.keys(CC)
+        /* uma categoria sem tecnicas nenhumas dava um botao que nao levava a
+           lado nenhum — some da barra ate ter conteudo, e volta sozinha */
+        .filter((c) => quantas(c) > 0)
+        .map((c) => ({ id: c, label: (CC[c].emoji ? CC[c].emoji + ' ' : '') + CC[c].label })));
     const filters = filterDefs.map((f) => ({
       ...f,
+      label: f.label + '  ' + quantas(f.id),
       pick: () => this.setState({ filter: f.id }),
       color: f.id === filter ? '#D0FFA4' : 'rgba(0,1,129,.6)',
       bg: f.id === filter ? '#000181' : 'transparent'
@@ -1739,11 +1756,19 @@ class Component extends DCLogic {
     const TT = this.T;
     const q = search.trim().toLowerCase();
     const techs = TT
-      .filter((t) => filter === 'all' || t.cat === filter)
+      .filter((t) => filter === 'all' || !filterDefs.some((f) => f.id === filter)
+        || (filter === 'sound' ? comSom(t) : t.cat === filter))
       .filter((t) => !q || t.name.toLowerCase().includes(q) || (t.sub || '').toLowerCase().includes(q) || (t.subs || []).join(' ').toLowerCase().includes(q))
       .map((t, i) => ({
         ...t,
         num: String(i + 1).padStart(2, '0'),
+        /* escrito a mao: a linha passa a dizer quantas gravacoes tem, a seguir
+           ao subtitulo. Sem isto era preciso abrir cada tecnica para descobrir
+           se havia som — e, nas que ainda nao tem, dizer "recordings coming"
+           explica o botao apagado em vez de o deixar parecer avariado. */
+        sub: (t.sub || '') + (this.recsFor(t.id).length
+          ? '  ·  ' + this.recsFor(t.id).length + (this.recsFor(t.id).length === 1 ? ' recording' : ' recordings')
+          : '  ·  recording coming'),
         catLabel: (catOf(t.cat).emoji ? catOf(t.cat).emoji + ' ' : '') + catOf(t.cat).label,
         catColor: catOf(t.cat).color,
         catText: catTextOn(catOf(t.cat).color),
