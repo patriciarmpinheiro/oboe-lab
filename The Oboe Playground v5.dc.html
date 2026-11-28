@@ -673,6 +673,7 @@
         </div>
 
         <div style="display:flex; flex-direction:column; gap:14px; border-top:1.5px solid #000181; border-bottom:1px solid rgba(0,1,129,.2); padding:16px 0; margin-bottom:clamp(22px,3vw,34px)">
+          <sc-if value="{{ repHasPieces }}" hint-placeholder-val="{{ true }}">
           <div style="display:flex; gap:12px; flex-wrap:wrap; align-items:center">
             <span style="font-size:.55rem; font-weight:600; letter-spacing:.2em; text-transform:uppercase; color:rgba(0,1,129,.5); width:78px">Setting</span>
             <div style="display:flex; gap:5px; flex-wrap:wrap">
@@ -741,6 +742,16 @@
             </div>
           </sc-for>
         </div>
+        </sc-if>
+
+        <sc-if value="{{ repEmpty }}" hint-placeholder-val="{{ false }}">
+          <div style="background:#000181; color:#F6F5EC; border-radius:24px; padding:clamp(28px,5vw,44px); max-width:620px">
+            <p style="margin:0 0 12px; font-size:.6rem; font-weight:600; letter-spacing:.24em; text-transform:uppercase; color:#D0FFA4">Open call</p>
+            <p style="margin:0 0 20px; font-family:'Instrument Serif',serif; font-size:clamp(1.5rem,3.4vw,2.1rem); line-height:1.15">The list starts with <span style="font-style:italic">your piece</span>.</p>
+            <p style="margin:0 0 22px; font-size:.9rem; line-height:1.7; color:rgba(246,245,236,.8); text-wrap:pretty">We are building the repertoire list for the oboe family with the people who wrote the music. Add yours and it is here on opening day — no jury, no fee, and you decide piece by piece how each one may be used.</p>
+            <a href="/open-call" style="display:inline-block; font-size:.6rem; font-weight:600; letter-spacing:.2em; text-transform:uppercase; color:#000181; background:#D0FFA4; border-radius:100px; padding:14px 26px; text-decoration:none; transition:all .35s" style-hover="letter-spacing:.26em">Add your pieces →</a>
+          </div>
+        </sc-if>
 
         <sc-if value="{{ repNoResults }}" hint-placeholder-val="{{ false }}">
           <p style="text-align:center; font-size:.85rem; color:rgba(0,1,129,.6); margin-top:48px">No pieces match those filters yet.</p>
@@ -2215,7 +2226,14 @@ class Component extends DCLogic {
       mpIntro: 'Every multiphonic here was played, recorded and analysed one by one — filter by instrument, character or difficulty, and read the fingering straight off the diagram.',
       mpInstrFilters, mpCatFilters, mpDynFilters, mpCards, mpModal,
       mpDiffFilters, mpHasDiff: diffKeys.length > 0,
-      repVisible: pieces.length > 0 && mostrar('repertoire'),
+      /* escrito a mao: a seccao escondia-se sozinha enquanto nao houvesse obras.
+         Isso fazia sentido antes do separador Paginas; agora tira-lhe a decisao
+         e impede-a de a ver. Quem manda e o tique. Vazia, em vez dos filtros e
+         de uma grelha sem nada, mostra um convite — que e exactamente o que a
+         open call precisa de dizer. */
+      repVisible: mostrar('repertoire'),
+      repEmpty: pieces.length === 0,
+      repHasPieces: pieces.length > 0,
       txRepSub: TX.repertoireSub || 'Pieces where these techniques live — open a technique to see the passage in the score.',
       /* escrito a mao: "discover a piece" escolhe uma obra ao acaso e deixa
          so essa a vista, limpando os filtros. Nunca repete a que esta a ser
