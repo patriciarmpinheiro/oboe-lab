@@ -1339,5 +1339,8 @@
       "note": "Everything here marked with a recording or a fingering diagram was tested and recorded for this site."
     }
   ],
-  "people": []
+  "people": [],
+  "hidden": [
+    "pod"
+  ]
 }
